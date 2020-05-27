@@ -1,0 +1,868 @@
+Tournament,Bracket,Team 1,Team 2,Team 1 wins,Team 2 wins
+KQC3,Group1,Post Meta Malone,The Notorious B.E.E.,2,0
+KQC3,Group1,Keep Yourself Alive,LaCroix Super Drinkers,2,0
+KQC3,Group1,Queen's Revenge,LaCroix Super Drinkers,2,1
+KQC3,Group1,Keep Yourself Alive,Post Meta Malone,2,0
+KQC3,Group1,Keep Yourself Alive,The Notorious B.E.E.,2,0
+KQC3,Group1,Queen's Revenge,Post Meta Malone,2,1
+KQC3,Group1,LaCroix Super Drinkers,Post Meta Malone,2,0
+KQC3,Group1,Queen's Revenge,The Notorious B.E.E.,2,1
+KQC3,Group1,Keep Yourself Alive,Queen's Revenge,2,1
+KQC3,Group1,The Notorious B.E.E.,LaCroix Super Drinkers,2,1
+KQC3,Group2,Vertical Scroll,Law & Order,2,0
+KQC3,Group2,Seattle BooperSonics,TallBaes,2,0
+KQC3,Group2,Seattle BooperSonics,Ol’ Dirty Berries,2,0
+KQC3,Group2,TallBaes,Law & Order,2,1
+KQC3,Group2,TallBaes,Vertical Scroll,2,0
+KQC3,Group2,Law & Order,Ol’ Dirty Berries,2,0
+KQC3,Group2,Seattle BooperSonics,Law & Order,2,1
+KQC3,Group2,Vertical Scroll,Ol’ Dirty Berries,2,1
+KQC3,Group2,TallBaes,Ol’ Dirty Berries,2,0
+KQC3,Group2,Seattle BooperSonics,Vertical Scroll,2,0
+KQC3,Group3,Fyre Fest 2,WE BEE SWARMIN’ FOR YA,2,0
+KQC3,Group3,fridge genie,Bye,2,0
+KQC3,Group3,Princes Among Boys,WE BEE SWARMIN’ FOR YA,2,0
+KQC3,Group3,fridge genie,Fyre Fest 2,2,0
+KQC3,Group3,Fyre Fest 2,Bye,2,0
+KQC3,Group3,Princes Among Boys,fridge genie,2,0
+KQC3,Group3,fridge genie,WE BEE SWARMIN’ FOR YA,2,0
+KQC3,Group3,Princes Among Boys,Bye,2,0
+KQC3,Group3,Princes Among Boys,Fyre Fest 2,2,0
+KQC3,Group3,Bye,WE BEE SWARMIN’ FOR YA,2,0
+KQC3,Group4,PUERTO RICO,Anti Social Snail Club,2,0
+KQC3,Group4,brunch skunks,TEAM NAME,2,0
+KQC3,Group4,MATH,brunch skunks,2,0
+KQC3,Group4,PUERTO RICO,TEAM NAME,2,0
+KQC3,Group4,Anti Social Snail Club,TEAM NAME,2,0
+KQC3,Group4,PUERTO RICO,MATH,2,1
+KQC3,Group4,PUERTO RICO,brunch skunks,2,1
+KQC3,Group4,MATH,Anti Social Snail Club,2,0
+KQC3,Group4,MATH,TEAM NAME,2,0
+KQC3,Group4,Anti Social Snail Club,brunch skunks,2,0
+KQC3,Group5,Mr. Tenders,Luibee's Mansion,2,0
+KQC3,Group5,Only Kinda Safe,Eyes on the Hives,2,0
+KQC3,Group5,Bae Caught Me Drippin',Only Kinda Safe,2,0
+KQC3,Group5,Eyes on the Hives,Luibee's Mansion,2,0
+KQC3,Group5,Mr. Tenders,Eyes on the Hives,2,0
+KQC3,Group5,Bae Caught Me Drippin',Luibee's Mansion,2,1
+KQC3,Group5,Luibee's Mansion,Only Kinda Safe,2,0
+KQC3,Group5,Mr. Tenders,Bae Caught Me Drippin',2,1
+KQC3,Group5,Eyes on the Hives,Bae Caught Me Drippin',2,1
+KQC3,Group5,Mr. Tenders,Only Kinda Safe,2,1
+KQC3,Group6,BarBEE Dream Gate,Dingle Berries,2,0
+KQC3,Group6,Bonus Nap,"We put the ""i"" in CLT",2,0
+KQC3,Group6,Bonus Nap,Shadow Scene,2,1
+KQC3,Group6,"We put the ""i"" in CLT",Dingle Berries,2,0
+KQC3,Group6,"We put the ""i"" in CLT",BarBEE Dream Gate,2,0
+KQC3,Group6,Shadow Scene,Dingle Berries,2,0
+KQC3,Group6,Bonus Nap,Dingle Berries,2,0
+KQC3,Group6,Shadow Scene,BarBEE Dream Gate,2,1
+KQC3,Group6,"We put the ""i"" in CLT",Shadow Scene,2,0
+KQC3,Group6,Bonus Nap,BarBEE Dream Gate,2,0
+KQC3,WC,Only Kinda Safe,Fyre Fest 2,1,0
+KQC3,WC,Fyre Fest 2,LaCroix Super Drinkers,1,0
+KQC3,WC,LaCroix Super Drinkers,Shadow Scene,3,2
+KQC3,WC,Only Kinda Safe,Vertical Scroll,1,0
+KQC3,WC,Fyre Fest 2,Law & Order,3,0
+KQC3,WC,Only Kinda Safe,Bae Caught Me Drippin',3,0
+KQC3,WC,Vertical Scroll,Anti Social Snail Club,3,0
+KQC3,WC,Shadow Scene,Ol’ Dirty Berries,3,1
+KQC3,WC,Bae Caught Me Drippin',WE BEE SWARMIN’ FOR YA,3,1
+KQC3,WC,Law & Order,The Notorious B.E.E.,3,1
+KQC3,WC,Vertical Scroll,Luibee's Mansion,3,1
+KQC3,WC,Fyre Fest 2,Bye,3,1
+KQC3,WC,Anti Social Snail Club,BarBEE Dream Gate,3,0
+KQC3,WC,LaCroix Super Drinkers,brunch skunks,3,1
+KQC3,WC,Only Kinda Safe,Post Meta Malone,3,0
+KQC3,WC,Ol’ Dirty Berries,Dingle Berries,3,0
+KQC3,WC,WE BEE SWARMIN’ FOR YA,TEAM NAME,3,1
+KQC3,KO,Keep Yourself Alive,Mr. Tenders,4,2
+KQC3,KO,Mr. Tenders,Princes Among Boys,3,0
+KQC3,KO,Mr. Tenders,Seattle BooperSonics,3,2
+KQC3,KO,Keep Yourself Alive,Princes Among Boys,3,2
+KQC3,KO,Seattle BooperSonics,PUERTO RICO,3,1
+KQC3,KO,Princes Among Boys,Seattle BooperSonics,3,0
+KQC3,KO,PUERTO RICO,MATH,3,2
+KQC3,KO,Mr. Tenders,Bonus Nap,3,1
+KQC3,KO,Mr. Tenders,fridge genie,3,0
+KQC3,KO,PUERTO RICO,"We put the ""i"" in CLT",3,1
+KQC3,KO,Keep Yourself Alive,Bonus Nap,3,0
+KQC3,KO,Mr. Tenders,Vertical Scroll,3,0
+KQC3,KO,MATH,Only Kinda Safe,3,0
+KQC3,KO,fridge genie,Fyre Fest 2,3,2
+KQC3,KO,Seattle BooperSonics,Mr. Tenders,3,2
+KQC3,KO,Bonus Nap,PUERTO RICO,3,1
+KQC3,KO,Princes Among Boys,fridge genie,3,1
+KQC3,KO,Only Kinda Safe,Eyes on the Hives,3,2
+KQC3,KO,Keep Yourself Alive,MATH,3,0
+KQC3,KO,Fyre Fest 2,Queen's Revenge,3,1
+GDC4,Group 1,Bay Area Rapid Tappers,Latter Day Snails,3,0
+GDC4,Group 1,Bonus Soulless,Pokemon NO,3,0
+GDC4,Group 1,Be Bestest,Crossfaded and Scared in Troutdale,3,0
+GDC4,Group 1,Tylbaes,Inherent Vice,3,0
+GDC4,Group 1,Pokemon NO,Crossfaded and Scared in Troutdale,3,0
+GDC4,Group 1,Be Bestest,Inherent Vice,3,0
+GDC4,Group 1,Bonus Soulless,Tylbaes,3,0
+GDC4,Group 1,Peach LLC,Latter Day Snails,3,0
+GDC4,Group 1,Latter Day Snails,Crossfaded and Scared in Troutdale,2,1
+GDC4,Group 1,Peach LLC,Inherent Vice,3,0
+GDC4,Group 1,Bonus Soulless,Be Bestest,2,1
+GDC4,Group 1,Tylbaes,Bay Area Rapid Tappers,2,1
+GDC4,Group 1,Be Bestest,Pokemon NO,3,0
+GDC4,Group 1,Bay Area Rapid Tappers,Crossfaded and Scared in Troutdale,3,0
+GDC4,Group 1,Peach LLC,Tylbaes,2,1
+GDC4,Group 1,Inherent Vice,Latter Day Snails,3,0
+GDC4,Group 1,Peach LLC,Bay Area Rapid Tappers,3,0
+GDC4,Group 1,Be Bestest,Tylbaes,2,1
+GDC4,Group 1,Bonus Soulless,Latter Day Snails,2,1
+GDC4,Group 1,Pokemon NO,Inherent Vice,3,0
+GDC4,Group 1,Be Bestest,Bay Area Rapid Tappers,2,1
+GDC4,Group 1,Peach LLC,Bonus Soulless,2,1
+GDC4,Group 1,Tylbaes,Pokemon NO,2,1
+GDC4,Group 1,Inherent Vice,Crossfaded and Scared in Troutdale,3,0
+GDC4,Group 1,Bay Area Rapid Tappers,Bonus Soulless,3,0
+GDC4,Group 1,Be Bestest,Peach LLC,2,1
+GDC4,Group 1,Pokemon NO,Latter Day Snails,3,0
+GDC4,Group 1,Tylbaes,Crossfaded and Scared in Troutdale,2,1
+GDC4,Group 2,Surprise!,Elon Dusk,3,0
+GDC4,Group 2,Dope Shit Only,Tony's 2D Jelly,3,0
+GDC4,Group 2,The Bees With Two Backs,Nick@Nite Map,3,0
+GDC4,Group 2,Good Luck,Honeyweight Champions,3,0
+GDC4,Group 2,The Bees With Two Backs,Surprise!,2,1
+GDC4,Group 2,Nick@Nite Map,Tony's 2D Jelly,3,0
+GDC4,Group 2,Dope Shit Only,Good Luck,2,1
+GDC4,Group 2,Elon Dusk,Honeyweight Champions,3,0
+GDC4,Group 2,Surprise!,Tony's 2D Jelly,3,0
+GDC4,Group 2,Elon Dusk,Good Luck,2,1
+GDC4,Group 2,The Bees With Two Backs,Honeyweight Champions,3,0
+GDC4,Group 2,Dope Shit Only,Nick@Nite Map,2,1
+GDC4,Group 2,Surprise!,Honeyweight Champions,3,0
+GDC4,Group 2,Dope Shit Only,Elon Dusk,3,0
+GDC4,Group 2,Good Luck,Nick@Nite Map,3,0
+GDC4,Group 2,The Bees With Two Backs,Tony's 2D Jelly,3,0
+GDC4,Group 2,Elon Dusk,Nick@Nite Map,3,0
+GDC4,Group 2,Surprise!,Good Luck,2,1
+GDC4,Group 2,Tony's 2D Jelly,Honeyweight Champions,3,0
+GDC4,Group 2,The Bees With Two Backs,Dope Shit Only,2,1
+GDC4,Group 2,Good Luck,The Bees With Two Backs,2,1
+GDC4,Group 2,Surprise!,Dope Shit Only,2,1
+GDC4,Group 2,Elon Dusk,Tony's 2D Jelly,3,0
+GDC4,Group 2,Nick@Nite Map,Honeyweight Champions,3,0
+GDC4,KO,Surprise!,Bonus Soulless,3,0
+GDC4,KO,Elon Dusk,Crossfaded and Scared in Troutdale,3,0
+GDC4,KO,Tylbaes,Latter Day Snails,3,0
+GDC4,KO,Nick@Nite Map,Inherent Vice,3,0
+GDC4,KO,Pokemon NO,Honeyweight Champions,3,0
+GDC4,KO,Be Bestest,Crossfaded and Scared in Troutdale,3,1
+GDC4,KO,Dope Shit Only,Pokemon NO,3,1
+GDC4,KO,Good Luck,Tylbaes,3,2
+GDC4,KO,Peach LLC,Tony's 2D Jelly,3,0
+GDC4,KO,Bonus Soulless,Nick@Nite Map,3,0
+GDC4,KO,The Bees With Two Backs,Latter Day Snails,3,0
+GDC4,KO,Bay Area Rapid Tappers,Elon Dusk,3,2
+GDC4,KO,Surprise!,Inherent Vice,3,0
+GDC4,KO,Crossfaded and Scared in Troutdale,Honeyweight Champions,3,0
+GDC4,KO,Surprise!,Bonus Soulless,3,0
+GDC4,KO,Elon Dusk,Crossfaded and Scared in Troutdale,3,0
+GDC4,KO,Tylbaes,Latter Day Snails,3,0
+GDC4,KO,Nick@Nite Map,Inherent Vice,3,0
+GDC4,KO,Pokemon NO,Honeyweight Champions,3,0
+GDC4,KO,Be Bestest,Crossfaded and Scared in Troutdale,3,1
+GDC4,KO,Dope Shit Only,Pokemon NO,3,1
+GDC4,KO,Good Luck,Tylbaes,3,2
+GDC4,KO,Peach LLC,Tony's 2D Jelly,3,0
+GDC4,KO,Bonus Soulless,Nick@Nite Map,3,0
+GDC4,KO,The Bees With Two Backs,Latter Day Snails,3,0
+GDC4,KO,Bay Area Rapid Tappers,Elon Dusk,3,2
+GDC4,KO,Surprise!,Inherent Vice,3,0
+GDC4,KO,Crossfaded and Scared in Troutdale,Honeyweight Champions,3,0
+MGF2,Updown1,S H A S H Strikes Back,Laser Wolf,3,0
+MGF2,Updown1,Big Fair Don't Care,Tim Curry & The Mystery of Cheese Pizza,3,0
+MGF2,Updown1,HAT GANG,Free Agents,3,0
+MGF2,Updown1,Big Fair Don't Care,Boops Ahoy,2,1
+MGF2,Updown1,Tim Curry & The Mystery of Cheese Pizza,Free Agents,3,0
+MGF2,Updown1,S H A S H Strikes Back,HAT GANG,3,0
+MGF2,Updown1,S H A S H Strikes Back,Boops Ahoy,2,1
+MGF2,Updown1,HAT GANG,Laser Wolf,2,1
+MGF2,Updown1,Big Fair Don't Care,Free Agents,3,0
+MGF2,Updown1,S H A S H Strikes Back,Big Fair Don't Care,2,1
+MGF2,Updown1,Boops Ahoy,Tim Curry & The Mystery of Cheese Pizza,2,1
+MGF2,Updown1,Laser Wolf,Free Agents,3,0
+MGF2,Updown1,Boops Ahoy,HAT GANG,3,0
+MGF2,Updown1,Big Fair Don't Care,Laser Wolf,3,0
+MGF2,Updown1,S H A S H Strikes Back,Tim Curry & The Mystery of Cheese Pizza,3,0
+MGF2,Updown2,A Team Has No Name,PIZZA,3,0
+MGF2,Updown2,Daddy Long Tentacle,Mr. Buth's Wild Ride,3,0
+MGF2,Updown2,Oh Jeez,Refried Bees,3,0
+MGF2,Updown2,Daddy Long Tentacle,Oh Jeez,2,1
+MGF2,Updown2,Reeeeeeee,PIZZA,3,0
+MGF2,Updown2,Mr. Buth's Wild Ride,A Team Has No Name,2,1
+MGF2,Updown2,Oh Jeez,Reeeeeeee,2,1
+MGF2,Updown2,Refried Bees,PIZZA,3,0
+MGF2,Updown2,Daddy Long Tentacle,A Team Has No Name,3,0
+MGF2,Updown2,Reeeeeeee,Daddy Long Tentacle,2,1
+MGF2,Updown2,Oh Jeez,Mr. Buth's Wild Ride,2,1
+MGF2,Updown2,Refried Bees,A Team Has No Name,3,0
+MGF2,Updown2,Oh Jeez,PIZZA,3,0
+MGF2,Updown2,Daddy Long Tentacle,Refried Bees,2,1
+MGF2,Updown2,Fam in Famine,Sleeper Scene,3,0
+MGF2,Tilt1,Super S H A S H Bros.,The Bee Sharps,3,0
+MGF2,Tilt1,Get Dixie Rekt,Trash,2,1
+MGF2,Tilt1,Super S H A S H Bros.,East Coast Beast Coast,3,0
+MGF2,Tilt1,Get Dixie Rekt,Sleeper Scene,3,0
+MGF2,Tilt1,Fam in Famine,The Bee Sharps,3,0
+MGF2,Tilt1,Fam in Famine,East Coast Beast Coast,3,0
+MGF2,Tilt1,The Bee Sharps,Sleeper Scene,3,0
+MGF2,Tilt1,Super S H A S H Bros.,Trash,3,0
+MGF2,Tilt1,Fam in Famine,Super S H A S H Bros.,2,1
+MGF2,Tilt1,East Coast Beast Coast,Get Dixie Rekt,2,1
+MGF2,Tilt1,Trash,Sleeper Scene,3,0
+MGF2,Tilt1,East Coast Beast Coast,The Bee Sharps,3,0
+MGF2,Tilt1,Super S H A S H Bros.,Get Dixie Rekt,3,0
+MGF2,Tilt1,Fam in Famine,Trash,3,0
+MGF2,Tilt1,J Mind,ain't no laws,3,0
+MGF2,Tilt2,The Adventure Drone,Two Spoons,2,1
+MGF2,Tilt2,Splash of SEA-MIN,Bazinga,2,1
+MGF2,Tilt2,Two Spoons,ain't no laws,3,0
+MGF2,Tilt2,J Mind,Splash of SEA-MIN,3,0
+MGF2,Tilt2,Something Something Toxic,Bazinga,3,0
+MGF2,Tilt2,Two Spoons,Something Something Toxic,2,1
+MGF2,Tilt2,The Adventure Drone,ain't no laws,3,0
+MGF2,Tilt2,J Mind,Bazinga,3,0
+MGF2,Tilt2,Two Spoons,J Mind,2,1
+MGF2,Tilt2,Something Something Toxic,Splash of SEA-MIN,3,0
+MGF2,Tilt2,The Adventure Drone,Bazinga,2,1
+MGF2,Tilt2,Something Something Toxic,ain't no laws,3,0
+MGF2,Tilt2,J Mind,The Adventure Drone,2,1
+MGF2,Tilt2,Two Spoons,Splash of SEA-MIN,3,0
+MGF2,Tilt2,The Adventure Drone,Get Dixie Rekt,3,1
+MGF2,WC,Get Dixie Rekt,Splash of SEA-MIN,2,0
+MGF2,WC,The Adventure Drone,Trash,2,1
+MGF2,WC,Splash of SEA-MIN,The Bee Sharps,2,0
+MGF2,WC,Get Dixie Rekt,ain't no laws,2,0
+MGF2,WC,Trash,Bazinga,2,1
+MGF2,WC,The Adventure Drone,Sleeper Scene,2,0
+MGF2,KO,Fam in Famine,A Team Has No Name,3,0
+MGF2,KO,Something Something Toxic,Oh Jeez,3,1
+MGF2,KO,The Adventure Drone,Daddy Long Tentacle,3,2
+MGF2,KO,Super S H A S H Bros.,Boops Ahoy,3,0
+MGF2,KO,S H A S H Strikes Back,Get Dixie Rekt,3,0
+MGF2,KO,Reeeeeeee,J Mind,3,1
+MGF2,KO,Two Spoons,Refried Bees,3,0
+MGF2,KO,Big Fair Don't Care,East Coast Beast Coast,3,0
+MGF2,KO,Oh Jeez,A Team Has No Name,3,0
+MGF2,KO,Daddy Long Tentacle,Boops Ahoy,3,1
+MGF2,KO,J Mind,Get Dixie Rekt,3,0
+MGF2,KO,East Coast Beast Coast,Refried Bees,3,1
+MGF2,KO,Fam in Famine,Something Something Toxic,3,2
+MGF2,KO,Super S H A S H Bros.,The Adventure Drone,3,0
+MGF2,KO,Reeeeeeee,S H A S H Strikes Back,3,0
+MGF2,KO,Big Fair Don't Care,Two Spoons,3,1
+MGF2,KO,East Coast Beast Coast,Something Something Toxic,3,2
+MGF2,KO,J Mind,The Adventure Drone,3,0
+MGF2,KO,S H A S H Strikes Back,Daddy Long Tentacle,3,2
+MGF2,KO,Two Spoons,Oh Jeez,3,1
+MGF2,KO,J Mind,East Coast Beast Coast,3,1
+MGF2,KO,S H A S H Strikes Back,Two Spoons,3,1
+MGF2,KO,Fam in Famine,Super S H A S H Bros.,3,1
+MGF2,KO,Big Fair Don't Care,Reeeeeeee,3,1
+MGF2,KO,S H A S H Strikes Back,Super S H A S H Bros.,3,0
+MGF2,KO,Reeeeeeee,J Mind,3,0
+MGF2,KO,Reeeeeeee,S H A S H Strikes Back,3,2
+MGF2,KO,Big Fair Don't Care,Fam in Famine,3,0
+MGF2,KO,Reeeeeeee,Fam in Famine,3,1
+MGF2,KO,Big Fair Don't Care,Reeeeeeee,4,2
+KQ30,Group H,Melissophilia,Cora’s Explorers,3,0
+KQ30,Group H,FaZe Clan,The Leftovers,3,0
+KQ30,Group H,"MATH, But Beta",Arcade AF,3,0
+KQ30,Group H,Melissophilia,The Leftovers,3,0
+KQ30,Group H,Arcade AF,Cora’s Explorers,2,1
+KQ30,Group H,FaZe Clan,"MATH, But Beta",2,1
+KQ30,Group H,"MATH, But Beta",The Leftovers,3,0
+KQ30,Group H,FaZe Clan,Cora’s Explorers,2,1
+KQ30,Group H,Melissophilia,Arcade AF,3,0
+KQ30,Group H,"MATH, But Beta",Cora’s Explorers,3,0
+KQ30,Group H,Arcade AF,The Leftovers,3,0
+KQ30,Group H,Melissophilia,FaZe Clan,2,1
+KQ30,Group H,FaZe Clan,Arcade AF,3,0
+KQ30,Group H,"MATH, But Beta",Melissophilia,2,1
+KQ30,Group H,Cora’s Explorers,The Leftovers,2,1
+KQ30,Group G,Uh,Don't Go Chasing Waterfalls,3,0
+KQ30,Group G,CHiSP,Trashturbation,3,0
+KQ30,Group G,Fam in Famine,ALL FOUR ONE,3,0
+KQ30,Group G,Don't Go Chasing Waterfalls,Trashturbation,3,0
+KQ30,Group G,Uh,Fam in Famine,2,1
+KQ30,Group G,CHiSP,ALL FOUR ONE,3,0
+KQ30,Group G,ALL FOUR ONE,Trashturbation,2,1
+KQ30,Group G,Uh,CHiSP,3,0
+KQ30,Group G,Fam in Famine,Don't Go Chasing Waterfalls,3,0
+KQ30,Group G,Uh,ALL FOUR ONE,3,0
+KQ30,Group G,Fam in Famine,Trashturbation,2,1
+KQ30,Group G,Don't Go Chasing Waterfalls,CHiSP,2,1
+KQ30,Group G,Fam in Famine,CHiSP,2,1
+KQ30,Group G,ALL FOUR ONE,Don't Go Chasing Waterfalls,2,1
+KQ30,Group G,Uh,Trashturbation,3,0
+KQ30,Group F,LL Sad J,Domme,3,0
+KQ30,Group F,Talk XXX To Me,sapnu puas,2,1
+KQ30,Group F,Not Safe for Snail,Talk XXX To Me,3,0
+KQ30,Group F,sapnu puas,Domme,3,0
+KQ30,Group F,LL Sad J,sapnu puas,3,0
+KQ30,Group F,Not Safe for Snail,Domme,3,0
+KQ30,Group F,Talk XXX To Me,Domme,2,1
+KQ30,Group F,LL Sad J,Not Safe for Snail,3,0
+KQ30,Group F,sapnu puas,Not Safe for Snail,2,1
+KQ30,Group F,LL Sad J,Talk XXX To Me,3,0
+KQ30,Group E,Seattle BooperSonics,Jen & Micah's 1-Year Anniversary,3,0
+KQ30,Group E,Corn on the Cab,Spicy: La BoiXXX,2,1
+KQ30,Group E,Bonus Salt Queen,Spicy: La BoiXXX,2,1
+KQ30,Group E,Seattle BooperSonics,Corn on the Cab,3,0
+KQ30,Group E,Corn on the Cab,Jen & Micah's 1-Year Anniversary,2,1
+KQ30,Group E,Seattle BooperSonics,Bonus Salt Queen,2,1
+KQ30,Group E,Seattle BooperSonics,Spicy: La BoiXXX,2,1
+KQ30,Group E,Bonus Salt Queen,Jen & Micah's 1-Year Anniversary,3,0
+KQ30,Group E,Bonus Salt Queen,Corn on the Cab,3,0
+KQ30,Group E,Spicy: La BoiXXX,Jen & Micah's 1-Year Anniversary,3,0
+KQ30,Group D,Hunks,ToXXXic,3,0
+KQ30,Group D,[loud daphane noises],Some Free Bees,3,0
+KQ30,Group D,Some Free Bees,Eat My Jorts,2,1
+KQ30,Group D,[loud daphane noises],ToXXXic,3,0
+KQ30,Group D,[loud daphane noises],Hunks,2,1
+KQ30,Group D,Eat My Jorts,ToXXXic,3,0
+KQ30,Group D,Some Free Bees,ToXXXic,2,1
+KQ30,Group D,Hunks,Eat My Jorts,3,0
+KQ30,Group D,[loud daphane noises],Eat My Jorts,2,1
+KQ30,Group D,Hunks,Some Free Bees,3,0
+KQ30,Group C,The Yung Knuxxx,Scott Christopher Aldridge,2,1
+KQ30,Group C,Thirty Shades of Day,Stinger Bell,3,0
+KQ30,Group C,Shots Fired,Stinger Bell,3,0
+KQ30,Group C,Scott Christopher Aldridge,Thirty Shades of Day,3,0
+KQ30,Group C,The Yung Knuxxx,Thirty Shades of Day,3,0
+KQ30,Group C,Scott Christopher Aldridge,Shots Fired,2,1
+KQ30,Group C,Scott Christopher Aldridge,Stinger Bell,3,0
+KQ30,Group C,The Yung Knuxxx,Shots Fired,3,0
+KQ30,Group C,Thirty Shades of Day,Shots Fired,2,1
+KQ30,Group C,The Yung Knuxxx,Stinger Bell,3,0
+KQ30,Group B,OK Cool,DON'T PANIC,3,0
+KQ30,Group B,Chum Bucket,Bee Bang Banditos,2,1
+KQ30,Group B,Sunshine Squad,Bee Bang Banditos,3,0
+KQ30,Group B,Chum Bucket,DON'T PANIC,3,0
+KQ30,Group B,Chum Bucket,OK Cool,3,0
+KQ30,Group B,Sunshine Squad,DON'T PANIC,3,0
+KQ30,Group B,Bee Bang Banditos,DON'T PANIC,3,0
+KQ30,Group B,Sunshine Squad,OK Cool,3,0
+KQ30,Group B,Sunshine Squad,Chum Bucket,2,1
+KQ30,Group B,OK Cool,Bee Bang Banditos,2,1
+KQ30,Group A,Queen's Revenge,Chile Bee-Lleno,2,1
+KQ30,Group A,bingu!,JoshB's SF Squad,2,1
+KQ30,Group A,JoshB's SF Squad,LaCroix Super Drank,3,0
+KQ30,Group A,Queen's Revenge,bingu!,2,1
+KQ30,Group A,bingu!,Chile Bee-Lleno,3,0
+KQ30,Group A,Queen's Revenge,LaCroix Super Drank,3,0
+KQ30,Group A,Queen's Revenge,JoshB's SF Squad,2,1
+KQ30,Group A,Chile Bee-Lleno,LaCroix Super Drank,3,0
+KQ30,Group A,bingu!,LaCroix Super Drank,3,0
+KQ30,Group A,Chile Bee-Lleno,JoshB's SF Squad,2,1
+KQ30,WC,Bee Bang Banditos,JoshB's SF Squad,2,0
+KQ30,WC,Bee Bang Banditos,Shots Fired,2,1
+KQ30,WC,Bee Bang Banditos,Arcade AF,2,0
+KQ30,WC,Arcade AF,Jen & Micah's 1-Year Anniversary,2,1
+KQ30,WC,JoshB's SF Squad,Shots Fired,2,0
+KQ30,WC,Jen & Micah's 1-Year Anniversary,ALL FOUR ONE,2,0
+KQ30,WC,Bee Bang Banditos,Corn on the Cab,2,0
+KQ30,WC,Shots Fired,Bee Bang Banditos,2,0
+KQ30,WC,ALL FOUR ONE,Some Free Bees,2,0
+KQ30,WC,Corn on the Cab,Don't Go Chasing Waterfalls,2,0
+KQ30,WC,Jen & Micah's 1-Year Anniversary,Talk XXX To Me,2,1
+KQ30,WC,JoshB's SF Squad,Arcade AF,2,0
+KQ30,WC,Corn on the Cab,DON'T PANIC,2,0
+KQ30,WC,Bee Bang Banditos,Some Free Bees,2,0
+KQ30,WC,Don't Go Chasing Waterfalls,Trashturbation,2,0
+KQ30,WC,JoshB's SF Squad,Corn on the Cab,2,0
+KQ30,WC,Shots Fired,Talk XXX To Me,2,0
+KQ30,WC,Trashturbation,ToXXXic,2,0
+KQ30,WC,Arcade AF,Don't Go Chasing Waterfalls,2,1
+KQ30,WC,DON'T PANIC,Cora’s Explorers,2,1
+KQ30,WC,Jen & Micah's 1-Year Anniversary,Domme,2,0
+KQ30,WC,Jen & Micah's 1-Year Anniversary,The Leftovers,2,0
+KQ30,WC,Trashturbation,Stinger Bell,2,1
+KQ30,WC,ALL FOUR ONE,LaCroix Super Drank,2,1
+KQ30,WC,Bee Bang Banditos,DON'T PANIC,2,0
+KQ30,WC,Talk XXX To Me,Trashturbation,2,1
+KQ30,WC,JoshB's SF Squad,LaCroix Super Drank,2,0
+KQ30,WC,Don't Go Chasing Waterfalls,Jen & Micah's 1-Year Anniversary,2,1
+KQ30,WC,Shots Fired,ToXXXic,2,0
+KQ30,WC,Arcade AF,Domme,2,0
+KQ30,WC,Some Free Bees,Cora’s Explorers,2,0
+KQ30,WC,DON'T PANIC,The Leftovers,2,1
+KQ30,WC,Corn on the Cab,ALL FOUR ONE,2,0
+KQ30,WC,LaCroix Super Drank,Stinger Bell,2,0
+KQ30,KO,CHiSP,FaZe Clan,3,2
+KQ30,KO,Fam in Famine,Not Safe for Snail,3,1
+KQ30,KO,Hunks,JoshB's SF Squad,3,1
+KQ30,KO,OK Cool,Queen's Revenge,3,0
+KQ30,KO,"MATH, But Beta",Bee Bang Banditos,3,0
+KQ30,KO,Melissophilia,Thirty Shades of Day,3,0
+KQ30,KO,sapnu puas,Bonus Salt Queen,3,0
+KQ30,KO,Scott Christopher Aldridge,Chile Bee-Lleno,3,2
+KQ30,KO,Shots Fired,[loud daphane noises],3,2
+KQ30,KO,Seattle BooperSonics,Arcade AF,3,0
+KQ30,KO,Chum Bucket,Eat My Jorts,3,0
+KQ30,KO,bingu!,Spicy: La BoiXXX,3,1
+KQ30,KO,JoshB's SF Squad,Queen's Revenge,3,1
+KQ30,KO,Bee Bang Banditos,Thirty Shades of Day,3,1
+KQ30,KO,Arcade AF,Spicy: La BoiXXX,3,1
+KQ30,KO,Eat My Jorts,[loud daphane noises],3,2
+KQ30,KO,LL Sad J,Fam in Famine,3,0
+KQ30,KO,Uh,CHiSP,3,0
+KQ30,KO,Melissophilia,"MATH, But Beta",3,0
+KQ30,KO,Hunks,OK Cool,3,0
+KQ30,KO,Scott Christopher Aldridge,Sunshine Squad,3,1
+KQ30,KO,sapnu puas,The Yung Knuxxx,3,0
+KQ30,KO,Seattle BooperSonics,bingu!,3,0
+KQ30,KO,CHiSP,Arcade AF,3,0
+KQ30,KO,Fam in Famine,Eat My Jorts,3,0
+KQ30,KO,Chum Bucket,Shots Fired,3,1
+KQ30,KO,"MATH, But Beta",Bonus Salt Queen,3,2
+KQ30,KO,Chile Bee-Lleno,OK Cool,3,2
+KQ30,KO,JoshB's SF Squad,Sunshine Squad,3,2
+KQ30,KO,bingu!,FaZe Clan,3,1
+KQ30,KO,Bee Bang Banditos,The Yung Knuxxx,3,2
+KQ30,KO,Not Safe for Snail,Shots Fired,3,0
+KQ30,KO,"MATH, But Beta",Fam in Famine,3,2
+KQ30,KO,CHiSP,Chile Bee-Lleno,3,1
+KQ30,KO,Bee Bang Banditos,Not Safe for Snail,3,1
+KQ30,KO,bingu!,JoshB's SF Squad,3,1
+KQ30,KO,Uh,Hunks,3,0
+KQ30,KO,sapnu puas,Chum Bucket,3,0
+KQ30,KO,Melissophilia,LL Sad J,3,2
+KQ30,KO,LL Sad J,Melissophilia,3,2
+KQ30,KO,Scott Christopher Aldridge,Seattle BooperSonics,3,0
+KQ30,KO,Melissophilia,CHiSP,3,0
+KQ30,KO,Hunks,"MATH, But Beta",3,2
+KQ30,KO,Seattle BooperSonics,Bee Bang Banditos,3,1
+KQ30,KO,bingu!,Chum Bucket,3,2
+KQ30,KO,Melissophilia,Seattle BooperSonics,3,2
+KQ30,KO,bingu!,Hunks,3,2
+KQ30,KO,LL Sad J,Scott Christopher Aldridge,3,0
+KQ30,KO,Uh,sapnu puas,3,1
+KQ30,KO,Scott Christopher Aldridge,bingu!,3,1
+KQ30,KO,sapnu puas,Melissophilia,3,0
+KQ30,KO,Uh,LL Sad J,3,0
+KQ30,KO,Scott Christopher Aldridge,sapnu puas,3,1
+KQ30,KO,LL Sad J,Scott Christopher Aldridge,3,0
+KQ30,KO,Uh,LL Sad J,4,2
+BB4,A1,60%,ClusterDuc,3,0
+BB4,A1,Mr. Buth's Wildest Flex,SF Sekrit,0,3
+BB4,A1,"Dope Hair, Don't Care",#paulallenscard,2,1
+BB4,A1,I Write Wins Not Strategies,Fresh,2,1
+BB4,A1,60%,Top Bottoms,3,0
+BB4,A1,Mr. Buth's Wildest Flex,ClusterDuc,1,2
+BB4,A1,I Write Wins Not Strategies,SF Sekrit,1,2
+BB4,A1,Fresh,#paulallenscard,1,2
+BB4,A1,I Write Wins Not Strategies,ClusterDuc,1,2
+BB4,A1,#paulallenscard,SF Sekrit,0,3
+BB4,A1,60%,Mr. Buth's Wildest Flex,3,0
+BB4,A1,"Dope Hair, Don't Care",Top Bottoms,3,0
+BB4,A1,60%,"Dope Hair, Don't Care",2,1
+BB4,A1,I Write Wins Not Strategies,Mr. Buth's Wildest Flex,2,1
+BB4,A1,Fresh,Top Bottoms,3,0
+BB4,A1,#paulallenscard,ClusterDuc,1,2
+BB4,A1,60%,I Write Wins Not Strategies,3,0
+BB4,A1,Fresh,"Dope Hair, Don't Care",0,3
+BB4,A1,#paulallenscard,Mr. Buth's Wildest Flex,0,3
+BB4,A1,SF Sekrit,Top Bottoms,3,0
+BB4,A1,60%,Fresh,3,0
+BB4,A1,#paulallenscard,I Write Wins Not Strategies,0,3
+BB4,A1,SF Sekrit,"Dope Hair, Don't Care",1,2
+BB4,A1,ClusterDuc,Top Bottoms,3,0
+BB4,A1,60%,#paulallenscard,3,0
+BB4,A1,SF Sekrit,Fresh,3,0
+BB4,A1,ClusterDuc,"Dope Hair, Don't Care",0,3
+BB4,A1,Top Bottoms,Mr. Buth's Wildest Flex,1,2
+BB4,A1,60%,Fresh,2,1
+BB4,A1,Top Bottoms,I Write Wins Not Strategies,0,3
+BB4,A1,Mr. Buth's Wildest Flex,"Dope Hair, Don't Care",1,2
+BB4,A1,ClusterDuc,SF Sekrit,0,3
+BB4,A1,Top Bottoms,#paulallenscard,1,2
+BB4,A1,Mr. Buth's Wildest Flex,Fresh,3,0
+BB4,A1,"Dope Hair, Don't Care",I Write Wins Not Strategies,2,1
+BB4,A1,ClusterDuc,Fresh,2,1
+BB4,A2,YUH,Pierre Escargot,2,1
+BB4,A2,Seattle BooperSonics,Marina & the Diamonds,3,0
+BB4,A2,Keeper of the Shades™,Pilcerova's Hornets,3,0
+BB4,A2,Super Smash Bees,Dank Booty Apparel Company,2,1
+BB4,A2,YUH,grandpa-billy.rake,1,2
+BB4,A2,Seattle BooperSonics,Pierre Escargot,3,0
+BB4,A2,Super Smash Bees,Marina & the Diamonds,2,1
+BB4,A2,Dank Booty Apparel Company,Pilcerova's Hornets,3,0
+BB4,A2,Super Smash Bees,Pierre Escargot,0,3
+BB4,A2,Pilcerova's Hornets,Marina & the Diamonds,1,2
+BB4,A2,YUH,Seattle BooperSonics,1,2
+BB4,A2,Keeper of the Shades™,grandpa-billy.rake,2,1
+BB4,A2,YUH,Keeper of the Shades™,2,1
+BB4,A2,Super Smash Bees,Seattle BooperSonics,0,3
+BB4,A2,Dank Booty Apparel Company,grandpa-billy.rake,2,1
+BB4,A2,Pilcerova's Hornets,Pierre Escargot,0,3
+BB4,A2,YUH,Super Smash Bees,3,0
+BB4,A2,Dank Booty Apparel Company,Keeper of the Shades™,1,2
+BB4,A2,Pilcerova's Hornets,Seattle BooperSonics,0,3
+BB4,A2,Marina & the Diamonds,grandpa-billy.rake,0,3
+BB4,A2,YUH,Dank Booty Apparel Company,3,0
+BB4,A2,Pilcerova's Hornets,Super Smash Bees,0,3
+BB4,A2,Marina & the Diamonds,Keeper of the Shades™,0,3
+BB4,A2,Pierre Escargot,grandpa-billy.rake,2,1
+BB4,A2,YUH,Pilcerova's Hornets,3,0
+BB4,A2,Marina & the Diamonds,Dank Booty Apparel Company,0,3
+BB4,A2,Pierre Escargot,Keeper of the Shades™,3,0
+BB4,A2,grandpa-billy.rake,Seattle BooperSonics,2,1
+BB4,A2,YUH,Marina & the Diamonds,3,0
+BB4,A2,Pierre Escargot,Dank Booty Apparel Company,3,0
+BB4,A2,grandpa-billy.rake,Super Smash Bees,3,0
+BB4,A2,Seattle BooperSonics,Keeper of the Shades™,2,1
+BB4,A2,Pierre Escargot,Marina & the Diamonds,3,0
+BB4,A2,grandpa-billy.rake,Pilcerova's Hornets,3,0
+BB4,A2,Seattle BooperSonics,Dank Booty Apparel Company,3,0
+BB4,A2,Keeper of the Shades™,Super Smash Bees,3,0
+BB4,B1,Sting Theory,What is Coin Op?,3,0
+BB4,B1,Boops!...I did it again.,Queen's Revenge,0,3
+BB4,B1,Friendly Flyers,FSw/oU,0,3
+BB4,B1,Escarletsgo,The Spectators,2,1
+BB4,B1,Live Laugh Love,Bring Ingredient,3,0
+BB4,B1,Sting Theory,Boops!...I did it again.,3,0
+BB4,B1,Friendly Flyers,What is Coin Op?,1,2
+BB4,B1,Escarletsgo,Queen's Revenge,0,3
+BB4,B1,Live Laugh Love,FSw/oU,0,3
+BB4,B1,Bring Ingredient,The Spectators,2,1
+BB4,B1,Sting Theory,Friendly Flyers,3,0
+BB4,B1,Escarletsgo,Boops!...I did it again.,3,0
+BB4,B1,Live Laugh Love,What is Coin Op?,2,1
+BB4,B1,Bring Ingredient,Queen's Revenge,2,1
+BB4,B1,The Spectators,FSw/oU,0,3
+BB4,B1,Live Laugh Love,Friendly Flyers,3,0
+BB4,B1,Bring Ingredient,Boops!...I did it again.,2,1
+BB4,B1,The Spectators,What is Coin Op?,0,3
+BB4,B1,FSw/oU,Queen's Revenge,2,1
+BB4,B1,Sting Theory,Escarletsgo,3,0
+BB4,B1,Sting Theory,Live Laugh Love,3,0
+BB4,B1,Bring Ingredient,Escarletsgo,2,1
+BB4,B1,The Spectators,Friendly Flyers,1,2
+BB4,B1,FSw/oU,Boops!...I did it again.,3,0
+BB4,B1,Queen's Revenge,What is Coin Op?,3,0
+BB4,B1,Sting Theory,Bring Ingredient,3,0
+BB4,B1,The Spectators,Live Laugh Love,0,3
+BB4,B1,FSw/oU,Escarletsgo,3,0
+BB4,B1,Queen's Revenge,Friendly Flyers,3,0
+BB4,B1,What is Coin Op?,Boops!...I did it again.,3,0
+BB4,B1,Sting Theory,The Spectators,3,0
+BB4,B1,FSw/oU,Bring Ingredient,3,0
+BB4,B1,Queen's Revenge,Live Laugh Love,2,1
+BB4,B1,What is Coin Op?,Escarletsgo,2,1
+BB4,B1,Boops!...I did it again.,Friendly Flyers,1,2
+BB4,B1,Sting Theory,FSw/oU,3,0
+BB4,B1,Queen's Revenge,The Spectators,3,0
+BB4,B1,What is Coin Op?,Bring Ingredient,2,1
+BB4,B1,Boops!...I did it again.,Live Laugh Love,0,3
+BB4,B1,Friendly Flyers,Escarletsgo,0,3
+BB4,B1,Sting Theory,Queen's Revenge,3,0
+BB4,B1,What is Coin Op?,FSw/oU,1,2
+BB4,B1,Boops!...I did it again.,The Spectators,0,3
+BB4,B1,Friendly Flyers,Bring Ingredient,2,1
+BB4,B1,Escarletsgo,Live Laugh Love,0,3
+BB4,B2,Ni Howdy,oh no,2,1
+BB4,B2,Dick Cheney Profited Off The Iraq War,Just Practicing,2,1
+BB4,B2,Mologna Sandwich,Dumpster (J)Divers,2,1
+BB4,B2,Arguably,HoBB4,1,2
+BB4,B2,Ni Howdy,BOOM! Tetris,3,0
+BB4,B2,Dick Cheney Profited Off The Iraq War,oh no,0,3
+BB4,B2,Arguably,Just Practicing,1,2
+BB4,B2,HoBB4,Dumpster (J)Divers,3,0
+BB4,B2,Arguably,oh no,0,3
+BB4,B2,Dumpster (J)Divers,Just Practicing,0,3
+BB4,B2,Ni Howdy,Dick Cheney Profited Off The Iraq War,3,0
+BB4,B2,Mologna Sandwich,BOOM! Tetris,1,2
+BB4,B2,Ni Howdy,Mologna Sandwich,3,0
+BB4,B2,Arguably,Dick Cheney Profited Off The Iraq War,2,1
+BB4,B2,HoBB4,BOOM! Tetris,2,1
+BB4,B2,Dumpster (J)Divers,oh no,0,3
+BB4,B2,Ni Howdy,Arguably,3,0
+BB4,B2,HoBB4,Mologna Sandwich,2,1
+BB4,B2,Dumpster (J)Divers,Dick Cheney Profited Off The Iraq War,1,2
+BB4,B2,Just Practicing,BOOM! Tetris,3,0
+BB4,B2,Ni Howdy,HoBB4,3,0
+BB4,B2,Dumpster (J)Divers,Arguably,0,3
+BB4,B2,Just Practicing,Mologna Sandwich,3,0
+BB4,B2,oh no,BOOM! Tetris,3,0
+BB4,B2,Ni Howdy,Dumpster (J)Divers,3,0
+BB4,B2,Just Practicing,HoBB4,3,0
+BB4,B2,oh no,Mologna Sandwich,2,1
+BB4,B2,BOOM! Tetris,Dick Cheney Profited Off The Iraq War,1,2
+BB4,B2,Ni Howdy,Just Practicing,3,0
+BB4,B2,oh no,HoBB4,3,0
+BB4,B2,BOOM! Tetris,Arguably,1,2
+BB4,B2,Dick Cheney Profited Off The Iraq War,Mologna Sandwich,0,3
+BB4,B2,oh no,Just Practicing,3,0
+BB4,B2,BOOM! Tetris,Dumpster (J)Divers,3,0
+BB4,B2,Dick Cheney Profited Off The Iraq War,HoBB4,0,3
+BB4,B2,Mologna Sandwich,Arguably,0,3
+BB4,C1,POGS,Spicy Milk,1,2
+BB4,C1,Sydney's Side Bees,Oishīdesu ka?,0,3
+BB4,C1,Pince Harming,Big Mac and The McNuggets,2,1
+BB4,C1,Royal Jelly Jamboree,Double it!,0,3
+BB4,C1,POGS,Beemeditated Murder,3,0
+BB4,C1,Sydney's Side Bees,Spicy Milk,0,3
+BB4,C1,Royal Jelly Jamboree,Oishīdesu ka?,1,2
+BB4,C1,Double it!,Big Mac and The McNuggets,3,0
+BB4,C1,Royal Jelly Jamboree,Spicy Milk,0,3
+BB4,C1,Big Mac and The McNuggets,Oishīdesu ka?,2,1
+BB4,C1,POGS,Sydney's Side Bees,2,1
+BB4,C1,Pince Harming,Beemeditated Murder,3,0
+BB4,C1,POGS,Pince Harming,0,3
+BB4,C1,Royal Jelly Jamboree,Sydney's Side Bees,2,1
+BB4,C1,Double it!,Beemeditated Murder,3,0
+BB4,C1,Big Mac and The McNuggets,Spicy Milk,0,3
+BB4,C1,POGS,Royal Jelly Jamboree,3,0
+BB4,C1,Double it!,Pince Harming,1,2
+BB4,C1,Big Mac and The McNuggets,Sydney's Side Bees,3,0
+BB4,C1,Oishīdesu ka?,Beemeditated Murder,3,0
+BB4,C1,POGS,Double it!,2,1
+BB4,C1,Big Mac and The McNuggets,Royal Jelly Jamboree,3,0
+BB4,C1,Oishīdesu ka?,Pince Harming,0,3
+BB4,C1,Spicy Milk,Beemeditated Murder,3,0
+BB4,C1,POGS,Big Mac and The McNuggets,2,1
+BB4,C1,Oishīdesu ka?,Double it!,1,2
+BB4,C1,Spicy Milk,Pince Harming,2,1
+BB4,C1,Beemeditated Murder,Sydney's Side Bees,3,0
+BB4,C1,POGS,Oishīdesu ka?,2,1
+BB4,C1,Spicy Milk,Double it!,3,0
+BB4,C1,Beemeditated Murder,Royal Jelly Jamboree,1,2
+BB4,C1,Sydney's Side Bees,Pince Harming,0,3
+BB4,C1,Spicy Milk,Oishīdesu ka?,3,0
+BB4,C1,Beemeditated Murder,Big Mac and The McNuggets,0,3
+BB4,C1,Sydney's Side Bees,Double it!,0,3
+BB4,C1,Pince Harming,Royal Jelly Jamboree,3,0
+BB4,C2,BumbleTrash,A Good Sussparilla,1,2
+BB4,C2,Some Like It Honk,PIZZA,3,0
+BB4,C2,chicken nuggets,B. D. Ogre,3,0
+BB4,C2,Bubblegunk Campers,Put Your Hands In The Air,0,3
+BB4,C2,M A S K S,"Honey, I Killed the Queen!",3,0
+BB4,C2,BumbleTrash,Some Like It Honk,0,3
+BB4,C2,chicken nuggets,A Good Sussparilla,3,0
+BB4,C2,Bubblegunk Campers,PIZZA,1,2
+BB4,C2,M A S K S,B. D. Ogre,3,0
+BB4,C2,"Honey, I Killed the Queen!",Put Your Hands In The Air,0,3
+BB4,C2,BumbleTrash,chicken nuggets,0,3
+BB4,C2,Bubblegunk Campers,Some Like It Honk,0,3
+BB4,C2,M A S K S,A Good Sussparilla,1,2
+BB4,C2,"Honey, I Killed the Queen!",PIZZA,3,0
+BB4,C2,Put Your Hands In The Air,B. D. Ogre,3,0
+BB4,C2,M A S K S,chicken nuggets,1,2
+BB4,C2,"Honey, I Killed the Queen!",Some Like It Honk,1,2
+BB4,C2,Put Your Hands In The Air,A Good Sussparilla,2,1
+BB4,C2,B. D. Ogre,PIZZA,2,1
+BB4,C2,BumbleTrash,Bubblegunk Campers,3,0
+BB4,C2,BumbleTrash,M A S K S,3,0
+BB4,C2,"Honey, I Killed the Queen!",Bubblegunk Campers,3,0
+BB4,C2,Put Your Hands In The Air,chicken nuggets,2,1
+BB4,C2,B. D. Ogre,Some Like It Honk,1,2
+BB4,C2,PIZZA,A Good Sussparilla,0,3
+BB4,C2,BumbleTrash,"Honey, I Killed the Queen!",3,0
+BB4,C2,Put Your Hands In The Air,M A S K S,3,0
+BB4,C2,B. D. Ogre,Bubblegunk Campers,3,0
+BB4,C2,PIZZA,chicken nuggets,0,3
+BB4,C2,A Good Sussparilla,Some Like It Honk,3,0
+BB4,C2,BumbleTrash,Put Your Hands In The Air,0,3
+BB4,C2,B. D. Ogre,"Honey, I Killed the Queen!",0,3
+BB4,C2,PIZZA,M A S K S,0,3
+BB4,C2,A Good Sussparilla,Bubblegunk Campers,3,0
+BB4,C2,Some Like It Honk,chicken nuggets,0,3
+BB4,C2,BumbleTrash,B. D. Ogre,2,1
+BB4,C2,PIZZA,Put Your Hands In The Air,0,3
+BB4,C2,A Good Sussparilla,"Honey, I Killed the Queen!",3,0
+BB4,C2,Some Like It Honk,M A S K S,1,2
+BB4,C2,chicken nuggets,Bubblegunk Campers,3,0
+BB4,C2,BumbleTrash,PIZZA,3,0
+BB4,C2,A Good Sussparilla,B. D. Ogre,3,0
+BB4,C2,Some Like It Honk,Put Your Hands In The Air,0,3
+BB4,C2,chicken nuggets,"Honey, I Killed the Queen!",3,0
+BB4,C2,Bubblegunk Campers,M A S K S,0,3
+BB4,WC,Some Like It Honk,Mologna Sandwich,1,3
+BB4,WC,Mologna Sandwich,#paulallenscard,2,1
+BB4,WC,Some Like It Honk,Dank Booty Apparel Company,2,0
+BB4,WC,Mr. Buth's Wildest Flex,Dumpster (J)Divers,2,0
+BB4,WC,Dumpster (J)Divers,Mologna Sandwich,1,2
+BB4,WC,Dank Booty Apparel Company,#paulallenscard,0,2
+BB4,WC,Oishīdesu ka?,Mologna Sandwich,0,2
+BB4,WC,#paulallenscard,BOOM! Tetris,2,1
+BB4,WC,Some Like It Honk,Mologna Sandwich,2,0
+BB4,WC,Dank Booty Apparel Company,Dick Cheney Profited Off The Iraq War,2,0
+BB4,WC,Mr. Buth's Wildest Flex,Escarletsgo,2,1
+BB4,WC,#paulallenscard,Dumpster (J)Divers,1,2
+BB4,WC,Dick Cheney Profited Off The Iraq War,Oishīdesu ka?,1,2
+BB4,WC,Mologna Sandwich,Super Smash Bees,2,0
+BB4,WC,#paulallenscard,Bring Ingredient,2,0
+BB4,WC,Escarletsgo,BOOM! Tetris,0,2
+BB4,WC,Royal Jelly Jamboree,Oishīdesu ka?,0,2
+BB4,WC,Super Smash Bees,Fresh,2,0
+BB4,WC,Bring Ingredient,Marina & the Diamonds,2,0
+BB4,WC,BOOM! Tetris,The Spectators,2,0
+BB4,WC,Some Like It Honk,The Spectators,2,0
+BB4,WC,BOOM! Tetris,Mologna Sandwich,1,2
+BB4,WC,Dank Booty Apparel Company,Marina & the Diamonds,2,0
+BB4,WC,Bring Ingredient,Dick Cheney Profited Off The Iraq War,0,2
+BB4,WC,Mr. Buth's Wildest Flex,Fresh,2,0
+BB4,WC,Escarletsgo,Super Smash Bees,2,0
+BB4,WC,Oishīdesu ka?,#paulallenscard,0,2
+BB4,WC,"Honey, I Killed the Queen!",Dumpster (J)Divers,1,2
+BB4,WC,"Honey, I Killed the Queen!",Royal Jelly Jamboree,1,2
+BB4,WC,Oishīdesu ka?,Bubblegunk Campers,2,0
+BB4,WC,Super Smash Bees,B. D. Ogre,2,0
+BB4,WC,Fresh,Sydney's Side Bees,2,0
+BB4,WC,Bring Ingredient,Beemeditated Murder,2,0
+BB4,WC,Marina & the Diamonds,Top Bottoms,2,1
+BB4,WC,BOOM! Tetris,PIZZA,2,0
+BB4,WC,The Spectators,Friendly Flyers,2,0
+BB4,WC,Bubblegunk Campers,Boops!...I did it again.,2,1
+BB4,WC,Pilcerova's Hornets,Top Bottoms,0,2
+BB4,WC,The Spectators,Royal Jelly Jamboree,2,1
+BB4,WC,BOOM! Tetris,Bubblegunk Campers,2,0
+BB4,WC,Mologna Sandwich,Boops!...I did it again.,2,0
+BB4,WC,B. D. Ogre,Marina & the Diamonds,0,2
+BB4,WC,Dick Cheney Profited Off The Iraq War,Sydney's Side Bees,2,0
+BB4,WC,Fresh,Beemeditated Murder,2,0
+BB4,WC,Escarletsgo,Pilcerova's Hornets,2,0
+BB4,WC,Super Smash Bees,Top Bottoms,2,1
+BB4,WC,#paulallenscard,PIZZA,2,0
+BB4,WC,Friendly Flyers,Dumpster (J)Divers,1,2
+BB4,KO,Sting Theory,Ni Howdy,1,3
+BB4,KO,Sting Theory,60%,0,3
+BB4,KO,Seattle BooperSonics,60%,0,3
+BB4,KO,Sting Theory,60%,3,0
+BB4,KO,Ni Howdy,Live Laugh Love,3,0
+BB4,KO,Live Laugh Love,Seattle BooperSonics,1,3
+BB4,KO,60%,SF Sekrit,3,1
+BB4,KO,Put Your Hands In The Air,Seattle BooperSonics,1,3
+BB4,KO,SF Sekrit,Pince Harming,3,1
+BB4,KO,Ni Howdy,oh no,3,0
+BB4,KO,Live Laugh Love,SF Sekrit,3,2
+BB4,KO,Sting Theory,Seattle BooperSonics,3,0
+BB4,KO,60%,YUH,3,1
+BB4,KO,YUH,Put Your Hands In The Air,1,3
+BB4,KO,Seattle BooperSonics,FSw/oU,3,2
+BB4,KO,SF Sekrit,"Dope Hair, Don't Care",3,0
+BB4,KO,oh no,Pince Harming,1,3
+BB4,KO,What is Coin Op?,Put Your Hands In The Air,0,3
+BB4,KO,FSw/oU,A Good Sussparilla,3,0
+BB4,KO,grandpa-billy.rake,"Dope Hair, Don't Care",1,3
+BB4,KO,Pince Harming,Double it!,3,1
+BB4,KO,Sting Theory,Double it!,3,0
+BB4,KO,Seattle BooperSonics,Pince Harming,3,2
+BB4,KO,60%,"Dope Hair, Don't Care",3,0
+BB4,KO,HoBB4,YUH,1,3
+BB4,KO,Ni Howdy,A Good Sussparilla,3,0
+BB4,KO,oh no,FSw/oU,3,0
+BB4,KO,Put Your Hands In The Air,Live Laugh Love,2,3
+BB4,KO,What is Coin Op?,SF Sekrit,0,3
+BB4,KO,What is Coin Op?,Queen's Revenge,3,0
+BB4,KO,Put Your Hands In The Air,I Write Wins Not Strategies,3,0
+BB4,KO,FSw/oU,Just Practicing,3,1
+BB4,KO,A Good Sussparilla,POGS,3,0
+BB4,KO,HoBB4,grandpa-billy.rake,0,3
+BB4,KO,"Dope Hair, Don't Care",Big Mac and The McNuggets,3,0
+BB4,KO,Pince Harming,Pierre Escargot,3,0
+BB4,KO,Double it!,chicken nuggets,3,2
+BB4,KO,Mologna Sandwich,Queen's Revenge,1,3
+BB4,KO,I Write Wins Not Strategies,BumbleTrash,3,1
+BB4,KO,Arguably,Just Practicing,0,3
+BB4,KO,Spicy Milk,POGS,2,3
+BB4,KO,Mr. Buth's Wildest Flex,grandpa-billy.rake,0,3
+BB4,KO,Big Mac and The McNuggets,M A S K S,3,1
+BB4,KO,ClusterDuc,Pierre Escargot,1,3
+BB4,KO,chicken nuggets,Keeper of the Shades™,3,0
+BB4,KO,Sting Theory,Mologna Sandwich,3,0
+BB4,KO,Queen's Revenge,Double it!,1,3
+BB4,KO,Seattle BooperSonics,I Write Wins Not Strategies,3,0
+BB4,KO,Pince Harming,BumbleTrash,3,2
+BB4,KO,60%,Arguably,3,0
+BB4,KO,"Dope Hair, Don't Care",Just Practicing,3,0
+BB4,KO,Spicy Milk,HoBB4,0,3
+BB4,KO,YUH,POGS,3,0
+BB4,KO,Ni Howdy,Mr. Buth's Wildest Flex,3,0
+BB4,KO,A Good Sussparilla,grandpa-billy.rake,3,1
+BB4,KO,oh no,Big Mac and The McNuggets,3,0
+BB4,KO,FSw/oU,M A S K S,3,0
+BB4,KO,Put Your Hands In The Air,ClusterDuc,3,0
+BB4,KO,Pierre Escargot,Live Laugh Love,0,3
+BB4,KO,chicken nuggets,What is Coin Op?,2,3
+BB4,KO,SF Sekrit,Keeper of the Shades™,3,0
+BB4,KO,Ni Howdy,60%,4,3
+HH2,Swiss Pools,TEAM SERMOR,Hive it Our Way,0,3
+HH2,Swiss Pools,Sumo Berry Boys,Jennifer Connelly in Phenomena,2,1
+HH2,Swiss Pools,Duck Hunt,Double Dreygon,0,3
+HH2,Swiss Pools,"You, Me, and Rick James",Bee Day Squad,0,3
+HH2,Swiss Pools,Berry Gives You Wings,Queens of the Drone Age,0,3
+HH2,Swiss Pools,Mini Mob,Got Gitted Good,0,3
+HH2,Swiss Pools,Mulholland Dive,Bumpkin Spice Latte,0,3
+HH2,Swiss Pools,Game of Combs,Two Week Notice,0,3
+HH2,Swiss Pools,"You, Me, and Rick James",TEAM SERMOR,3,0
+HH2,Swiss Pools,Mulholland Dive,Mini Mob,3,0
+HH2,Swiss Pools,Game of Combs,Berry Gives You Wings,3,0
+HH2,Swiss Pools,Jennifer Connelly in Phenomena,Duck Hunt,0,3
+HH2,Swiss Pools,Hive it Our Way,Sumo Berry Boys,3,0
+HH2,Swiss Pools,Queens of the Drone Age,Double Dreygon,2,1
+HH2,Swiss Pools,Bumpkin Spice Latte,Got Gitted Good,0,3
+HH2,Swiss Pools,Two Week Notice,Bee Day Squad,2,1
+HH2,Swiss Pools,Mini Mob,TEAM SERMOR,3,0
+HH2,Swiss Pools,Jennifer Connelly in Phenomena,Berry Gives You Wings,3,0
+HH2,Swiss Pools,Bumpkin Spice Latte,Sumo Berry Boys,3,0
+HH2,Swiss Pools,Mulholland Dive,Duck Hunt,1,2
+HH2,Swiss Pools,Game of Combs,"You, Me, and Rick James",1,2
+HH2,Swiss Pools,Bee Day Squad,Double Dreygon,0,3
+HH2,Swiss Pools,Two Week Notice,Queens of the Drone Age,1,2
+HH2,Swiss Pools,Got Gitted Good,Hive it Our Way,3,0
+HH2,Swiss Pools,Double Dreygon,Bumpkin Spice Latte,3,0
+HH2,Swiss Pools,Got Gitted Good,Queens of the Drone Age,1,2
+HH2,Swiss Pools,Berry Gives You Wings,TEAM SERMOR,3,0
+HH2,Swiss Pools,Mini Mob,Sumo Berry Boys,0,3
+HH2,Swiss Pools,Mulholland Dive,Jennifer Connelly in Phenomena,3,0
+HH2,Swiss Pools,Game of Combs,Bee Day Squad,0,3
+HH2,Swiss Pools,"You, Me, and Rick James",Duck Hunt,1,2
+HH2,Swiss Pools,Two Week Notice,Hive it Our Way,2,1
+HH2,Swiss Pools,TEAM SERMOR,Jennifer Connelly in Phenomena,0,3
+HH2,Swiss Pools,Berry Gives You Wings,Mini Mob,3,0
+HH2,Swiss Pools,Sumo Berry Boys,Game of Combs,3,0
+HH2,Swiss Pools,"You, Me, and Rick James",Bumpkin Spice Latte,1,2
+HH2,Swiss Pools,Bee Day Squad,Hive it Our Way,2,1
+HH2,Swiss Pools,Two Week Notice,Mulholland Dive,3,0
+HH2,Swiss Pools,Queens of the Drone Age,Duck Hunt,3,0
+HH2,Swiss Pools,Got Gitted Good,Double Dreygon,1,2
+HH2,Swiss Pools,Duck Hunt,Berry Gives You Wings,3,0
+HH2,Swiss Pools,TEAM SERMOR,Game of Combs,0,3
+HH2,Swiss Pools,Mini Mob,Jennifer Connelly in Phenomena,0,3
+HH2,Swiss Pools,Mulholland Dive,"You, Me, and Rick James",0,3
+HH2,Swiss Pools,Bumpkin Spice Latte,Hive it Our Way,0,3
+HH2,Swiss Pools,Got Gitted Good,Two Week Notice,1,2
+HH2,Swiss Pools,Double Dreygon,Sumo Berry Boys,3,0
+HH2,Swiss Pools,Queens of the Drone Age,Bee Day Squad,2,1
+HH2,Swiss Pools,Sumo Berry Boys,Berry Gives You Wings,3,0
+HH2,Swiss Pools,Jennifer Connelly in Phenomena,Game of Combs,3,0
+HH2,Swiss Pools,TEAM SERMOR,Mulholland Dive,0,3
+HH2,Swiss Pools,Mini Mob,Bumpkin Spice Latte,0,3
+HH2,Swiss Pools,Duck Hunt,Bee Day Squad,1,2
+HH2,Swiss Pools,Got Gitted Good,"You, Me, and Rick James",3,0
+HH2,Swiss Pools,Queens of the Drone Age,Hive it Our Way,3,0
+HH2,Swiss Pools,Double Dreygon,Two Week Notice,2,1
+HH2,KO,Got Gitted Good,Bee Day Squad,1,3
+HH2,KO,Double Dreygon,Hive it Our Way,3,0
+HH2,KO,Two Week Notice,Jennifer Connelly in Phenomena,3,0
+HH2,KO,Queens of the Drone Age,Bumpkin Spice Latte,3,0
+HH2,KO,Hive it Our Way,Got Gitted Good,0,3
+HH2,KO,Bumpkin Spice Latte,Jennifer Connelly in Phenomena,3,0
+HH2,KO,Queens of the Drone Age,Got Gitted Good,1,3
+HH2,KO,Bee Day Squad,Bumpkin Spice Latte,2,3
+HH2,KO,Double Dreygon,Bee Day Squad,3,1
+HH2,KO,Queens of the Drone Age,Two Week Notice,1,3
+HH2,KO,Bumpkin Spice Latte,Got Gitted Good,0,3
+HH2,KO,Two Week Notice,Got Gitted Good,2,3
+HH2,KO,Two Week Notice,Double Dreygon,0,3
+HH2,KO,Double Dreygon,Got Gitted Good,0,3
+HH2,KO,Got Gitted Good,Double Dreygon,2,3
