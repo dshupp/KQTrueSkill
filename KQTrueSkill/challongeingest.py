@@ -100,15 +100,15 @@ class ChallongeTournament:
 
 def main():
     print(f"testing challonge integration")
-    subtourney_id: int = 5689203  # GDC4 Groups 1
-    tourney_name: str = "GDC4"
+    # subtourney_id: int = 5689203  # GDC4 Groups 1
+    subtourney_id: int = 4415714 # GDC3 DE
+    tourney_name: str = "GDC3"
     account: ChallongeAccount = ChallongeAccount()
     ct: ChallongeTournament = account.get_tournament(tourney_name, subtourney_id)
 
     tourneys: [] = account.get_tourney_list()
-
     for t in tourneys:
-        print(f"{t}")
+        print(f"{t['tournament']}")
 
 
 if __name__ == '__main__':

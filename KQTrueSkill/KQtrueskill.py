@@ -1,3 +1,5 @@
+import filecmp
+
 from trueskill import *
 import csv
 
@@ -73,10 +75,10 @@ class KQTrueSkill:
             line_count = 0
             for row in csv_reader:
                 if line_count == 0:
-                    print(f' Game Results Column names are {", ".join(row)}')
+                    #  print(f' Game Results Column names are {", ".join(row)}')
                     line_count += 1
                 else:
-                    print(f'\t{row[0]}, {row[1]}, {row[2]}, {row[3]}, {row[4]}, {row[5]}.')
+                    # print(f'\t{row[0]}, {row[1]}, {row[2]}, {row[3]}, {row[4]}, {row[5]}.')
                     tournament = row[0]
                     bracket = row[1]
                     team1name = row[2]
@@ -96,21 +98,22 @@ class KQTrueSkill:
                         # print(f'\tGot rating for {team2name}/{player}')
                     # print(f'\tt1ratings: {t1ratings}\n\tt2ratings: {t2ratings}')
                     # update ratings for each game win
-                    print(f'\tupdate ratings for {team1name} {team1wins}-{team2wins} {team2name}:')
-                    print(
-                        f'\tt1players: {teams[tournament][team1name]}\n\tt1ratings: {t1ratings}\n\tt2players: {teams[tournament][team2name]}\n\tt2ratings: {t2ratings}')
+                    # print(f'\tupdate ratings for {team1name} {team1wins}-{team2wins} {team2name}:')
+                    # print(f'\tt1players: {teams[tournament][team1name]}\n\tt1ratings: {t1ratings}\n\tt2players: {teams[tournament][team2name]}\n\tt2ratings: {t2ratings}')
                     for x in range(team1wins):
-                        print(f'\t{team1name} won a game')
+                        # print(f'\t{team1name} won a game')
                         t1ratings, t2ratings = rate([t1ratings, t2ratings], ranks=[0, 1])
                         # print(f'\tt1players: {teams[tournament][team1name]}\nt1ratings: {t1ratings}\n\tt2players: {teams[tournament][team2name]}\nt2ratings: {t2ratings}')
                     else:
-                        print(f'\tdone with t1')
+                        # print(f'\tdone with t1')
+                        pass
                     for x in range(team2wins):
-                        print(f'\t{team2name} won a game')
+                        # print(f'\t{team2name} won a game')
                         t1ratings, t2ratings = rate([t1ratings, t2ratings], ranks=[1, 0])
                         # print(f'\tt1players: {teams[tournament][team1name]}\nt1ratings: {t1ratings}\n\tt2players: {teams[tournament][team2name]}\nt2ratings: {t2ratings}')
                     else:
-                        print(f'\tdone with t2')
+                        # print(f'\tdone with t2')
+                        pass
 
                     # now put the ratings back into the main dict
                     for i in range(5):
@@ -119,8 +122,7 @@ class KQTrueSkill:
                     for i in range(5):
                         playerratings[teams[tournament][team2name][i]] = t2ratings[i]
                         # print(f'\tPut rating for {team2name}/{teams[tournament][team2name][i]}')
-                    print(
-                        f'\tt1players: {teams[tournament][team1name]}\n\tt1ratings: {t1ratings}\n\tt2players: {teams[tournament][team2name]}\n\tt2ratings: {t2ratings}')
+                    # print(f'\tt1players: {teams[tournament][team1name]}\n\tt1ratings: {t1ratings}\n\tt2players: {teams[tournament][team2name]}\n\tt2ratings: {t2ratings}')
 
                     # either always put ratings objects right back onto the player, or use a dict that references player name->rating object
 
@@ -143,6 +145,11 @@ class KQTrueSkill:
 
 def main():
     KQTrueSkill.process()
+    # test whether processing changed values
+    if filecmp.cmp("2019PlayerSkill.old.csv", "2019PlayerSkill.old.csv"):
+        print("Files are same")
+    else:
+        print("Files are different")
 
 
 if __name__ == '__main__':
