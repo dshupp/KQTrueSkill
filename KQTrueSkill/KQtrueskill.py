@@ -7,17 +7,94 @@ import csv
 
 class KQTrueSkill:
 
+    def __init__(self):
+        self.playerscenes = {}
+        self.playerteams = {}
+        self.playerratings = {}
+        self.playertournaments = {}  # playertournaments[playername] = {"BB4","KQ30",...}
+        self.playergames = {}
+        self.tournaments = []
+        self.teams = {}  # [tournament][team name] = {p1, p2, p3...}
+        self.output_file_name: str = '2019PlayerSkill.csv'
 
     def process(self):
-        playerscenes = {}
-        playerteams = {}
-        playerratings = {}
-        playertournaments = {}  # playertournaments[playername] = {"BB4","KQ30",...}
-        playergames = {}
-        tournaments = []
-        teams = {}  # [tournament][team name] = {p1, p2, p3...}
-        BB4ratings = {}
+        # ingest all your players
+        self.ingest_2019_players()
 
+        # ingest all your matches. sort them into historical order
+        matches: [] = self.ingest_2019_games()
+        ordered_matches = sorted(matches, key=lambda match: match["time"])
+
+        # run trueskill on the matches
+        self.calculate_trueskills(ordered_matches)
+
+        # print your player ratings
+        self.write_player_ratings()
+
+        print(f'Player Ratings: {self.playerratings}')
+
+    def calculate_trueskills(self, ordered_matches):
+        for m in ordered_matches:
+            t1ratings = []
+            t2ratings = []
+            tournament: str = m['tournament']
+            team1name: str = m['team1name']
+            team2name: str = m['team2name']
+            team1wins: int = m['team1wins']
+            team2wins: int = m['team2wins']
+
+            for player in self.teams[tournament][team1name]:
+                t1ratings.append(self.playerratings[player])
+                self.playergames[player] += team1wins + team2wins  # update player games count
+                # print(f'\tGot rating for {team1name}/{player}')
+            for player in self.teams[tournament][team2name]:
+                t2ratings.append(self.playerratings[player])
+                self.playergames[player] += team1wins + team2wins  # update player games count
+                # print(f'\tGot rating for {team2name}/{player}')
+            # print(f'\tt1ratings: {t1ratings}\n\tt2ratings: {t2ratings}')
+            # update ratings for each game win
+            # print(f'\tupdate ratings for {team1name} {team1wins}-{team2wins} {team2name}:')
+            # print(f'\tt1players: {teams[tournament][team1name]}\n\tt1ratings: {t1ratings}\n\tt2players: {teams[tournament][team2name]}\n\tt2ratings: {t2ratings}')
+            for x in range(team1wins):
+                # print(f'\t{team1name} won a game')
+                t1ratings, t2ratings = rate([t1ratings, t2ratings], ranks=[0, 1])
+                # print(f'\tt1players: {teams[tournament][team1name]}\nt1ratings: {t1ratings}\n\tt2players: {teams[tournament][team2name]}\nt2ratings: {t2ratings}')
+            else:
+                # print(f'\tdone with t1')
+                pass
+            for x in range(team2wins):
+                # print(f'\t{team2name} won a game')
+                t1ratings, t2ratings = rate([t1ratings, t2ratings], ranks=[1, 0])
+                # print(f'\tt1players: {teams[tournament][team1name]}\nt1ratings: {t1ratings}\n\tt2players: {teams[tournament][team2name]}\nt2ratings: {t2ratings}')
+            else:
+                # print(f'\tdone with t2')
+                pass
+
+            # now put the ratings back into the main dict
+            for i in range(5):
+                self.playerratings[self.teams[tournament][team1name][i]] = t1ratings[i]
+                # print(f'\tPut rating for {team1name}/{teams[tournament][team1name][i]}')
+            for i in range(5):
+                self.playerratings[self.teams[tournament][team2name][i]] = t2ratings[i]
+                # print(f'\tPut rating for {team2name}/{teams[tournament][team2name][i]}')
+            # print(f'\tt1players: {teams[tournament][team1name]}\n\tt1ratings: {t1ratings}\n\tt2players: {teams[tournament][team2name]}\n\tt2ratings: {t2ratings}')
+
+            # either always put ratings objects right back onto the player, or use a dict that references player name->rating object
+
+    def write_player_ratings(self):
+        with open(self.output_file_name, mode='w') as playerskillfile:
+            playerskill_writer = csv.writer(playerskillfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+
+            playerskill_writer.writerow(['Player Name', 'mu', 'sigma', 'tourneys', 'games', 'teams'])
+            for player in self.playerratings.keys():
+                row = [player, self.playerratings[player].mu, self.playerratings[player].sigma,
+                       len(self.playertournaments[player]),
+                       self.playergames[player]]
+                for team in self.playerteams[player]:
+                    row.append(team)
+                playerskill_writer.writerow(row)
+
+    def ingest_2019_players(self):
         with open('2019 KQ - 2019 Players.csv') as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=',')
             line_count = 0
@@ -32,46 +109,46 @@ class KQTrueSkill:
                     playerscene = row[3]
 
                     # assumption - teams/games expect tournaments to be processed in order (tourney 1 teams/games listed first, tourney 2 second, etc
-                    if tournament not in tournaments:
-                        tournaments.append(tournament)
-                        teams[tournament] = {}
+                    if tournament not in self.tournaments:
+                        self.tournaments.append(tournament)
+                        self.teams[tournament] = {}
 
                     print(f'\t{playername}, {playerscene}, {playerteam}.')
-                    playerscenes[playername] = playerscene
-                    # unused?
-                    # playerteams[playername] = playerteam # use .append() here if we need this later
+                    self.playerscenes[playername] = playerscene
 
-                    if playerteam in teams[tournament].keys():
+                    if playerteam in self.teams[tournament].keys():
                         print(
-                            f'\tteams[{tournament}][{playerteam}] is {teams[tournament][playerteam]}, adding {playername}')
-                        teams[tournament][playerteam].append(playername)
+                            f'\tteams[{tournament}][{playerteam}] is {self.teams[tournament][playerteam]}, adding {playername}')
+                        self.teams[tournament][playerteam].append(playername)
                     else:
-                        teams[tournament][playerteam] = [playername]
+                        self.teams[tournament][playerteam] = [playername]
                         print(
-                            f'\tmade new team for {playerteam}. teams[{tournament}][{playerteam}] is {teams[tournament][playerteam]}')
+                            f'\tmade new team for {playerteam}. teams[{tournament}][{playerteam}] is {self.teams[tournament][playerteam]}')
 
-                    playerratings[playername] = Rating()
+                    self.playerratings[playername] = Rating()
                     print(f'\tmade Rating object for {playerteam}/{playername}.')
 
-                    if playername in playerteams.keys():
-                        playerteams[playername].append(playerteam + '/' + tournament)
+                    if playername in self.playerteams.keys():
+                        self.playerteams[playername].append(playerteam + '/' + tournament)
                     else:
-                        playerteams[playername] = [playerteam + '/' + tournament]
+                        self.playerteams[playername] = [playerteam + '/' + tournament]
 
-                    if playername in playertournaments.keys():
-                        playertournaments[playername].append(tournament)
+                    if playername in self.playertournaments.keys():
+                        self.playertournaments[playername].append(tournament)
                     else:
-                        playertournaments[playername] = [tournament]
-                    print(f'\t\tplayertournaments[{playername}] = {playertournaments[playername]}.')
+                        self.playertournaments[playername] = [tournament]
+                    print(f'\t\tplayertournaments[{playername}] = {self.playertournaments[playername]}.')
 
-                    playergames[playername] = 0
+                    self.playergames[playername] = 0
 
                     line_count += 1
             print(f'Processed {line_count} lines.')
-            print(f'Player Scenes: {playerscenes}')
-            print(f'****TEAMS: {teams}')
+            print(f'Player Scenes: {self.playerscenes}')
+            print(f'****TEAMS: {self.teams}')
 
+    def ingest_2019_games(self):
         matches: [] = []
+
         with open('2019 KQ - 2019 game results.csv') as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=',')
             line_count = 0
@@ -100,68 +177,7 @@ class KQTrueSkill:
                          })
                     line_count += 1
         print(f"Processed {line_count} lines, matches has {len(matches)} entries.")
-
-        ordered_matches = sorted(matches, key=lambda match: match["time"])
-
-        for m in ordered_matches:
-            t1ratings = []
-            t2ratings = []
-            tournament: str = m['tournament']
-            team1name: str = m['team1name']
-            team2name: str = m['team2name']
-            team1wins: int = m['team1wins']
-            team2wins: int = m['team2wins']
-
-            for player in teams[tournament][team1name]:
-                t1ratings.append(playerratings[player])
-                playergames[player] += team1wins + team2wins  # update player games count
-                # print(f'\tGot rating for {team1name}/{player}')
-            for player in teams[tournament][team2name]:
-                t2ratings.append(playerratings[player])
-                playergames[player] += team1wins + team2wins  # update player games count
-                # print(f'\tGot rating for {team2name}/{player}')
-            # print(f'\tt1ratings: {t1ratings}\n\tt2ratings: {t2ratings}')
-            # update ratings for each game win
-            # print(f'\tupdate ratings for {team1name} {team1wins}-{team2wins} {team2name}:')
-            # print(f'\tt1players: {teams[tournament][team1name]}\n\tt1ratings: {t1ratings}\n\tt2players: {teams[tournament][team2name]}\n\tt2ratings: {t2ratings}')
-            for x in range(team1wins):
-                # print(f'\t{team1name} won a game')
-                t1ratings, t2ratings = rate([t1ratings, t2ratings], ranks=[0, 1])
-                # print(f'\tt1players: {teams[tournament][team1name]}\nt1ratings: {t1ratings}\n\tt2players: {teams[tournament][team2name]}\nt2ratings: {t2ratings}')
-            else:
-                # print(f'\tdone with t1')
-                pass
-            for x in range(team2wins):
-                # print(f'\t{team2name} won a game')
-                t1ratings, t2ratings = rate([t1ratings, t2ratings], ranks=[1, 0])
-                # print(f'\tt1players: {teams[tournament][team1name]}\nt1ratings: {t1ratings}\n\tt2players: {teams[tournament][team2name]}\nt2ratings: {t2ratings}')
-            else:
-                # print(f'\tdone with t2')
-                pass
-
-            # now put the ratings back into the main dict
-            for i in range(5):
-                playerratings[teams[tournament][team1name][i]] = t1ratings[i]
-                # print(f'\tPut rating for {team1name}/{teams[tournament][team1name][i]}')
-            for i in range(5):
-                playerratings[teams[tournament][team2name][i]] = t2ratings[i]
-                # print(f'\tPut rating for {team2name}/{teams[tournament][team2name][i]}')
-            # print(f'\tt1players: {teams[tournament][team1name]}\n\tt1ratings: {t1ratings}\n\tt2players: {teams[tournament][team2name]}\n\tt2ratings: {t2ratings}')
-
-            # either always put ratings objects right back onto the player, or use a dict that references player name->rating object
-
-        with open('2019PlayerSkill.csv', mode='w') as playerskillfile:
-            playerskill_writer = csv.writer(playerskillfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-
-            playerskill_writer.writerow(['Player Name', 'mu', 'sigma', 'tourneys', 'games', 'teams'])
-            for player in playerratings.keys():
-                row = [player, playerratings[player].mu, playerratings[player].sigma, len(playertournaments[player]),
-                       playergames[player]]
-                for team in playerteams[player]:
-                    row.append(team)
-                playerskill_writer.writerow(row)
-
-        print(f'Player Ratings: {playerratings}')
+        return matches
 
 
 def main():
