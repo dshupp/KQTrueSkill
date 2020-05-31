@@ -6,8 +6,10 @@ import csv
 
 
 class KQTrueSkill:
+    datetime_format: str = "%Y-%m-%dT%H:%M:%S%z"
 
     def __init__(self):
+        self.matches: [] = []
         self.playerscenes = {}
         self.playerteams = {}
         self.playerratings = {}
@@ -16,25 +18,25 @@ class KQTrueSkill:
         self.tournaments = []
         self.teams = {}  # [tournament][team name] = {p1, p2, p3...}
         self.output_file_name: str = '2019PlayerSkill.csv'
+        self.process()
 
     def process(self):
         # ingest all your players
-        self.ingest_2019_players()
+        self.ingest_dataset('datasets/2019 KQ - 2019 Players.csv', 'datasets/2019 KQ - 2019 game results.csv')
+        self.ingest_dataset('datasets/2018 KQ - GDC3 Players.csv', 'datasets/2018 KQ - GDC3 game results.csv')
 
         # ingest all your matches. sort them into historical order
-        matches: [] = self.ingest_2019_games()
-        ordered_matches = sorted(matches, key=lambda match: match["time"])
 
         # run trueskill on the matches
-        self.calculate_trueskills(ordered_matches)
+        self.calculate_trueskills()
 
-        # print your player ratings
-        self.write_player_ratings()
+    def ingest_dataset(self, playerfile: str, matchfile: str):
+        self.ingest_players_from_file(playerfile)
+        self.ingest_matches_from_file(matchfile)
+        self.matches = sorted(self.matches, key=lambda match: match["time"])
 
-        print(f'Player Ratings: {self.playerratings}')
-
-    def calculate_trueskills(self, ordered_matches):
-        for m in ordered_matches:
+    def calculate_trueskills(self):
+        for m in self.matches:
             t1ratings = []
             t2ratings = []
             tournament: str = m['tournament']
@@ -81,21 +83,25 @@ class KQTrueSkill:
 
             # either always put ratings objects right back onto the player, or use a dict that references player name->rating object
 
-    def write_player_ratings(self):
-        with open(self.output_file_name, mode='w') as playerskillfile:
+    def write_player_ratings(self, filename: str = None):
+        if filename is None:
+            filename = self.output_file_name
+        with open(filename, mode='w') as playerskillfile:
             playerskill_writer = csv.writer(playerskillfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
-            playerskill_writer.writerow(['Player Name', 'mu', 'sigma', 'tourneys', 'games', 'teams'])
+            playerskill_writer.writerow(['Player Name', 'scene', 'mu', 'sigma', 'trueskill', 'tourneys', 'games', 'teams'])
             for player in self.playerratings.keys():
-                row = [player, self.playerratings[player].mu, self.playerratings[player].sigma,
+                row = [player, self.playerscenes[player], self.playerratings[player].mu,
+                       self.playerratings[player].sigma,
+                       self.playerratings[player].mu - 2 * self.playerratings[player].sigma,
                        len(self.playertournaments[player]),
                        self.playergames[player]]
                 for team in self.playerteams[player]:
                     row.append(team)
                 playerskill_writer.writerow(row)
 
-    def ingest_2019_players(self):
-        with open('2019 KQ - 2019 Players.csv') as csv_file:
+    def ingest_players_from_file(self, filename: str):
+        with open(filename) as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=',')
             line_count = 0
             for row in csv_reader:
@@ -107,54 +113,47 @@ class KQTrueSkill:
                     playerteam = row[1]
                     playername = row[2]
                     playerscene = row[3]
-
-                    # assumption - teams/games expect tournaments to be processed in order (tourney 1 teams/games listed first, tourney 2 second, etc
-                    if tournament not in self.tournaments:
-                        self.tournaments.append(tournament)
-                        self.teams[tournament] = {}
-
-                    print(f'\t{playername}, {playerscene}, {playerteam}.')
-                    self.playerscenes[playername] = playerscene
-
-                    if playerteam in self.teams[tournament].keys():
-                        print(
-                            f'\tteams[{tournament}][{playerteam}] is {self.teams[tournament][playerteam]}, adding {playername}')
-                        self.teams[tournament][playerteam].append(playername)
-                    else:
-                        self.teams[tournament][playerteam] = [playername]
-                        print(
-                            f'\tmade new team for {playerteam}. teams[{tournament}][{playerteam}] is {self.teams[tournament][playerteam]}')
-
-                    self.playerratings[playername] = Rating()
-                    print(f'\tmade Rating object for {playerteam}/{playername}.')
-
-                    if playername in self.playerteams.keys():
-                        self.playerteams[playername].append(playerteam + '/' + tournament)
-                    else:
-                        self.playerteams[playername] = [playerteam + '/' + tournament]
-
-                    if playername in self.playertournaments.keys():
-                        self.playertournaments[playername].append(tournament)
-                    else:
-                        self.playertournaments[playername] = [tournament]
-                    print(f'\t\tplayertournaments[{playername}] = {self.playertournaments[playername]}.')
-
-                    self.playergames[playername] = 0
-
+                    self.add_player(playername, playerscene, playerteam, tournament)
                     line_count += 1
             print(f'Processed {line_count} lines.')
             print(f'Player Scenes: {self.playerscenes}')
             print(f'****TEAMS: {self.teams}')
 
-    def ingest_2019_games(self):
-        matches: [] = []
+    def add_player(self, playername, playerscene, playerteam, tournament):
+        # assumption - teams/games expect tournaments to be processed in order (tourney 1 teams/games listed first, tourney 2 second, etc
+        if tournament not in self.tournaments:
+            self.tournaments.append(tournament)
+            self.teams[tournament] = {}
+        # print(f'\t{playername}, {playerscene}, {playerteam}.')
+        self.playerscenes[playername] = playerscene
+        if playerteam in self.teams[tournament].keys():
+            # print(
+            #     f'\tteams[{tournament}][{playerteam}] is {self.teams[tournament][playerteam]}, adding {playername}')
+            self.teams[tournament][playerteam].append(playername)
+        else:
+            self.teams[tournament][playerteam] = [playername]
+            # print(
+            #     f'\tmade new team for {playerteam}. teams[{tournament}][{playerteam}] is {self.teams[tournament][playerteam]}')
+        self.playerratings[playername] = Rating()
+        # print(f'\tmade Rating object for {playerteam}/{playername}.')
+        if playername in self.playerteams.keys():
+            self.playerteams[playername].append(playerteam + '/' + tournament)
+        else:
+            self.playerteams[playername] = [playerteam + '/' + tournament]
+        if playername in self.playertournaments.keys():
+            self.playertournaments[playername].append(tournament)
+        else:
+            self.playertournaments[playername] = [tournament]
+        # print(f'\t\tplayertournaments[{playername}] = {self.playertournaments[playername]}.')
+        self.playergames[playername] = 0
 
-        with open('2019 KQ - 2019 game results.csv') as csv_file:
+    def ingest_matches_from_file(self, filename: str):
+        with open(filename) as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=',')
             line_count = 0
             for row in csv_reader:
                 if line_count == 0:
-                    #  print(f' Game Results Column names are {", ".join(row)}')
+                    # print(f' Game Results Column names are {", ".join(row)}')
                     line_count += 1
                 else:
                     # print(f'\t{row[0]}, {row[1]}, {row[2]}, {row[3]}, {row[4]}, {row[5]}, {row[6]}.')
@@ -164,9 +163,20 @@ class KQTrueSkill:
                     team2name = row[3]
                     team1wins = int(row[4])
                     team2wins = int(row[5])
+                    time = datetime.datetime.strptime(row[6], self.datetime_format)
 
-                    time = datetime.datetime.strptime(row[6], "%Y-%m-%dT%H:%M:%S%z")
-                    matches.append(
+                    # we should not be adding any new members to our tourney/team lists here
+                    if tournament not in self.tournaments:
+                        raise Exception(
+                            f" {tournament} not found in self.tournaments. tournaments found = {self.tournaments}")
+                    if team1name not in self.teams[tournament].keys():
+                        raise Exception(
+                            f"{team1name} not found in teams[{tournament}]. teams found = {self.teams[tournament].keys()}")
+                    if team2name not in self.teams[tournament].keys():
+                        raise Exception(
+                            f"{team2name} not found in teams[{tournament}]. teams found = {self.teams[tournament].keys()}")
+
+                    self.matches.append(
                         {"tournament": tournament,
                          "bracket": bracket,
                          "team1name": team1name,
@@ -176,13 +186,17 @@ class KQTrueSkill:
                          "time": time,
                          })
                     line_count += 1
-        print(f"Processed {line_count} lines, matches has {len(matches)} entries.")
-        return matches
+        print(f"Processed {line_count-1} matches, now tracking {len(self.matches)} matches.")
 
 
 def main():
     history: KQTrueSkill = KQTrueSkill()
-    history.process()
+
+    # print your player ratings
+    history.write_player_ratings()
+
+    print(f'Player Ratings: {history.playerratings}')
+
     # test whether processing changed values
     if filecmp.cmp("2019PlayerSkill.old.csv", "2019PlayerSkill.csv"):
         print("Files are same")
