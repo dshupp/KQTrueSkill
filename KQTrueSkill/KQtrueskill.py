@@ -16,26 +16,41 @@ class KQTrueSkill:
         self.playertournaments = {}  # playertournaments[playername] = {"BB4","KQ30",...}
         self.playergames = {}
         self.tournaments = []
+        self.tournamentdates = {}  # source data only ties matches directly to a date.
         self.teams = {}  # [tournament][team name] = {p1, p2, p3...}
         self.output_file_name: str = '2019PlayerSkill.csv'
-        self.process()
+        self.process_approved_datasets()
 
-    def process(self):
-        # ingest all your players
+    # ingest the known good datasets automatically
+    def process_approved_datasets(self):
         self.ingest_dataset('datasets/2019 KQ - 2019 Players.csv', 'datasets/2019 KQ - 2019 game results.csv')
         self.ingest_dataset('datasets/2018 KQ - GDC3 Players.csv', 'datasets/2018 KQ - GDC3 game results.csv')
-
-        # ingest all your matches. sort them into historical order
-
         # run trueskill on the matches
         self.calculate_trueskills()
 
     def ingest_dataset(self, playerfile: str, matchfile: str):
+        # must ingest players first
+        # reports new players found in this file
         self.ingest_players_from_file(playerfile)
+
+        # expect Exceptions if your team names don't match
         self.ingest_matches_from_file(matchfile)
+
+        # ensure matches will always process in historical order
         self.matches = sorted(self.matches, key=lambda match: match["time"])
 
+    # wipe old ratings objects and recalculate trueskill, compare new result with old ratings
     def calculate_trueskills(self):
+        # save old ratings for later comparison
+        old_playerratings = self.playerratings
+
+        # make clean ratings objects
+        self.playerratings = {}
+        for player in self.playerteams.keys():
+            self.playerratings[player] = Rating()
+
+        # calculate complete history
+        current_tournament: str = ''
         for m in self.matches:
             t1ratings = []
             t2ratings = []
@@ -45,60 +60,55 @@ class KQTrueSkill:
             team1wins: int = m['team1wins']
             team2wins: int = m['team2wins']
 
+            if current_tournament != tournament:
+                current_tournament = tournament
+                print(f"processing {tournament}")
+
+            # Trueskill wants arrays of ratings objects for each player
+            # Order doesn't matter to trueskill, but it does matter to us, so preserve order as found in
+            # the teams collection
             for player in self.teams[tournament][team1name]:
                 t1ratings.append(self.playerratings[player])
                 self.playergames[player] += team1wins + team2wins  # update player games count
-                # print(f'\tGot rating for {team1name}/{player}')
             for player in self.teams[tournament][team2name]:
                 t2ratings.append(self.playerratings[player])
                 self.playergames[player] += team1wins + team2wins  # update player games count
-                # print(f'\tGot rating for {team2name}/{player}')
-            # print(f'\tt1ratings: {t1ratings}\n\tt2ratings: {t2ratings}')
+
             # update ratings for each game win
-            # print(f'\tupdate ratings for {team1name} {team1wins}-{team2wins} {team2name}:')
-            # print(f'\tt1players: {teams[tournament][team1name]}\n\tt1ratings: {t1ratings}\n\tt2players: {teams[tournament][team2name]}\n\tt2ratings: {t2ratings}')
             for x in range(team1wins):
-                # print(f'\t{team1name} won a game')
                 t1ratings, t2ratings = rate([t1ratings, t2ratings], ranks=[0, 1])
-                # print(f'\tt1players: {teams[tournament][team1name]}\nt1ratings: {t1ratings}\n\tt2players: {teams[tournament][team2name]}\nt2ratings: {t2ratings}')
-            else:
-                # print(f'\tdone with t1')
-                pass
+
             for x in range(team2wins):
-                # print(f'\t{team2name} won a game')
                 t1ratings, t2ratings = rate([t1ratings, t2ratings], ranks=[1, 0])
-                # print(f'\tt1players: {teams[tournament][team1name]}\nt1ratings: {t1ratings}\n\tt2players: {teams[tournament][team2name]}\nt2ratings: {t2ratings}')
-            else:
-                # print(f'\tdone with t2')
-                pass
 
             # now put the ratings back into the main dict
             for i in range(5):
                 self.playerratings[self.teams[tournament][team1name][i]] = t1ratings[i]
-                # print(f'\tPut rating for {team1name}/{teams[tournament][team1name][i]}')
             for i in range(5):
                 self.playerratings[self.teams[tournament][team2name][i]] = t2ratings[i]
-                # print(f'\tPut rating for {team2name}/{teams[tournament][team2name][i]}')
-            # print(f'\tt1players: {teams[tournament][team1name]}\n\tt1ratings: {t1ratings}\n\tt2players: {teams[tournament][team2name]}\n\tt2ratings: {t2ratings}')
 
-            # either always put ratings objects right back onto the player, or use a dict that references player name->rating object
+        # log diifferences in new and old ratings
+        self.compare_ratings(old_playerratings, self.playerratings)
 
-    def write_player_ratings(self, filename: str = None):
-        if filename is None:
-            filename = self.output_file_name
-        with open(filename, mode='w') as playerskillfile:
-            playerskill_writer = csv.writer(playerskillfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    def compare_ratings(self, old_playerratings, playerratings):
+        new_players = []
+        removed_players = []
+        shared_player_deltas = {}
 
-            playerskill_writer.writerow(['Player Name', 'scene', 'mu', 'sigma', 'trueskill', 'tourneys', 'games', 'teams'])
-            for player in self.playerratings.keys():
-                row = [player, self.playerscenes[player], self.playerratings[player].mu,
-                       self.playerratings[player].sigma,
-                       self.playerratings[player].mu - 2 * self.playerratings[player].sigma,
-                       len(self.playertournaments[player]),
-                       self.playergames[player]]
-                for team in self.playerteams[player]:
-                    row.append(team)
-                playerskill_writer.writerow(row)
+        for p in old_playerratings.keys():
+            if p in playerratings.keys():
+                shared_player_deltas[
+                    p] = f"mu: {playerratings[p].mu - old_playerratings[p].mu}, s: {playerratings[p].sigma - old_playerratings[p].sigma}"
+            else:
+                removed_players.append(p)
+
+        for p in playerratings.keys():
+            if p not in old_playerratings.keys():
+                new_players.append(p)
+
+        print(f"New Players: {new_players}")
+        print(f"Removed players: {removed_players}")
+        print(f"Changed players: {shared_player_deltas}")
 
     def ingest_players_from_file(self, filename: str):
         with open(filename) as csv_file:
@@ -120,33 +130,30 @@ class KQTrueSkill:
             print(f'****TEAMS: {self.teams}')
 
     def add_player(self, playername, playerscene, playerteam, tournament):
-        # assumption - teams/games expect tournaments to be processed in order (tourney 1 teams/games listed first, tourney 2 second, etc
         if tournament not in self.tournaments:
             self.tournaments.append(tournament)
             self.teams[tournament] = {}
-        # print(f'\t{playername}, {playerscene}, {playerteam}.')
+
         self.playerscenes[playername] = playerscene
+
         if playerteam in self.teams[tournament].keys():
-            # print(
-            #     f'\tteams[{tournament}][{playerteam}] is {self.teams[tournament][playerteam]}, adding {playername}')
             self.teams[tournament][playerteam].append(playername)
         else:
             self.teams[tournament][playerteam] = [playername]
-            # print(
-            #     f'\tmade new team for {playerteam}. teams[{tournament}][{playerteam}] is {self.teams[tournament][playerteam]}')
-        self.playerratings[playername] = Rating()
-        # print(f'\tmade Rating object for {playerteam}/{playername}.')
+
         if playername in self.playerteams.keys():
             self.playerteams[playername].append(playerteam + '/' + tournament)
         else:
             self.playerteams[playername] = [playerteam + '/' + tournament]
+
         if playername in self.playertournaments.keys():
             self.playertournaments[playername].append(tournament)
         else:
             self.playertournaments[playername] = [tournament]
-        # print(f'\t\tplayertournaments[{playername}] = {self.playertournaments[playername]}.')
+
         self.playergames[playername] = 0
 
+    # side effect: updates tournament dates with dates found here
     def ingest_matches_from_file(self, filename: str):
         with open(filename) as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=',')
@@ -176,6 +183,10 @@ class KQTrueSkill:
                         raise Exception(
                             f"{team2name} not found in teams[{tournament}]. teams found = {self.teams[tournament].keys()}")
 
+                    # track the date for this tournament, if not already tracked
+                    if tournament not in self.tournamentdates.keys():
+                        self.tournamentdates[tournament] = time.date()
+
                     self.matches.append(
                         {"tournament": tournament,
                          "bracket": bracket,
@@ -186,7 +197,24 @@ class KQTrueSkill:
                          "time": time,
                          })
                     line_count += 1
-        print(f"Processed {line_count-1} matches, now tracking {len(self.matches)} matches.")
+        print(f"Processed {line_count - 1} matches, now tracking {len(self.matches)} matches.")
+
+    def write_player_ratings(self, filename: str = None):
+        if filename is None:
+            filename = self.output_file_name
+        with open(filename, mode='w') as playerskillfile:
+            playerskill_writer = csv.writer(playerskillfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            playerskill_writer.writerow(
+                ['Player Name', 'scene', 'mu', 'sigma', 'trueskill', 'tourneys', 'games', 'teams'])
+            for player in self.playerratings.keys():
+                row = [player, self.playerscenes[player], self.playerratings[player].mu,
+                       self.playerratings[player].sigma,
+                       self.playerratings[player].mu - 2 * self.playerratings[player].sigma,
+                       len(self.playertournaments[player]),
+                       self.playergames[player]]
+                for team in self.playerteams[player]:
+                    row.append(team)
+                playerskill_writer.writerow(row)
 
 
 def main():
