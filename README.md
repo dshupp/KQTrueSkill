@@ -5,11 +5,13 @@ This tool uses historical match results at KQ invitationals to calculate estimat
 
 
 Currently includes: 
+
 KQtrueskill.py - Python object that builds a complete history from canonical player and match datasets, does some simple data validation, and runs trueskill on the matches
+
 /datasets - scrubbed, canonical player and match results files for different tournaments.  
+
 /ingest_tools: 
 - challengeingest.py - builds a match results files from challong with 'XXX' for errors that need scrubbing  
-- smashingest.py (future, if needed)
 - players.py - builds a player file for a tournmaent from a sanitized version of the team sheet 
 
 PlayerSkill.csv - Trueskill by player for the current set of tournaments
