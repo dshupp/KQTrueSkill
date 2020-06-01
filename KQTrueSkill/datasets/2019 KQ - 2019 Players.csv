@@ -4,7 +4,7 @@ KQC3,brunch skunks,Amanda Norris,CHA
 KQC3,brunch skunks,Micah Wallace,CHA
 KQC3,brunch skunks,Jen Wallace,CHA
 KQC3,brunch skunks,Matthew Anderson,CHA
-KQC3,BarBEE Dream Gate,Ammar Rica,CLT
+KQC3,BarBEE Dream Gate,Ammar Ahmed,CLT
 KQC3,BarBEE Dream Gate,Lisa Steward,CBUS
 KQC3,BarBEE Dream Gate,Kasi White,MPLS
 KQC3,BarBEE Dream Gate,Sarah Stewart,MPLS
@@ -230,7 +230,7 @@ GDC4,Good Luck,Kasi White,MPLS
 GDC4,Good Luck,Mat Herring,PDX
 GDC4,Good Luck,David Garzon,CHI
 GDC4,Inherent Vice,Jacob Whiteoak,MPLS
-GDC4,Inherent Vice,Amanda Pertwee ,CBUS
+GDC4,Inherent Vice,Amanda Pertwee,CBUS
 GDC4,Inherent Vice,Ben Engel,SLC
 GDC4,Inherent Vice,Miranda Aguilar,PDX
 GDC4,Inherent Vice,Dezi-PDX,PDX
@@ -249,7 +249,7 @@ MGF2,East Coast Beast Coast,Courtney LaSchultz,CLT
 MGF2,East Coast Beast Coast,Tiana Tan,NYC
 MGF2,East Coast Beast Coast,Clarkson,BMOR
 MGF2,East Coast Beast Coast,Deanna Lopez,NYC
-MGF2,Two Spoons,Azul Yoshi,MPLS
+MGF2,Two Spoons,Paul Fore,MPLS
 MGF2,Two Spoons,Cesar Bustos,CHI
 MGF2,Two Spoons,Dexter Chacko,MPLS
 MGF2,Two Spoons,Daniel Shupp,SF
@@ -319,7 +319,7 @@ MGF2,Something Something Toxic,Michelle Lutz,MPLS
 MGF2,Something Something Toxic,Dylan Lee,PDX
 MGF2,Something Something Toxic,Shawn Matthew,MPLS
 MGF2,Something Something Toxic,Eduardo Martinez Banda,DFW
-MGF2,Get Dixie Rekt,Ryan Lescoe,CLMSP
+MGF2,Get Dixie Rekt,Ryan Lescoe,CLT
 MGF2,Get Dixie Rekt,Ryan Vile,CBUS
 MGF2,Get Dixie Rekt,Hugo Meneses,KC
 MGF2,Get Dixie Rekt,Joel Stockard,KC
@@ -621,7 +621,7 @@ BB4,"Dope Hair, Don't Care",Matt Thompson,CBUS
 BB4,"Dope Hair, Don't Care",Dylan Lee,PDX
 BB4,grandpa-billy.rake,Victor Jardim,NYC
 BB4,grandpa-billy.rake,Daphane Love,NYC
-BB4,grandpa-billy.rake,Richard Ray Chan,NYC
+BB4,grandpa-billy.rake,Richard Chan,NYC
 BB4,grandpa-billy.rake,Marian Wu,NYC
 BB4,grandpa-billy.rake,Mustafa Allsop,NYC
 BB4,Bring Ingredient,Ian Lukidis,CHI
@@ -658,7 +658,7 @@ BB4,Friendly Flyers,Rick Rushing,CHA
 BB4,Friendly Flyers,Jack Akins,CHA
 BB4,Friendly Flyers,Justin Time,CHA
 BB4,Friendly Flyers,Ryan Nevison,CHA
-BB4,Friendly Flyers,Frankie Pinkston ,CHA
+BB4,Friendly Flyers,Frankie Pinkston,CHA
 BB4,Dumpster (J)Divers,Brian Aston,JAX
 BB4,Dumpster (J)Divers,Matthew Stevenson,JAX
 BB4,Dumpster (J)Divers,Aaron Bobby,JAX
@@ -746,13 +746,13 @@ BB4,Pilcerova's Hornets,Matthew Steele,BOS
 BB4,Pilcerova's Hornets,Michael Leuchtenburg,BOS
 BB4,Live Laugh Love,J Sisk,MPLS
 BB4,Live Laugh Love,Dexter Chacko,MPLS
-BB4,Live Laugh Love,Azul Yoshi,MPLS
+BB4,Live Laugh Love,Paul Fore,MPLS
 BB4,Live Laugh Love,Nick Larsen,MPLS
 BB4,Live Laugh Love,Jesse Sorensen,MPLS
 BB4,Just Practicing,Kyle Shipwash,CLT
 BB4,Just Practicing,Brian Lancaster,CLT
 BB4,Just Practicing,Bobby Hutter,CLT
-BB4,Just Practicing,Kyle McKinney ,CLT
+BB4,Just Practicing,Kyle McKinney,CLT
 BB4,Just Practicing,Kasi White,MPLS
 BB4,POGS,Ryan Lescoe,CLMSP [Charlottapolis]
 BB4,POGS,Ryan Rismon,MPLS
@@ -802,7 +802,7 @@ BB4,60%,Charles Pratt,NYC
 BB4,Super Smash Bees,Sam Powers,CBUS
 BB4,Super Smash Bees,Julia Azarcon,CBUS
 BB4,Super Smash Bees,Eric Howell,CBUS
-BB4,Super Smash Bees,Ammar Rica,CLT
+BB4,Super Smash Bees,Ammar Ahmed,CLT
 BB4,Super Smash Bees,Jason Steckey,CLT
 BB4,Sting Theory,Lex Wilkins,PDX
 BB4,Sting Theory,Johnmark Faris,PDX
@@ -825,7 +825,7 @@ BB4,PIZZA,Alison Jesme,MPLS
 BB4,PIZZA,Shelby Renee,MPLS
 BB4,PIZZA,Francis Sullivan,MPLS
 BB4,Top Bottoms,Matthew Anderson,CHA
-BB4,Top Bottoms,Nate Johnson ,ATL
+BB4,Top Bottoms,Nate Johnson,ATL
 BB4,Top Bottoms,Sarah Mack,CHA
 BB4,Top Bottoms,Blake Fisher,CHA
 BB4,Top Bottoms,Craig Stukey,LAX
@@ -844,7 +844,7 @@ BB4,Mologna Sandwich,Kim Cox-Grosso,PHX
 BB4,Mologna Sandwich,Burton Flake,PHX
 BB4,Mologna Sandwich,Max Sumeta,PHX
 BB4,Mologna Sandwich,Sam Gramley,PHX
-BB4,Sydney's Side Bees,Sydney Niles ,CLT
+BB4,Sydney's Side Bees,Sydney Niles,CLT
 BB4,Sydney's Side Bees,Andrew Talarico,CLT
 BB4,Sydney's Side Bees,Nicole De Vall,CLT
 BB4,Sydney's Side Bees,Aaron Carter,CLT
@@ -880,7 +880,7 @@ HH2,Hive it Our Way,Marian Wu,NYC
 HH2,Hive it Our Way,Ben Mills,NYC
 HH2,Hive it Our Way,Kasi White,MPLS
 HH2,Got Gitted Good,Woody Stanfield,CHI
-HH2,Got Gitted Good,Kaylee SEA,SEA
+HH2,Got Gitted Good,Kaylee Perkizas,SEA
 HH2,Got Gitted Good,Brian Lancaster,CLT
 HH2,Got Gitted Good,Nick Davis,CHI
 HH2,Got Gitted Good,Eduardo Martinez Banda,DFW

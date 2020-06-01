@@ -25,6 +25,7 @@ class KQTrueSkill:
     def process_approved_datasets(self):
         self.ingest_dataset('datasets/2019 KQ - 2019 Players.csv', 'datasets/2019 KQ - 2019 game results.csv')
         self.ingest_dataset('datasets/2018 KQ - GDC3 Players.csv', 'datasets/2018 KQ - GDC3 game results.csv')
+        self.ingest_dataset('datasets/2018 KQ - BB3 Players.csv' , 'datasets/2018 KQ - BB3 matches.csv')
         # run trueskill on the matches
         self.calculate_trueskills()
 
@@ -119,15 +120,16 @@ class KQTrueSkill:
                     print(f'Player List Column names are {", ".join(row)}')
                     line_count += 1
                 else:
+                    line_count += 1
+                    # print(line_count)
                     tournament = row[0]
                     playerteam = row[1]
                     playername = row[2]
                     playerscene = row[3]
                     self.add_player(playername, playerscene, playerteam, tournament)
-                    line_count += 1
-            print(f'Processed {line_count} lines.')
-            print(f'Player Scenes: {self.playerscenes}')
-            print(f'****TEAMS: {self.teams}')
+            print(f'Processed {line_count} players from {filename}.')
+            # print(f'Player Scenes: {self.playerscenes}')
+            # print(f'****TEAMS: {self.teams}')
 
     def add_player(self, playername, playerscene, playerteam, tournament):
         if tournament not in self.tournaments:
@@ -215,6 +217,14 @@ class KQTrueSkill:
                 for team in self.playerteams[player]:
                     row.append(team)
                 playerskill_writer.writerow(row)
+
+    def get_player_scene_list(self):
+        playerlist = []
+
+        for playername in self.playerteams.keys():
+            playerlist.append(f"{playername} / {self.playerscenes[playername]}")
+
+        return playerlist
 
 
 def main():
