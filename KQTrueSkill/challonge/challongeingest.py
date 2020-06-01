@@ -178,20 +178,25 @@ def main():
     # scripts for importing a tournament from challonge and getting it into an editable csv that can be read into a KQ history
     # subtourney_id: int = 5689203  # GDC4 Groups 1
     # subtourney_id: int = 4415714  # GDC3 DE
-    bb3_subtourneys = [{'id': 5057256, 'name': 'BB3', 'bracket': 'KO'},
-                       {'id': 5057264, 'name': 'BB3', 'bracket': 'Pool1'},
-                       {'id': 5057281, 'name': 'BB3', 'bracket': 'Pool2'},
-                       {'id': 5057309, 'name': 'BB3', 'bracket': 'Pool3'},
-                       {'id': 5057310, 'name': 'BB3', 'bracket': 'Pool4'},
-                       {'id': 5057312, 'name': 'BB3', 'bracket': 'Pool5'},
-                       {'id': 5057313, 'name': 'BB3', 'bracket': 'Pool6'},
-                       {'id': 5057316, 'name': 'BB3', 'bracket': 'Pool7'},
-                       {'id': 5057318, 'name': 'BB3', 'bracket': 'Pool8'},
-                       {'id': 5057321, 'name': 'BB3', 'bracket': 'Pool9'},
-                       {'id': 5057323, 'name': 'BB3', 'bracket': 'Pool10'},
-                       {'id': 5057324, 'name': 'BB3', 'bracket': 'WC'},
+    # bb3_subtourneys = [{'id': 5057256, 'name': 'BB3', 'bracket': 'KO'},
+    #                    {'id': 5057264, 'name': 'BB3', 'bracket': 'Pool1'},
+    #                    {'id': 5057281, 'name': 'BB3', 'bracket': 'Pool2'},
+    #                    {'id': 5057309, 'name': 'BB3', 'bracket': 'Pool3'},
+    #                    {'id': 5057310, 'name': 'BB3', 'bracket': 'Pool4'},
+    #                    {'id': 5057312, 'name': 'BB3', 'bracket': 'Pool5'},
+    #                    {'id': 5057313, 'name': 'BB3', 'bracket': 'Pool6'},
+    #                    {'id': 5057316, 'name': 'BB3', 'bracket': 'Pool7'},
+    #                    {'id': 5057318, 'name': 'BB3', 'bracket': 'Pool8'},
+    #                    {'id': 5057321, 'name': 'BB3', 'bracket': 'Pool9'},
+    #                    {'id': 5057323, 'name': 'BB3', 'bracket': 'Pool10'},
+    #                    {'id': 5057324, 'name': 'BB3', 'bracket': 'WC'},
+    #                    ]
+
+    hh1_subtourneys = [{'id': 5025209, 'name': 'HH1', 'bracket': 'Swiss'},
+                       {'id': 5026099, 'name': 'HH1', 'bracket': 'KO'},
                        ]
-    tourney_name: str = "BB3"
+
+    tourney_name: str = "HH1"
     account: ChallongeAccount = ChallongeAccount(ChallongeAccount.API_KEY_DYLAN, None)
 
     # for tourney in account.get_tourney_list():
@@ -200,12 +205,12 @@ def main():
 
     # print(json.dumps(account.get_tourney_list(),indent=1))
 
-    for subtourney in bb3_subtourneys:
+    for subtourney in hh1_subtourneys:
         print(f"writing {subtourney['name']} / {subtourney['bracket']}")
         ct: ChallongeTournament = account.get_tournament(tourney_name, subtourney['id'], subtourney['bracket'])
         # ct.parent_tourney_name = 'BB3'
         # ct.bracket_name = subtourney['bracket']
-        ct.write_matchfile('out.csv', True)
+        ct.write_matchfile('2018 KQ - HH1 game results.csv', True)
 
     # tourneys: [] = account.get_tourney_list()
     # for t in tourneys:
@@ -215,7 +220,7 @@ def main():
     # history: KQTrueSkill = KQTrueSkill()
     # print(history.tournaments)
     # history.ingest_players_from_file('2018 KQ - BB3 Players.csv')
-    # history.ingest_matches_from_file('out.csv')
+    # history.ingest_matches_from_file('2018 KQ - HH1 game results.csv')
 
     # history.write_player_ratings('')
 

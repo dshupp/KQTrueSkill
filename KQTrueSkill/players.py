@@ -25,7 +25,7 @@ def compare_players_to_history(history: KQTrueSkill, filename: str = None):
 
                 if playername not in history.playerteams.keys():
                     p = f"{playername} / {playerscene} not found. {tournament}/{playerteam} *************************"
-                    print(p)
+                    # print(p)
                     not_found.append(p)
     all_players = history.get_player_scene_list() + not_found
     all_players_sorted = sorted(all_players)
@@ -34,14 +34,14 @@ def compare_players_to_history(history: KQTrueSkill, filename: str = None):
 
 
 
-    # history.write_player_ratings('out.csv')
+    # history.write_player_ratings('2018 KQ - HH1 game results.csv')
 
 
 def main():
     history: KQTrueSkill = KQTrueSkill()
     print(history.tournaments)
 
-    compare_players_to_history(history, 'datasets/2018 KQ - BB3 Players.csv')
+    compare_players_to_history(history, 'datasets/2018 KQ - HH1 Players.csv')
 
 if __name__ == '__main__':
     main()

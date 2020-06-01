@@ -26,6 +26,7 @@ class KQTrueSkill:
         self.ingest_dataset('datasets/2019 KQ - 2019 Players.csv', 'datasets/2019 KQ - 2019 game results.csv')
         self.ingest_dataset('datasets/2018 KQ - GDC3 Players.csv', 'datasets/2018 KQ - GDC3 game results.csv')
         self.ingest_dataset('datasets/2018 KQ - BB3 Players.csv' , 'datasets/2018 KQ - BB3 matches.csv')
+        self.ingest_dataset('datasets/2018 KQ - HH1 Players.csv', 'datasets/2018 KQ - HH1 game results.csv')
         # run trueskill on the matches
         self.calculate_trueskills()
 
