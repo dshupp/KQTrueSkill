@@ -18,7 +18,7 @@ class KQTrueSkill:
         self.tournaments = []
         self.tournamentdates = {}  # source data only ties matches directly to a date.
         self.teams = {}  # [tournament][team name] = {p1, p2, p3...}
-        self.output_file_name: str = '2019PlayerSkill.csv'
+        self.output_file_name: str = 'PlayerSkill.csv'
         self.process_approved_datasets()
 
     # ingest the known good datasets automatically
@@ -189,6 +189,7 @@ class KQTrueSkill:
                     # track the date for this tournament, if not already tracked
                     if tournament not in self.tournamentdates.keys():
                         self.tournamentdates[tournament] = time.date()
+                        print(f"sat {tournament} date to {time.strftime(KQTrueSkill.datetime_format)}")
 
                     self.matches.append(
                         {"tournament": tournament,
@@ -231,13 +232,24 @@ class KQTrueSkill:
 def main():
     history: KQTrueSkill = KQTrueSkill()
 
+    printable_tournaments = {}
+    for t in sorted(history.tournamentdates.keys()):
+        date: datetime.date = history.tournamentdates[t]
+        if date.year in printable_tournaments.keys():
+            printable_tournaments[date.year].append(t)
+        else:
+            printable_tournaments[date.year] = [t]
+        printable_tournaments[date.year] = sorted(printable_tournaments[date.year], key=lambda tourney: history.tournamentdates[tourney])
+
+    for y in printable_tournaments.keys():
+        print(f"{y}: {printable_tournaments[y]}")
     # print your player ratings
     history.write_player_ratings()
 
     print(f'Player Ratings: {history.playerratings}')
 
     # test whether processing changed values
-    if filecmp.cmp("2019PlayerSkill.old.csv", "2019PlayerSkill.csv"):
+    if filecmp.cmp("PlayerSkill.old.csv", "PlayerSkill.csv"):
         print("Files are same")
     else:
         print("Files are different")

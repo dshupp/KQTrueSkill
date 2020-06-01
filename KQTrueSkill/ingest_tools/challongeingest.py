@@ -175,7 +175,7 @@ class ChallongeTournament:
 
 
 def main():
-    # scripts for importing a tournament from challonge and getting it into an editable csv that can be read into a KQ history
+    # scripts for importing a tournament from ingest_tools and getting it into an editable csv that can be read into a KQ history
     # subtourney_id: int = 5689203  # GDC4 Groups 1
     # subtourney_id: int = 4415714  # GDC3 DE
     # bb3_subtourneys = [{'id': 5057256, 'name': 'BB3', 'bracket': 'KO'},

@@ -7,7 +7,7 @@ from KQTrueSkill.KQtrueskill import KQTrueSkill
 
 def compare_players_to_history(history: KQTrueSkill, filename: str = None):
     if filename is None:
-        filename = 'datasets/2018 KQ - BB3 Players.csv'
+        filename = '../datasets/2018 KQ - BB3 Players.csv'
 
     not_found = []
     with open(filename) as csv_file:
@@ -41,7 +41,7 @@ def main():
     history: KQTrueSkill = KQTrueSkill()
     print(history.tournaments)
 
-    compare_players_to_history(history, 'datasets/2018 KQ - HH1 Players.csv')
+    compare_players_to_history(history, '../datasets/2018 KQ - HH1 Players.csv')
 
 if __name__ == '__main__':
     main()
