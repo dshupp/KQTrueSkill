@@ -16,7 +16,15 @@ KQtrueskill.py - Python object that builds a complete history from canonical pla
 
 PlayerSkill.csv - Trueskill by player for the current set of tournaments
 
-    2018: ['GDC3', 'HH1', 'BB3']
-    2019: ['KQC3', 'GDC4', 'KQ30', 'MGF2', 'BB4', 'HH2']
+    2018: ['CC1', 'GDC3', 'HH1', 'BB3']
+    2019: ['CC2', 'KQC3', 'GDC4', 'KQ30', 'MGF2', 'BB4', 'HH2']
+    2020: ['CC3']
+    
+If you'd like to see a tournament added to the list, send dshupp@gmail.com links to the teamsheet, the challonge, and the Challonge API key for the account that created the challonge.
 
-If you'd like to see a tournament added to the list, send dshupp@gmail.com links to the teamsheet, the challonge, and the Challonge API key for the account that created the challonge. 
+***
+Current known holes in the tournaments above, either cause team sheets were incomplete, or results weren't logged in challonge: (lmk if you know these match results/players)
+
+    CC2,GroupC,I DIED AND I'M SORRY,Fifth Wheel,XXX,XXX,2019-01-26T17:30:46-0500 # currently logged as 2-0 Fifth Wheel
+    GDC3, Better than bots, Alan ?, 
+    GDC3, Better than bots, Unknown GDC3, 

@@ -15,6 +15,7 @@ class KQTrueSkill:
         self.playerratings = {}
         self.playertournaments = {}  # playertournaments[playername] = {"BB4","KQ30",...}
         self.playergames = {}
+        self.incomplete_players = [] # list of playernames w/0 scenes
         self.tournaments = []
         self.tournamentdates = {}  # source data only ties matches directly to a date.
         self.teams = {}  # [tournament][team name] = {p1, p2, p3...}
@@ -25,10 +26,17 @@ class KQTrueSkill:
     def process_approved_datasets(self):
         self.ingest_dataset('datasets/2019 KQ - 2019 Players.csv', 'datasets/2019 KQ - 2019 game results.csv')
         self.ingest_dataset('datasets/2018 KQ - GDC3 Players.csv', 'datasets/2018 KQ - GDC3 game results.csv')
-        self.ingest_dataset('datasets/2018 KQ - BB3 Players.csv' , 'datasets/2018 KQ - BB3 matches.csv')
+        self.ingest_dataset('datasets/2018 KQ - BB3 Players.csv', 'datasets/2018 KQ - BB3 game results.csv')
         self.ingest_dataset('datasets/2018 KQ - HH1 Players.csv', 'datasets/2018 KQ - HH1 game results.csv')
+        self.ingest_dataset('datasets/2018 - CC1 Players.csv', 'datasets/2018 - CC1 game results.csv')
+        self.ingest_dataset('datasets/2019 - CC2 Players.csv', 'datasets/2019 - CC2 game results.csv')
+        self.ingest_dataset('datasets/2020 - CC3 Players.csv', 'datasets/2020 - CC3 game results.csv')
         # run trueskill on the matches
         self.calculate_trueskills()
+
+    def test_dataset(self, player_file, results_file):
+        self.ingest_dataset(player_file, results_file)
+        # self.calculate_trueskills()
 
     def ingest_dataset(self, playerfile: str, matchfile: str):
         # must ingest players first
@@ -156,6 +164,12 @@ class KQTrueSkill:
 
         self.playergames[playername] = 0
 
+        if playername is None or playername.strip() == '':
+            self.incomplete_players.append(f"{tournament}, {playerteam}, {playername}, {playerscene}")
+        elif playerscene is None or playerscene.strip() == '':
+            self.incomplete_players.append(f"{tournament}, {playerteam}, {playername}, {playerscene}")
+
+
     # side effect: updates tournament dates with dates found here
     def ingest_matches_from_file(self, filename: str):
         with open(filename) as csv_file:
@@ -228,25 +242,40 @@ class KQTrueSkill:
 
         return playerlist
 
+    def print_tournaments(self):
+        printable_tournaments = {}
+        for t in sorted(self.tournamentdates.keys()):
+            date: datetime.date = self.tournamentdates[t]
+            if date.year in printable_tournaments.keys():
+                printable_tournaments[date.year].append(t)
+            else:
+                printable_tournaments[date.year] = [t]
+            printable_tournaments[date.year] = sorted(printable_tournaments[date.year],
+                                                      key=lambda tourney: self.tournamentdates[tourney])
+        for y in printable_tournaments.keys():
+            print(f"{y}: {printable_tournaments[y]}")
+
+    def print_data_errors(self):
+        # match errors are tracked during data scrubbing. known match errors hard coded into README
+        # missing players should have an empty scene, so display players with empty scenes here
+        for p in self.incomplete_players:
+            print(p)
+
 
 def main():
     history: KQTrueSkill = KQTrueSkill()
 
-    printable_tournaments = {}
-    for t in sorted(history.tournamentdates.keys()):
-        date: datetime.date = history.tournamentdates[t]
-        if date.year in printable_tournaments.keys():
-            printable_tournaments[date.year].append(t)
-        else:
-            printable_tournaments[date.year] = [t]
-        printable_tournaments[date.year] = sorted(printable_tournaments[date.year], key=lambda tourney: history.tournamentdates[tourney])
+    # stuff to copy into README
+    history.print_tournaments()
+    print("")
+    history.print_data_errors()
 
-    for y in printable_tournaments.keys():
-        print(f"{y}: {printable_tournaments[y]}")
+
+
     # print your player ratings
     history.write_player_ratings()
 
-    print(f'Player Ratings: {history.playerratings}')
+    #print(f'Player Ratings: {history.playerratings}')
 
     # test whether processing changed values
     if filecmp.cmp("PlayerSkill.old.csv", "PlayerSkill.csv"):
