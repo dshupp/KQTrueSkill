@@ -26,5 +26,8 @@ If you'd like to see a tournament added to the list, send dshupp@gmail.com links
 Current known holes in the tournaments above, either cause team sheets were incomplete, or results weren't logged in challonge: (lmk if you know these match results/players)
 
     CC2,GroupC,I DIED AND I'M SORRY,Fifth Wheel,XXX,XXX,2019-01-26T17:30:46-0500 # currently logged as 2-0 Fifth Wheel
-    GDC3, Better than bots, Alan ?, 
-    GDC3, Better than bots, Unknown GDC3, 
+    GDC3: Better than bots 5
+    BB3: Warp World 5
+    BB3: BeeDeeOhNo 5 
+    BB3: Show Me Your Boops 4 
+    BB3: Show Me Your Boops 5

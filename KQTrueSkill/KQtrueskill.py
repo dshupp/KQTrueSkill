@@ -165,9 +165,9 @@ class KQTrueSkill:
         self.playergames[playername] = 0
 
         if playername is None or playername.strip() == '':
-            self.incomplete_players.append(f"{tournament}, {playerteam}, {playername}, {playerscene}")
+            self.incomplete_players.append(f"{tournament}: {playername}, {playerscene}")
         elif playerscene is None or playerscene.strip() == '':
-            self.incomplete_players.append(f"{tournament}, {playerteam}, {playername}, {playerscene}")
+            self.incomplete_players.append(f"{tournament}: {playername}, {playerscene}")
 
 
     # side effect: updates tournament dates with dates found here
