@@ -16,18 +16,53 @@ KQtrueskill.py - Python object that builds a complete history from canonical pla
 
 PlayerSkill.csv - Trueskill by player for the current set of tournaments
 
-    2018: ['CC1', 'GDC3', 'HH1', 'BB3']
+### Currently tracked tournaments
+    2016: ['KQXV']
+    2017: ['KQXX']
+    2018: ['CC1', 'GDC3', 'MCS-MPLS', 'MCS-CHI', 'KQXXV', 'MGF1', 'HH1', 'MCS-CBUS', 'BB3']
     2019: ['CC2', 'KQC3', 'GDC4', 'KQ30', 'MGF2', 'BB4', 'HH2']
     2020: ['CC3']
     
-If you'd like to see a tournament added to the list, send dshupp@gmail.com links to the teamsheet, the challonge, and the Challonge API key for the account that created the challonge.
+If you'd like to see a tournament added to the list, send dshupp@gmail.com links to the teamsheet and challonge
 
 ***
-Current known holes in the tournaments above, either cause team sheets were incomplete, or results weren't logged in challonge: (lmk if you know these match results/players)
+## Known Data Issues
 
+### Tournaments where we can't find the Challonge
+    Challonge for MCS KC
+
+### Matches with missing data
     CC2,GroupC,I DIED AND I'M SORRY,Fifth Wheel,XXX,XXX,2019-01-26T17:30:46-0500 # currently logged as 2-0 Fifth Wheel
-    GDC3: Better than bots 5
-    BB3: Warp World 5
-    BB3: BeeDeeOhNo 5 
-    BB3: Show Me Your Boops 4 
-    BB3: Show Me Your Boops 5
+    
+### Teams with missing players
+
+    GDC3: Better than bots, Better than bots 5, 
+    BB3: Warp World, Warp World 5, 
+    BB3: BeeDeeOhNo, BeeDeeOhNo 5, 
+    BB3: Show Me Your Boops, Show Me Your Boops 4, 
+    BB3: Show Me Your Boops, Show Me Your Boops 5, 
+    KQXX: Blood HoNYC, George, 
+    KQXX: Kogan's Heroes, Dj, 
+    KQXX: Kogan's Heroes, Melissa G., 
+    KQXX: Kogan's Heroes, Kogan's Heroes 5, None
+    KQXX: What Hive School Did You Go To?, Morgan Ryman, 
+    KQXX: Superteam: Return of the Private Cab, Bryan Boyer, 
+    KQXX: Superteam: Return of the Private Cab, David Spencer, 
+    KQXX: Rob's Slobs, Miranda, 
+    KQXX: Garbage Snail Kids, Garbage Snail Kids 5, None
+    KQXV: Fake Palidrones, Fake Palidrones 1, None
+    KQXV: Fake Palidrones, Fake Palidrones 2, None
+    KQXV: Fake Palidrones, Fake Palidrones 3, None
+    KQXV: Fake Palidrones, Fake Palidrones 4, None
+    KQXV: Fake Palidrones, Fake Palidrones 5, None
+    KQXV: Harambae Watch, Harambae Watch 1, None
+    KQXV: Harambae Watch, Harambae Watch 2, None
+    KQXV: Harambae Watch, Harambae Watch 3, None
+    KQXV: Harambae Watch, Harambae Watch 4, None
+    KQXV: Harambae Watch, Harambae Watch 5, None
+    MCS-CHI: Mad Chuck, Mad Chuck 1, None
+    MCS-CHI: Mad Chuck, Mad Chuck 2, None
+    MCS-CHI: Mad Chuck, Mad Chuck 3, None
+    MCS-CHI: Mad Chuck, Mad Chuck 4, None
+    MCS-CHI: Mad Chuck, Mad Chuck 5, None
+    MGF1: Y U Dumb Tho?, Y U Dumb Tho? 5, None

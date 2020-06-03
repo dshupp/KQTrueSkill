@@ -31,6 +31,7 @@ class KQTrueSkill:
         self.ingest_dataset('datasets/2018 - CC1 Players.csv', 'datasets/2018 - CC1 game results.csv')
         self.ingest_dataset('datasets/2019 - CC2 Players.csv', 'datasets/2019 - CC2 game results.csv')
         self.ingest_dataset('datasets/2020 - CC3 Players.csv', 'datasets/2020 - CC3 game results.csv')
+        self.ingest_dataset('datasets/2018 Midwest players.csv','datasets/2018 Midwest game results.csv')
         # run trueskill on the matches
         self.calculate_trueskills()
 
@@ -145,7 +146,7 @@ class KQTrueSkill:
             self.tournaments.append(tournament)
             self.teams[tournament] = {}
 
-        if playerteam is None or playername.strip() == '':
+        if playerteam is None or playerteam.strip() == '':
             raise Exception(f"{tournament}: empty team")
 
         if playerteam in self.teams[tournament].keys():
@@ -174,9 +175,9 @@ class KQTrueSkill:
         self.playergames[playername] = 0
 
         if playername is None or playername.strip() == '':
-            self.incomplete_players.append(f"{tournament}: {playername}, {playerscene}")
+            self.incomplete_players.append(f"{tournament}: {playerteam}, {playername}, {playerscene}")
         elif playerscene is None or playerscene.strip() == '':
-            self.incomplete_players.append(f"{tournament}: {playername}, {playerscene}")
+            self.incomplete_players.append(f"{tournament}: {playerteam}, {playername}, {playerscene}")
 
 
     # side effect: updates tournament dates with dates found here
@@ -204,10 +205,10 @@ class KQTrueSkill:
                             f" {tournament} not found in self.tournaments. tournaments found = {self.tournaments}")
                     if team1name not in self.teams[tournament].keys():
                         raise Exception(
-                            f"{team1name} not found in teams[{tournament}]. teams found = {self.teams[tournament].keys()}")
+                            f"{team1name} not found in teams[{tournament}]. team 2 was {team2name}. teams found = {self.teams[tournament].keys()}")
                     if team2name not in self.teams[tournament].keys():
                         raise Exception(
-                            f"{team2name} not found in teams[{tournament}]. teams found = {self.teams[tournament].keys()}")
+                            f"{team2name} not found in teams[{tournament}]. team 1 was {team1name}. teams found = {self.teams[tournament].keys()}")
 
                     # track the date for this tournament, if not already tracked
                     if tournament not in self.tournamentdates.keys():
@@ -251,7 +252,7 @@ class KQTrueSkill:
 
         return playerlist
 
-    def print_tournaments(self):
+    def print_known_tournaments(self):
         printable_tournaments = {}
         for t in sorted(self.tournamentdates.keys()):
             date: datetime.date = self.tournamentdates[t]
@@ -275,8 +276,8 @@ def main():
     history: KQTrueSkill = KQTrueSkill()
 
     # stuff to copy into README
-    history.print_tournaments()
-    print("")
+    history.print_known_tournaments()
+    print("\n*************************\n")
     history.print_data_errors()
 
 

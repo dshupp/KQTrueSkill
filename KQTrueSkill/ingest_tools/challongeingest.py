@@ -241,15 +241,14 @@ Cor15: [] = ["Cor15", [{'id': 'BrooklynCoronation2015', 'name': 'Cor15', 'bracke
 
 # https://ehgaming.challonge.com/users/charlesjpratt/tournaments
 Cor16: [] = ["Cor16", [{'id': 'BrooklynCoronationFall2016', 'name': 'Cor16', 'bracket': 'Swiss'},
-                 ]]
-
+                       ]]
 
 # need groups
 Cor17s: [] = ["Cor17s", [{'id': 'BKCRN2017', 'name': 'Cor17s', 'bracket': 'KO'},
-                       ]]
+                         ]]
 # need groups
 Cor17f: [] = ["Cor17f", [{'id': 'BKCFall2017', 'name': 'Cor17f', 'bracket': 'KO'},
-                       ]]
+                         ]]
 
 # uses group stages in challonge
 Cor18s: [] = ["Cor18s", [{'id': 'springcoronation2018', 'name': 'Cor18s', 'bracket': 'KO'},
@@ -263,59 +262,65 @@ Cor19: [] = ["Cor19", [{'id': 'Coro2019', 'name': 'Cor19', 'bracket': 'KO'},
                        {'id': 'Coro2019Group2', 'name': 'Cor19', 'bracket': 'Group2'},
                        ]]
 
-TEMPLATE: [] = ["", [{'id': '', 'name': '', 'bracket': 'KO'},
-                 {'id': '', 'name': '', 'bracket': 'WC'},
-                 {'id': '', 'name': '', 'bracket': 'Group1'},
-                 {'id': '', 'name': '', 'bracket': 'Group2'},
-                 ]]
+MGF1: [] = ["MGF1", [{'id': 'MGFDE', 'name': 'MGF1', 'bracket': 'KO'},
+                     {'id': 'MGFUD130', 'name': 'MGF1', 'bracket': 'GroupUpdown1'},
+                     {'id': 'MGFUDNOON', 'name': 'MGF1', 'bracket': 'GroupUpdown2'},
+                     ]]
 
-TEMPLATE: [] = ["", [{'id': '', 'name': '', 'bracket': 'KO'},
-                 {'id': '', 'name': '', 'bracket': 'WC'},
-                 {'id': '', 'name': '', 'bracket': 'Group1'},
-                 {'id': '', 'name': '', 'bracket': 'Group2'},
-                 ]]
 
-MCS2018CHI: [] = ["MCS-CHI", [{'id': 'mcschi', 'name': 'MCS-CHI', 'bracket': 'KO'},
-                 ]]
+# can't find challonge
+MCS_KC: [] = ["MCS-KC", [{'id': '', 'name': 'MCS-K', 'bracket': 'KO'},
+                         {'id': '', 'name': 'MCS-K', 'bracket': 'WC'},
+                         {'id': '', 'name': 'MCS-K', 'bracket': 'Group1'},
+                         {'id': '', 'name': 'MCS-K', 'bracket': 'Group2'},
+                         ]]
 
+MCS_CBUS: [] = ["MCS-CBUS", [{'id': 'MCSFINALS', 'name': 'MCS-CBUS', 'bracket': 'KO'},
+                             {'id': 'MCSwc', 'name': 'MCS-CBUS', 'bracket': 'WC'},
+                             {'id': 'MCSGroup1', 'name': 'MCS-CBUS', 'bracket': 'Group1'},
+                             {'id': 'MCSGroup2', 'name': 'MCS-CBUS', 'bracket': 'Group2'},
+                             {'id': 'MCSGroup3', 'name': 'MCS-CBUS', 'bracket': 'Group1'},
+                             {'id': 'MCSGroup4', 'name': 'MCS-CBUS', 'bracket': 'Group2'},
+                             ]]
+
+MCS_CHI: [] = ["MCS-CHI", [{'id': 'mcschi', 'name': 'MCS-CHI', 'bracket': 'KO'},
+                           ]]
+
+MCS_MPLS: [] = ["MCS-MPLS", [{'id': 'mcsmpls', 'name': 'MCS-MPLS', 'bracket': 'KO'},
+                             ]]
 
 KQ15: [] = ["KQXV", [{'id': 'KQ15', 'name': 'KGXV', 'bracket': 'KO'},
-                 ]]
+                     ]]
 
 KQ20: [] = ["KQXX", [{'id': 'kqxx', 'name': 'KQXX', 'bracket': 'KO'},
-                 {'id': 'kqxxwc', 'name': 'KQXX', 'bracket': 'WC'},
-                 {'id': 'kqxxgroupa', 'name': 'KQXX', 'bracket': 'Groupa'},
-                 {'id': 'kqxxgroupb', 'name': 'KQXX', 'bracket': 'Groupb'},
-                 {'id': 'kqxxgroupc', 'name': 'KQXX', 'bracket': 'Groupc'},
-                 {'id': 'kqxxgroupd', 'name': 'KQXX', 'bracket': 'Groupd'},
-                 {'id': 'kqxxgroupe', 'name': 'KQXX', 'bracket': 'Groupe'},
-                 {'id': 'kqxxgroupf', 'name': 'KQXX', 'bracket': 'Groupf'},
-                 {'id': 'kqxxgroupg', 'name': 'KQXX', 'bracket': 'Groupg'},
-                 {'id': 'kqxxgrouph', 'name': 'KQXX', 'bracket': 'Grouph'},
-                 ]]
+                     {'id': 'kqxxwc', 'name': 'KQXX', 'bracket': 'WC'},
+                     {'id': 'kqxxgroupa', 'name': 'KQXX', 'bracket': 'Groupa'},
+                     {'id': 'kqxxgroupb', 'name': 'KQXX', 'bracket': 'Groupb'},
+                     {'id': 'kqxxgroupc', 'name': 'KQXX', 'bracket': 'Groupc'},
+                     {'id': 'kqxxgroupd', 'name': 'KQXX', 'bracket': 'Groupd'},
+                     {'id': 'kqxxgroupe', 'name': 'KQXX', 'bracket': 'Groupe'},
+                     {'id': 'kqxxgroupf', 'name': 'KQXX', 'bracket': 'Groupf'},
+                     {'id': 'kqxxgroupg', 'name': 'KQXX', 'bracket': 'Groupg'},
+                     {'id': 'kqxxgrouph', 'name': 'KQXX', 'bracket': 'Grouph'},
+                     ]]
 
 KQ25: [] = ["KQXXV", [{'id': 'kqxxv', 'name': 'KQXXV', 'bracket': 'KO'},
-                 {'id': 'kqxxvwc', 'name': 'KQXXV', 'bracket': 'WC'},
-                 {'id': 'kqxxva', 'name': 'KQXXV', 'bracket': 'GroupA'},
-                 {'id': 'kqxxvb', 'name': 'KQXXV', 'bracket': 'GroupB'},
-                 {'id': 'kqxxvc', 'name': 'KQXXV', 'bracket': 'GroupC'},
-                 {'id': 'kqxxvd', 'name': 'KQXXV', 'bracket': 'GroupD'},
-                 {'id': 'kqxxve', 'name': 'KQXXV', 'bracket': 'GroupE'},
-                 {'id': 'kqxxvf', 'name': 'KQXXV', 'bracket': 'GroupF'},
-                 {'id': 'kqxxvg', 'name': 'KQXXV', 'bracket': 'GroupG'},
-                 ]]
-
-
-
-
-
-
+                      {'id': 'kqxxvwc', 'name': 'KQXXV', 'bracket': 'WC'},
+                      {'id': 'kqxxva', 'name': 'KQXXV', 'bracket': 'GroupA'},
+                      {'id': 'kqxxvb', 'name': 'KQXXV', 'bracket': 'GroupB'},
+                      {'id': 'kqxxvc', 'name': 'KQXXV', 'bracket': 'GroupC'},
+                      {'id': 'kqxxvd', 'name': 'KQXXV', 'bracket': 'GroupD'},
+                      {'id': 'kqxxve', 'name': 'KQXXV', 'bracket': 'GroupE'},
+                      {'id': 'kqxxvf', 'name': 'KQXXV', 'bracket': 'GroupF'},
+                      {'id': 'kqxxvg', 'name': 'KQXXV', 'bracket': 'GroupG'},
+                      ]]
 
 TEMPLATE: [] = ["", [{'id': '', 'name': '', 'bracket': 'KO'},
-                 {'id': '', 'name': '', 'bracket': 'WC'},
-                 {'id': '', 'name': '', 'bracket': 'Group1'},
-                 {'id': '', 'name': '', 'bracket': 'Group2'},
-                 ]]
+                     {'id': '', 'name': '', 'bracket': 'WC'},
+                     {'id': '', 'name': '', 'bracket': 'Group1'},
+                     {'id': '', 'name': '', 'bracket': 'Group2'},
+                     ]]
+
 
 # https://ehgaming.challonge.com/users/charlesjpratt/tournaments?page=5
 # needs:
@@ -326,14 +331,14 @@ TEMPLATE: [] = ["", [{'id': '', 'name': '', 'bracket': 'KO'},
 # groups
 
 
-def get_match_results_from_challonge(account, tourney_name, subtourney_list, filename):
+def get_match_results_from_challonge(account, tourney_name, subtourney_list, filename, append=False):
     first_write = True
     for subtourney in subtourney_list:
         print(f"writing {subtourney['name']} / {subtourney['bracket']}")
         ct: ChallongeTournament = account.get_tournament(tourney_name, subtourney['id'], subtourney['bracket'])
         # ct.parent_tourney_name = 'BB3'
         # ct.bracket_name = subtourney['bracket']
-        ct.write_matchfile(filename, not first_write)
+        ct.write_matchfile(filename, append or not first_write)
         first_write = False
 
 
@@ -344,16 +349,19 @@ def main():
     cp.read('api_keys.properties')
     api_key = cp.get('APIKeys', 'api_key.dshupp')
 
-    parent_tourney: str = CC3[0]
-    subtourney_list: [] = CC3[1]
-
-    parent_tourney = 'test'
-    subtourney_list = [{'id': 'BKCRN2017', 'name': 'BKCRN2017', 'bracket': 'KO'}]
+    parent_tourney: str = KQ15[0]
+    subtourney_list: [] = KQ15[1]
 
     account: ChallongeAccount = ChallongeAccount(api_key, None)
-    account.print_tournament('BKCRN2017')
+    # account.print_tournament('BKCRN2017')
 
-    # get_match_results_from_challonge(account, parent_tourney, subtourney_list, 'test - remove')
+    # get_match_results_from_challonge(account, KQ15[0], KQ15[1], '2018 Midwest game results.csv', append=True)
+    # get_match_results_from_challonge(account, KQ20[0], KQ20[1], '2018 Midwest game results.csv', append=True)
+    # get_match_results_from_challonge(account, KQ25[0], KQ25[1], '2018 Midwest game results.csv', append=True)
+    # get_match_results_from_challonge(account, MCS_MPLS[0], MCS_MPLS[1], '2018 Midwest game results.csv', append=True)
+    # get_match_results_from_challonge(account, MCS_CHI[0], MCS_CHI[1], '2018 Midwest game results.csv', append=True)
+    # get_match_results_from_challonge(account, MCS_CBUS[0], MCS_CBUS[1], '2018 Midwest game results.csv', append=True)
+    # get_match_results_from_challonge(account, MGF1[0], MGF1[1], '2018 Midwest game results.csv', append=True)
 
 
 if __name__ == '__main__':
