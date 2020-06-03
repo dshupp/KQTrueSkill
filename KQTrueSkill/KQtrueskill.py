@@ -145,12 +145,21 @@ class KQTrueSkill:
             self.tournaments.append(tournament)
             self.teams[tournament] = {}
 
-        self.playerscenes[playername] = playerscene
+        if playerteam is None or playername.strip() == '':
+            raise Exception(f"{tournament}: empty team")
 
         if playerteam in self.teams[tournament].keys():
+            if playername is None or playername == '':
+                playername = playerteam + f" {len(self.teams[tournament][playerteam]) + 1}"
+                playerscene = None
             self.teams[tournament][playerteam].append(playername)
         else:
+            if playername is None or playername == '':
+                playername = playerteam + " 1"
+                playerscene = None
             self.teams[tournament][playerteam] = [playername]
+
+        self.playerscenes[playername] = playerscene
 
         if playername in self.playerteams.keys():
             self.playerteams[playername].append(playerteam + '/' + tournament)
