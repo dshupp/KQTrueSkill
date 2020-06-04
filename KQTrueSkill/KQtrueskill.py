@@ -233,7 +233,7 @@ class KQTrueSkill:
         with open(filename, mode='w') as playerskillfile:
             playerskill_writer = csv.writer(playerskillfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             playerskill_writer.writerow(
-                ['Player Name', 'scene', 'mu', 'sigma', 'trueskill', 'tourneys', 'games', 'teams'],'','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','')
+                ['Player Name', 'scene', 'mu', 'sigma', 'trueskill', 'tourneys', 'games', 'teams','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''])
             for player in self.playerratings.keys():
                 row = [player, self.playerscenes[player], self.playerratings[player].mu,
                        self.playerratings[player].sigma,
