@@ -80,6 +80,7 @@ class ChallongeTournament:
         if resp.status_code != 200:
             # This means something went wrong.
             raise Exception('GET /matches/ {}'.format(resp.status_code))
+        print(json.dumps(resp.json(),indent=1))
         return resp.json()
 
     # GET https://api.challonge.com/v1/tournaments/{tournament}.{json|xml}
@@ -130,6 +131,8 @@ class ChallongeTournament:
                 team1name = 'XXX'
                 print(f"ERROR - Empty player1_id in match {match}")
                 self.processing_errors += 1
+            elif isinstance(match['player1_id'],int):
+                team1name = self.get_player_name(match['player1_id'])
             else:
                 team1name: str = self.teams[match['player1_id']]
 
@@ -137,6 +140,8 @@ class ChallongeTournament:
                 team2name = 'XXX'
                 print(f"ERROR - Empty player2_id in match {match}")
                 self.processing_errors += 1
+            elif isinstance(match['player1_id'],int):
+                team2name = self.get_player_name(match['player2_id'])
             else:
                 team2name: str = self.teams[match['player2_id']]
 
@@ -189,6 +194,18 @@ class ChallongeTournament:
                        ]
                 match_writer.writerow(row)
 
+    def get_player_name(self, player_id):
+        url: str = f"{self.account.API_URL}tournaments/{self.tourney_id}/participants/{player_id}.json?api_key={self.account.api_key}"
+        if self.account.subdomain != None:
+            url += f"&subdomain={self.account.subdomain}"
+        print(url)
+        resp = requests.get(url)
+        print(json.dumps(resp.json(),indent=1))
+        if resp.status_code != 200:
+            # This means something went wrong.
+            raise Exception('GET /participants/ {}'.format(resp.status_code))
+        return resp.json()['participant']['name']
+
 
 BB3: [] = ['BB3', [{'id': 5057256, 'name': 'BB3', 'bracket': 'KO'},
                    {'id': 5057264, 'name': 'BB3', 'bracket': 'Pool1'},
@@ -227,53 +244,11 @@ CC3: [] = ["CC3", [{'id': 8048812, 'name': 'CC3', 'bracket': 'GroupA'},
                    {'id': 8048880, 'name': 'CC3', 'bracket': 'KO'},
                    ]]
 
-# subtourney_id: int = 5689203  # GDC4 Groups 1
-# subtourney_id: int = 4415714  # GDC3 DE
-
-GDC1: [] = ["GDC1", [{'id': 'SFGDC', 'name': 'GDC1', 'bracket': 'KO'},
-                     ]]
-
-GDC2: [] = ["GDC2", [{'id': 'kqgdc2', 'name': 'GDC2', 'bracket': 'KO'},
-                     ]]
-# groups?
-Cor15: [] = ["Cor15", [{'id': 'BrooklynCoronation2015', 'name': 'Cor15', 'bracket': 'KO'},
-                       ]]
-
-# https://ehgaming.challonge.com/users/charlesjpratt/tournaments
-Cor16: [] = ["Cor16", [{'id': 'BrooklynCoronationFall2016', 'name': 'Cor16', 'bracket': 'Swiss'},
-                       ]]
-
-# need groups
-Cor17s: [] = ["Cor17s", [{'id': 'BKCRN2017', 'name': 'Cor17s', 'bracket': 'KO'},
-                         ]]
-# need groups
-Cor17f: [] = ["Cor17f", [{'id': 'BKCFall2017', 'name': 'Cor17f', 'bracket': 'KO'},
-                         ]]
-
-# uses group stages in challonge
-Cor18s: [] = ["Cor18s", [{'id': 'springcoronation2018', 'name': 'Cor18s', 'bracket': 'KO'},
-                         {'id': 'springcoronation2018/groups', 'name': 'Cor18s', 'bracket': 'KO'},
-                         ]]
-
-# uses group stages in challonge
-Cor19: [] = ["Cor19", [{'id': 'Coro2019', 'name': 'Cor19', 'bracket': 'KO'},
-                       {'id': 'Coro2019wc', 'name': 'Cor19', 'bracket': 'WC'},
-                       {'id': 'Coro2019Group1', 'name': 'Cor19', 'bracket': 'Group1'},
-                       {'id': 'Coro2019Group2', 'name': 'Cor19', 'bracket': 'Group2'},
-                       ]]
-
 MGF1: [] = ["MGF1", [{'id': 'MGFDE', 'name': 'MGF1', 'bracket': 'KO'},
                      {'id': 'MGFUD130', 'name': 'MGF1', 'bracket': 'GroupUpdown1'},
                      {'id': 'MGFUDNOON', 'name': 'MGF1', 'bracket': 'GroupUpdown2'},
                      ]]
 
-
-# can't find challonge
-MCS_KC: [] = ["MCS-KC", [{'id': '', 'name': 'MCS-K', 'bracket': 'KO'},
-                         {'id': '', 'name': 'MCS-K', 'bracket': 'WC'},
-                         {'id': '', 'name': 'MCS-K', 'bracket': 'Group1'},
-                         {'id': '', 'name': 'MCS-K', 'bracket': 'Group2'},
-                         ]]
 
 MCS_CBUS: [] = ["MCS-CBUS", [{'id': 'MCSFINALS', 'name': 'MCS-CBUS', 'bracket': 'KO'},
                              {'id': 'MCSwc', 'name': 'MCS-CBUS', 'bracket': 'WC'},
@@ -314,6 +289,53 @@ KQ25: [] = ["KQXXV", [{'id': 'kqxxv', 'name': 'KQXXV', 'bracket': 'KO'},
                       {'id': 'kqxxvf', 'name': 'KQXXV', 'bracket': 'GroupF'},
                       {'id': 'kqxxvg', 'name': 'KQXXV', 'bracket': 'GroupG'},
                       ]]
+# processed tourneys go above this line
+
+# subtourney_id: int = 5689203  # GDC4 Groups 1
+# subtourney_id: int = 4415714  # GDC3 DE
+
+# no groups
+GDC1: [] = ["GDC1", [{'id': 'SFGDC', 'name': 'GDC1', 'bracket': 'KO'},
+                     ]]
+# groups at https://smash.gg/tournament/killer-queen-gdc-iii/event/sunday-mixer-killer-queen-gdc3/brackets/218546/530036
+GDC2: [] = ["GDC2", [{'id': 'kqgdc2', 'name': 'GDC2', 'bracket': 'KO'},
+                     ]]
+# groups?
+Cor15: [] = ["Cor15", [{'id': 'BrooklynCoronation2015', 'name': 'Cor15', 'bracket': 'KO'},
+                       ]]
+
+# https://ehgaming.challonge.com/users/charlesjpratt/tournaments
+Cor16: [] = ["Cor16", [{'id': 'BrooklynCoronationFall2016', 'name': 'Cor16', 'bracket': 'Swiss'},
+                       ]]
+
+# need groups
+Cor17s: [] = ["Cor17s", [{'id': 'BKCRN2017', 'name': 'Cor17s', 'bracket': 'KO'},
+                         ]]
+# need groups
+Cor17f: [] = ["Cor17f", [{'id': 'BKCFall2017', 'name': 'Cor17f', 'bracket': 'KO'},
+                         ]]
+
+# uses group stages in challonge
+Cor18s: [] = ["Cor18s", [{'id': 'springcoronation2018', 'name': 'Cor18s', 'bracket': 'KO'},
+                         {'id': 'springcoronation2018/groups', 'name': 'Cor18s', 'bracket': 'KO'},
+                         ]]
+
+# uses group stages in challonge
+Cor19: [] = ["Cor19", [{'id': 'Coro2019', 'name': 'Cor19', 'bracket': 'KO'},
+                       {'id': 'Coro2019wc', 'name': 'Cor19', 'bracket': 'WC'},
+                       {'id': 'Coro2019Group1', 'name': 'Cor19', 'bracket': 'Group1'},
+                       {'id': 'Coro2019Group2', 'name': 'Cor19', 'bracket': 'Group2'},
+                       ]]
+
+
+
+# can't find challonge
+MCS_KC: [] = ["MCS-KC", [{'id': 'KCKQMCS', 'name': 'MCS-K', 'bracket': 'KO'},
+                         {'id': '', 'name': 'MCS-K', 'bracket': 'WC'},
+                         {'id': '', 'name': 'MCS-K', 'bracket': 'Group1'},
+                         {'id': '', 'name': 'MCS-K', 'bracket': 'Group2'},
+                         ]]
+
 
 TEMPLATE: [] = ["", [{'id': '', 'name': '', 'bracket': 'KO'},
                      {'id': '', 'name': '', 'bracket': 'WC'},
@@ -349,13 +371,13 @@ def main():
     cp.read('api_keys.properties')
     api_key = cp.get('APIKeys', 'api_key.dshupp')
 
-    parent_tourney: str = KQ15[0]
-    subtourney_list: [] = KQ15[1]
+    parent_tourney: str = Cor18s[0]
+    subtourney_list: [] = Cor18s[1]
 
     account: ChallongeAccount = ChallongeAccount(api_key, None)
     # account.print_tournament('BKCRN2017')
 
-    # get_match_results_from_challonge(account, KQ15[0], KQ15[1], '2018 Midwest game results.csv', append=True)
+    get_match_results_from_challonge(account, Cor18s[0], Cor18s[1], 'Cor18s.csv', append=False)
     # get_match_results_from_challonge(account, KQ20[0], KQ20[1], '2018 Midwest game results.csv', append=True)
     # get_match_results_from_challonge(account, KQ25[0], KQ25[1], '2018 Midwest game results.csv', append=True)
     # get_match_results_from_challonge(account, MCS_MPLS[0], MCS_MPLS[1], '2018 Midwest game results.csv', append=True)
