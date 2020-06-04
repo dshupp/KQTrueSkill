@@ -1,2 +1,3 @@
 /venv/
-/KQTrueSkill/ingest_tools/api_keys.properties
+/KQTrueSkill/ingest_tools/properties/api_keys.properties
+/KQTrueSkill/ingest_tools/properties/

@@ -368,7 +368,7 @@ def main():
     # scripts for importing a tournament from ingest_tools and getting it into an editable csv that can be read into a KQ history
 
     cp: configparser.RawConfigParser = configparser.RawConfigParser()
-    cp.read('api_keys.properties')
+    cp.read('properties/api_keys.properties')
     api_key = cp.get('APIKeys', 'api_key.dshupp')
 
     parent_tourney: str = Cor18s[0]
