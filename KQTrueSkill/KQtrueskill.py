@@ -15,7 +15,9 @@ class KQTrueSkill:
         self.playerratings = {}
         self.playertournaments = {}  # playertournaments[playername] = {"BB4","KQ30",...}
         self.playergames = {}
-        self.incomplete_players = [] # list of playernames w/0 scenes
+        self.playerwins = {}
+        self.playerlosses = {}
+        self.incomplete_players = []  # list of playernames w/0 scenes
         self.tournaments = []
         self.tournamentdates = {}  # source data only ties matches directly to a date.
         self.teams = {}  # [tournament][team name] = {p1, p2, p3...}
@@ -31,7 +33,7 @@ class KQTrueSkill:
         self.ingest_dataset('datasets/2018 - CC1 Players.csv', 'datasets/2018 - CC1 game results.csv')
         self.ingest_dataset('datasets/2019 - CC2 Players.csv', 'datasets/2019 - CC2 game results.csv')
         self.ingest_dataset('datasets/2020 - CC3 Players.csv', 'datasets/2020 - CC3 game results.csv')
-        self.ingest_dataset('datasets/2018 Midwest players.csv','datasets/2018 Midwest game results.csv')
+        self.ingest_dataset('datasets/2018 Midwest players.csv', 'datasets/2018 Midwest game results.csv')
         # run trueskill on the matches
         self.calculate_trueskills()
 
@@ -51,6 +53,7 @@ class KQTrueSkill:
         self.matches = sorted(self.matches, key=lambda match: match["time"])
 
     # wipe old ratings objects and recalculate trueskill, compare new result with old ratings
+    # side effect: update player games & w/l counts
     def calculate_trueskills(self):
         # save old ratings for later comparison
         old_playerratings = self.playerratings
@@ -80,10 +83,14 @@ class KQTrueSkill:
             # the teams collection
             for player in self.teams[tournament][team1name]:
                 t1ratings.append(self.playerratings[player])
-                self.playergames[player] += team1wins + team2wins  # update player games count
+                self.playergames[player] += team1wins + team2wins
+                self.playerwins[player] += team1wins
+                self.playerlosses[player] += team2wins
             for player in self.teams[tournament][team2name]:
                 t2ratings.append(self.playerratings[player])
-                self.playergames[player] += team1wins + team2wins  # update player games count
+                self.playergames[player] += team1wins + team2wins
+                self.playerwins[player] += team2wins
+                self.playerlosses[player] += team1wins
 
             # update ratings for each game win
             for x in range(team1wins):
@@ -173,12 +180,14 @@ class KQTrueSkill:
             self.playertournaments[playername] = [tournament]
 
         self.playergames[playername] = 0
+        self.playerwins[playername] = 0
+        self.playerlosses[playername] = 0
+
 
         if playername is None or playername.strip() == '':
             self.incomplete_players.append(f"{tournament}: {playerteam}, {playername}, {playerscene}")
         elif playerscene is None or playerscene.strip() == '':
             self.incomplete_players.append(f"{tournament}: {playerteam}, {playername}, {playerscene}")
-
 
     # side effect: updates tournament dates with dates found here
     def ingest_matches_from_file(self, filename: str):
@@ -233,13 +242,20 @@ class KQTrueSkill:
         with open(filename, mode='w') as playerskillfile:
             playerskill_writer = csv.writer(playerskillfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             playerskill_writer.writerow(
-                ['Player Name', 'scene', 'mu', 'sigma', 'trueskill', 'tourneys', 'games', 'teams','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''])
+                ['Player Name', 'scene', 'mu', 'sigma', 'trueskill', 'tourneys', 'games', 'wins', 'losses','win%', 'teams', '',
+                 '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
+                 '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
+                 '', ''])
             for player in self.playerratings.keys():
                 row = [player, self.playerscenes[player], self.playerratings[player].mu,
                        self.playerratings[player].sigma,
                        self.playerratings[player].mu - 2 * self.playerratings[player].sigma,
                        len(self.playertournaments[player]),
-                       self.playergames[player]]
+                       self.playergames[player],
+                       self.playerwins[player],
+                       self.playerlosses[player],
+                       "%.2f" % (self.playerwins[player] / self.playergames[player]),
+                       ]
                 for team in self.playerteams[player]:
                     row.append(team)
                 playerskill_writer.writerow(row)
@@ -280,12 +296,10 @@ def main():
     print("\n*************************\n")
     history.print_data_errors()
 
-
-
     # print your player ratings
     history.write_player_ratings()
 
-    #print(f'Player Ratings: {history.playerratings}')
+    # print(f'Player Ratings: {history.playerratings}')
 
     # test whether processing changed values
     if filecmp.cmp("PlayerSkill.old.csv", "PlayerSkill.csv"):
