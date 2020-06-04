@@ -1,10 +1,10 @@
 This tool uses historical match results at KQ invitationals to calculate estimated skills for players, according to the TrueSkill algorithm. Goals include: 
-- create a scrubbed, usable, complete historical dataset for tournament play
-- calculate relative rankings of KQ players at current and historical times, including a numerical skill estimate and a confidence level
-- inform discussions on team balance, player skills, and game analysis
+- create a complete historical dataset for tournament play, with game wins/losses tracked for each player and team, and player names normalized across teams
+- this dataset is inteded for use by future projects to inform discussions on team balance, player development, and game analysis
+- as an example of analysis you can do with this dataset, calculate relative rankings of KQ players at current and historical times, including a numerical skill estimate and a confidence level
 
 
-Currently includes: 
+## Project contents 
 
 KQtrueskill.py - Python object that builds a complete history from canonical player and match datasets, does some simple data validation, and runs trueskill on the matches
 
@@ -16,7 +16,8 @@ KQtrueskill.py - Python object that builds a complete history from canonical pla
 
 PlayerSkill.csv - Trueskill by player for the current set of tournaments
 
-### Currently tracked tournaments
+
+## Currently tracked tournaments
     2016: ['KQXV']
     2017: ['KQXX']
     2018: ['CC1', 'GDC3', 'MCS-MPLS', 'MCS-CHI', 'KQXXV', 'MGF1', 'HH1', 'MCS-CBUS', 'BB3']
@@ -26,6 +27,15 @@ PlayerSkill.csv - Trueskill by player for the current set of tournaments
 If you'd like to see a tournament added to the list, send dshupp@gmail.com links to the teamsheet and challonge
 
 ***
+## Trueskill notes
+Trueskill was built by Microsoft for matchmaking in Halo, which is, like KQ, a team game where team members change between games.  It estimates skill for each player based on wins and losses. It also measures how statistically confident it is in its estimate so far.    
+
+A player's skill is represented as a normal distribution with mean mu (representing perceived skill) and a variance of sigma (representing how "unconfident" the system is in the player's mu value. This means that Trueskill is 95% confident that a player's true skill is at least mu - 2 * sigma.  
+
+All players start with mu = 25 and sigma = 25/3; mu always increases after a win and always decreases after a loss, and how much it changes depends on how surprising the result was, given the players involved. Unbalanced games, for example, don't affect percieved skill much when the favorite wins, but affects it more in an upset.
+
+Since game order matters in trueskill, we use the match time for all tournament games, and process them in historical order
+
 ## Known Data Issues
 
 ### Tournaments where we can't find the Challonge
