@@ -34,6 +34,7 @@ class KQTrueSkill:
         self.ingest_dataset('datasets/2019 - CC2 Players.csv', 'datasets/2019 - CC2 game results.csv')
         self.ingest_dataset('datasets/2020 - CC3 Players.csv', 'datasets/2020 - CC3 game results.csv')
         self.ingest_dataset('datasets/2018 Midwest players.csv', 'datasets/2018 Midwest game results.csv')
+        self.ingest_dataset('datasets/Coronation players.csv', 'datasets/2017 Coronation game results.csv')
         # run trueskill on the matches
         self.calculate_trueskills()
 
@@ -270,7 +271,7 @@ class KQTrueSkill:
 
     def print_known_tournaments(self):
         printable_tournaments = {}
-        for t in sorted(self.tournamentdates.keys()):
+        for t in self.tournamentdates.keys():
             date: datetime.date = self.tournamentdates[t]
             if date.year in printable_tournaments.keys():
                 printable_tournaments[date.year].append(t)
@@ -278,7 +279,7 @@ class KQTrueSkill:
                 printable_tournaments[date.year] = [t]
             printable_tournaments[date.year] = sorted(printable_tournaments[date.year],
                                                       key=lambda tourney: self.tournamentdates[tourney])
-        for y in printable_tournaments.keys():
+        for y in sorted(printable_tournaments.keys()):
             print(f"{y}: {printable_tournaments[y]}")
 
     def print_data_errors(self):

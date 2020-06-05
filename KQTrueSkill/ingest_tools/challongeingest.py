@@ -80,7 +80,7 @@ class ChallongeTournament:
         if resp.status_code != 200:
             # This means something went wrong.
             raise Exception('GET /matches/ {}'.format(resp.status_code))
-        print(json.dumps(resp.json(),indent=1))
+        # print(json.dumps(resp.json(),indent=1))
         return resp.json()
 
     # GET https://api.challonge.com/v1/tournaments/{tournament}.{json|xml}
@@ -131,8 +131,11 @@ class ChallongeTournament:
                 team1name = 'XXX'
                 print(f"ERROR - Empty player1_id in match {match}")
                 self.processing_errors += 1
-            elif isinstance(match['player1_id'],int):
-                team1name = self.get_player_name(match['player1_id'])
+            elif isinstance(match['player1_id'], int):
+                try:
+                    team1name = self.get_team_name_from_id(match['player1_id'])
+                except:
+                    team1name = str(match['player1_id'])
             else:
                 team1name: str = self.teams[match['player1_id']]
 
@@ -140,8 +143,11 @@ class ChallongeTournament:
                 team2name = 'XXX'
                 print(f"ERROR - Empty player2_id in match {match}")
                 self.processing_errors += 1
-            elif isinstance(match['player1_id'],int):
-                team2name = self.get_player_name(match['player2_id'])
+            elif isinstance(match['player2_id'], int):
+                try:
+                    team2name = self.get_team_name_from_id(match['player2_id'])
+                except:
+                    team2name = str(match['player2_id'])
             else:
                 team2name: str = self.teams[match['player2_id']]
 
@@ -194,13 +200,13 @@ class ChallongeTournament:
                        ]
                 match_writer.writerow(row)
 
-    def get_player_name(self, player_id):
+    def get_team_name_from_id(self, player_id):
         url: str = f"{self.account.API_URL}tournaments/{self.tourney_id}/participants/{player_id}.json?api_key={self.account.api_key}"
         if self.account.subdomain != None:
             url += f"&subdomain={self.account.subdomain}"
         print(url)
         resp = requests.get(url)
-        print(json.dumps(resp.json(),indent=1))
+        # print(json.dumps(resp.json(),indent=1))
         if resp.status_code != 200:
             # This means something went wrong.
             raise Exception('GET /participants/ {}'.format(resp.status_code))
@@ -248,7 +254,6 @@ MGF1: [] = ["MGF1", [{'id': 'MGFDE', 'name': 'MGF1', 'bracket': 'KO'},
                      {'id': 'MGFUD130', 'name': 'MGF1', 'bracket': 'GroupUpdown1'},
                      {'id': 'MGFUDNOON', 'name': 'MGF1', 'bracket': 'GroupUpdown2'},
                      ]]
-
 
 MCS_CBUS: [] = ["MCS-CBUS", [{'id': 'MCSFINALS', 'name': 'MCS-CBUS', 'bracket': 'KO'},
                              {'id': 'MCSwc', 'name': 'MCS-CBUS', 'bracket': 'WC'},
@@ -317,7 +322,7 @@ Cor17f: [] = ["Cor17f", [{'id': 'BKCFall2017', 'name': 'Cor17f', 'bracket': 'KO'
 
 # uses group stages in challonge
 Cor18s: [] = ["Cor18s", [{'id': 'springcoronation2018', 'name': 'Cor18s', 'bracket': 'KO'},
-                         {'id': 'springcoronation2018/groups', 'name': 'Cor18s', 'bracket': 'KO'},
+                         #    {'id': 'springcoronation2018/groups', 'name': 'Cor18s', 'bracket': 'KO'}, added manually
                          ]]
 
 # uses group stages in challonge
@@ -327,15 +332,12 @@ Cor19: [] = ["Cor19", [{'id': 'Coro2019', 'name': 'Cor19', 'bracket': 'KO'},
                        {'id': 'Coro2019Group2', 'name': 'Cor19', 'bracket': 'Group2'},
                        ]]
 
-
-
 # can't find challonge
 MCS_KC: [] = ["MCS-KC", [{'id': 'KCKQMCS', 'name': 'MCS-K', 'bracket': 'KO'},
                          {'id': '', 'name': 'MCS-K', 'bracket': 'WC'},
                          {'id': '', 'name': 'MCS-K', 'bracket': 'Group1'},
                          {'id': '', 'name': 'MCS-K', 'bracket': 'Group2'},
                          ]]
-
 
 TEMPLATE: [] = ["", [{'id': '', 'name': '', 'bracket': 'KO'},
                      {'id': '', 'name': '', 'bracket': 'WC'},
@@ -367,20 +369,19 @@ def get_match_results_from_challonge(account, tourney_name, subtourney_list, fil
 def main():
     # scripts for importing a tournament from ingest_tools and getting it into an editable csv that can be read into a KQ history
 
-    cp: configparser.RawConfigParser = configparser.RawConfigParser()
-    cp.read('properties/api_keys.properties')
-    api_key = cp.get('APIKeys', 'api_key.dshupp')
+    # cp: configparser.RawConfigParser = configparser.RawConfigParser()
+    # cp.read('properties/api_keys.cfg')
+    # api_key = cp.get('APIKeys', '')
 
-    parent_tourney: str = Cor18s[0]
-    subtourney_list: [] = Cor18s[1]
-
-    account: ChallongeAccount = ChallongeAccount(api_key, None)
+    account: ChallongeAccount = ChallongeAccount('OJxf8wmFKHb5afldGJ1HzTn5Omg4s7BcuevuQXCd', None)
     # account.print_tournament('BKCRN2017')
 
-    get_match_results_from_challonge(account, Cor18s[0], Cor18s[1], 'Cor18s.csv', append=False)
-    # get_match_results_from_challonge(account, KQ20[0], KQ20[1], '2018 Midwest game results.csv', append=True)
-    # get_match_results_from_challonge(account, KQ25[0], KQ25[1], '2018 Midwest game results.csv', append=True)
-    # get_match_results_from_challonge(account, MCS_MPLS[0], MCS_MPLS[1], '2018 Midwest game results.csv', append=True)
+    get_match_results_from_challonge(account, Cor15[0], Cor15[1], '../datasets/2017 Coronation game results.csv', append=True)
+    get_match_results_from_challonge(account, Cor16[0], Cor16[1], '../datasets/2017 Coronation game results.csv', append=True)
+    get_match_results_from_challonge(account, Cor17s[0], Cor17s[1], '../datasets/2017 Coronation game results.csv', append=True)
+    get_match_results_from_challonge(account, Cor17f[0], Cor17f[1], '../datasets/2017 Coronation game results.csv', append=True)
+    get_match_results_from_challonge(account, Cor18s[0], Cor18s[1], '../datasets/2017 Coronation game results.csv', append=True)
+    get_match_results_from_challonge(account, Cor19[0], Cor19[1], '../datasets/2017 Coronation game results.csv', append=True)
     # get_match_results_from_challonge(account, MCS_CHI[0], MCS_CHI[1], '2018 Midwest game results.csv', append=True)
     # get_match_results_from_challonge(account, MCS_CBUS[0], MCS_CBUS[1], '2018 Midwest game results.csv', append=True)
     # get_match_results_from_challonge(account, MGF1[0], MGF1[1], '2018 Midwest game results.csv', append=True)

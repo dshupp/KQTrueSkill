@@ -19,9 +19,9 @@ PlayerSkill.csv - Trueskill by player for the current set of tournaments
 
 ## Currently tracked tournaments
     2016: ['KQXV']
-    2017: ['KQXX']
-    2018: ['CC1', 'GDC3', 'MCS-MPLS', 'MCS-CHI', 'KQXXV', 'MGF1', 'HH1', 'MCS-CBUS', 'BB3']
-    2019: ['CC2', 'KQC3', 'GDC4', 'KQ30', 'MGF2', 'BB4', 'HH2']
+    2017: ['Coro17s', 'KQXX', 'Coro17f']
+    2018: ['CC1', 'GDC3', 'MCS-MPLS', 'Coro18s', 'MCS-CHI', 'KQXXV', 'MGF1', 'HH1', 'MCS-CBUS', 'BB3']
+    2019: ['CC2', 'KQC3', 'GDC4', 'Coro19', 'KQ30', 'MGF2', 'BB4', 'HH2']
     2020: ['CC3']
     
 If you'd like to see a tournament added to the list, send dshupp@gmail.com links to the teamsheet and challonge

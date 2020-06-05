@@ -1,5 +1,5 @@
 Tourament,Team,Player,Scene
-KQXX,Salt 💯,Mike Esparza,CHI
+KQXX,Salt 💯,Michael Esparza,CHI
 KQXX,Salt 💯,Paul Thomas,CHI
 KQXX,Salt 💯,Austin Turney,KC
 KQXX,Salt 💯,Andy Laber,KC
@@ -7,7 +7,7 @@ KQXX,Salt 💯,Andrew Wilkening,NY
 KQXX,BDSM,Andrew Kelley,NY
 KQXX,BDSM,Daphane Love,NY
 KQXX,BDSM,Victor Jardim,NY
-KQXX,BDSM,Jason,NY
+KQXX,BDSM,Jason Mann,NY
 KQXX,BDSM,Sam Weddle,PHX
 KQXX,Come Bump Us,Craig Payne,CBUS
 KQXX,Come Bump Us,Hell Logsdon,CBUS
@@ -33,7 +33,7 @@ KQXX,Ding Dong Football,Andrew Quang,CHI
 KQXX,Ding Dong Football,Helen Lau,CHI
 KQXX,Ding Dong Football,John Colby Cook,CHI
 KQXX,Ding Dong Football,Megan Stetz,CHI
-KQXX,Ding Dong Football,Spencer Kaykew,CHI
+KQXX,Ding Dong Football,Spencer Kern,CHI
 KQXX,#Blessed,Josh Biedenweg,SF
 KQXX,#Blessed,Cindy Leung,SF
 KQXX,#Blessed,Felix Yuan,SF
@@ -102,14 +102,14 @@ KQXX,Z,Steven Saenz,CLT
 KQXX,Z,Alex Kogan,CHI
 KQXX,Kogan's Heroes,Josh Eklow,CHI
 KQXX,Kogan's Heroes,Sven,MPLS
-KQXX,Kogan's Heroes,Dj,
-KQXX,Kogan's Heroes,Melissa G.,
+KQXX,Kogan's Heroes,DJ Knerr,STL
+KQXX,Kogan's Heroes,Melissa G.,KC
 KQXX,Kogan's Heroes,,
 KQXX,Buzzkill,Bert Wierenga,CHI
 KQXX,Buzzkill,Christina Norton,CHI
 KQXX,Buzzkill,Nick Giacone,CHI
 KQXX,Buzzkill,Brian Susman,CHI
-KQXX,Buzzkill,JD,CHI
+KQXX,Buzzkill,JD Look,CHI
 KQXX,What Hive School Did You Go To?,Michael Rasnic,CHI
 KQXX,What Hive School Did You Go To?,Morgan Ryman,
 KQXX,What Hive School Did You Go To?,Michael Roman,STL
@@ -156,7 +156,7 @@ KQXX,Rob's Slobs,Jeremy Feltman,MPLS
 KQXX,Rob's Slobs,Sam Tregillus,MPLS
 KQXX,Rob's Slobs,Diana Moya-James,CHI
 KQXX,Garbage Snail Kids,Josh DeBonis,NY
-KQXX,Garbage Snail Kids,Nikita Mikros,NY
+KQXX,Garbage Snail Kids,Nik Mikros,NY
 KQXX,Garbage Snail Kids,Amanda DeBonis,NY
 KQXX,Garbage Snail Kids,Nick Davis,CHI
 KQXX,Garbage Snail Kids,,
@@ -224,7 +224,7 @@ KQXXV,Full TILT,Dee Burling,MPLS
 KQXXV,Full TILT,Justin Henry,MPLS
 KQXXV,Full TILT,Mark Nelson,MPLS
 KQXXV,Full TILT,Francis Sullivan,MPLS
-KQXXV,Full TILT,Paul HIllman,MPLS
+KQXXV,Full TILT,Paul Hillman,MPLS
 KQXXV,Checkers Your Privilege,Kyle Shipwash,CLT
 KQXXV,Checkers Your Privilege,Imandra McKenzie,PDX
 KQXXV,Checkers Your Privilege,Andy Laber,KC
@@ -289,11 +289,11 @@ KQXXV,Queen's Revenge,Jacob LaSchultz,CLT
 KQXXV,Queen's Revenge,Courtney LaSchultz,CLT
 KQXXV,Queen's Revenge,Cheyenne Steel,CLT
 KQXXV,Queen's Revenge,Steven Saenz,CLT
-KQXXV,Queen's Revenge,Truett Grigg,CLT
+KQXXV,Queen's Revenge,Preston Truett Grigg,CLT
 KQXXV,P.E. AbsenBees,Jordan Navarra,CLT
-KQXXV,P.E. AbsenBees,Nicole Boi Vall,CLT
+KQXXV,P.E. AbsenBees,Nicole De Vall,CLT
 KQXXV,P.E. AbsenBees,Andrew Griner,CLT
-KQXXV,P.E. AbsenBees,Maria BoiEll,CLT
+KQXXV,P.E. AbsenBees,Maria Barrell,CLT
 KQXXV,P.E. AbsenBees,Andrew Talarico,CLT
 KQXXV,Spicy Boiz,Melanie Brown,SEA
 KQXXV,Spicy Boiz,Tressa Points,SEA
@@ -386,13 +386,13 @@ KQXV,Queenceneara,Adam Babel,CHI
 KQXV,Queenceneara,Spencer Kern,CHI
 KQXV,Queenceneara,Chris T,CHI
 KQXV,LORD MOIST,Billy Faldo,KC
-KQXV,LORD MOIST,Christian,KC
+KQXV,LORD MOIST,Christian H,KC
 KQXV,LORD MOIST,Dennis Chem,KC
 KQXV,LORD MOIST,Nicky,KC
 KQXV,LORD MOIST,Bunmi M,KC
 KQXV,TallBoyz,Ammar Ahmed,CLT
 KQXV,TallBoyz,Travis Teta,CLT
-KQXV,TallBoyz,Kristian,CLT
+KQXV,TallBoyz,Kristian Andrewson,CLT
 KQXV,TallBoyz,Andrew Griner,CLT
 KQXV,TallBoyz,Ryan Lescoe,CLT
 KQXV,Yass Queens,Cheyenne Steel,CLT
@@ -404,7 +404,7 @@ KQXV,Murder Nerds,Anna,CHI
 KQXV,Murder Nerds,Belia Portillo,CHI
 KQXV,Murder Nerds,Jorge,CHI
 KQXV,Murder Nerds,Shawn,CHI
-KQXV,Murder Nerds,CB,CHI
+KQXV,Murder Nerds,Chuck Bressan,CHI
 KQXV,Man Buns But Better,Craig Payne,CBUS
 KQXV,Man Buns But Better,Hell Logsdon,CBUS
 KQXV,Man Buns But Better,Blake Compton,CBUS
@@ -413,10 +413,10 @@ KQXV,Man Buns But Better,Carlos DeLaSerda,CBUS
 KQXV,Malort Sharts,Pawel,CHI
 KQXV,Malort Sharts,Katie Rhodes,CHI
 KQXV,Malort Sharts,Jennifer,CHI
-KQXV,Malort Sharts,Steven Titra,CHI
+KQXV,Malort Sharts,Steve Titra,CHI
 KQXV,Malort Sharts,Curt,CHI
-KQXV,Sting of Queens,Hugo Menesis,KC
-KQXV,Sting of Queens,Melissa,KC
+KQXV,Sting of Queens,Hugo Meneses,KC
+KQXV,Sting of Queens,Melissa G.,KC
 KQXV,Sting of Queens,George,KC
 KQXV,Sting of Queens,Eli Whitney,KC
 KQXV,Sting of Queens,Ryan Waisner,KC
@@ -424,7 +424,7 @@ KQXV,Dankey Kang,Brian Kang,NY
 KQXV,Dankey Kang,Poe,CHI
 KQXV,Dankey Kang,Devin,CHI
 KQXV,Dankey Kang,Metal Mike,CHI
-KQXV,Dankey Kang,Johnny,CHI
+KQXV,Dankey Kang,Johnny Summerville,CHI
 KQXV,Fake Palidrones,,CHI
 KQXV,Fake Palidrones,,CHI
 KQXV,Fake Palidrones,,CHI
@@ -459,14 +459,14 @@ MCS-CHI,quietly yeeshes,Rishi Khullar,CHI
 MCS-CHI,quietly yeeshes,Chris Cadayona,CHI
 MCS-CHI,quietly yeeshes,Woody Stanfield,CHI
 MCS-CHI,quietly yeeshes,Dan Barron,CHI
-MCS-CHI,quietly yeeshes,Spencer Kaykew,CHI
+MCS-CHI,quietly yeeshes,Spencer Kern,CHI
 MCS-CHI,Day Berries,Alex Valdez,MAD
 MCS-CHI,Day Berries,Philip Repsher,CHI
 MCS-CHI,Day Berries,Ryan Waisner,CHI
 MCS-CHI,Day Berries,Chuck Bressan,CHI
 MCS-CHI,Day Berries,Anna Thornton,MPLS
 MCS-CHI,Los We’re Up!,Paul Thomas,CHI
-MCS-CHI,Los We’re Up!,Mike Esparza,CHI
+MCS-CHI,Los We’re Up!,Michael Esparza,CHI
 MCS-CHI,Los We’re Up!,Carlos DeLaSerda,CBUS
 MCS-CHI,Los We’re Up!,Stephi Castillo,CHI
 MCS-CHI,Los We’re Up!,Kevin Merryman,CHI
@@ -533,7 +533,7 @@ MCS-CBUS,Not So Safe,Ken Mosley,CBUS
 MCS-CBUS,Queen's Revenge,Jacob LaSchultz,CLT
 MCS-CBUS,Queen's Revenge,Courtney LaSchultz,CLT
 MCS-CBUS,Queen's Revenge,Cheyenne Steel,CLT
-MCS-CBUS,Queen's Revenge,Truett Grigg,CLT
+MCS-CBUS,Queen's Revenge,Preston Truett Grigg,CLT
 MCS-CBUS,Queen's Revenge,Steven Saenz,CLT
 MCS-CBUS,ChiffeRobe,Nick Davis,CHI
 MCS-CBUS,ChiffeRobe,Andrew Wilkening,NY
@@ -552,7 +552,7 @@ MCS-CBUS,BeeBee Metal,Michael Rasnic,CHI
 MCS-CBUS,BeeBee Metal,Charles Pratt,NY
 MCS-CBUS,Shadow Scene,Nick Monger,CIN
 MCS-CBUS,Shadow Scene,Victoria Bauscher,CIN
-MCS-CBUS,Shadow Scene,Spenser Kern,CIN
+MCS-CBUS,Shadow Scene,Spencer Kern,CIN
 MCS-CBUS,Shadow Scene,Bethany Caspersz,CIN
 MCS-CBUS,Shadow Scene,Bobby Boehl,CIN
 MCS-CBUS,Snackémon GO,Jordan Navarra,CLT
@@ -703,7 +703,7 @@ MGF1,Yennhi and the Jets,Geovanny Tzarax,MPLS
 MGF1,Country Rhodes,Katie Rhodes,CHI
 MGF1,Country Rhodes,Justin Buth,CHI
 MGF1,Country Rhodes,Alex Valdez,MAD
-MGF1,Country Rhodes,Dre Quan,CHI
+MGF1,Country Rhodes,Andrew Quang,CHI
 MGF1,Country Rhodes,Woody Stanfield,CHI
 MGF1,Al Bee Sure!,Drew Sandquist,NY
 MGF1,Al Bee Sure!,Anthony,NY
@@ -721,9 +721,9 @@ MGF1,ON A STICK,Kyle Shipwash,CLT
 MGF1,ON A STICK,Paul Hillman,MPLS
 MGF1,ON A STICK,Sarah Stewart,MPLS
 MGF1,Mustache Militia,Lindsay Miller,MPLS
-MGF1,Mustache Militia,Francis,MPLS
+MGF1,Mustache Militia,Francis Sullivan,MPLS
 MGF1,Mustache Militia,Marina Catherine,MPLS
-MGF1,Mustache Militia,Mark,MPLS
+MGF1,Mustache Militia,Mark Larson,MPLS
 MGF1,Mustache Militia,Kasi White,MPLS
 MGF1,Lovely Berry Bumps,Jesse Spalding,MPLS
 MGF1,Lovely Berry Bumps,Johanna Rose,MPLS
