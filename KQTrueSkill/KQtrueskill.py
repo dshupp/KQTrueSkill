@@ -256,12 +256,12 @@ class KQTrueSkill:
                 max_tourneys = len(self.playerteams[p])
         headers = ['Player Name', 'scene', 'mu', 'sigma', 'trueskill', 'tourneys', 'games', 'wins', 'losses', 'win%']
         for i in range(max_tourneys):
-            headers.append(f"Team {i}")
+            headers.append(f"Team")
 
         with open(filename, mode='w') as playerskillfile:
             playerskill_writer = csv.writer(playerskillfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             playerskill_writer.writerow(headers)
-            for player in self.playerratings.keys():
+            for player in sorted(self.playerratings.keys()):
                 row = [player, self.playerscenes[player], self.playerratings[player].mu,
                        self.playerratings[player].sigma,
                        self.playerratings[player].mu - 2 * self.playerratings[player].sigma,

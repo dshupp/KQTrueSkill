@@ -3,6 +3,33 @@ This tool uses historical match results at KQ invitationals to calculate estimat
 - this dataset is inteded for use by future projects to inform discussions on team balance, player development, and game analysis
 - as an example of analysis you can do with this dataset, calculate relative rankings of KQ players at current and historical times, including a numerical skill estimate and a confidence level
 
+## Roadmap
+
+    Use cases to explore
+        Leaderboard - Trueskill can be used to provide a ranking for all players.
+            - Current understanding is that Trueskill is really only valid as a snapshot at a point time.   
+        Balancing teams - Can you run a draft tournament? 
+    
+    Questions about Trueskill and KQ
+        How predictive is Trueskill for KQ?
+            - Are there other ways to benchmark other than predictive power?                  
+        What does improvement look like when you're tracking trueskill across tournaments? 
+            - How much does a tournament change a player's trueskill?
+        How much does including/excluding data affect predictiveness?
+            - How much does the data from a group stage affect predictive power?
+            - How much does local league night data improve the accuracy of rankings in tournaments?
+            - How much does it change my ranking to exclude tournaments from back when I sucked
+        How does changing the algorithm affect its performance? 
+            - How does weighting the impact of queens vs drones affect predictiveness 
+            
+            
+    Current Priority: add all touramnet KO & Group stages from all KQ invitationals
+    
+    Next: Review results, benchmark predictive power vs tournaments
+    
+    Future:
+        - Track a player's skill over time
+        
 
 ## Project contents 
 
@@ -34,7 +61,16 @@ A player's skill is represented as a normal distribution with mean mu (represent
 
 All players start with mu = 25 and sigma = 25/3; mu always increases after a win and always decreases after a loss, and how much it changes depends on how surprising the result was, given the players involved. Unbalanced games, for example, don't affect percieved skill much when the favorite wins, but affects it more in an upset.
 
+The best way to improve your 'trueskill' is to win a match between balanced teams.  
+
 Since game order matters in trueskill, we use the match time for all tournament games, and process them in historical order
+
+### FAQ
+Q: Are my old tournament performances from when I was new keeping my ratings low? 
+
+A: Very little, if at all. The algorithm assumes that your skill level is changing over time, 
+and it takes a few dozen games to adjust to a new skill level, so within a tournament or two 
+it will have you pegged at your current level, and the effects of older tournaments will fade.
 
 ## Known Data Issues
 ### Tournaments where we can't find the Team Sheet
