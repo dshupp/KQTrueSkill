@@ -22,7 +22,7 @@ class KQTrueSkill:
         self.tournaments = []
         self.tournamentdates = {}  # source data only ties matches directly to a date.
         self.teams = {}  # [tournament][team name] = {p1, p2, p3...}
-        self.output_file_name: str = 'PlayerSkill.csv'
+        self.output_file_name: str = '../PlayerSkill.csv'
         self.process_approved_datasets()
 
     # ingest the known good datasets automatically
@@ -318,7 +318,7 @@ def main():
     # print(f'Player Ratings: {history.playerratings}')
 
     # test whether processing changed values
-    if filecmp.cmp("PlayerSkill.old.csv", "PlayerSkill.csv"):
+    if filecmp.cmp("PlayerSkill.old.csv", history.output_file_name):
         print("Files are same")
     else:
         print("Files are different")
