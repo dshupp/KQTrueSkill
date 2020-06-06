@@ -254,8 +254,7 @@ class KQTrueSkill:
         for p in self.playerteams.keys():
             if max_tourneys < len(self.playerteams[p]):
                 max_tourneys = len(self.playerteams[p])
-        headers = ['Player Name', 'scene', 'mu', 'sigma', 'trueskill', 'tourneys', 'games', 'wins', 'losses', 'win%',
-                 'teams']
+        headers = ['Player Name', 'scene', 'mu', 'sigma', 'trueskill', 'tourneys', 'games', 'wins', 'losses', 'win%']
         for i in range(max_tourneys):
             headers.append(f"Team {i}")
 
