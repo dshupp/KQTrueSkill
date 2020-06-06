@@ -1,6 +1,6 @@
 import filecmp
 import datetime
-
+import trueskill
 from trueskill import *
 import csv
 
@@ -9,6 +9,7 @@ class KQTrueSkill:
     datetime_format: str = "%Y-%m-%dT%H:%M:%S%z"
 
     def __init__(self):
+        trueskill.setup(trueskill.MU, trueskill.SIGMA, trueskill.BETA, trueskill.TAU, draw_probability=0)
         self.matches: [] = []
         self.playerscenes = {}
         self.playerteams = {}
@@ -264,7 +265,7 @@ class KQTrueSkill:
             for player in sorted(self.playerratings.keys()):
                 row = [player, self.playerscenes[player], self.playerratings[player].mu,
                        self.playerratings[player].sigma,
-                       self.playerratings[player].mu - 2 * self.playerratings[player].sigma,
+                       self.playerratings[player].mu - 3 * self.playerratings[player].sigma,
                        len(self.playertournaments[player]),
                        self.playergames[player],
                        self.playerwins[player],
@@ -273,7 +274,7 @@ class KQTrueSkill:
                        ]
                 for team in self.playerteams[player]:
                     row.append(team)
-                playerskill_writer.writerow(row+['']*(max_tourneys-len(self.playerteams[player])))
+                playerskill_writer.writerow(row + [''] * (max_tourneys - len(self.playerteams[player])))
 
     def get_player_scene_list(self):
         playerlist = []
@@ -321,7 +322,6 @@ def main():
         print("Files are same")
     else:
         print("Files are different")
-
 
 
 if __name__ == '__main__':
