@@ -20,9 +20,9 @@ PlayerSkill.csv - Trueskill by player for the current set of tournaments
 ## Currently tracked tournaments
     2016: ['KQXV']
     2017: ['Coro17s', 'KQXX', 'Coro17f']
-    2018: ['CC1', 'GDC3', 'MCS-MPLS', 'Coro18s', 'MCS-CHI', 'KQXXV', 'MGF1', 'HH1', 'MCS-CBUS', 'BB3']
-    2019: ['CC2', 'KQC3', 'GDC4', 'Coro19', 'KQ30', 'MGF2', 'BB4', 'HH2']
-    2020: ['CC3']
+    2018: ['CC1', 'GDC3', 'MCS-MPLS', 'Coro18s', 'MCS-CHI', 'KQXXV', 'MCS_KC', 'MGF1', 'HH1', 'MCS-CBUS', 'BB3', 'CHA_HT']
+    2019: ['CC2', 'QGW19', 'KQC3', 'GDC4', 'Coro19', 'GFT', 'KQ30', 'MGF2', 'BBrawl4', 'BB4', 'HH2']
+    2020: ['CC3', 'QGW20']
     
 If you'd like to see a tournament added to the list, send dshupp@gmail.com links to the teamsheet and challonge
 
@@ -37,12 +37,12 @@ All players start with mu = 25 and sigma = 25/3; mu always increases after a win
 Since game order matters in trueskill, we use the match time for all tournament games, and process them in historical order
 
 ## Known Data Issues
-
+### Tournaments where we can't find the Team Sheet
+    Coronation 2015, 2016
 ### Tournaments where we can't find the Challonge
-    Challonge for MCS KC
-
+    None currently
 ### Matches with missing data
-    CC2,GroupC,I DIED AND I'M SORRY,Fifth Wheel,XXX,XXX,2019-01-26T17:30:46-0500 # currently logged as 2-0 Fifth Wheel
+    None currently
     
 ### Teams with missing players
 
@@ -52,8 +52,6 @@ Since game order matters in trueskill, we use the match time for all tournament 
     BB3: Show Me Your Boops, Show Me Your Boops 4, 
     BB3: Show Me Your Boops, Show Me Your Boops 5, 
     KQXX: Blood HoNYC, George, 
-    KQXX: Kogan's Heroes, Dj, 
-    KQXX: Kogan's Heroes, Melissa G., 
     KQXX: Kogan's Heroes, Kogan's Heroes 5, None
     KQXX: What Hive School Did You Go To?, Morgan Ryman, 
     KQXX: Superteam: Return of the Private Cab, Bryan Boyer, 
@@ -76,3 +74,6 @@ Since game order matters in trueskill, we use the match time for all tournament 
     MCS-CHI: Mad Chuck, Mad Chuck 4, None
     MCS-CHI: Mad Chuck, Mad Chuck 5, None
     MGF1: Y U Dumb Tho?, Y U Dumb Tho? 5, None
+    BBrawl4: Some Side Cab Scrubs, Anna Willoughby, 
+    QGW19: 3 Dollar PBRs, 3 Dollar PBRs 4, None
+    QGW19: 3 Dollar PBRs, 3 Dollar PBRs 5, None

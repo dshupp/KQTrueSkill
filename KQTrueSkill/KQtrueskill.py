@@ -35,11 +35,14 @@ class KQTrueSkill:
         self.ingest_dataset('datasets/2020 - CC3 Players.csv', 'datasets/2020 - CC3 game results.csv')
         self.ingest_dataset('datasets/2018 Midwest players.csv', 'datasets/2018 Midwest game results.csv')
         self.ingest_dataset('datasets/Coronation players.csv', 'datasets/2017 Coronation game results.csv')
+        self.ingest_dataset('ingest_tools/2018 misc players.csv', 'ingest_tools/out.csv')
+
         # run trueskill on the matches
         self.calculate_trueskills()
 
     def test_dataset(self, player_file, results_file):
         self.ingest_dataset(player_file, results_file)
+        # todo report teams with no matches
         # self.calculate_trueskills()
 
     def ingest_dataset(self, playerfile: str, matchfile: str):
@@ -133,17 +136,22 @@ class KQTrueSkill:
         with open(filename) as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=',')
             line_count = 0
+            last_seen_team = None
             for row in csv_reader:
                 if line_count == 0:
                     print(f'Player List Column names are {", ".join(row)}')
                     line_count += 1
                 else:
                     line_count += 1
-                    # print(line_count)
                     tournament = row[0]
                     playerteam = row[1]
                     playername = row[2]
                     playerscene = row[3]
+
+                    if playerteam is None or playerteam.strip() == '':
+                        playerteam = last_seen_team
+                    else:
+                        last_seen_team = playerteam
                     self.add_player(playername, playerscene, playerteam, tournament)
             print(f'Processed {line_count} players from {filename}.')
             # print(f'Player Scenes: {self.playerscenes}')
@@ -184,7 +192,6 @@ class KQTrueSkill:
         self.playerwins[playername] = 0
         self.playerlosses[playername] = 0
 
-
         if playername is None or playername.strip() == '':
             self.incomplete_players.append(f"{tournament}: {playerteam}, {playername}, {playerscene}")
         elif playerscene is None or playerscene.strip() == '':
@@ -195,6 +202,7 @@ class KQTrueSkill:
         with open(filename) as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=',')
             line_count = 0
+            errors = ''
             for row in csv_reader:
                 if line_count == 0:
                     # print(f' Game Results Column names are {", ".join(row)}')
@@ -211,14 +219,11 @@ class KQTrueSkill:
 
                     # we should not be adding any new members to our tourney/team lists here
                     if tournament not in self.tournaments:
-                        raise Exception(
-                            f" {tournament} not found in self.tournaments. tournaments found = {self.tournaments}")
+                        errors += f"{tournament} not found in self.tournaments. tournaments found = {self.tournaments}\n"
                     if team1name not in self.teams[tournament].keys():
-                        raise Exception(
-                            f"{team1name} not found in teams[{tournament}]. team 2 was {team2name}. teams found = {self.teams[tournament].keys()}")
+                        errors += f"{team1name} not found in teams[{tournament}]. team 2 was {team2name}. teams found = {self.teams[tournament].keys()}\n"
                     if team2name not in self.teams[tournament].keys():
-                        raise Exception(
-                            f"{team2name} not found in teams[{tournament}]. team 1 was {team1name}. teams found = {self.teams[tournament].keys()}")
+                        errors += f"{team2name} not found in teams[{tournament}]. team 1 was {team1name}. teams found = {self.teams[tournament].keys()}\n"
 
                     # track the date for this tournament, if not already tracked
                     if tournament not in self.tournamentdates.keys():
@@ -236,6 +241,8 @@ class KQTrueSkill:
                          })
                     line_count += 1
         print(f"Processed {line_count - 1} matches, now tracking {len(self.matches)} matches.")
+        if errors != '':
+            raise Exception(errors)
 
     def write_player_ratings(self, filename: str = None):
         if filename is None:
@@ -243,7 +250,8 @@ class KQTrueSkill:
         with open(filename, mode='w') as playerskillfile:
             playerskill_writer = csv.writer(playerskillfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             playerskill_writer.writerow(
-                ['Player Name', 'scene', 'mu', 'sigma', 'trueskill', 'tourneys', 'games', 'wins', 'losses','win%', 'teams', '',
+                ['Player Name', 'scene', 'mu', 'sigma', 'trueskill', 'tourneys', 'games', 'wins', 'losses', 'win%',
+                 'teams', '',
                  '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
                  '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
                  '', ''])
