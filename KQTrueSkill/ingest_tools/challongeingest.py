@@ -404,14 +404,14 @@ def main():
 
 
 
-    # get_match_results_from_challonge(account, MCS_KC[0], MCS_KC[1], 'out.csv', append=False)
-    # get_match_results_from_challonge(account, GFT[0], GFT[1], 'out.csv', append=True)
-    # get_match_results_from_challonge(account_sfl, QGW19[0], QGW19[1], 'out.csv', append=True)
-    # get_match_results_from_challonge(account, QGW20[0], QGW20[1], 'out.csv', append=True)
-    # get_match_results_from_challonge(account, BBrawl4[0], BBrawl4[1], 'out.csv', append=True)
-    # get_match_results_from_challonge(account_cha, CHA_HT[0], CHA_HT[1], 'out.csv', append=True)
+    # get_match_results_from_challonge(account, MCS_KC[0], MCS_KC[1], '2019 misc game results.csv', append=False)
+    # get_match_results_from_challonge(account, GFT[0], GFT[1], '2019 misc game results.csv', append=True)
+    # get_match_results_from_challonge(account_sfl, QGW19[0], QGW19[1], '2019 misc game results.csv', append=True)
+    # get_match_results_from_challonge(account, QGW20[0], QGW20[1], '2019 misc game results.csv', append=True)
+    # get_match_results_from_challonge(account, BBrawl4[0], BBrawl4[1], '2019 misc game results.csv', append=True)
+    # get_match_results_from_challonge(account_cha, CHA_HT[0], CHA_HT[1], '2019 misc game results.csv', append=True)
 
-    # get_match_results_from_challonge(account, [0], [1], 'out.csv', append=True)
+    # get_match_results_from_challonge(account, [0], [1], '2019 misc game results.csv', append=True)
 
 
 if __name__ == '__main__':

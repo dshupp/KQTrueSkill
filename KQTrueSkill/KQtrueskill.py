@@ -35,7 +35,7 @@ class KQTrueSkill:
         self.ingest_dataset('datasets/2020 - CC3 Players.csv', 'datasets/2020 - CC3 game results.csv')
         self.ingest_dataset('datasets/2018 Midwest players.csv', 'datasets/2018 Midwest game results.csv')
         self.ingest_dataset('datasets/Coronation players.csv', 'datasets/2017 Coronation game results.csv')
-        self.ingest_dataset('ingest_tools/2018 misc players.csv', 'ingest_tools/out.csv')
+        self.ingest_dataset('datasets/2019 misc players.csv', 'datasets/2019 misc game results.csv')
 
         # run trueskill on the matches
         self.calculate_trueskills()
@@ -43,6 +43,7 @@ class KQTrueSkill:
     def test_dataset(self, player_file, results_file):
         self.ingest_dataset(player_file, results_file)
         # todo report teams with no matches
+        # todo combine datasets into one file
         # self.calculate_trueskills()
 
     def ingest_dataset(self, playerfile: str, matchfile: str):
@@ -247,14 +248,20 @@ class KQTrueSkill:
     def write_player_ratings(self, filename: str = None):
         if filename is None:
             filename = self.output_file_name
+
+        # make sure our csv rows align
+        max_tourneys = 0
+        for p in self.playerteams.keys():
+            if max_tourneys < len(self.playerteams[p]):
+                max_tourneys = len(self.playerteams[p])
+        headers = ['Player Name', 'scene', 'mu', 'sigma', 'trueskill', 'tourneys', 'games', 'wins', 'losses', 'win%',
+                 'teams']
+        for i in range(max_tourneys):
+            headers.append(f"Team {i}")
+
         with open(filename, mode='w') as playerskillfile:
             playerskill_writer = csv.writer(playerskillfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-            playerskill_writer.writerow(
-                ['Player Name', 'scene', 'mu', 'sigma', 'trueskill', 'tourneys', 'games', 'wins', 'losses', 'win%',
-                 'teams', '',
-                 '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-                 '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-                 '', ''])
+            playerskill_writer.writerow(headers)
             for player in self.playerratings.keys():
                 row = [player, self.playerscenes[player], self.playerratings[player].mu,
                        self.playerratings[player].sigma,
@@ -267,7 +274,7 @@ class KQTrueSkill:
                        ]
                 for team in self.playerteams[player]:
                     row.append(team)
-                playerskill_writer.writerow(row)
+                playerskill_writer.writerow(row+['']*(max_tourneys-len(self.playerteams[player])))
 
     def get_player_scene_list(self):
         playerlist = []
