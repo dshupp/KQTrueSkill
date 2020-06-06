@@ -6,9 +6,13 @@ This tool uses historical match results at KQ invitationals to calculate estimat
 ## Roadmap
 
     Use cases to explore
-        Leaderboard - Trueskill can be used to provide a ranking for all players.
+        Leaderboard 
+            - Trueskill can be used to provide a ranking for all players.
             - Current understanding is that Trueskill is really only valid as a snapshot at a point time.   
-        Balancing teams - Can you run a draft tournament? 
+        Balancing teams 
+            - How do you use trueskill to run a draft tournament?
+        Tournament Predictions
+            - Am I better than a bot at picking tournament placements?     
     
     Questions about Trueskill and KQ
         How predictive is Trueskill for KQ?
@@ -20,7 +24,8 @@ This tool uses historical match results at KQ invitationals to calculate estimat
             - How much does local league night data improve the accuracy of rankings in tournaments?
             - How much does it change my ranking to exclude tournaments from back when I sucked
         How does changing the algorithm affect its performance? 
-            - How does weighting the impact of queens vs drones affect predictiveness 
+            - How does weighting the impact of queens vs drones affect predictiveness
+            - How does messing with Beta
             
             
     Current Priority: add all touramnet KO & Group stages from all KQ invitationals
