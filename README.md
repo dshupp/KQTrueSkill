@@ -51,9 +51,9 @@ PlayerSkill.csv - Trueskill by player for the current set of tournaments
 
 ## Currently tracked tournaments
     2016: ['KQXV']
-    2017: ['Coro17s', 'KQXX', 'Coro17f']
+    2017: ['GDC2', 'Coro17s', 'KQXX', 'Camp17', 'Coro17f']
     2018: ['CC1', 'GDC3', 'MCS-MPLS', 'Coro18s', 'MCS-CHI', 'KQXXV', 'MCS_KC', 'MGF1', 'HH1', 'MCS-CBUS', 'BB3', 'CHA_HT']
-    2019: ['CC2', 'QGW19', 'KQC3', 'GDC4', 'Coro19', 'GFT', 'KQ30', 'MGF2', 'BBrawl4', 'BB4', 'HH2']
+    2019: ['CC2', 'QGW19', 'KQC3', 'GDC4', 'Coro19', 'GFT', 'KQ30', 'Camp19', 'MGF2', 'ECC1', 'BBrawl4', 'BB4', 'HH2']
     2020: ['CC3', 'QGW20']
     
 If you'd like to see a tournament added to the list, send dshupp@gmail.com links to the teamsheet and challonge
@@ -80,8 +80,9 @@ it will have you pegged at your current level, and the effects of older tourname
 ## Known Data Issues
 ### Tournaments where we can't find the Team Sheet
     Coronation 2015, 2016
+    GDC 1
 ### Tournaments where we can't find the Challonge
-    None currently
+    Camp 2017 Groups, Camp 2019 Groups
 ### Matches with missing data
     None currently
     

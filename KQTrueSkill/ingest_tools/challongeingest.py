@@ -315,9 +315,22 @@ Cor19: [] = ["Cor19", [{'id': 'Coro2019', 'name': 'Cor19', 'bracket': 'KO'},
 # no groups
 GDC1: [] = ["GDC1", [{'id': 'SFGDC', 'name': 'GDC1', 'bracket': 'KO'},
                      ]]
-# groups at https://smash.gg/tournament/killer-queen-gdc-iii/event/sunday-mixer-killer-queen-gdc3/brackets/218546/530036
+
 GDC2: [] = ["GDC2", [{'id': 'kqgdc2', 'name': 'GDC2', 'bracket': 'KO'},
                      ]]
+
+Camp17: [] = ["Camp17", [{'id': 'campkq', 'bracket': 'KO'},
+                     ]]
+
+Camp19: [] = ["Camp19", [{'id': 'campkq2019', 'bracket': 'KO'},
+                     ]]
+
+
+ECC1: [] = ["ECC1", [{'id': 'ECC2019finals', 'bracket': 'KO'},
+                     {'id': 'ECC2019poolA', 'bracket': 'Group1'},
+                     {'id': 'ECC2019poolB', 'bracket': 'Group2'},
+                     ]]
+
 # groups?
 Cor15: [] = ["Cor15", [{'id': 'BrooklynCoronation2015', 'name': 'Cor15', 'bracket': 'KO'},
                        ]]
@@ -371,7 +384,6 @@ TEMPLATE: [] = ["", [{'id': '', 'bracket': 'KO'},
                      ]]
 
 
-# https://ehgaming.challonge.com/users/charlesjpratt/tournaments?page=5
 # needs:
 # gdc3 groups
 # Coro 17s/f groups?
@@ -397,18 +409,20 @@ def main():
     # api_key = cp.get('APIKeys', '')
 
     account: ChallongeAccount = ChallongeAccount('OJxf8wmFKHb5afldGJ1HzTn5Omg4s7BcuevuQXCd', None)
+    account_kqsf: ChallongeAccount = ChallongeAccount('OJxf8wmFKHb5afldGJ1HzTn5Omg4s7BcuevuQXCd','kq-sf')
     account_sfl: ChallongeAccount = ChallongeAccount('OJxf8wmFKHb5afldGJ1HzTn5Omg4s7BcuevuQXCd','hybridhypegaming')
     account_cha: ChallongeAccount = ChallongeAccount('OJxf8wmFKHb5afldGJ1HzTn5Omg4s7BcuevuQXCd','killer-queen-chattanooga')
 
     # account.print_tournament('BKCRN2017')
 
 
+    get_match_results_from_challonge(account, GDC1[0], GDC1[1], 'tmp.csv', append=False)
+    get_match_results_from_challonge(account, GDC2[0], GDC2[1], 'tmp.csv', append=True)
+    get_match_results_from_challonge(account, Camp17[0], Camp17[1], 'tmp.csv', append=True)
+    get_match_results_from_challonge(account, Camp19[0], Camp19[1], 'tmp.csv', append=True)
+    get_match_results_from_challonge(account, ECC1[0], ECC1[1], 'tmp.csv', append=True)
 
-    # get_match_results_from_challonge(account, MCS_KC[0], MCS_KC[1], '2019 misc game results.csv', append=False)
-    # get_match_results_from_challonge(account, GFT[0], GFT[1], '2019 misc game results.csv', append=True)
-    # get_match_results_from_challonge(account_sfl, QGW19[0], QGW19[1], '2019 misc game results.csv', append=True)
-    # get_match_results_from_challonge(account, QGW20[0], QGW20[1], '2019 misc game results.csv', append=True)
-    # get_match_results_from_challonge(account, BBrawl4[0], BBrawl4[1], '2019 misc game results.csv', append=True)
+
     # get_match_results_from_challonge(account_cha, CHA_HT[0], CHA_HT[1], '2019 misc game results.csv', append=True)
 
     # get_match_results_from_challonge(account, [0], [1], '2019 misc game results.csv', append=True)

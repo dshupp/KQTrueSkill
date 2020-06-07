@@ -1,3 +1,4 @@
+import copy
 import filecmp
 import datetime
 import trueskill
@@ -10,11 +11,12 @@ class KQTrueSkill:
 
     def __init__(self):
         trueskill.setup(trueskill.MU, trueskill.SIGMA, trueskill.BETA, trueskill.TAU, draw_probability=0)
+        self.snapshots = {}  # self.snapshots[tournament] = {'playername' = , 'trueskill' = }
         self.matches: [] = []
         self.playerscenes = {}
         self.playerteams = {}
         self.playerratings = {}
-        self.playertournaments = {}  # playertournaments[playername] = {"BB4","KQ30",...}
+        self.playertournaments = {}  # playertournaments[playername] = ["BB4","KQ30",...]
         self.playergames = {}
         self.playerwins = {}
         self.playerlosses = {}
@@ -81,6 +83,7 @@ class KQTrueSkill:
             team2wins: int = m['team2wins']
 
             if current_tournament != tournament:
+                self.record_trueskill_snapshot(current_tournament)
                 current_tournament = tournament
                 print(f"processing {tournament}")
 
@@ -110,9 +113,10 @@ class KQTrueSkill:
                 self.playerratings[self.teams[tournament][team1name][i]] = t1ratings[i]
             for i in range(5):
                 self.playerratings[self.teams[tournament][team2name][i]] = t2ratings[i]
+        self.record_trueskill_snapshot(current_tournament)
 
         # log diifferences in new and old ratings
-        self.compare_ratings(old_playerratings, self.playerratings)
+        # self.compare_ratings(old_playerratings, self.playerratings)
 
     def compare_ratings(self, old_playerratings, playerratings):
         new_players = []
@@ -174,6 +178,7 @@ class KQTrueSkill:
             self.teams[tournament][playerteam].append(playername)
         else:
             if playername is None or playername == '':
+                self.incomplete_players.append(f"{tournament}: {playerteam}, {playername}, {playerscene}")
                 playername = playerteam + " 1"
                 playerscene = None
             self.teams[tournament][playerteam] = [playername]
@@ -181,9 +186,9 @@ class KQTrueSkill:
         self.playerscenes[playername] = playerscene
 
         if playername in self.playerteams.keys():
-            self.playerteams[playername].append(playerteam + '/' + tournament)
+            self.playerteams[playername][tournament] = playerteam
         else:
-            self.playerteams[playername] = [playerteam + '/' + tournament]
+            self.playerteams[playername] = {tournament: playerteam}
 
         if playername in self.playertournaments.keys():
             self.playertournaments[playername].append(tournament)
@@ -194,10 +199,8 @@ class KQTrueSkill:
         self.playerwins[playername] = 0
         self.playerlosses[playername] = 0
 
-        if playername is None or playername.strip() == '':
-            self.incomplete_players.append(f"{tournament}: {playerteam}, {playername}, {playerscene}")
-        elif playerscene is None or playerscene.strip() == '':
-            self.incomplete_players.append(f"{tournament}: {playerteam}, {playername}, {playerscene}")
+        # elif playerscene is None or playerscene.strip() == '':
+        #     self.incomplete_players.append(f"{tournament}: {playerteam}, {playername}, {playerscene}")
 
     # side effect: updates tournament dates with dates found here
     def ingest_matches_from_file(self, filename: str):
@@ -251,20 +254,19 @@ class KQTrueSkill:
             filename = self.output_file_name
 
         # make sure our csv rows align
-        max_tourneys = 0
-        for p in self.playerteams.keys():
-            if max_tourneys < len(self.playerteams[p]):
-                max_tourneys = len(self.playerteams[p])
-        headers = ['Player Name', 'scene', 'mu', 'sigma', 'trueskill', 'tourneys', 'games', 'wins', 'losses', 'win%']
-        for i in range(max_tourneys):
-            headers.append(f"Team")
+        num_tourneys = len(self.tournaments)
+        tourneylist = sorted(self.tournaments, key=lambda t: self.tournamentdates[t])
+
+        headers = ['Player Name', 'scene', 'trueskill', 'tourneys', 'games', 'wins', 'losses', 'win%']
+        headers += tourneylist * 2
 
         with open(filename, mode='w') as playerskillfile:
             playerskill_writer = csv.writer(playerskillfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             playerskill_writer.writerow(headers)
             for player in sorted(self.playerratings.keys()):
-                row = [player, self.playerscenes[player], self.playerratings[player].mu,
-                       self.playerratings[player].sigma,
+                try:
+                    row = [player,
+                       self.playerscenes[player],
                        self.playerratings[player].mu - 3 * self.playerratings[player].sigma,
                        len(self.playertournaments[player]),
                        self.playergames[player],
@@ -272,9 +274,21 @@ class KQTrueSkill:
                        self.playerlosses[player],
                        "%.2f" % (self.playerwins[player] / self.playergames[player]),
                        ]
-                for team in self.playerteams[player]:
-                    row.append(team)
-                playerskill_writer.writerow(row + [''] * (max_tourneys - len(self.playerteams[player])))
+                    for t in tourneylist:
+                        if t in self.playertournaments[player]:
+                            row.append(t + " / " + self.playerteams[player][t])
+                        else:
+                            row.append('')
+                    for t in tourneylist:
+                        if self.snapshots[t][player].mu == trueskill.MU and self.snapshots[t][player].sigma == trueskill.SIGMA:
+                            row.append('')
+                        else:
+                            row.append(self.snapshots[t][player].mu - 3*self.snapshots[t][player].sigma)
+                    playerskill_writer.writerow(row)
+                except Exception as e:
+                    print(f"{player}, {self.playerscenes[player]}, {self.playergames[player]}, {self.playerteams[player]}: {e}")
+                    raise Exception(e)
+
 
     def get_player_scene_list(self):
         playerlist = []
@@ -302,6 +316,9 @@ class KQTrueSkill:
         # missing players should have an empty scene, so display players with empty scenes here
         for p in self.incomplete_players:
             print(p)
+
+    def record_trueskill_snapshot(self, tournament):
+        self.snapshots[tournament] = copy.deepcopy(self.playerratings)
 
 
 def main():

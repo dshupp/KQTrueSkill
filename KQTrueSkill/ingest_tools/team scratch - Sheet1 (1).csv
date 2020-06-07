@@ -1,6 +1,6 @@
 Tournament,Team,Name,Scene
 GDC3,Better than bots,Jon So,SF
-GDC3,Better than bots,Nik Mikros,NY
+GDC3,Better than bots,Nikita Mikros,NY
 GDC3,Better than bots,Alan Dang,LA
 GDC3,Better than bots,Matt Scheiffer,SF
 GDC3,Better than bots,Better than bots 5,
@@ -73,17 +73,17 @@ GDC3,Scoo-Bee-Doo,Alyssa DeMoss,PDX
 GDC3,Scoo-Bee-Doo,Jason Galginaitis,PDX
 GDC3,Scoo-Bee-Doo,Julie King,PDX
 GDC3,Scoo-Bee-Doo,Desirae Post,PDX
-GDC3,Scoo-Bee-Doo,Monica-PDX,PDXPDX
+GDC3,Scoo-Bee-Doo,Monica-PDX,PDX
 GDC3,T.E.A.M.,Jeremy Watson,SF
 GDC3,T.E.A.M.,Steve Halili,SF
 GDC3,T.E.A.M.,Reed Silverstein,SF
 GDC3,T.E.A.M.,Derek Nomaddic,SF
 GDC3,T.E.A.M.,Kelly Kim,SF
-Camp17,Asterisk,Cody Frederickson,PDX
+Camp17,ASTERISK,Cody Frederickson,PDX
 Camp17,,Logan David,PDX
 Camp17,,Mat Herring,PDX
 Camp17,,Johnmark Faris,PDX
-Camp17,,Evan Weintraub,PDX
+Camp17,,Evan W,PDX
 Camp17,Daddy Scott's Cabin 13,Alyssa DeMoss,PDX
 Camp17,,Joel Zylka,PDX
 Camp17,,Hailey Aguilar,PDX
@@ -94,6 +94,11 @@ Camp17,,Javan Ivey,PDX
 Camp17,,Madi T,PDX
 Camp17,,Shea Flaherty,PDX
 Camp17,,David Henry,PDX
+Camp17,Hello From The Other Hive,Brandon J,PDX
+Camp17,,Tyler Vane,PDX
+Camp17,,Alejandro G,PDX
+Camp17,,Warren Edwards,PDX
+Camp17,,Felix S,PDX
 Camp17,We Did It! Hooray!,Michael Esparza,CHI
 Camp17,,Megan Stetz,CHI
 Camp17,,Austin Turney,KC
@@ -107,8 +112,8 @@ Camp17,,Kasi White,MPLS
 Camp17,JNCO Biloba,Lev Bakin,MAD
 Camp17,,Jenn Gilbert,MAD
 Camp17,,Neal Smith,PDX
-Camp17,,Ben Mills,LA
-Camp17,,Andrew Kelley,NY
+Camp17,,Ben M,LAX
+Camp17,,Andrew K,PDX
 Camp17,Bee in Tents,Marian Wu,NYC
 Camp17,,Damish Shah,NYC
 Camp17,,Miranda Aguilar,PDX
@@ -116,9 +121,14 @@ Camp17,,Jason Mann,NYC
 Camp17,,Melanie Brown,SEA
 Camp17,R. Kelly's Pool Party,Christina Norton,CHI
 Camp17,,Brian Susman,CHI
-Camp17,,Bert Wierenga,CHI
+Camp17,,Bert Weirenga,CHI
 Camp17,,John L,CHI
 Camp17,,Nick Giacone,CHI
+Camp17,Fraud Squad,David I,PDX
+Camp17,,Logan Barnett,PDX
+Camp17,,Chelsea W,PDX
+Camp17,,Isaiah DeMoss,PDX
+Camp17,,Sam B,PDX
 Camp17,Salute Your Shorts,Tyler Moloney,PHX
 Camp17,,Josh Eklow,CHI
 Camp17,,Steven Saenz,CLT
@@ -129,20 +139,55 @@ Camp17,,Aaron Goldberg,CHI
 Camp17,,Blake Compton,CBUS
 Camp17,,Billy Faldo,KC
 Camp17,,David Garzon,CHI
+Camp17,I'm Confused About The Bee References,Lisa P,PDX
+Camp17,,Regina C,AUS
+Camp17,,Shannon H,PDX
+Camp17,,Doug H,AUS
+Camp17,,Justin H,PDX
 Camp17,Hentai Coordination,Cesar Bustos,CHI
 Camp17,,Dylan Lee,PDX
 Camp17,,Belia Portillo,CHI
 Camp17,,Steve Titra,CHI
 Camp17,,Nik Mikros,NYC
+Camp17,Cagey Bee,Ara Roselani,PDX
+Camp17,,Nathan Vorhees,PDX
+Camp17,,Julia H,PDX
+Camp17,,Jason Galginaitis,PDX
+Camp17,,Matthew D,PDX
 Camp17,I Thought It Was Tasteful,Dylan Conrad,CHI
 Camp17,,Ryan Waisner,CHI
 Camp17,,Alex Jaspersen,SF
 Camp17,,David Kirk,CHI
-Camp17,,Eli Azizy,CLT
-Camp19,Alyssa,Alyssa DeMoss,
-Camp19,,Bianca Halir,
-Camp19,,Isaiah DeMoss,
-Camp19,,Marian Wu,
+Camp17,,Eli Azizi,CLT
+Camp17,GET BOOPED,Tressa Points,SEA
+Camp17,,Gabriel Sosa,SEA
+Camp17,,Stephen M,SEA
+Camp17,,Chris McGrath,SEA
+Camp17,,Rocky D,SEA
+Camp17,Commentator's Curse,Heather Davis,SF
+Camp17,,Scott Wilkewitz,SF
+Camp17,,Colby Price,SF
+Camp17,,Tony Hauber,SF
+Camp17,,Mike Dunn,SF
+Camp17,Pollinators Anonymous,Mark B,PDX
+Camp17,,Jared Mackey,PDX
+Camp17,,Steven Do,PDX
+Camp17,,Houston C,PDX
+Camp17,,Jordan L,PDX
+Camp17,Queenage Dream,Alexandra G,NYC
+Camp17,,Charlie Pfaff,NYC
+Camp17,,Andrew Kelley,NYC
+Camp17,,Nick Monger,CIN
+Camp17,,Vanessa Rhodes,PDX
+Camp17,Snailbait,Aenne S,PDX
+Camp17,,Mackenzie W,PDX
+Camp17,,Alex P,PDX
+Camp17,,Katie D,PDX
+Camp17,,David C,SF
+Camp19,Alyssa,Alyssa DeMoss,PDX
+Camp19,,Bianca Halir,PDX
+Camp19,,Isaiah DeMoss,PDX
+Camp19,,Marian Wu,NY
 Camp19,,Steve Titra,
 Camp19,Cesar,Cesar Bustos,
 Camp19,,Joel Stockard,
@@ -184,11 +229,11 @@ Camp19,,Heather Gardner,
 Camp19,,Joel Zylka,
 Camp19,,John Colby Cook,
 Camp19,,San,
-Camp19,Dre,Andrew Quang,
+Camp19,dre,Andrew Quang,
 Camp19,,Alexander Lee,
 Camp19,,Julie King,
 Camp19,,Kyle Gustafson,
-Camp19,,Nick Higgins,
+Camp19,,Nick Higgins ,
 Camp19,Jeff,Jeff Hochgesang,
 Camp19,,Adrian Resquer,
 Camp19,,Brian Lancaster,
@@ -202,8 +247,8 @@ Camp19,,Melanie Szemis,
 Camp19,Toshi,Toshi Satow,
 Camp19,,Kasi White,
 Camp19,,Maxwel Knudsen,
-Camp19,,Neal Smith,PDX
-Camp19,,Ray Wang,PHX
+Camp19,,Neal Smith,
+Camp19,,Raymond Wang,
 Camp19,Woody,Woody Stanfield,
 Camp19,,Brian McMahon,
 Camp19,,Nick Davis,
@@ -215,14 +260,14 @@ Camp19,,Jose Velasco,
 Camp19,,Samantha Gramley,
 Camp19,,Tony Hauber,
 Camp19,Cody,Cody Frederickson,
-Camp19,,Brandon Johnson,
+Camp19,,Brandon Johnson ,
 Camp19,,Carlos Trejo,
 Camp19,,Kyle VanWieringen,
 Camp19,,Sarah Stewart,
 Camp19,dr00,Andrew Daugherty,
 Camp19,,Hailey Aguilar,
 Camp19,,Ian Lukidis,
-Camp19,,Jason Galginaitis,
+Camp19,,Jason Galginaitiz,
 Camp19,,Toni Scarlett,
 Camp19,Jeremy,Jeremy Watson,
 Camp19,,Curtis Clements,
@@ -231,7 +276,7 @@ Camp19,,Liz Barrera,
 Camp19,,Sam Weddle,
 Camp19,Mitch,Mitch Diemert,
 Camp19,,Jenna Reynolds,
-Camp19,,Max Sumeta,
+Camp19,,Max Sumeta ,
 Camp19,,Ryan Waisner,
 Camp19,,Taylor Berrett,
 Camp19,Turbo,Andrew Kelley,
@@ -243,7 +288,7 @@ Camp19,Brandon,Brandon Robertson,
 Camp19,,Alex Valdez,
 Camp19,,Andrew Griner,
 Camp19,,Katie Dyer,
-Camp19,,Kiera DeFrange,
+Camp19,,Kiera DeFrange ,
 Camp19,Damish,Damish Shah,
 Camp19,,Logan Barnett,
 Camp19,,Matt Abdou,
@@ -255,10 +300,10 @@ Camp19,,Andy Seery,
 Camp19,,Taryn Costello,
 Camp19,,Tyler Vane,
 Camp19,John K,John Koutroulakis,
-Camp19,,Felix Yuan,SF
-Camp19,,Heather Davis,SF
-Camp19,,Steven Pulliam,PDX
-Camp19,,Tressa Points,
+Camp19,,Felix Yuan,
+Camp19,,Heather Davis,
+Camp19,,Steven Pulliam,
+Camp19,,Tressa Points ,
 Camp19,Pierre,Pierre LaFortune,
 Camp19,,Alex Simchuk,
 Camp19,,Cresten St. Clair,
@@ -274,7 +319,7 @@ ECC1,,Rachel Rohrbach,SEA
 ECC1,,Haley Schaefer,SEA
 ECC1,,Taylor Robbins,SEA
 ECC1,,Kyler Kelly,SEA
-ECC1,Yeet Kune Do,Brian Lee,SF
+ECC1,yeet Kune do,Brian Lee,SF
 ECC1,,Matt Abdou,PDX
 ECC1,,Brian McMahon,SF
 ECC1,,Chris McGrath,SEA
@@ -300,21 +345,21 @@ ECC1,,Melanie Szemis,PDX
 ECC1,,Thomas Hardy,PDX
 ECC1,,Lex Wilkins,PDX
 ECC1,Big Stick Energy,Kaylee Perkizas,SEA
-ECC1,,Nick Higgins,PDX
+ECC1,,Nick Higgins ,PDX
 ECC1,,Jason Galginaitis,PDX
 ECC1,,Quinn Mazure,SEA
 ECC1,,Justin Buth,CHI
 ECC1,Chase's Betting Blues,Chase Reeve,CHA
 ECC1,,Micah Wallace,CHA
-ECC1,,Steven Pulliam,PDX
+ECC1,,Steven Pulliam ,PDX
 ECC1,,DJ Knerr,STL
-ECC1,,Emily Leonard,STL
+ECC1,,Emily Leonard ,STL
 ECC1,Pearl Stuff My Jam,Cody Frederickson,PDX
 ECC1,,Jenn Gilbert,MAD
 ECC1,,Lev Bakin,MAD
 ECC1,,Austin Turney,KC
 ECC1,,Billy Faldo,KC
-ECC1,Nutssss,David Walsh,LA
+ECC1,Nutssss,David Walsh,LAX
 ECC1,,Miranda Steele,SF
 ECC1,,Kevin Marnell,SEA
 ECC1,,Neal Smith,PDX
@@ -334,63 +379,3 @@ ECC1,,Julie Denberger,SEA
 ECC1,,Amy Bucy,SEA
 ECC1,,Sey,SEA
 ECC1,,Loren Martin,SEA
-GDC2,Cloud 9 Gaming,Josh Biedenweg,SF
-GDC2,,Felix Yuan,SF
-GDC2,,Steve Halili,SF
-GDC2,,Thor,SF
-GDC2,,Sean Kelly,SF
-GDC2,Olive Juice Guys,Jeremy Watson,SF
-GDC2,,Tony Hauber,SF
-GDC2,,Brett Stilwell,SF
-GDC2,,Eric,SF
-GDC2,,Rachel K,SF
-GDC2,#SorryNotSorry,Brian Lee,SF
-GDC2,,Mike Dunn,SF
-GDC2,,Heather Davis,SF
-GDC2,,Ash Ramirez,SF
-GDC2,,Matt Scheiffer,SF
-GDC2,Same,Cody Frederickson,PDX
-GDC2,,Neal Smith,PDX
-GDC2,,Javan Ivey,PDX
-GDC2,,Evan Weintraub,PDX
-GDC2,,Lev Bakin,MAD
-GDC2,Full Snail University,Andrew Daugherty,NYC
-GDC2,,Tiana Tan,NYC
-GDC2,,Jenny Chang,NYC
-GDC2,,Mike Dooley,NYC
-GDC2,,Richard Chan,NYC
-GDC2,Whiskey Stick,Shea Flaherty,pdx
-GDC2,,Madi T,pdx
-GDC2,,Ben,pdx
-GDC2,,David Henry,pdx
-GDC2,,Jenn Gilbert,MAD
-GDC2,Unbumblebearable,Dylan Lee,pdx
-GDC2,,David Garzon,chi
-GDC2,,Belia Portillo,chi
-GDC2,,Brian Susman,chi
-GDC2,,Michael Esparza,chi
-GDC2,Candy House,Andrew Quang,CHI
-GDC2,,Mat Herring,PDX
-GDC2,,Logan David,PDX
-GDC2,,Jorge Hernandez,CLT
-GDC2,,Aaron Tran,CLT
-GDC2,Booty Town 69,Alyssa DeMoss,PDX
-GDC2,,Imandra McKenzie,PDX
-GDC2,,Dave Immel,PDX
-GDC2,,Dylan Higgins,PDX
-GDC2,,Josh Boykin,PDX
-GDC2,Welcome to Stingapore,Ryan Lescoe,
-GDC2,,Hailey Aguilar,PDX
-GDC2,,Jon So,SF
-GDC2,,,
-GDC2,,Violet Brown,SF
-GDC2,T W O . F I V E  S C E N E,Brian Kang,NYC
-GDC2,,Alex Jaspersen,SF
-GDC2,,Cindy Leung,SF
-GDC2,,Andi Slobodien,SF
-GDC2,,Andrew Dotson,SF
-GDC2,Beenix Rising,Tyler Moloney,PHX
-GDC2,,Sam Weddle,PHX
-GDC2,,Lukas PHX,PHX
-GDC2,,Jason Bither,PHX
-GDC2,,Melanie PHX,PHX

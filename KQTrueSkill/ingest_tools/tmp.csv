@@ -1,50 +1,40 @@
 tournament,bracket,team1name,team2name,team1wins,team2wins,time
-GDC3,KO,Mucho Tasto,Couples Bearapy,3,0,2018-03-25T05:30:21+0800
-GDC3,KO,Ruin My Hole,Queso Fresco,3,0,2018-03-25T05:30:21+0800
-GDC3,KO,Infinite Joust,Better than bots,3,0,2018-03-25T05:30:21+0800
-GDC3,KO,Mahalo,Broke Boi$ Mtn,3,1,2018-03-25T05:30:21+0800
-GDC3,KO,J Crew,Hate & Smashberry,3,0,2018-03-25T05:30:21+0800
-GDC3,KO,Ope!,Double or Nothing,3,0,2018-03-25T05:30:21+0800
-GDC3,KO,Don't. You Won't.,Earthquake Season,3,0,2018-03-25T05:30:21+0800
-GDC3,KO,T.E.A.M.,Scoo-Bee-Doo,3,0,2018-03-25T05:30:21+0800
-GDC3,KO,Mucho Tasto,Ruin My Hole,3,1,2018-03-25T05:35:42+0800
-GDC3,KO,Infinite Joust,Mahalo,3,2,2018-03-25T05:57:21+0800
-GDC3,KO,J Crew,Ope!,3,0,2018-03-25T06:16:14+0800
-GDC3,KO,Don't. You Won't.,T.E.A.M.,3,0,2018-03-25T06:34:34+0800
-GDC3,KO,Mucho Tasto,Infinite Joust,3,1,2018-03-25T08:10:52+0800
-GDC3,KO,J Crew,Don't. You Won't.,2,3,2018-03-25T08:45:10+0800
-GDC3,KO,Mucho Tasto,Don't. You Won't.,2,3,2018-03-25T11:02:41+0800
-GDC3,KO,Couples Bearapy,Queso Fresco,3,2,2018-03-25T05:35:42+0800
-GDC3,KO,Better than bots,Broke Boi$ Mtn,0,3,2018-03-25T05:57:21+0800
-GDC3,KO,Hate & Smashberry,Double or Nothing,3,1,2018-03-25T06:16:14+0800
-GDC3,KO,Earthquake Season,Scoo-Bee-Doo,1,3,2018-03-25T06:34:34+0800
-GDC3,KO,T.E.A.M.,Couples Bearapy,3,0,2018-03-25T08:45:10+0800
-GDC3,KO,Ope!,Broke Boi$ Mtn,3,0,2018-03-25T08:22:32+0800
-GDC3,KO,Mahalo,Hate & Smashberry,3,0,2018-03-25T08:10:52+0800
-GDC3,KO,Ruin My Hole,Scoo-Bee-Doo,3,0,2018-03-25T07:50:42+0800
-GDC3,KO,T.E.A.M.,Ope!,3,0,2018-03-25T09:32:49+0800
-GDC3,KO,Mahalo,Ruin My Hole,1,3,2018-03-25T09:08:24+0800
-GDC3,KO,Infinite Joust,T.E.A.M.,3,2,2018-03-25T10:31:32+0800
-GDC3,KO,J Crew,Ruin My Hole,1,3,2018-03-25T11:02:41+0800
-GDC3,KO,Infinite Joust,Ruin My Hole,3,0,2018-03-25T11:50:54+0800
-GDC3,KO,Mucho Tasto,Infinite Joust,3,2,2018-03-25T12:29:24+0800
-GDC3,KO,Don't. You Won't.,Mucho Tasto,4,1,2018-03-25T12:54:10+0800
-GDC3,Group1,Mucho Tasto,Better than bots,2,0,2018-03-25T05:14:10+0800
-GDC3,Group1,Mucho Tasto,Ope!,2,0,2018-03-25T05:15:10+0800
-GDC3,Group1,Ope!,Scoo-Bee-Doo,2,0,2018-03-25T05:16:10+0800
-GDC3,Group1,Better than bots,Scoo-Bee-Doo,0,2,2018-03-25T05:17:10+0800
-GDC3,Group2,Ruin My Hole,Earthquake Season,2,0,2018-03-25T05:18:10+0800
-GDC3,Group2,Ruin My Hole,J Crew,0,2,2018-03-25T05:19:10+0800
-GDC3,Group2,Broke Boi$ Mtn,J Crew,0,2,2018-03-25T05:20:10+0800
-GDC3,Group2,Earthquake Season,Broke Boi$ Mtn,0,2,2018-03-25T05:21:10+0800
-GDC3,Group3,Don't. You Won't.,Queso Fresco,2,0,2018-03-25T05:22:10+0800
-GDC3,Group3,Don't. You Won't.,Mahalo,2,1,2018-03-25T05:23:10+0800
-GDC3,Group3,Mahalo,Hate & Smashberry,2,1,2018-03-25T05:24:10+0800
-GDC3,Group3,Queso Fresco,Hate & Smashberry,2,1,2018-03-25T05:25:10+0800
-GDC3,Group4,T.E.A.M.,Couples Bearapy,2,0,2018-03-25T05:26:10+0800
-GDC3,Group4,T.E.A.M.,Infinite Joust,0,2,2018-03-25T05:27:10+0800
-GDC3,Group4,Couples Bearapy,Double or Nothing,0,2,2018-03-25T05:28:10+0800
-GDC3,Group4,Couples Bearapy,Infinite Joust,0,2,2018-03-25T05:29:10+0800
+GDC1,KO,Oprah WindFury,Mo Honey Mo Problems,1,3,2016-03-20T05:39:58+0700
+GDC1,KO,Queenie Queen and the Berry Bunch,Golden Empire Phoenix,0,3,2016-03-20T05:39:58+0700
+GDC1,KO,Gunpowder and Cigarettes,Team Pickup,0,3,2016-03-20T05:39:58+0700
+GDC1,KO,SORRY,Mo Honey Mo Problems,3,0,2016-03-20T05:40:14+0700
+GDC1,KO,Beez Nuts,Frankenteam,0,3,2016-03-20T05:39:58+0700
+GDC1,KO,SPORTS,OPS,3,0,2016-03-20T05:39:58+0700
+GDC1,KO,The Bee Team,The Dollberries,3,0,2016-03-20T05:39:58+0700
+GDC1,KO,Wild Thornberries,Golden Empire Phoenix,3,0,2016-03-20T05:47:29+0700
+GDC1,KO,Beech Don't Kill My Hive,PDX Hype Machine,2,3,2016-03-20T05:39:58+0700
+GDC1,KO,Buzzkills,Team Pickup,3,0,2016-03-20T05:53:14+0700
+GDC1,KO,Panic at the Frisco,Deadbees,3,0,2016-03-20T05:39:58+0700
+GDC1,KO,SORRY,Frankenteam,3,1,2016-03-20T07:09:38+0700
+GDC1,KO,SPORTS,The Bee Team,3,1,2016-03-20T06:11:36+0700
+GDC1,KO,Wild Thornberries,PDX Hype Machine,3,1,2016-03-20T07:09:30+0700
+GDC1,KO,Buzzkills,Panic at the Frisco,0,3,2016-03-20T07:07:50+0700
+GDC1,KO,SORRY,SPORTS,3,1,2016-03-20T07:58:54+0700
+GDC1,KO,Wild Thornberries,Panic at the Frisco,0,3,2016-03-20T08:18:56+0700
+GDC1,KO,SORRY,Panic at the Frisco,3,1,2016-03-20T09:45:42+0700
+GDC1,KO,Deadbees,Oprah WindFury,3,0,2016-03-20T07:07:44+0700
+GDC1,KO,The Dollberries,Queenie Queen and the Berry Bunch,0,1,2016-03-20T06:11:36+0700
+GDC1,KO,Beez Nuts,Gunpowder and Cigarettes,1,0,2016-03-20T05:59:49+0700
+GDC1,KO,Team Pickup,Deadbees,0,3,2016-03-20T07:50:29+0700
+GDC1,KO,Beech Don't Kill My Hive,Golden Empire Phoenix,3,0,2016-03-20T07:09:30+0700
+GDC1,KO,OPS,Queenie Queen and the Berry Bunch,3,0,2016-03-20T07:51:04+0700
+GDC1,KO,Mo Honey Mo Problems,Beez Nuts,0,3,2016-03-20T07:09:38+0700
+GDC1,KO,The Bee Team,Deadbees,3,1,2016-03-20T07:53:27+0700
+GDC1,KO,Frankenteam,Beech Don't Kill My Hive,2,3,2016-03-20T07:58:54+0700
+GDC1,KO,Buzzkills,OPS,3,0,2016-03-20T08:18:56+0700
+GDC1,KO,PDX Hype Machine,Beez Nuts,3,0,2016-03-20T08:10:35+0700
+GDC1,KO,The Bee Team,Beech Don't Kill My Hive,0,3,2016-03-20T08:45:15+0700
+GDC1,KO,Buzzkills,PDX Hype Machine,3,2,2016-03-20T09:03:34+0700
+GDC1,KO,Wild Thornberries,Beech Don't Kill My Hive,3,0,2016-03-20T09:45:42+0700
+GDC1,KO,SPORTS,Buzzkills,3,1,2016-03-20T09:38:25+0700
+GDC1,KO,Wild Thornberries,SPORTS,3,1,2016-03-20T10:14:42+0700
+GDC1,KO,Panic at the Frisco,Wild Thornberries,0,3,2016-03-20T10:52:28+0700
+GDC1,KO,SORRY,Wild Thornberries,4,0,2016-03-20T11:02:09+0700
 GDC2,KO,#SorryNotSorry,T W O . F I V E  S C E N E,2,3,2017-03-05T03:24:57+0700
 GDC2,KO,Whiskey Stick,Unbumblebearable,0,3,2017-03-05T03:24:57+0700
 GDC2,KO,Booty Town 69,Welcome to Stingapore,3,2,2017-03-05T03:24:57+0700
@@ -68,26 +58,26 @@ GDC2,KO,Unbumblebearable,Cloud 9 Gaming,3,0,2017-03-05T07:26:55+0700
 GDC2,KO,Olive Juice Guys,Unbumblebearable,3,2,2017-03-05T07:53:54+0700
 GDC2,KO,Same,Olive Juice Guys,4,1,2017-03-05T08:16:36+0700
 Camp17,KO,Nother Scorcher,Hentai Coordination,0,3,2017-08-14T06:05:23+1000
-Camp17,KO,R. Kelly's Pool Party,Salute Your Shorts,3,2,2017-08-14T06:05:23+1000
+Camp17,KO,R. Kelly's Pool Party,WC 2,3,2,2017-08-14T06:05:23+1000
 Camp17,KO,Asterisk,JNCO Biloba,3,2,2017-08-14T06:05:23+1000
-Camp17,KO,Bee in Tents,Daddy Scott's Cabin 13,3,0,2017-08-14T06:05:23+1000
+Camp17,KO,Bee In Tents,WC 1,3,0,2017-08-14T06:05:23+1000
 Camp17,KO,I Thought It Was Tasteful,Hentai Coordination,2,3,2017-08-14T06:22:45+1000
-Camp17,KO,We Did It! Hooray!,R. Kelly's Pool Party,3,1,2017-08-14T06:40:36+1000
+Camp17,KO,We Did It Hooray!,R. Kelly's Pool Party,3,1,2017-08-14T06:40:36+1000
 Camp17,KO,Ben Centerfolds Five,Asterisk,1,3,2017-08-14T07:00:56+1000
-Camp17,KO,#xXxDingersOutxXx,Bee in Tents,3,2,2017-08-14T07:15:59+1000
-Camp17,KO,Hentai Coordination,We Did It! Hooray!,1,3,2017-08-14T07:48:42+1000
+Camp17,KO,#xXxDingersOutxXx,Bee In Tents,3,2,2017-08-14T07:15:59+1000
+Camp17,KO,Hentai Coordination,We Did It Hooray!,1,3,2017-08-14T07:48:42+1000
 Camp17,KO,Asterisk,#xXxDingersOutxXx,1,3,2017-08-14T08:26:14+1000
-Camp17,KO,We Did It! Hooray!,#xXxDingersOutxXx,1,3,2017-08-14T10:21:53+1000
-Camp17,KO,Bee in Tents,Nother Scorcher,3,1,2017-08-14T08:26:14+1000
-Camp17,KO,Ben Centerfolds Five,Salute Your Shorts,3,1,2017-08-14T08:00:20+1000
+Camp17,KO,We Did It Hooray!,#xXxDingersOutxXx,1,3,2017-08-14T10:21:53+1000
+Camp17,KO,Bee In Tents,Nother Scorcher,3,1,2017-08-14T08:26:14+1000
+Camp17,KO,Ben Centerfolds Five,WC 2,3,1,2017-08-14T08:00:20+1000
 Camp17,KO,R. Kelly's Pool Party,JNCO Biloba,3,1,2017-08-14T07:48:42+1000
-Camp17,KO,I Thought It Was Tasteful,Daddy Scott's Cabin 13,3,0,2017-08-14T07:37:57+1000
-Camp17,KO,Bee in Tents,Ben Centerfolds Five,3,1,2017-08-14T09:29:00+1000
+Camp17,KO,I Thought It Was Tasteful,WC 1,3,0,2017-08-14T07:37:57+1000
+Camp17,KO,Bee In Tents,Ben Centerfolds Five,3,1,2017-08-14T09:29:00+1000
 Camp17,KO,R. Kelly's Pool Party,I Thought It Was Tasteful,3,1,2017-08-14T08:48:23+1000
-Camp17,KO,Hentai Coordination,Bee in Tents,2,3,2017-08-14T10:07:59+1000
+Camp17,KO,Hentai Coordination,Bee In Tents,2,3,2017-08-14T10:07:59+1000
 Camp17,KO,Asterisk,R. Kelly's Pool Party,3,1,2017-08-14T10:21:53+1000
-Camp17,KO,Bee in Tents,Asterisk,2,3,2017-08-14T10:58:41+1000
-Camp17,KO,We Did It! Hooray!,Asterisk,0,3,2017-08-14T11:42:12+1000
+Camp17,KO,Bee In Tents,Asterisk,2,3,2017-08-14T10:58:41+1000
+Camp17,KO,We Did It Hooray!,Asterisk,0,3,2017-08-14T11:42:12+1000
 Camp17,KO,#xXxDingersOutxXx,Asterisk,3,4,2017-08-14T11:53:45+1000
 Camp17,KO,Asterisk,#xXxDingersOutxXx,6,3,2017-08-14T12:22:14+1000
 Camp19,KO,Andi,Tyler,0,3,2019-07-28T14:36:09-0400
