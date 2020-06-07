@@ -29,16 +29,12 @@ class KQTrueSkill:
 
     # ingest the known good datasets automatically
     def process_approved_datasets(self):
-        self.ingest_dataset('datasets/2019 KQ - 2019 Players.csv', 'datasets/2019 KQ - 2019 game results.csv')
-        self.ingest_dataset('datasets/2018 KQ - GDC3 Players.csv', 'datasets/2018 KQ - GDC3 game results.csv')
-        self.ingest_dataset('datasets/2018 KQ - BB3 Players.csv', 'datasets/2018 KQ - BB3 game results.csv')
-        self.ingest_dataset('datasets/2018 KQ - HH1 Players.csv', 'datasets/2018 KQ - HH1 game results.csv')
-        self.ingest_dataset('datasets/2018 - CC1 Players.csv', 'datasets/2018 - CC1 game results.csv')
-        self.ingest_dataset('datasets/2019 - CC2 Players.csv', 'datasets/2019 - CC2 game results.csv')
-        self.ingest_dataset('datasets/2020 - CC3 Players.csv', 'datasets/2020 - CC3 game results.csv')
-        self.ingest_dataset('datasets/2018 Midwest players.csv', 'datasets/2018 Midwest game results.csv')
-        self.ingest_dataset('datasets/Coronation players.csv', 'datasets/2017 Coronation game results.csv')
-        self.ingest_dataset('datasets/2019 misc players.csv', 'datasets/2019 misc game results.csv')
+        self.ingest_dataset('datasets/2019 Players.csv', 'datasets/2019 game results.csv')
+        self.ingest_dataset('datasets/SF-PDX-SEA-LA Players.csv', 'datasets/SF-PDX-SEA-LA game results.csv')
+        self.ingest_dataset('datasets/BB3 Players.csv', 'datasets/BB3 game results.csv')
+        self.ingest_dataset('datasets/CC Players.csv', 'datasets/CC game results.csv')
+        self.ingest_dataset('datasets/Midwest players.csv', 'datasets/Midwest game results.csv')
+        self.ingest_dataset('datasets/Coronation players.csv', 'datasets/Coronation game results.csv')
 
         # run trueskill on the matches
         self.calculate_trueskills()

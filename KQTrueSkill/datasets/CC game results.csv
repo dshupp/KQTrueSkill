@@ -1,0 +1,206 @@
+tournament,bracket,team1name,team2name,team1wins,team2wins,time
+CC1,GroupA,Cowbois Beesbop,Hey This Looks Fun!,2,0,2018-02-03T13:38:57-0800
+CC1,GroupA,Punxsutawney Trill,Beelandia,2,0,2018-02-03T13:38:57-0800
+CC1,GroupA,Hey This Looks Fun!,Punxsutawney Trill,0,2,2018-02-03T13:38:57-0800
+CC1,GroupA,He'll Yeah,Cowbois Beesbop,2,0,2018-02-03T13:38:57-0800
+CC1,GroupA,Punxsutawney Trill,He'll Yeah,0,2,2018-02-03T13:38:57-0800
+CC1,GroupA,Beelandia,Hey This Looks Fun!,2,0,2018-02-03T13:38:57-0800
+CC1,GroupA,He'll Yeah,Beelandia,2,0,2018-02-03T13:38:57-0800
+CC1,GroupA,Cowbois Beesbop,Punxsutawney Trill,0,2,2018-02-03T13:38:57-0800
+CC1,GroupA,Beelandia,Cowbois Beesbop,0,2,2018-02-03T13:38:57-0800
+CC1,GroupA,Hey This Looks Fun!,He'll Yeah,0,2,2018-02-03T13:38:58-0800
+CC1,GroupB,Taco Bell Conquistadors,Miller Time,0,2,2018-02-03T17:39:10-0500
+CC1,GroupB,Pork and Bees,Sedona My Face,0,2,2018-02-03T17:39:10-0500
+CC1,GroupB,Sedona My Face,Taco Bell Conquistadors,2,0,2018-02-03T17:39:10-0500
+CC1,GroupB,Miller Time,Pork and Bees,1,1,2018-02-03T17:39:11-0500
+CC1,GroupB,Pork and Bees,Taco Bell Conquistadors,2,0,2018-02-03T17:39:10-0500
+CC1,GroupB,Miller Time,Sedona My Face,0,2,2018-02-03T17:39:10-0500
+CC1,GroupC,Dank MayMays,Show Me Your Boops,1,1,2018-02-03T18:24:03-0500
+CC1,GroupC,BYE FELIXIA,Fons Pszczoly,0,2,2018-02-03T18:24:03-0500
+CC1,GroupC,Fons Pszczoly,Dank MayMays,2,0,2018-02-03T18:24:03-0500
+CC1,GroupC,Show Me Your Boops,BYE FELIXIA,1,1,2018-02-03T18:24:03-0500
+CC1,GroupC,BYE FELIXIA,Dank MayMays,0,2,2018-02-03T18:24:03-0500
+CC1,GroupC,Show Me Your Boops,Fons Pszczoly,1,1,2018-02-03T18:24:03-0500
+CC1,KO,Show Me Your Boops,Pork and Bees,2,3,2018-02-03T18:16:58-0600
+CC1,KO,Punxsutawney Trill,Hey This Looks Fun!,3,0,2018-02-03T18:16:58-0600
+CC1,KO,Cowbois Beesbop,Taco Bell Conquistadors,3,0,2018-02-03T18:16:58-0600
+CC1,KO,BYE FELIXIA,Miller Time,3,0,2018-02-03T18:16:58-0600
+CC1,KO,Beelandia,Dank MayMays,2,3,2018-02-03T18:16:58-0600
+CC1,KO,He'll Yeah,Pork and Bees,3,0,2018-02-03T18:35:02-0600
+CC1,KO,Punxsutawney Trill,Cowbois Beesbop,3,0,2018-02-03T18:51:31-0600
+CC1,KO,Sedona My Face,BYE FELIXIA,3,0,2018-02-03T19:01:49-0600
+CC1,KO,Fons Pszczoly,Dank MayMays,3,2,2018-02-03T19:17:26-0600
+CC1,KO,He'll Yeah,Punxsutawney Trill,3,0,2018-02-03T19:39:54-0600
+CC1,KO,Sedona My Face,Fons Pszczoly,2,3,2018-02-03T20:01:49-0600
+CC1,KO,He'll Yeah,Fons Pszczoly,2,3,2018-02-03T21:44:15-0600
+CC1,KO,Hey This Looks Fun!,Taco Bell Conquistadors,0,3,2018-02-03T18:51:31-0600
+CC1,KO,Dank MayMays,Show Me Your Boops,3,1,2018-02-03T20:01:49-0600
+CC1,KO,BYE FELIXIA,Taco Bell Conquistadors,3,0,2018-02-03T19:48:53-0600
+CC1,KO,Cowbois Beesbop,Miller Time,2,3,2018-02-03T19:39:54-0600
+CC1,KO,Pork and Bees,Beelandia,3,0,2018-02-03T19:32:01-0600
+CC1,KO,Dank MayMays,BYE FELIXIA,3,0,2018-02-03T20:49:00-0600
+CC1,KO,Miller Time,Pork and Bees,1,3,2018-02-03T20:25:05-0600
+CC1,KO,Punxsutawney Trill,Dank MayMays,0,3,2018-02-03T21:26:47-0600
+CC1,KO,Sedona My Face,Pork and Bees,3,0,2018-02-03T21:44:15-0600
+CC1,KO,Dank MayMays,Sedona My Face,2,3,2018-02-03T22:08:38-0600
+CC1,KO,He'll Yeah,Sedona My Face,0,3,2018-02-03T22:45:03-0600
+CC1,KO,Fons Pszczoly,Sedona My Face,2,4,2018-02-03T23:09:31-0600
+CC1,KO,Sedona My Face,Fons Pszczoly,1,4,2018-02-03T23:38:49-0600
+CC2,GroupA,Cactus Trash,My Voice... on Anime,0,2,2019-01-26T15:13:37-0500
+CC2,GroupA,Executive Producer Dick Wolfpac,Cobra Khive,2,0,2019-01-26T15:13:37-0500
+CC2,GroupA,My Voice... on Anime,Executive Producer Dick Wolfpac,1,1,2019-01-26T15:13:37-0500
+CC2,GroupA,Sedona MySpace,Cactus Trash,2,0,2019-01-26T15:13:37-0500
+CC2,GroupA,Executive Producer Dick Wolfpac,Sedona MySpace,0,2,2019-01-26T15:13:37-0500
+CC2,GroupA,Cobra Khive,My Voice... on Anime,1,1,2019-01-26T15:13:37-0500
+CC2,GroupA,Sedona MySpace,Cobra Khive,2,0,2019-01-26T15:13:37-0500
+CC2,GroupA,Cactus Trash,Executive Producer Dick Wolfpac,0,2,2019-01-26T15:13:37-0500
+CC2,GroupA,Cobra Khive,Cactus Trash,0,2,2019-01-26T15:13:37-0500
+CC2,GroupA,My Voice... on Anime,Sedona MySpace,0,2,2019-01-26T15:13:37-0500
+CC2,GroupB,MDMA W,Classic Romcom,2,0,2019-01-26T16:17:32-0500
+CC2,GroupB,Risky Beezness,Where Have All The Techbros Gone?,0,2,2019-01-26T16:17:32-0500
+CC2,GroupB,Classic Romcom,Risky Beezness,2,0,2019-01-26T16:17:32-0500
+CC2,GroupB,RAGE FACE,MDMA W,0,2,2019-01-26T16:17:32-0500
+CC2,GroupB,Risky Beezness,RAGE FACE,0,2,2019-01-26T16:17:32-0500
+CC2,GroupB,Where Have All The Techbros Gone?,Classic Romcom,1,1,2019-01-26T16:17:32-0500
+CC2,GroupB,RAGE FACE,Where Have All The Techbros Gone?,0,2,2019-01-26T16:17:32-0500
+CC2,GroupB,MDMA W,Risky Beezness,2,0,2019-01-26T16:17:32-0500
+CC2,GroupB,Where Have All The Techbros Gone?,MDMA W,1,1,2019-01-26T16:17:32-0500
+CC2,GroupB,Classic Romcom,RAGE FACE,2,0,2019-01-26T16:17:32-0500
+CC2,GroupC,SMUT COFFEE,Fifth Wheel,0,2,2019-01-26T17:30:45-0500
+CC2,GroupC,Go Flex Yourself,I DIED AND I'M SORRY,0,2,2019-01-26T17:30:46-0500
+CC2,GroupC,(She Got No) Honey in the Bank,SHASH for the CLASH,0,2,2019-01-26T17:30:46-0500
+CC2,GroupC,I DIED AND I'M SORRY,(She Got No) Honey in the Bank,2,0,2019-01-26T17:30:46-0500
+CC2,GroupC,SHASH for the CLASH,SMUT COFFEE,2,0,2019-01-26T17:30:46-0500
+CC2,GroupC,Fifth Wheel,Go Flex Yourself,1,1,2019-01-26T17:30:46-0500
+CC2,GroupC,SHASH for the CLASH,I DIED AND I'M SORRY,2,0,2019-01-26T17:30:46-0500
+CC2,GroupC,(She Got No) Honey in the Bank,Fifth Wheel,0,2,2019-01-26T17:30:46-0500
+CC2,GroupC,SMUT COFFEE,Go Flex Yourself,0,2,2019-01-26T17:30:46-0500
+CC2,GroupC,Go Flex Yourself,(She Got No) Honey in the Bank,1,1,2019-01-26T17:30:46-0500
+CC2,GroupC,Fifth Wheel,SHASH for the CLASH,1,1,2019-01-26T17:30:46-0500
+CC2,GroupC,I DIED AND I'M SORRY,SMUT COFFEE,2,0,2019-01-26T17:30:46-0500
+CC2,GroupC,SHASH for the CLASH,Go Flex Yourself,2,0,2019-01-26T17:30:46-0500
+CC2,GroupC,SMUT COFFEE,(She Got No) Honey in the Bank,0,2,2019-01-26T17:30:46-0500
+CC2,GroupC,I DIED AND I'M SORRY,Fifth Wheel,0,2,2019-01-26T17:30:46-0500
+CC2,KO,Sedona MySpace,Risky Beezness,3,0,2019-01-26T19:43:10-0500
+CC2,KO,My Voice... on Anime,I DIED AND I'M SORRY,3,1,2019-01-26T19:43:10-0500
+CC2,KO,Fifth Wheel,Cactus Trash,3,0,2019-01-26T19:43:10-0500
+CC2,KO,Where Have All The Techbros Gone?,(She Got No) Honey in the Bank,3,2,2019-01-26T19:43:10-0500
+CC2,KO,MDMA W,SMUT COFFEE,3,0,2019-01-26T19:43:10-0500
+CC2,KO,Classic Romcom,Go Flex Yourself,3,0,2019-01-26T19:43:10-0500
+CC2,KO,SHASH for the CLASH,Cobra Khive,3,0,2019-01-26T19:43:10-0500
+CC2,KO,Executive Producer Dick Wolfpac,RAGE FACE,3,1,2019-01-26T19:43:10-0500
+CC2,KO,Sedona MySpace,My Voice... on Anime,3,2,2019-01-26T20:10:51-0500
+CC2,KO,Fifth Wheel,Where Have All The Techbros Gone?,3,2,2019-01-26T20:36:49-0500
+CC2,KO,MDMA W,Classic Romcom,1,3,2019-01-26T20:51:06-0500
+CC2,KO,SHASH for the CLASH,Executive Producer Dick Wolfpac,3,2,2019-01-26T21:16:52-0500
+CC2,KO,Sedona MySpace,Fifth Wheel,2,3,2019-01-26T23:19:13-0500
+CC2,KO,Classic Romcom,SHASH for the CLASH,3,1,2019-01-26T23:32:54-0500
+CC2,KO,Fifth Wheel,Classic Romcom,0,3,2019-01-27T01:55:39-0500
+CC2,KO,Risky Beezness,I DIED AND I'M SORRY,0,3,2019-01-26T20:10:51-0500
+CC2,KO,Cactus Trash,(She Got No) Honey in the Bank,1,3,2019-01-26T20:36:49-0500
+CC2,KO,SMUT COFFEE,Go Flex Yourself,0,3,2019-01-26T20:51:06-0500
+CC2,KO,Cobra Khive,RAGE FACE,1,3,2019-01-26T21:16:52-0500
+CC2,KO,Executive Producer Dick Wolfpac,I DIED AND I'M SORRY,2,3,2019-01-26T23:32:54-0500
+CC2,KO,MDMA W,(She Got No) Honey in the Bank,3,0,2019-01-26T23:19:23-0500
+CC2,KO,Where Have All The Techbros Gone?,Go Flex Yourself,3,1,2019-01-26T23:19:13-0500
+CC2,KO,My Voice... on Anime,RAGE FACE,3,2,2019-01-26T22:29:35-0500
+CC2,KO,I DIED AND I'M SORRY,MDMA W,0,3,2019-01-27T00:39:26-0500
+CC2,KO,Where Have All The Techbros Gone?,My Voice... on Anime,1,3,2019-01-27T00:15:34-0500
+CC2,KO,Sedona MySpace,MDMA W,3,0,2019-01-27T01:39:22-0500
+CC2,KO,SHASH for the CLASH,My Voice... on Anime,3,2,2019-01-27T01:55:39-0500
+CC2,KO,Sedona MySpace,SHASH for the CLASH,2,3,2019-01-27T02:28:23-0500
+CC2,KO,Fifth Wheel,SHASH for the CLASH,2,3,2019-01-27T03:03:36-0500
+CC2,KO,Classic Romcom,SHASH for the CLASH,3,4,2019-01-27T03:36:31-0500
+CC2,KO,SHASH for the CLASH,Classic Romcom,0,4,2019-01-27T15:08:16-0500
+CC3,GroupA,Sir HaTrick Stewart,ELF Poison Wizard,2,0,2020-02-01T15:30:51-0500
+CC3,GroupA,Free Agents,Rise Up Lights,0,2,2020-02-01T15:30:51-0500
+CC3,GroupA,The Mattrix™️,Miller Luck,2,0,2020-02-01T15:30:51-0500
+CC3,GroupA,Rise Up Lights,The Mattrix™️,2,0,2020-02-01T15:30:51-0500
+CC3,GroupA,Miller Luck,Sir HaTrick Stewart,0,2,2020-02-01T15:30:51-0500
+CC3,GroupA,ELF Poison Wizard,Free Agents,2,0,2020-02-01T15:30:51-0500
+CC3,GroupA,Miller Luck,Rise Up Lights,0,2,2020-02-01T15:30:51-0500
+CC3,GroupA,The Mattrix™️,ELF Poison Wizard,2,0,2020-02-01T15:30:51-0500
+CC3,GroupA,Sir HaTrick Stewart,Free Agents,2,0,2020-02-01T15:30:51-0500
+CC3,GroupA,Free Agents,The Mattrix™️,0,2,2020-02-01T15:30:51-0500
+CC3,GroupA,ELF Poison Wizard,Miller Luck,1,1,2020-02-01T15:30:51-0500
+CC3,GroupA,Rise Up Lights,Sir HaTrick Stewart,1,1,2020-02-01T15:30:51-0500
+CC3,GroupA,Miller Luck,Free Agents,2,0,2020-02-01T15:30:51-0500
+CC3,GroupA,Sir HaTrick Stewart,The Mattrix™️,2,0,2020-02-01T15:30:51-0500
+CC3,GroupA,Rise Up Lights,ELF Poison Wizard,2,0,2020-02-01T15:30:51-0500
+CC3,GroupB,Down To Flex,Stat Daddies,2,0,2020-02-01T22:19:31+0200
+CC3,GroupB,Hollywood Reboot,Les Champs-Élyse,2,0,2020-02-01T22:19:31+0200
+CC3,GroupB,Stat Daddies,Hollywood Reboot,1,1,2020-02-01T22:19:31+0200
+CC3,GroupB,Babysitter's Club,Down To Flex,0,2,2020-02-01T22:19:31+0200
+CC3,GroupB,Hollywood Reboot,Babysitter's Club,2,0,2020-02-01T22:19:31+0200
+CC3,GroupB,Les Champs-Élyse,Stat Daddies,2,0,2020-02-01T22:19:31+0200
+CC3,GroupB,Babysitter's Club,Les Champs-Élyse,0,2,2020-02-01T22:19:32+0200
+CC3,GroupB,Down To Flex,Hollywood Reboot,0,2,2020-02-01T22:19:32+0200
+CC3,GroupB,Les Champs-Élyse,Down To Flex,2,0,2020-02-01T22:19:32+0200
+CC3,GroupB,Stat Daddies,Babysitter's Club,0,2,2020-02-01T22:19:32+0200
+CC3,GroupC,#vanpattenscard,Attack of the Crones,2,0,2020-02-01T23:00:50+0100
+CC3,GroupC,Cheetoh,Homecoming,2,0,2020-02-01T23:00:50+0100
+CC3,GroupC,Chill Chill Chill,Daddy Mayo,2,0,2020-02-01T23:00:50+0100
+CC3,GroupC,Homecoming,Chill Chill Chill,1,1,2020-02-01T23:00:50+0100
+CC3,GroupC,Daddy Mayo,#vanpattenscard,0,2,2020-02-01T23:00:50+0100
+CC3,GroupC,Attack of the Crones,Cheetoh,0,2,2020-02-01T23:00:50+0100
+CC3,GroupC,Daddy Mayo,Homecoming,0,2,2020-02-01T23:00:50+0100
+CC3,GroupC,Chill Chill Chill,Attack of the Crones,2,0,2020-02-01T23:00:50+0100
+CC3,GroupC,#vanpattenscard,Cheetoh,0,2,2020-02-01T23:00:50+0100
+CC3,GroupC,Cheetoh,Chill Chill Chill,2,0,2020-02-01T23:00:50+0100
+CC3,GroupC,Attack of the Crones,Daddy Mayo,1,1,2020-02-01T23:00:50+0100
+CC3,GroupC,Homecoming,#vanpattenscard,1,1,2020-02-01T23:00:50+0100
+CC3,GroupC,Daddy Mayo,Cheetoh,0,2,2020-02-01T23:00:50+0100
+CC3,GroupC,#vanpattenscard,Chill Chill Chill,2,0,2020-02-01T23:00:50+0100
+CC3,GroupC,Homecoming,Attack of the Crones,2,0,2020-02-01T23:00:50+0100
+CC3,GroupD,Blue-Eyes White Privilege,TFG,1,1,2020-02-01T17:03:41-0500
+CC3,GroupD,Farfetch'd Fan Club,Snailor Jerry,0,2,2020-02-01T17:03:41-0500
+CC3,GroupD,TFG,Farfetch'd Fan Club,2,0,2020-02-01T17:03:41-0500
+CC3,GroupD,Applesauce,Blue-Eyes White Privilege,2,0,2020-02-01T17:03:41-0500
+CC3,GroupD,Farfetch'd Fan Club,Applesauce,0,2,2020-02-01T17:03:41-0500
+CC3,GroupD,Snailor Jerry,TFG,2,0,2020-02-01T17:03:41-0500
+CC3,GroupD,Applesauce,Snailor Jerry,2,0,2020-02-01T17:03:41-0500
+CC3,GroupD,Blue-Eyes White Privilege,Farfetch'd Fan Club,2,0,2020-02-01T17:03:41-0500
+CC3,GroupD,Snailor Jerry,Blue-Eyes White Privilege,2,0,2020-02-01T17:03:41-0500
+CC3,GroupD,TFG,Applesauce,0,2,2020-02-01T17:03:41-0500
+CC3,KO,Miller Luck,Babysitter's Club,1,3,2020-02-02T11:42:51+1100
+CC3,KO,Blue-Eyes White Privilege,Daddy Mayo,2,3,2020-02-02T11:42:51+1100
+CC3,KO,Chill Chill Chill,Farfetch'd Fan Club,3,0,2020-02-02T11:42:51+1100
+CC3,KO,ELF Poison Wizard,Stat Daddies,3,0,2020-02-02T11:42:51+1100
+CC3,KO,TFG,Attack of the Crones,2,3,2020-02-02T11:42:51+1100
+CC3,KO,Down To Flex,Free Agents,3,0,2020-02-02T11:42:51+1100
+CC3,KO,Applesauce,Babysitter's Club,3,0,2020-02-02T11:52:46+1100
+CC3,KO,#vanpattenscard,The Mattrix™️,2,3,2020-02-02T11:42:51+1100
+CC3,KO,Rise Up Lights,Daddy Mayo,3,1,2020-02-02T12:20:43+1100
+CC3,KO,Hollywood Reboot,Chill Chill Chill,3,0,2020-02-02T12:24:57+1100
+CC3,KO,Cheetoh,ELF Poison Wizard,3,0,2020-02-02T12:15:02+1100
+CC3,KO,Les Champs-Élyse,Homecoming,1,3,2020-02-02T11:42:51+1100
+CC3,KO,Sir HaTrick Stewart,Attack of the Crones,3,0,2020-02-02T12:00:55+1100
+CC3,KO,Snailor Jerry,Down To Flex,3,2,2020-02-02T12:21:23+1100
+CC3,KO,Applesauce,The Mattrix™️,3,1,2020-02-02T12:56:22+1100
+CC3,KO,Rise Up Lights,Hollywood Reboot,3,1,2020-02-02T13:14:31+1100
+CC3,KO,Cheetoh,Homecoming,3,0,2020-02-02T13:16:08+1100
+CC3,KO,Sir HaTrick Stewart,Snailor Jerry,3,0,2020-02-02T14:11:22+1100
+CC3,KO,Applesauce,Rise Up Lights,1,3,2020-02-02T15:39:51+1100
+CC3,KO,Cheetoh,Sir HaTrick Stewart,1,3,2020-02-02T15:52:27+1100
+CC3,KO,Rise Up Lights,Sir HaTrick Stewart,2,3,2020-02-02T17:01:04+1100
+CC3,KO,Down To Flex,Miller Luck,3,0,2020-02-02T13:50:11+1100
+CC3,KO,Les Champs-Élyse,Blue-Eyes White Privilege,3,0,2020-02-02T12:51:37+1100
+CC3,KO,ELF Poison Wizard,Farfetch'd Fan Club,3,0,2020-02-02T13:16:08+1100
+CC3,KO,Chill Chill Chill,Stat Daddies,3,1,2020-02-02T13:05:39+1100
+CC3,KO,#vanpattenscard,TFG,0,3,2020-02-02T12:54:09+1100
+CC3,KO,Babysitter's Club,Free Agents,3,0,2020-02-02T12:56:22+1100
+CC3,KO,Attack of the Crones,Down To Flex,0,3,2020-02-02T14:37:46+1100
+CC3,KO,Les Champs-Élyse,ELF Poison Wizard,3,0,2020-02-02T14:29:57+1100
+CC3,KO,Daddy Mayo,Chill Chill Chill,1,3,2020-02-02T14:40:48+1100
+CC3,KO,TFG,Babysitter's Club,0,3,2020-02-02T14:19:17+1100
+CC3,KO,Hollywood Reboot,Down To Flex,3,0,2020-02-02T15:39:51+1100
+CC3,KO,The Mattrix™️,Les Champs-Élyse,3,2,2020-02-02T15:29:11+1100
+CC3,KO,Snailor Jerry,Chill Chill Chill,3,1,2020-02-02T15:52:27+1100
+CC3,KO,Homecoming,Babysitter's Club,3,0,2020-02-02T15:42:33+1100
+CC3,KO,Hollywood Reboot,The Mattrix™️,2,3,2020-02-02T16:09:52+1100
+CC3,KO,Snailor Jerry,Homecoming,0,3,2020-02-02T16:33:21+1100
+CC3,KO,Cheetoh,The Mattrix™️,3,0,2020-02-02T17:00:37+1100
+CC3,KO,Applesauce,Homecoming,3,0,2020-02-02T17:04:49+1100
+CC3,KO,Cheetoh,Applesauce,3,1,2020-02-02T17:23:21+1100
+CC3,KO,Rise Up Lights,Cheetoh,3,1,2020-02-02T18:12:08+1100
+CC3,KO,Sir HaTrick Stewart,Rise Up Lights,4,1,2020-02-02T18:32:25+1100
