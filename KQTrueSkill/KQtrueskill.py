@@ -169,17 +169,18 @@ class KQTrueSkill:
             self.teams[tournament] = {}
 
         if playerteam is None or playerteam.strip() == '':
-            raise Exception(f"{tournament}: empty team")
+            raise Exception(f"{tournament}.add_player: empty team")
 
         if playerteam in self.teams[tournament].keys():
             if playername is None or playername == '':
                 playername = playerteam + f" {len(self.teams[tournament][playerteam]) + 1}"
                 playerscene = None
+                self.incomplete_players.append(f"{tournament}: {playername}")
             self.teams[tournament][playerteam].append(playername)
         else:
             if playername is None or playername == '':
-                self.incomplete_players.append(f"{tournament}: {playerteam}, {playername}, {playerscene}")
                 playername = playerteam + " 1"
+                self.incomplete_players.append(f"{tournament}: {playername}")
                 playerscene = None
             self.teams[tournament][playerteam] = [playername]
 
@@ -285,6 +286,10 @@ class KQTrueSkill:
                         else:
                             row.append(self.snapshots[t][player].mu - 3*self.snapshots[t][player].sigma)
                     playerskill_writer.writerow(row)
+                except ZeroDivisionError as e:
+                    print(
+                        f"{player}, {self.playerscenes[player]}, {self.playergames[player]}, {self.playerteams[player]}: {e}; probably a player with zero games")
+                    raise e
                 except Exception as e:
                     print(f"{player}, {self.playerscenes[player]}, {self.playergames[player]}, {self.playerteams[player]}: {e}")
                     raise Exception(e)

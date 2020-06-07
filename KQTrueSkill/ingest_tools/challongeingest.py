@@ -307,37 +307,6 @@ Cor19: [] = ["Cor19", [{'id': 'Coro2019', 'name': 'Cor19', 'bracket': 'KO'},
                        {'id': 'Coro2019Group2', 'name': 'Cor19', 'bracket': 'Group2'},
                        ]]
 
-# processed tourneys go above this line
-
-# subtourney_id: int = 5689203  # GDC4 Groups 1
-# subtourney_id: int = 4415714  # GDC3 DE
-
-# no groups
-GDC1: [] = ["GDC1", [{'id': 'SFGDC', 'name': 'GDC1', 'bracket': 'KO'},
-                     ]]
-
-GDC2: [] = ["GDC2", [{'id': 'kqgdc2', 'name': 'GDC2', 'bracket': 'KO'},
-                     ]]
-
-Camp17: [] = ["Camp17", [{'id': 'campkq', 'bracket': 'KO'},
-                     ]]
-
-Camp19: [] = ["Camp19", [{'id': 'campkq2019', 'bracket': 'KO'},
-                     ]]
-
-
-ECC1: [] = ["ECC1", [{'id': 'ECC2019finals', 'bracket': 'KO'},
-                     {'id': 'ECC2019poolA', 'bracket': 'Group1'},
-                     {'id': 'ECC2019poolB', 'bracket': 'Group2'},
-                     ]]
-
-# groups?
-Cor15: [] = ["Cor15", [{'id': 'BrooklynCoronation2015', 'name': 'Cor15', 'bracket': 'KO'},
-                       ]]
-
-# https://ehgaming.challonge.com/users/charlesjpratt/tournaments
-Cor16: [] = ["Cor16", [{'id': 'BrooklynCoronationFall2016', 'name': 'Cor16', 'bracket': 'KO'},
-                       ]]
 
 MCS_KC: [] = ["MCS_KC", [{'id': 'KCKQMCS', 'bracket': 'KO'},
                          ]]
@@ -375,6 +344,50 @@ CHA_HT: [] = ["CHA_HT", [{'id': 'Hiveturkeyfinals', 'bracket': 'KO'},
                          {'id': 'Hiveturkeyswiss', 'bracket': 'WC'},
                          ]]
 
+
+# processed tourneys go above this line
+
+# subtourney_id: int = 5689203  # GDC4 Groups 1
+# subtourney_id: int = 4415714  # GDC3 DE
+
+# no groups
+GDC1: [] = ["GDC1", [{'id': 'SFGDC', 'name': 'GDC1', 'bracket': 'KO'},
+                     ]]
+
+GDC2: [] = ["GDC2", [{'id': 'kqgdc2', 'name': 'GDC2', 'bracket': 'KO'},
+                     ]]
+
+Camp17: [] = ["Camp17", [{'id': 'campkq', 'bracket': 'KO'},
+                     ]]
+
+Camp19: [] = ["Camp19", [{'id': 'campkq2019', 'bracket': 'KO'},
+                     ]]
+
+
+ECC1: [] = ["ECC1", [{'id': 'ECC2019finals', 'bracket': 'KO'},
+                     {'id': 'ECC2019poolA', 'bracket': 'Group1'},
+                     {'id': 'ECC2019poolB', 'bracket': 'Group2'},
+                     ]]
+
+# groups?
+Cor15: [] = ["Cor15", [{'id': 'BrooklynCoronation2015', 'name': 'Cor15', 'bracket': 'KO'},
+                       ]]
+
+# https://ehgaming.challonge.com/users/charlesjpratt/tournaments
+Cor16: [] = ["Cor16", [{'id': 'BrooklynCoronationFall2016', 'name': 'Cor16', 'bracket': 'KO'},
+                       ]]
+
+BnB1: [] = ["BnB1", [{'id': 'batb17', 'bracket': 'KO'},
+                     ]]
+BnB2: [] = ["BnB2", [{'id': 'bandb2', 'bracket': 'KO'},
+                     ]]
+BnB3: [] = ["BnB3", [{'id': 'bandb3', 'bracket': 'KO'},
+                     ]]
+MAD420: [] = ["MAD420", [{'id': 'KQBuds420', 'bracket': 'KO'},
+                     {'id': 'KQBuds1', 'bracket': 'Group1'},
+                     {'id': 'KQBuds2', 'bracket': 'Group2'},
+                     ]]
+
 # TEMPLATE[0] = the tourney identifier KQTrueskill will use
 # TEMPLATE[1] = list of dictionaries, one dict for each challonge url
 TEMPLATE: [] = ["", [{'id': '', 'bracket': 'KO'},
@@ -410,18 +423,17 @@ def main():
 
     account: ChallongeAccount = ChallongeAccount('OJxf8wmFKHb5afldGJ1HzTn5Omg4s7BcuevuQXCd', None)
     account_kqsf: ChallongeAccount = ChallongeAccount('OJxf8wmFKHb5afldGJ1HzTn5Omg4s7BcuevuQXCd','kq-sf')
-    account_sfl: ChallongeAccount = ChallongeAccount('OJxf8wmFKHb5afldGJ1HzTn5Omg4s7BcuevuQXCd','hybridhypegaming')
+    account_sfl: ChallongeAccount = ChallongeAccount('OJxf8wmFKHb5afldGJ1HzTn5Omg4s7BcuevuQXCd', 'hybridhypegaming')
+    account_stl: ChallongeAccount = ChallongeAccount('OJxf8wmFKHb5afldGJ1HzTn5Omg4s7BcuevuQXCd', 'killerqueenstl')
     account_cha: ChallongeAccount = ChallongeAccount('OJxf8wmFKHb5afldGJ1HzTn5Omg4s7BcuevuQXCd','killer-queen-chattanooga')
 
     # account.print_tournament('BKCRN2017')
 
 
-    get_match_results_from_challonge(account, GDC1[0], GDC1[1], 'tmp.csv', append=False)
-    get_match_results_from_challonge(account, GDC2[0], GDC2[1], 'tmp.csv', append=True)
-    get_match_results_from_challonge(account, Camp17[0], Camp17[1], 'tmp.csv', append=True)
-    get_match_results_from_challonge(account, Camp19[0], Camp19[1], 'tmp.csv', append=True)
-    get_match_results_from_challonge(account, ECC1[0], ECC1[1], 'tmp.csv', append=True)
-
+    get_match_results_from_challonge(account, MAD420[0], MAD420[1], 'tmp.csv', append=False)
+    get_match_results_from_challonge(account_stl, BnB1[0], BnB1[1], 'tmp.csv', append=True)
+    get_match_results_from_challonge(account, BnB2[0], BnB2[1], 'tmp.csv', append=True)
+    get_match_results_from_challonge(account, BnB3[0], BnB3[1], 'tmp.csv', append=True)
 
     # get_match_results_from_challonge(account_cha, CHA_HT[0], CHA_HT[1], '2019 misc game results.csv', append=True)
 

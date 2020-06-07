@@ -52,8 +52,8 @@ PlayerSkill.csv - Trueskill by player for the current set of tournaments
 ## Currently tracked tournaments
     2016: ['KQXV']
     2017: ['GDC2', 'Coro17s', 'KQXX', 'Camp17', 'Coro17f']
-    2018: ['CC1', 'GDC3', 'MCS-MPLS', 'Coro18s', 'MCS-CHI', 'KQXXV', 'MCS_KC', 'MGF1', 'HH1', 'MCS-CBUS', 'BB3', 'CHA_HT']
-    2019: ['CC2', 'QGW19', 'KQC3', 'GDC4', 'Coro19', 'GFT', 'KQ30', 'Camp19', 'MGF2', 'ECC1', 'BBrawl4', 'BB4', 'HH2']
+    2018: ['CC1', 'GDC3', 'BnB2', 'MCS-MPLS', 'Coro18s', 'MCS-CHI', 'KQXXV', 'MCS_KC', 'MGF1', 'HH1', 'MCS-CBUS', 'BB3', 'CHA_HT']
+    2019: ['CC2', 'QGW19', 'KQC3', 'GDC4', 'BnB3', 'MAD420', 'Coro19', 'GFT', 'KQ30', 'Camp19', 'MGF2', 'ECC1', 'BBrawl4', 'BB4', 'HH2']
     2020: ['CC3', 'QGW20']
     
 If you'd like to see a tournament added to the list, send dshupp@gmail.com links to the teamsheet and challonge
@@ -88,34 +88,30 @@ it will have you pegged at your current level, and the effects of older tourname
     
 ### Teams with missing players
 
-    GDC3: Better than bots, Better than bots 5, 
-    BB3: Warp World, Warp World 5, 
-    BB3: BeeDeeOhNo, BeeDeeOhNo 5, 
-    BB3: Show Me Your Boops, Show Me Your Boops 4, 
-    BB3: Show Me Your Boops, Show Me Your Boops 5, 
-    KQXX: Blood HoNYC, George, 
-    KQXX: Kogan's Heroes, Kogan's Heroes 5, None
-    KQXX: What Hive School Did You Go To?, Morgan Ryman, 
-    KQXX: Superteam: Return of the Private Cab, Bryan Boyer, 
-    KQXX: Superteam: Return of the Private Cab, David Spencer, 
-    KQXX: Rob's Slobs, Miranda, 
-    KQXX: Garbage Snail Kids, Garbage Snail Kids 5, None
-    KQXV: Fake Palidrones, Fake Palidrones 1, None
-    KQXV: Fake Palidrones, Fake Palidrones 2, None
-    KQXV: Fake Palidrones, Fake Palidrones 3, None
-    KQXV: Fake Palidrones, Fake Palidrones 4, None
-    KQXV: Fake Palidrones, Fake Palidrones 5, None
-    KQXV: Harambae Watch, Harambae Watch 1, None
-    KQXV: Harambae Watch, Harambae Watch 2, None
-    KQXV: Harambae Watch, Harambae Watch 3, None
-    KQXV: Harambae Watch, Harambae Watch 4, None
-    KQXV: Harambae Watch, Harambae Watch 5, None
-    MCS-CHI: Mad Chuck, Mad Chuck 1, None
-    MCS-CHI: Mad Chuck, Mad Chuck 2, None
-    MCS-CHI: Mad Chuck, Mad Chuck 3, None
-    MCS-CHI: Mad Chuck, Mad Chuck 4, None
-    MCS-CHI: Mad Chuck, Mad Chuck 5, None
-    MGF1: Y U Dumb Tho?, Y U Dumb Tho? 5, None
-    BBrawl4: Some Side Cab Scrubs, Anna Willoughby, 
-    QGW19: 3 Dollar PBRs, 3 Dollar PBRs 4, None
-    QGW19: 3 Dollar PBRs, 3 Dollar PBRs 5, None
+    GDC3: Better than bots 5
+    GDC2: Welcome to Stingapore 4
+    BB3: Warp World 5
+    BB3: BeeDeeOhNo 5
+    BB3: Show Me Your Boops 4
+    BB3: Show Me Your Boops 5
+    KQXX: Kogan's Heroes 5
+    KQXX: Garbage Snail Kids 5
+    KQXV: Fake Palidrones 1
+    KQXV: Fake Palidrones 2
+    KQXV: Fake Palidrones 3
+    KQXV: Fake Palidrones 4
+    KQXV: Fake Palidrones 5
+    KQXV: Harambae Watch 1
+    KQXV: Harambae Watch 2
+    KQXV: Harambae Watch 3
+    KQXV: Harambae Watch 4
+    KQXV: Harambae Watch 5
+    MCS-CHI: Mad Chuck 1
+    MCS-CHI: Mad Chuck 2
+    MCS-CHI: Mad Chuck 3
+    MCS-CHI: Mad Chuck 4
+    MCS-CHI: Mad Chuck 5
+    MGF1: Y U Dumb Tho? 5
+    BnB3: Dregs of the Apiary 2
+    QGW19: 3 Dollar PBRs 4
+    QGW19: 3 Dollar PBRs 5
