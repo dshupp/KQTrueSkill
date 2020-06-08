@@ -46,7 +46,7 @@ KQXX,Malört & Savior,Travis Teta,CLT
 KQXX,Malört & Savior,Bobby Hutter,CLT
 KQXX,Extra Pesto,Rishi Khullar,CHI
 KQXX,Extra Pesto,Dan N.,CHI
-KQXX,Extra Pesto,Mark R.,CHI
+KQXX,Extra Pesto,Mark ReCupido,CHI
 KQXX,Extra Pesto,Bart Brylak,CHI
 KQXX,Extra Pesto,Antonio,CHI
 KQXX,Hive of the Mantis,Jonathan Pollard,ATX
@@ -60,7 +60,7 @@ KQXX,Pigeon Rats,Richard Chan,NY
 KQXX,Pigeon Rats,Kevin Constantino,NY
 KQXX,Pigeon Rats,Marian Wu,NY
 KQXX,Blood HoNYC,Hugo Meneses,KC
-KQXX,Blood HoNYC,George,
+KQXX,Blood HoNYC,George Cruz,KC,
 KQXX,Blood HoNYC,Randy Diaz,NY
 KQXX,Blood HoNYC,Raven Bagy,NY
 KQXX,Blood HoNYC,Eli Whitney,KC
@@ -101,9 +101,9 @@ KQXX,Z,Jorge Hernandez,CLT
 KQXX,Z,Steven Saenz,CLT
 KQXX,Z,Alex Kogan,CHI
 KQXX,Kogan's Heroes,Josh Eklow,CHI
-KQXX,Kogan's Heroes,Sven,MPLS
+KQXX,Kogan's Heroes,Sven Mattson,MPLS
 KQXX,Kogan's Heroes,DJ Knerr,STL
-KQXX,Kogan's Heroes,Melissa G.,KC
+KQXX,Kogan's Heroes,Melissa Gambino,KC
 KQXX,Kogan's Heroes,,
 KQXX,Buzzkill,Bert Wierenga,CHI
 KQXX,Buzzkill,Christina Norton,CHI
@@ -143,7 +143,7 @@ KQXX,"Oh, Hive Mark!",Tyler Moloney,PHX
 KQXX,Freddie Mercury's Wet Dream,Anna Willoughby,CHI
 KQXX,Freddie Mercury's Wet Dream,Todd Hansen,CHI
 KQXX,Freddie Mercury's Wet Dream,Johnny Summerville,CHI
-KQXX,Freddie Mercury's Wet Dream,Shawn,CHI
+KQXX,Freddie Mercury's Wet Dream,Shawn Dalton,CHI
 KQXX,Freddie Mercury's Wet Dream,Woody Stanfield,CHI
 KQXX,Mile Hive Club,Ryan Knerr,STL
 KQXX,Mile Hive Club,DJ Knerr,STL
@@ -304,7 +304,7 @@ KQXXV,God Slay the Queen,Matthew Anderson,CHA
 KQXXV,God Slay the Queen,Casey Campbell,CHA
 KQXXV,God Slay the Queen,Jason Maxwell,CHA
 KQXXV,God Slay the Queen,Camille Cass,CHA
-KQXXV,God Slay the Queen,Shelby Renee,MPLS
+KQXXV,God Slay the Queen,Shelby Renee Nuncio,MPLS
 KQXXV,Buiser's Bois,Alex Valdez,MAD
 KQXXV,Buiser's Bois,Hilton Jones,MAD
 KQXXV,Buiser's Bois,Philip Repsher,CHI
@@ -374,7 +374,7 @@ KQXV,Tap Water Braised Cabbage,David Kirk,CHI
 KQXV,Tap Water Braised Cabbage,Mariano,CHI
 KQXV,Tap Water Braised Cabbage,Antonio,CHI
 KQXV,Tap Water Braised Cabbage,Rishi Khullar,CHI
-KQXV,Tap Water Braised Cabbage,Mark R.,CHI
+KQXV,Tap Water Braised Cabbage,Mark ReCupido,CHI
 KQXV,Anaphylaxis,Mustafa Allsop,NY
 KQXV,Anaphylaxis,Sarah Greenwood,NY
 KQXV,Anaphylaxis,Andrew Kelley,NY
@@ -403,7 +403,7 @@ KQXV,Yass Queens,Jason Steckey,CLT
 KQXV,Murder Nerds,Anna,CHI
 KQXV,Murder Nerds,Belia Portillo,CHI
 KQXV,Murder Nerds,Jorge,CHI
-KQXV,Murder Nerds,Shawn,CHI
+KQXV,Murder Nerds,Shawn Dalton,CHI
 KQXV,Murder Nerds,Chuck Bressan,CHI
 KQXV,Man Buns But Better,Craig Payne,CBUS
 KQXV,Man Buns But Better,Hell Logsdon,CBUS
@@ -414,10 +414,10 @@ KQXV,Malort Sharts,Pawel,CHI
 KQXV,Malort Sharts,Katie Rhodes,CHI
 KQXV,Malort Sharts,Jennifer,CHI
 KQXV,Malort Sharts,Steve Titra,CHI
-KQXV,Malort Sharts,Curt,CHI
+KQXV,Malort Sharts,Curt Hansen,CHI
 KQXV,Sting of Queens,Hugo Meneses,KC
-KQXV,Sting of Queens,Melissa G.,KC
-KQXV,Sting of Queens,George,KC
+KQXV,Sting of Queens,Melissa Gambino,KC
+KQXV,Sting of Queens,George Cruz,KC
 KQXV,Sting of Queens,Eli Whitney,KC
 KQXV,Sting of Queens,Ryan Waisner,KC
 KQXV,Dankey Kang,Brian Kang,NY
@@ -639,9 +639,9 @@ MCS-MPLS,Don't Worry,Scott Muggli,MPLS
 MCS-MPLS,Don't Worry,Nicole Ryan,MPLS
 MCS-MPLS,Don't Worry,DJ Rickerd,MPLS
 MCS-MPLS,Don't Worry,Andrea Buiser,MPLS
-MCS-MPLS,Don't Worry,Shelby Renee,MPLS
+MCS-MPLS,Don't Worry,Shelby Renee Nuncio,MPLS
 MCS-MPLS,I'm Hungry,Matt Merritt,MPLS
-MCS-MPLS,I'm Hungry,Aydy Burling,MPLS
+MCS-MPLS,I'm Hungry,AyLy Burling,MPLS
 MCS-MPLS,I'm Hungry,Marina Catherine,MPLS
 MCS-MPLS,I'm Hungry,Tyler Moersch,MPLS
 MCS-MPLS,I'm Hungry,Justin Henry,MPLS
@@ -685,7 +685,7 @@ MGF1,West Virginia,Jack Salaski,MPLS
 MGF1,West Virginia,Dexter Chacko,MPLS
 MGF1,West Virginia,Erik Beardman,MPLS
 MGF1,West Virginia,Jesse Sorensen,MPLS
-MGF1,the Bee-52’s,Shelby Renee,MPLS
+MGF1,the Bee-52’s,Shelby Renee Nuncio,MPLS
 MGF1,the Bee-52’s,Andrea Buiser,MPLS
 MGF1,the Bee-52’s,Nick Bornemann,MPLS
 MGF1,the Bee-52’s,Kevin Vanhorn,MPLS
@@ -757,8 +757,8 @@ MAD420,,Peter Leahy,MAD
 MAD420,,Alex Valdez,MAD
 MAD420,"Beez Resin, Indeed",Nate,MAD
 MAD420,,Jenn Gilbert,MAD
-MAD420,,Leviathon,MAD
-MAD420,,Hilton,MAD
+MAD420,,Lev Bakin,MAD
+MAD420,,Hilton Jones,MAD
 MAD420,,Trevor,MAD
 MAD420,Grow up and do blow like adults,Cora-Lee Bowman,MPLS
 MAD420,,Beau Pulvermacher,MPLS
@@ -846,7 +846,7 @@ BnB2,,Aaron Porter,STL
 BnB2,,Sara Rohrbough,STL
 BnB2,,Michael Roman,STL
 BnB2,BEEday GamBEEno,Nicky Yates,KC
-BnB2,,Melissa G.,KC
+BnB2,,Melissa Gambino,KC
 BnB2,,Morgan Ryman,KC
 BnB2,,Thomas Hardy,KC
 BnB2,,Christian Henningsen,KC

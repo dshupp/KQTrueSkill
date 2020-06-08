@@ -50,8 +50,8 @@ PlayerSkill.csv - Trueskill by player for the current set of tournaments
 
 
 ## Currently tracked tournaments
-    2016: ['KQXV']
-    2017: ['GDC2', 'Coro17s', 'KQXX', 'Camp17', 'Coro17f']
+    2016: ['GDC1', 'KQXV', 'BB1']
+    2017: ['GDC2', 'Coro17s', 'KQXX', 'Camp17', 'BB2', 'Coro17f']
     2018: ['CC1', 'GDC3', 'BnB2', 'MCS-MPLS', 'Coro18s', 'MCS-CHI', 'KQXXV', 'MCS_KC', 'MGF1', 'HH1', 'MCS-CBUS', 'BB3', 'CHA_HT']
     2019: ['CC2', 'QGW19', 'KQC3', 'GDC4', 'BnB3', 'MAD420', 'Coro19', 'GFT', 'KQ30', 'Camp19', 'MGF2', 'ECC1', 'BBrawl4', 'BB4', 'HH2']
     2020: ['CC3', 'QGW20']
@@ -80,9 +80,9 @@ it will have you pegged at your current level, and the effects of older tourname
 ## Known Data Issues
 ### Tournaments where we can't find the Team Sheet
     Coronation 2015, 2016
-    GDC 1
 ### Tournaments where we can't find the Challonge
     Camp 2017 Groups, Camp 2019 Groups
+    Coronation 2017f/s groups
 ### Matches with missing data
     None currently
     
@@ -97,11 +97,9 @@ it will have you pegged at your current level, and the effects of older tourname
     GDC1: Oprah WindFury (SF) 3
     GDC1: Oprah WindFury (SF) 4
     GDC1: Oprah WindFury (SF) 5
-    GDC1: Mo Honey Mo Problems (SF) 1
     GDC1: Mo Honey Mo Problems (SF) 3
     GDC1: Mo Honey Mo Problems (SF) 4
     GDC1: Mo Honey Mo Problems (SF) 5
-    GDC1: Queenie Queen and the Berry Bunch (SF) 1
     GDC1: Queenie Queen and the Berry Bunch (SF) 2
     GDC1: Queenie Queen and the Berry Bunch (SF) 3
     GDC1: Queenie Queen and the Berry Bunch (SF) 4
@@ -116,68 +114,41 @@ it will have you pegged at your current level, and the effects of older tourname
     GDC1: Team Pickup (SF) 3
     GDC1: Team Pickup (SF) 4
     GDC1: Team Pickup (SF) 5
-    GDC1: SORRY (PDX) 1
-    GDC1: SORRY (PDX) 2
-    GDC1: SORRY (PDX) 3
-    GDC1: SORRY (PDX) 4
-    GDC1: SORRY (PDX) 5
-    GDC1: Frankenteam (Mixed) 1
-    GDC1: Frankenteam (Mixed) 2
     GDC1: Frankenteam (Mixed) 3
     GDC1: Frankenteam (Mixed) 4
     GDC1: Frankenteam (Mixed) 5
-    GDC1: SPORTS (CHI) 1
-    GDC1: SPORTS (CHI) 2
-    GDC1: SPORTS (CHI) 3
     GDC1: SPORTS (CHI) 4
-    GDC1: SPORTS (CHI) 5
-    GDC1: OPS (Founders) 1
-    GDC1: OPS (Founders) 2
-    GDC1: OPS (Founders) 3
     GDC1: OPS (Founders) 4
     GDC1: OPS (Founders) 5
-    GDC1: The Bee Team (SF) 2
-    GDC1: The Bee Team (SF) 3
-    GDC1: The Bee Team (SF) 4
-    GDC1: The Bee Team (SF) 5
     GDC1: The Dollberries (SF) 1
     GDC1: The Dollberries (SF) 2
     GDC1: The Dollberries (SF) 3
     GDC1: The Dollberries (SF) 4
     GDC1: The Dollberries (SF) 5
-    GDC1: Wild Thornberries (NYC) 1
-    GDC1: Wild Thornberries (NYC) 2
     GDC1: Wild Thornberries (NYC) 3
     GDC1: Wild Thornberries (NYC) 4
     GDC1: Wild Thornberries (NYC) 5
-    GDC1: Beech Don't Kill My Hive (SF) 2
-    GDC1: Beech Don't Kill My Hive (SF) 3
-    GDC1: Beech Don't Kill My Hive (SF) 4
-    GDC1: Beech Don't Kill My Hive (SF) 5
-    GDC1: PDX Hype Machine (PDX) 1
-    GDC1: PDX Hype Machine (PDX) 2
+    GDC1: The Bee Team (SF) 3
+    GDC1: The Bee Team (SF) 5
     GDC1: PDX Hype Machine (PDX) 3
-    GDC1: PDX Hype Machine (PDX) 4
-    GDC1: PDX Hype Machine (PDX) 5
     GDC1: Buzzkills (SF) 4
     GDC1: Buzzkills (SF) 5
-    GDC1: Panic at the Frisco (PDX) 1
-    GDC1: Panic at the Frisco (PDX) 2
-    GDC1: Panic at the Frisco (PDX) 3
-    GDC1: Panic at the Frisco (PDX) 4
-    GDC1: Panic at the Frisco (PDX) 5
     GDC1: Deadbees (SF) 1
     GDC1: Deadbees (SF) 2
     GDC1: Deadbees (SF) 3
     GDC1: Deadbees (SF) 4
     GDC1: Deadbees (SF) 5
-    GDC1: Golden Empire Phoenix (Mix) 3
-    GDC1: Golden Empire Phoenix (Mix) 4
     GDC1: Golden Empire Phoenix (Mix) 5
     BB3: Warp World 5
     BB3: BeeDeeOhNo 5
     BB3: Show Me Your Boops 4
     BB3: Show Me Your Boops 5
+    BB1: Pure Storage 1
+    BB1: Pure Storage 2
+    BB1: Pure Storage 3
+    BB1: Pure Storage 4
+    BB1: Pure Storage 5
+    BB2: Free Agents 5
     KQXX: Kogan's Heroes 5
     KQXX: Garbage Snail Kids 5
     KQXV: Fake Palidrones 1

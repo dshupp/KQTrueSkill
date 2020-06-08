@@ -59,7 +59,7 @@ BB3,DAD REACTS ONLY,Dylan Lee,PDX
 BB3,DAD REACTS ONLY,Thomas Hardy,PDX
 BB3,DAD REACTS ONLY,David Henry,PDX
 BB3,DAD REACTS ONLY,Scott Adelman,PDX
-BB3,Dayzed and Confused,Phillip Jones,ATX
+BB3,Dayzed and Confused,Phil Jones,ATX
 BB3,Dayzed and Confused,Brian Lucas,ATX
 BB3,Dayzed and Confused,Leah Lucas,ATX
 BB3,Dayzed and Confused,Richard E. Ochoa,ATX
@@ -95,7 +95,7 @@ BB3,Higgins Boson,Johnmark Faris,PDX
 BB3,Higgins Boson,Dylan Higgins,PDX
 BB3,Higgins Boson,Javan Ivey,PDX
 BB3,Hive of the Mantis,Adriana Steinberg,ATX
-BB3,Hive of the Mantis,Phillip Bracy,ATX
+BB3,Hive of the Mantis,Phil Bracy,ATX
 BB3,Hive of the Mantis,Brandon Robertson,ATX
 BB3,Hive of the Mantis,Jonathan Pollard,ATX
 BB3,Hive of the Mantis,Chris Steinberg,ATX
@@ -260,7 +260,7 @@ BB3,The Flying Snails,Zoe Ackerman,SEA
 BB3,The Flying Snails,Patrick Heth,SEA
 BB3,The Flying Snails,Michael Flanagin,SEA
 BB3,Warp World,David Hunt (grandpoobear),PDX
-BB3,Warp World,Matthew Jakubowski,CHI
+BB3,Warp World,Matt Jakubowski,CHI
 BB3,Warp World,Kahlief Adams,PDX
 BB3,Warp World,Xwater,CAN
 BB3,Warp World,,
@@ -281,9 +281,9 @@ BB3,Because I Got Hive,Jon Lyons,CIN
 BB3,Because I Got Hive,Joe Enrico,CLT
 BB3,It's Pronounced GIF,Kevin Vanhorn,MPLS
 BB3,It's Pronounced GIF,Nick Bornemann,MPLS
-BB3,It's Pronounced GIF,Shelby Renee,MPLS
+BB3,It's Pronounced GIF,Shelby Renee Nuncio,MPLS
 BB3,It's Pronounced GIF,Johanna Rose,MPLS
-BB3,It's Pronounced GIF,Anna Zarubin,SF
+BB3,It's Pronounced GIF,Anna Zarubin-Martin,SF
 BB3,Show Me Your Boops,Taylor Robbins,SEA
 BB3,Show Me Your Boops,Amy Bucy,SEA
 BB3,Show Me Your Boops,Mike Porter,SEA
@@ -328,15 +328,15 @@ BB1,Berry Berry Sneaky,Joe Pollard,ATX
 BB1,,Phil Bracy,ATX
 BB1,,Adriana Steinberg,ATX
 BB1,,John Pollard,ATX
-BB1,,Donald Thibert,ATX
-BB1,Hot Dogs,Dylan Konrad,CHI
+BB1,,Don Thibert,ATX
+BB1,Hot Dogs,Dylan Conrad,CHI
 BB1,,Aaron Goldberg,CHI
 BB1,,Chris Cadayona,CHI
 BB1,,Cesar Bustos,CHI
 BB1,,David Garzon,CHI
 BB1,Full Snail University,Andrew Daugherty,NY
 BB1,,Jenny Chang,NY
-BB1,,Michael Dooley,NY
+BB1,,Mike Dooley,NY
 BB1,,Tiana Tan,NY
 BB1,,Charles Pratt,NY
 BB1,Southern Discomfort,Kyle Shipwash,CLT
@@ -407,7 +407,7 @@ BB1,,David Henry,PDX
 BB1,Bay Bees,Cindy Leung,SF
 BB1,,Andrew Dotson,SF
 BB1,,Matt Scheiffer,SF
-BB1,,Brett Stilwell,SF
+BB1,,Brett Stillwell,SF
 BB1,,Geller,SF
 BB1,Bumbolo,Anna Thornton,CHI
 BB1,,Austin Turney,KC
@@ -418,7 +418,7 @@ BB1,HBIC,John Koutroulakis,CLT
 BB1,,Cheyenne Steel,CLT
 BB1,,Amanda Lax,CLT
 BB1,,Emily Gamble,CLT
-BB1,,Eliyas Azizy,CLT
+BB1,,Eli Azizy,CLT
 BB1,Beerlung,Brian Kang,NY
 BB1,,Brian Wong,NY
 BB1,,Anthony Paredes,NY
@@ -448,7 +448,7 @@ BB1,Bumblebasstronauts,Tyler Moloney,PHX
 BB1,,Jason Bither,PHX
 BB1,,Jeff Hochgesang,PHX
 BB1,,Toni Scarlett,PHX
-BB1,,Christopher Larson,PHX
+BB1,,Chris Larson,PHX
 BB1,Bee Bear Banditos,Burton Flake,PHX
 BB1,On the Fly,Andy Laber,KC
 BB1,,Sammy,KC
@@ -469,7 +469,7 @@ BB2,#Toxic,Nathan Palmer,MPLS
 BB2,,Michelle Lutz,MPLS
 BB2,,Shawn Masog,MPLS
 BB2,,Alex Meester,MPLS
-BB2,,Arde - AKA - Matthew Zwilling,MPLS
+BB2,,"Matthew ""Arde"" Zwilling",MPLS
 BB2,Team Werk,Wyatt Yeong,NY
 BB2,,Andrew Kelley,NY
 BB2,,Damish Shah,NY
@@ -480,7 +480,7 @@ BB2,,Anthony Paredes,NY
 BB2,,Mustafa Allsop,NY
 BB2,,Marian Wu,NY
 BB2,,Richard Chan,NY
-BB2,Full Snail University,Michael Dooley,NY
+BB2,Full Snail University,Mike Dooley,NY
 BB2,,Jenny Chang,NY
 BB2,,Andrew Daugherty,NY
 BB2,,Tiana Tan,NY
@@ -514,14 +514,14 @@ BB2,Right Gate if Ya Nasty,John Koutroulakis,CLT
 BB2,,Amanda Lax,CLT
 BB2,,Andrew Griner,CLT
 BB2,,Emily Gamble,CLT
-BB2,,Eliyas Azizy,CLT
+BB2,,Eli Azizy,CLT
 BB2,Spyglass,Dylan Conrad,CHI
 BB2,,Aaron Goldberg,CHI
 BB2,,Dan Barron,CHI
 BB2,,Chris Cads,CHI
 BB2,,Josh Eklow,CHI
 BB2,Hype Train! CHOO CHOO!,Matt Feldkamp,KC
-BB2,,Billy Faltas,KC
+BB2,,Billy Faldo,KC
 BB2,,Austin Turney,KC
 BB2,,Wyatt Roberts,KC
 BB2,,Michael Esparza,CHI
@@ -534,22 +534,22 @@ BB2,"Oh, Hive Mark!",Jeff Hochgesang,PHX
 BB2,,Toni Scarlett,PHX
 BB2,,Tyler Moloney,PHX
 BB2,,Kia Zarezadeh,PHX
-BB2,,Kim Cox,PHX
+BB2,,Kim Grosso,PHX
 BB2,Don't Assume My Objective,Nick Otroshkin,PHX
-BB2,,Samantha Weddle,PHX
+BB2,,Sam Weddle,PHX
 BB2,,Jason Bither,PHX
-BB2,,Burton Taylor Flake III,PHX
+BB2,,Burton Flake,PHX
 BB2,,Kyle DeGoey,MPLS
 BB2,Dearly Beeloved,Adam Babel,CHI
 BB2,,Michael Rasnic,CHI
-BB2,,Belia Darzu,CHI
+BB2,,Belia Portillo,CHI
 BB2,,Alex Kogan,CHI
 BB2,,Todd Hansen,CHI
 BB2,Come Bump Us,Craig Payne,CBUS
 BB2,,Heather Logsdon,CBUS
 BB2,,Blake Compton,CBUS
 BB2,,Carlos DeLaSerda,CBUS
-BB2,,Matthew Thompson,CBUS
+BB2,,Matt Thompson,CBUS
 BB2,Artist Formerly Known as Buzzkill,Bert Wierenga,CHI
 BB2,,Brian Susman,CHI
 BB2,,Christina Norton,CHI
@@ -569,12 +569,12 @@ BB2,大Trouble小Castro,Brian Lee,SF
 BB2,,Yan Ingamells,SF
 BB2,,Mike Dunn,SF
 BB2,,Reed Silverstein,SF
-BB2,,Matthew Scheiffer,SF
+BB2,,Matt Scheiffer,SF
 BB2,Hot Buzz,Colby Price,SF
 BB2,,Tony Hauber,IOWA
 BB2,,Anna Zarubin-Martin,SF
 BB2,,Jonathan So,SF
-BB2,,Nicole DeVall,CLT
+BB2,,Nicole De Vall,CLT
 BB2,Blouses,Jeremy Watson,SF
 BB2,,Felix Yuan,SF
 BB2,,Cindy Leung,SF
@@ -582,7 +582,7 @@ BB2,,Steve Halili,SF
 BB2,,Sean Kelly,SF
 BB2,Bumps of Lightning,Heather Davis,SF
 BB2,,Derek Nomaddic,SF
-BB2,,Ashtin Ramirez,SF
+BB2,,Ash Ramirez,SF
 BB2,,Sam Aldach,SF
 BB2,,Kelly Kim,SF
 BB2,#SetAbsFree,Josh Biedenweg,SF
@@ -604,9 +604,9 @@ BB2,Bee Kind Rewind,Bobby Hutter,CLT
 BB2,,Jason Steckey,CLT
 BB2,,Yennhi Vo,CLT
 BB2,,Erin Cowles,CLT
-BB2,,Kenneth Moseley,CBUS
+BB2,,Ken Moseley,CBUS
 BB2,Comfbee Cozbee,Mitchell Heck,MPLS
-BB2,,Kenneth Bougie,MPLS
+BB2,,Ken Bougie,MPLS
 BB2,,Shelby Renee Nuncio,MPLS
 BB2,,Kyle Brunette,MPLS
 BB2,,Bailey Schweitzer,MPLS
@@ -641,13 +641,13 @@ BB2,,George Cruz,KC
 BB2,,Barry Kidd,KC
 BB2,,Ro Kidd,KC
 BB2,Formally Known As,James Burling,MPLS
-BB2,,Bradley Schoenherr,MPLS
+BB2,,Brad Schoenherr,MPLS
 BB2,,Dee Burling,MPLS
 BB2,,Francis Sullivan,MPLS
 BB2,,Kelvin Collado,MPLS
 BB2,Hive of the Mantis,Chris Steinberg,ATX
 BB2,,Phil Bracy,ATX
-BB2,,Donald Thibert,ATX
+BB2,,Don Thibert,ATX
 BB2,,Adriana Steinberg,ATX
 BB2,,Josh Bird,ATX
 BB2,Winging It,Alyssa DeMoss,PDX
@@ -679,7 +679,7 @@ BB2,The Wild Thorntonberries,Anna Thornton,MPLS
 BB2,,Matt Merritt,MPLS
 BB2,,Ryan Rismon,MPLS
 BB2,,Tyler Moersch,MPLS
-BB2,,Dan Pregler,MPLS
+BB2,,Dan Pregler Jr.,MPLS
 BB2,Mmm... Check Please,Cole Murphy,CHI
 BB2,,Mark ReCupido,CHI
 BB2,,David Kirk,CHI
@@ -722,6 +722,6 @@ BB2,,Cora-Lee Bowman,MPLS
 BB2,,Scott Myran,MPLS
 BB2,Free Agents,Korey Erickson,
 BB2,,Nick Monger,CIN
-BB2,,Sven Mattson,
-BB2,,Erro Higdon,
+BB2,,Sven Mattson,MPLS
+BB2,,Errol Higdon,
 BB2,,,
