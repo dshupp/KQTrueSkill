@@ -1,6 +1,8 @@
 import copy
 import filecmp
 import datetime
+import math
+
 import trueskill
 from trueskill import *
 import csv
@@ -263,33 +265,47 @@ class KQTrueSkill:
             for player in sorted(self.playerratings.keys()):
                 try:
                     row = [player,
-                       self.playerscenes[player],
-                       self.playerratings[player].mu - 3 * self.playerratings[player].sigma,
-                       len(self.playertournaments[player]),
-                       self.playergames[player],
-                       self.playerwins[player],
-                       self.playerlosses[player],
-                       "%.2f" % (self.playerwins[player] / self.playergames[player]),
-                       ]
+                           self.playerscenes[player],
+                           self.playerratings[player].mu - 3 * self.playerratings[player].sigma,
+                           len(self.playertournaments[player]),
+                           self.playergames[player],
+                           self.playerwins[player],
+                           self.playerlosses[player],
+                           "%.2f" % (self.playerwins[player] / self.playergames[player]),
+                           ]
                     for t in tourneylist:
                         if t in self.playertournaments[player]:
                             row.append(t + " / " + self.playerteams[player][t])
                         else:
                             row.append('')
                     for t in tourneylist:
-                        if self.snapshots[t][player].mu == trueskill.MU and self.snapshots[t][player].sigma == trueskill.SIGMA:
+                        if self.snapshots[t][player].mu == trueskill.MU and self.snapshots[t][
+                            player].sigma == trueskill.SIGMA:
                             row.append('')
                         else:
-                            row.append(self.snapshots[t][player].mu - 3*self.snapshots[t][player].sigma)
+                            row.append(self.snapshots[t][player].mu - 3 * self.snapshots[t][player].sigma)
                     playerskill_writer.writerow(row)
                 except ZeroDivisionError as e:
                     print(
                         f"{player}, {self.playerscenes[player]}, {self.playergames[player]}, {self.playerteams[player]}: {e}; probably a player with zero games")
                     raise e
                 except Exception as e:
-                    print(f"{player}, {self.playerscenes[player]}, {self.playergames[player]}, {self.playerteams[player]}: {e}")
+                    print(
+                        f"{player}, {self.playerscenes[player]}, {self.playergames[player]}, {self.playerteams[player]}: {e}")
                     raise Exception(e)
 
+    # returns win probability of 5 p1s vs 5 p2s
+    def win_probability_players(self, p1, p2):
+        return self.win_probability_teams(5 * [self.playerratings[p1]], 5 * [self.playerratings[p2]])
+
+    # expects list of ratings objects for the 2 teams
+    def win_probability_teams(self, team1, team2):
+        delta_mu = sum(r.mu for r in team1) - sum(r.mu for r in team2)
+        sum_sigma = sum(r.sigma ** 2 for r in team1) + sum(r.sigma ** 2 for r in team2)
+        size = len(team1) + len(team2)
+        ts: trueskill = trueskill.global_env()
+        denom = math.sqrt(size * (ts.beta ** 2) + sum_sigma)
+        return ts.cdf(delta_mu / denom)
 
     def get_player_scene_list(self):
         playerlist = []
@@ -333,6 +349,23 @@ def main():
     # print your player ratings
     history.write_player_ratings()
 
+    print(f"win probablity, 5 Dans vs 5 Wilks {history.win_probability_players('Dan Shupp', 'Andrew Wilkening')}")
+
+    ni_howdy = [history.snapshots['BB4']['Woody Stanfield'],
+                history.snapshots['BB4']['Helen Lau'],
+                history.snapshots['BB4']['Dan Barron'],
+                history.snapshots['BB4']['Nick Davis'],
+                history.snapshots['BB4']['Andrew Quang'],
+                ]
+
+    clean = [history.snapshots['BB3']['Sam Beckman'],
+             history.snapshots['BB3']['Prashant Sridhar'],
+             history.snapshots['BB3']['Brian Wong'],
+             history.snapshots['BB3']['Andrew Kelley'],
+             history.snapshots['BB3']['Carissa Phong'],
+             ]
+
+    print(f"win probability, BB4 Ni Howdy vs BB3 CLEAN = {history.win_probability_teams(ni_howdy, clean)}")
     # print(f'Player Ratings: {history.playerratings}')
 
     # test whether processing changed values
