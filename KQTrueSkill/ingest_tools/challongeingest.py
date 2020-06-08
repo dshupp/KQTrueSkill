@@ -8,7 +8,6 @@ from KQTrueSkill.KQtrueskill import KQTrueSkill
 
 
 class ChallongeAccount:
-    SUBDOMAIN_KQSF = "kq-sf"
 
     DATETIME_FORMAT: str = "%Y-%m-%dT%H:%M:%S.%f%z"
     API_URL: str = "https://api.challonge.com/v1/"

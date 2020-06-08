@@ -88,6 +88,8 @@ it will have you pegged at your current level, and the effects of older tourname
     
 ### Teams with missing players
 
+    QGW19: 3 Dollar PBRs 4
+    QGW19: 3 Dollar PBRs 5
     GDC3: Better than bots 5
     GDC2: Welcome to Stingapore 4
     BB3: Warp World 5
@@ -112,6 +114,7 @@ it will have you pegged at your current level, and the effects of older tourname
     MCS-CHI: Mad Chuck 4
     MCS-CHI: Mad Chuck 5
     MGF1: Y U Dumb Tho? 5
+    MAD420: 4:35 blaze it...Sorry, traffic was crazy 5
+    MAD420: 4:35 blaze it...Sorry, traffic was crazy 10
+    BnB3: High Key, Low Seed 1
     BnB3: Dregs of the Apiary 2
-    QGW19: 3 Dollar PBRs 4
-    QGW19: 3 Dollar PBRs 5
