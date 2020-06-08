@@ -92,6 +92,88 @@ it will have you pegged at your current level, and the effects of older tourname
     QGW19: 3 Dollar PBRs 5
     GDC3: Better than bots 5
     GDC2: Welcome to Stingapore 4
+    GDC1: Oprah WindFury (SF) 1
+    GDC1: Oprah WindFury (SF) 2
+    GDC1: Oprah WindFury (SF) 3
+    GDC1: Oprah WindFury (SF) 4
+    GDC1: Oprah WindFury (SF) 5
+    GDC1: Mo Honey Mo Problems (SF) 1
+    GDC1: Mo Honey Mo Problems (SF) 3
+    GDC1: Mo Honey Mo Problems (SF) 4
+    GDC1: Mo Honey Mo Problems (SF) 5
+    GDC1: Queenie Queen and the Berry Bunch (SF) 1
+    GDC1: Queenie Queen and the Berry Bunch (SF) 2
+    GDC1: Queenie Queen and the Berry Bunch (SF) 3
+    GDC1: Queenie Queen and the Berry Bunch (SF) 4
+    GDC1: Queenie Queen and the Berry Bunch (SF) 5
+    GDC1: Gunpowder and Cigarettes (SF) 1
+    GDC1: Gunpowder and Cigarettes (SF) 2
+    GDC1: Gunpowder and Cigarettes (SF) 3
+    GDC1: Gunpowder and Cigarettes (SF) 4
+    GDC1: Gunpowder and Cigarettes (SF) 5
+    GDC1: Team Pickup (SF) 1
+    GDC1: Team Pickup (SF) 2
+    GDC1: Team Pickup (SF) 3
+    GDC1: Team Pickup (SF) 4
+    GDC1: Team Pickup (SF) 5
+    GDC1: SORRY (PDX) 1
+    GDC1: SORRY (PDX) 2
+    GDC1: SORRY (PDX) 3
+    GDC1: SORRY (PDX) 4
+    GDC1: SORRY (PDX) 5
+    GDC1: Frankenteam (Mixed) 1
+    GDC1: Frankenteam (Mixed) 2
+    GDC1: Frankenteam (Mixed) 3
+    GDC1: Frankenteam (Mixed) 4
+    GDC1: Frankenteam (Mixed) 5
+    GDC1: SPORTS (CHI) 1
+    GDC1: SPORTS (CHI) 2
+    GDC1: SPORTS (CHI) 3
+    GDC1: SPORTS (CHI) 4
+    GDC1: SPORTS (CHI) 5
+    GDC1: OPS (Founders) 1
+    GDC1: OPS (Founders) 2
+    GDC1: OPS (Founders) 3
+    GDC1: OPS (Founders) 4
+    GDC1: OPS (Founders) 5
+    GDC1: The Bee Team (SF) 2
+    GDC1: The Bee Team (SF) 3
+    GDC1: The Bee Team (SF) 4
+    GDC1: The Bee Team (SF) 5
+    GDC1: The Dollberries (SF) 1
+    GDC1: The Dollberries (SF) 2
+    GDC1: The Dollberries (SF) 3
+    GDC1: The Dollberries (SF) 4
+    GDC1: The Dollberries (SF) 5
+    GDC1: Wild Thornberries (NYC) 1
+    GDC1: Wild Thornberries (NYC) 2
+    GDC1: Wild Thornberries (NYC) 3
+    GDC1: Wild Thornberries (NYC) 4
+    GDC1: Wild Thornberries (NYC) 5
+    GDC1: Beech Don't Kill My Hive (SF) 2
+    GDC1: Beech Don't Kill My Hive (SF) 3
+    GDC1: Beech Don't Kill My Hive (SF) 4
+    GDC1: Beech Don't Kill My Hive (SF) 5
+    GDC1: PDX Hype Machine (PDX) 1
+    GDC1: PDX Hype Machine (PDX) 2
+    GDC1: PDX Hype Machine (PDX) 3
+    GDC1: PDX Hype Machine (PDX) 4
+    GDC1: PDX Hype Machine (PDX) 5
+    GDC1: Buzzkills (SF) 4
+    GDC1: Buzzkills (SF) 5
+    GDC1: Panic at the Frisco (PDX) 1
+    GDC1: Panic at the Frisco (PDX) 2
+    GDC1: Panic at the Frisco (PDX) 3
+    GDC1: Panic at the Frisco (PDX) 4
+    GDC1: Panic at the Frisco (PDX) 5
+    GDC1: Deadbees (SF) 1
+    GDC1: Deadbees (SF) 2
+    GDC1: Deadbees (SF) 3
+    GDC1: Deadbees (SF) 4
+    GDC1: Deadbees (SF) 5
+    GDC1: Golden Empire Phoenix (Mix) 3
+    GDC1: Golden Empire Phoenix (Mix) 4
+    GDC1: Golden Empire Phoenix (Mix) 5
     BB3: Warp World 5
     BB3: BeeDeeOhNo 5
     BB3: Show Me Your Boops 4

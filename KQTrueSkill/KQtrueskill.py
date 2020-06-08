@@ -33,7 +33,7 @@ class KQTrueSkill:
     def process_approved_datasets(self):
         self.ingest_dataset('datasets/2019 Players.csv', 'datasets/2019 game results.csv')
         self.ingest_dataset('datasets/SF-PDX-SEA-LA Players.csv', 'datasets/SF-PDX-SEA-LA game results.csv')
-        self.ingest_dataset('datasets/BB3 Players.csv', 'datasets/BB3 game results.csv')
+        self.ingest_dataset('datasets/BB Players.csv', 'datasets/BB game results.csv')
         self.ingest_dataset('datasets/CC Players.csv', 'datasets/CC game results.csv')
         self.ingest_dataset('datasets/Midwest players.csv', 'datasets/Midwest game results.csv')
         self.ingest_dataset('datasets/Coronation players.csv', 'datasets/Coronation game results.csv')
@@ -93,11 +93,24 @@ class KQTrueSkill:
                 self.playergames[player] += team1wins + team2wins
                 self.playerwins[player] += team1wins
                 self.playerlosses[player] += team2wins
+
+
             for player in self.teams[tournament][team2name]:
                 t2ratings.append(self.playerratings[player])
                 self.playergames[player] += team1wins + team2wins
                 self.playerwins[player] += team2wins
                 self.playerlosses[player] += team1wins
+
+            # teams with < 5 players are assumed to have played with bots.
+            # we include bots as very low skill players, and don't track the results of their games
+            if len(self.teams[tournament][team1name]) < 5:
+                print(f"found team with <5 players: {team1name}")
+                for _ in range(len(self.teams[tournament][team1name]), 5):
+                    t1ratings.append(self.create_bot())
+            if len(self.teams[tournament][team2name]) < 5:
+                print(f"found team with <5 players: {team2name}")
+                for _ in range(len(self.teams[tournament][team2name]), 5):
+                    t2ratings.append(self.create_bot())
 
             # update ratings for each game win
             for x in range(team1wins):
@@ -107,14 +120,12 @@ class KQTrueSkill:
                 t1ratings, t2ratings = rate([t1ratings, t2ratings], ranks=[1, 0])
 
             # now put the ratings back into the main dict
-            for i in range(5):
+            for i in range(len(self.teams[tournament][team1name])):
                 self.playerratings[self.teams[tournament][team1name][i]] = t1ratings[i]
-            for i in range(5):
+            for i in range(len(self.teams[tournament][team2name])):
                 self.playerratings[self.teams[tournament][team2name][i]] = t2ratings[i]
         self.record_trueskill_snapshot(current_tournament)
 
-        # log diifferences in new and old ratings
-        # self.compare_ratings(old_playerratings, self.playerratings)
 
     def compare_ratings(self, old_playerratings, playerratings):
         new_players = []
@@ -336,6 +347,9 @@ class KQTrueSkill:
 
     def record_trueskill_snapshot(self, tournament):
         self.snapshots[tournament] = copy.deepcopy(self.playerratings)
+
+    def create_bot(self):
+        return Rating(mu=5.000, sigma=2)
 
 
 def main():

@@ -354,11 +354,6 @@ MAD420: [] = ["MAD420", [{'id': 'KQBuds420', 'bracket': 'KO'},
                      {'id': 'KQBuds2', 'bracket': 'Group2'},
                      ]]
 
-# processed tourneys go above this line
-
-# subtourney_id: int = 5689203  # GDC4 Groups 1
-# subtourney_id: int = 4415714  # GDC3 DE
-
 # no groups
 GDC1: [] = ["GDC1", [{'id': 'SFGDC', 'name': 'GDC1', 'bracket': 'KO'},
                      ]]
@@ -376,6 +371,31 @@ Camp19: [] = ["Camp19", [{'id': 'campkq2019', 'bracket': 'KO'},
 ECC1: [] = ["ECC1", [{'id': 'ECC2019finals', 'bracket': 'KO'},
                      {'id': 'ECC2019poolA', 'bracket': 'Group1'},
                      {'id': 'ECC2019poolB', 'bracket': 'Group2'},
+                     ]]
+
+# processed tourneys go above this line
+
+# subtourney_id: int = 5689203  # GDC4 Groups 1
+# subtourney_id: int = 4415714  # GDC3 DE
+
+BB1: [] = ["BB1", [{'id': 'KQBBFinals', 'bracket': 'KO'},
+                     {'id': 'KQBBWC', 'bracket': 'WC'},
+                     {'id': 'KQBB1', 'bracket': 'Group1'},
+                     {'id': 'KQBB2', 'bracket': 'Group2'},
+                     {'id': 'KQBB3', 'bracket': 'Group3'},
+                     {'id': 'KQBB4', 'bracket': 'Group4'},
+                     {'id': 'KQBB5', 'bracket': 'Group5'},
+                     ]]
+BB2: [] = ["BB2", [{'id': 'BB2Knockout', 'bracket': 'KO'},
+                     {'id': 'bb2wildcard', 'bracket': 'WC'},
+                     {'id': 'BB2groupa', 'bracket': 'Group1'},
+                     {'id': 'BB2groupb', 'bracket': 'Group2'},
+                     {'id': 'BB2groupc', 'bracket': 'Group3'},
+                     {'id': 'BB2groupd', 'bracket': 'Group4'},
+                     {'id': 'BB2groupe', 'bracket': 'Group5'},
+                     {'id': 'BB2groupf', 'bracket': 'Group6'},
+                     {'id': 'BB2groupg', 'bracket': 'Group7'},
+                     {'id': 'BB2grouph', 'bracket': 'Group8'},
                      ]]
 
 # groups?
@@ -397,7 +417,6 @@ TEMPLATE: [] = ["", [{'id': '', 'bracket': 'KO'},
 
 
 # needs:
-# gdc3 groups
 # Coro 17s/f groups?
 
 
@@ -429,7 +448,8 @@ def main():
     # account.print_tournament('BKCRN2017')
 
 
-    get_match_results_from_challonge(account, GDC1[0], GDC1[1], 'tmp.csv', append=False)
+    get_match_results_from_challonge(account, BB1[0], BB1[1], 'tmp.csv', append=False)
+    get_match_results_from_challonge(account, BB2[0], BB2[1], 'tmp.csv', append=True)
     # get_match_results_from_challonge(account_stl, BnB1[0], BnB1[1], 'tmp.csv', append=True)
     # get_match_results_from_challonge(account, BnB2[0], BnB2[1], 'tmp.csv', append=True)
     # get_match_results_from_challonge(account, BnB3[0], BnB3[1], 'tmp.csv', append=True)

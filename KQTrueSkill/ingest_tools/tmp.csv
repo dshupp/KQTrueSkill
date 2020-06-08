@@ -1,2 +1,367 @@
 tournament,bracket,team1name,team2name,team1wins,team2wins,time
-
+BB1,KO,Excuses,PNWXSW,3,2,2016-11-05T16:31:56-0400
+BB1,KO,NY Sticks,Warriors Come out and play,1,3,2016-11-05T16:31:56-0400
+BB1,KO,Hot Dogs,Bumbolo,3,0,2016-11-05T16:31:56-0400
+BB1,KO,Beerlung,FLT,3,1,2016-11-05T16:31:56-0400
+BB1,KO,Blood Honey,Team Werk,1,3,2016-11-05T16:31:56-0400
+BB1,KO,Golden Hate Warriors,Manic Pixie Stream Girls,3,1,2016-11-05T16:31:56-0400
+BB1,KO,Day,Cobra Kawaii,3,0,2016-11-05T16:31:56-0400
+BB1,KO,FSU,Rent is Too Damn Hive,3,1,2016-11-05T16:31:56-0400
+BB1,KO,Excuses,Warriors Come out and play,3,0,2016-11-05T16:55:51-0400
+BB1,KO,Hot Dogs,Beerlung,3,1,2016-11-05T17:20:32-0400
+BB1,KO,Team Werk,Golden Hate Warriors,3,0,2016-11-05T17:41:57-0400
+BB1,KO,Day,FSU,1,3,2016-11-05T18:13:10-0400
+BB1,KO,Excuses,Hot Dogs,3,0,2016-11-05T19:31:46-0400
+BB1,KO,Team Werk,FSU,3,0,2016-11-05T20:07:06-0400
+BB1,KO,Excuses,Team Werk,3,0,2016-11-05T21:08:11-0400
+BB1,KO,PNWXSW,NY Sticks,3,2,2016-11-05T16:55:51-0400
+BB1,KO,Bumbolo,FLT,0,3,2016-11-05T17:20:32-0400
+BB1,KO,Blood Honey,Manic Pixie Stream Girls,1,3,2016-11-05T17:41:57-0400
+BB1,KO,Cobra Kawaii,Rent is Too Damn Hive,3,1,2016-11-05T18:13:10-0400
+BB1,KO,Day,PNWXSW,3,2,2016-11-05T20:07:06-0400
+BB1,KO,Golden Hate Warriors,FLT,0,3,2016-11-05T19:42:49-0400
+BB1,KO,Beerlung,Manic Pixie Stream Girls,3,2,2016-11-05T19:31:46-0400
+BB1,KO,Warriors Come out and play,Cobra Kawaii,1,3,2016-11-05T19:19:16-0400
+BB1,KO,Day,FLT,3,0,2016-11-05T20:58:26-0400
+BB1,KO,Beerlung,Cobra Kawaii,1,3,2016-11-05T20:38:40-0400
+BB1,KO,Hot Dogs,Day,3,2,2016-11-05T21:14:47-0400
+BB1,KO,FSU,Cobra Kawaii,3,2,2016-11-05T21:29:06-0400
+BB1,KO,Hot Dogs,FSU,3,0,2016-11-05T22:16:41-0400
+BB1,KO,Team Werk,Hot Dogs,3,1,2016-11-05T22:52:51-0400
+BB1,KO,Excuses,Team Werk,1,4,2016-11-05T23:11:14-0400
+BB1,KO,Team Werk,Excuses,4,1,2016-11-05T23:29:22-0400
+BB1,WC,Pure Storage,On the Fly,3,1,2016-11-05T09:54:22-0700
+BB1,WC,Bee Bear Banditos,Berry Berry Sneaky,3,2,2016-11-05T09:54:22-0700
+BB1,WC,PNWXSW,Pure Storage,3,0,2016-11-05T10:05:04-0700
+BB1,WC,Bumblebasstronauts,Oh Behave,3,0,2016-11-05T09:54:22-0700
+BB1,WC,Stinger Scouts,Rad Hawks,3,0,2016-11-05T09:54:22-0700
+BB1,WC,Southern Discomfort,John Beena,3,0,2016-11-05T09:54:22-0700
+BB1,WC,Beediocre,Bee Bear Banditos,3,0,2016-11-05T10:40:15-0700
+BB1,WC,BHC,Logan United,0,3,2016-11-05T09:54:22-0700
+BB1,WC,Berry Springer,HBIC,3,0,2016-11-05T09:54:22-0700
+BB1,WC,Fascist,Bay Bees,3,1,2016-11-05T09:54:22-0700
+BB1,WC,PNWXSW,Bumblebasstronauts,3,0,2016-11-05T10:38:45-0700
+BB1,WC,Stinger Scouts,Southern Discomfort,2,3,2016-11-05T10:54:31-0700
+BB1,WC,Beediocre,Logan United,3,1,2016-11-05T11:08:08-0700
+BB1,WC,Berry Springer,Fascist,0,3,2016-11-05T11:39:59-0700
+BB1,WC,PNWXSW,Southern Discomfort,3,1,2016-11-05T12:04:50-0700
+BB1,WC,Beediocre,Fascist,2,3,2016-11-05T12:26:43-0700
+BB1,WC,PNWXSW,Fascist,3,1,2016-11-05T12:56:43-0700
+BB1,Group1,Day (CHI),Berry Berry Sneaky (ATX),2,0,2016-11-04T19:52:16-0400
+BB1,Group1,Cobra Kawaii (SF),Logan United (CHI),2,1,2016-11-04T19:52:16-0400
+BB1,Group1,NY Sticks (NYC),The Fascist and the Fuhrerious (CLT),2,0,2016-11-04T19:52:16-0400
+BB1,Group1,Logan United (CHI),Day (CHI),0,2,2016-11-04T19:52:16-0400
+BB1,Group1,The Fascist and the Fuhrerious (CLT),Berry Berry Sneaky (ATX),2,0,2016-11-04T19:52:16-0400
+BB1,Group1,NY Sticks (NYC),Cobra Kawaii (SF),2,1,2016-11-04T19:52:16-0400
+BB1,Group1,Day (CHI),The Fascist and the Fuhrerious (CLT),2,0,2016-11-04T19:52:16-0400
+BB1,Group1,Logan United (CHI),NY Sticks (NYC),1,2,2016-11-04T19:52:16-0400
+BB1,Group1,Berry Berry Sneaky (ATX),Cobra Kawaii (SF),0,2,2016-11-04T19:52:16-0400
+BB1,Group1,NY Sticks (NYC),Day (CHI),0,2,2016-11-04T19:52:16-0400
+BB1,Group1,Cobra Kawaii (SF),The Fascist and the Fuhrerious (CLT),2,1,2016-11-04T19:52:16-0400
+BB1,Group1,Berry Berry Sneaky (ATX),Logan United (CHI),0,2,2016-11-04T19:52:17-0400
+BB1,Group1,Day (CHI),Cobra Kawaii (SF),2,0,2016-11-04T19:52:17-0400
+BB1,Group1,NY Sticks (NYC),Berry Berry Sneaky (ATX),2,0,2016-11-04T19:52:17-0400
+BB1,Group1,The Fascist and the Fuhrerious (CLT),Logan United (CHI),2,0,2016-11-04T19:52:17-0400
+BB1,Group2,FSU (NYC),PureStorage (SF),2,0,2016-11-04T19:55:22-0400
+BB1,Group2,Southern Discomfort (CLT),Rad Hawks (CBUS),2,0,2016-11-04T19:55:22-0400
+BB1,Group2,Stinger Scouts (PDX),Blood Honey (KC),1,2,2016-11-04T19:55:22-0400
+BB1,Group2,PureStorage (SF),Hot Dogs (CHI),XXX,XXX,2016-11-04T19:55:22-0400
+BB1,Group2,Blood Honey (KC),FSU (NYC),1,2,2016-11-04T19:55:22-0400
+BB1,Group2,Stinger Scouts (PDX),Southern Discomfort (CLT),2,0,2016-11-04T19:55:22-0400
+BB1,Group2,Hot Dogs (CHI),Rad Hawks (CBUS),2,0,2016-11-04T19:55:22-0400
+BB1,Group2,PureStorage (SF),Blood Honey (KC),0,2,2016-11-04T19:55:22-0400
+BB1,Group2,FSU (NYC),Southern Discomfort (CLT),2,0,2016-11-04T19:55:22-0400
+BB1,Group2,Blood Honey (KC),Hot Dogs (CHI),0,2,2016-11-04T19:55:22-0400
+BB1,Group2,Stinger Scouts (PDX),Rad Hawks (CBUS),2,0,2016-11-04T19:55:22-0400
+BB1,Group2,Southern Discomfort (CLT),PureStorage (SF),2,0,2016-11-04T19:55:22-0400
+BB1,Group2,Hot Dogs (CHI),Stinger Scouts (PDX),2,1,2016-11-04T19:55:22-0400
+BB1,Group2,Blood Honey (KC),Southern Discomfort (CLT),1,2,2016-11-04T19:55:22-0400
+BB1,Group2,Rad Hawks (CBUS),FSU (NYC),0,2,2016-11-04T19:55:23-0400
+BB1,Group2,Southern Discomfort (CLT),Hot Dogs (CHI),0,2,2016-11-04T19:55:23-0400
+BB1,Group2,FSU (NYC),Stinger Scouts (PDX),2,0,2016-11-04T19:55:23-0400
+BB1,Group2,PureStorage (SF),Rad Hawks (CBUS),1,2,2016-11-04T19:55:23-0400
+BB1,Group2,Hot Dogs (CHI),FSU (NYC),2,0,2016-11-04T19:55:23-0400
+BB1,Group2,Stinger Scouts (PDX),PureStorage (SF),2,0,2016-11-04T19:55:23-0400
+BB1,Group2,Blood Honey (KC),Rad Hawks (CBUS),2,0,2016-11-04T19:55:23-0400
+BB1,Group3,Manic Pixie Stream Girls (CHI),Bee Bear Banditos (PHX),2,0,2016-11-04T20:09:16-0400
+BB1,Group3,The Rent is Too Damn Hive (NYC),Berry Home Companions (MPLS),2,0,2016-11-04T20:09:16-0400
+BB1,Group3,Berry Springer (CBUS),Oh Beehave! (SF),0,2,2016-11-04T20:09:16-0400
+BB1,Group3,Bee Bear Banditos (PHX),Excuses (PDX),0,2,2016-11-04T20:09:16-0400
+BB1,Group3,Oh Beehave! (SF),Manic Pixie Stream Girls (CHI),0,2,2016-11-04T20:09:16-0400
+BB1,Group3,Berry Springer (CBUS),The Rent is Too Damn Hive (NYC),1,2,2016-11-04T20:09:16-0400
+BB1,Group3,Excuses (PDX),Berry Home Companions (MPLS),2,0,2016-11-04T20:09:16-0400
+BB1,Group3,Bee Bear Banditos (PHX),Oh Beehave! (SF),0,2,2016-11-04T20:09:16-0400
+BB1,Group3,Manic Pixie Stream Girls (CHI),The Rent is Too Damn Hive (NYC),2,1,2016-11-04T20:09:16-0400
+BB1,Group3,Oh Beehave! (SF),Excuses (PDX),0,2,2016-11-04T20:09:16-0400
+BB1,Group3,Berry Springer (CBUS),Berry Home Companions (MPLS),2,1,2016-11-04T20:09:16-0400
+BB1,Group3,The Rent is Too Damn Hive (NYC),Bee Bear Banditos (PHX),2,0,2016-11-04T20:09:16-0400
+BB1,Group3,Excuses (PDX),Berry Springer (CBUS),2,0,2016-11-04T20:09:16-0400
+BB1,Group3,Oh Beehave! (SF),The Rent is Too Damn Hive (NYC),0,2,2016-11-04T20:09:16-0400
+BB1,Group3,Berry Home Companions (MPLS),Manic Pixie Stream Girls (CHI),0,2,2020-06-08T15:21:14
+BB1,Group3,The Rent is Too Damn Hive (NYC),Excuses (PDX),0,2,2016-11-04T20:09:16-0400
+BB1,Group3,Manic Pixie Stream Girls (CHI),Berry Springer (CBUS),1,2,2016-11-04T20:09:16-0400
+BB1,Group3,Bee Bear Banditos (PHX),Berry Home Companions (MPLS),1,2,2016-11-04T20:09:16-0400
+BB1,Group3,Excuses (PDX),Manic Pixie Stream Girls (CHI),2,0,2016-11-04T20:09:16-0400
+BB1,Group3,Berry Springer (CBUS),Bee Bear Banditos (PHX),2,0,2016-11-04T20:09:16-0400
+BB1,Group3,Oh Beehave! (SF),Berry Home Companions (MPLS),0,2,2016-11-04T20:09:16-0400
+BB1,Group4,Team Werk (NYC),HBIC (CLT),2,0,2016-11-04T20:00:58-0400
+BB1,Group4,FLT (KC),Bumbolo (CHI),2,0,2016-11-04T20:00:58-0400
+BB1,Group4,PNWXSW (PDX),Bay Bees (SF),2,0,2016-11-04T20:00:58-0400
+BB1,Group4,Bumbolo (CHI),Team Werk (NYC),0,2,2016-11-04T20:00:58-0400
+BB1,Group4,Bay Bees (SF),HBIC (CLT),2,0,2016-11-04T20:00:58-0400
+BB1,Group4,PNWXSW (PDX),FLT (KC),2,0,2016-11-04T20:00:58-0400
+BB1,Group4,Team Werk (NYC),Bay Bees (SF),2,0,2016-11-04T20:00:58-0400
+BB1,Group4,Bumbolo (CHI),PNWXSW (PDX),2,0,2016-11-04T20:00:58-0400
+BB1,Group4,HBIC (CLT),FLT (KC),0,2,2016-11-04T20:00:58-0400
+BB1,Group4,PNWXSW (PDX),Team Werk (NYC),0,2,2016-11-04T20:00:58-0400
+BB1,Group4,FLT (KC),Bay Bees (SF),2,1,2016-11-04T20:00:58-0400
+BB1,Group4,HBIC (CLT),Bumbolo (CHI),1,2,2016-11-04T20:00:58-0400
+BB1,Group4,Team Werk (NYC),FLT (KC),2,0,2016-11-04T20:00:59-0400
+BB1,Group4,PNWXSW (PDX),HBIC (CLT),2,0,2016-11-04T20:00:59-0400
+BB1,Group4,Bay Bees (SF),Bumbolo (CHI),0,2,2016-11-04T20:00:59-0400
+BB1,Group5,Warriors Come Out And Play (CHI),On the Fly (KC),2,0,2016-11-05T02:09:38+0200
+BB1,Group5,Golden Hate Warriors (SF),Bumblebasstronauts (PHX),2,0,2016-11-05T02:09:38+0200
+BB1,Group5,John Beena (PDX),Beediocre (NYC),0,2,2016-11-05T02:09:38+0200
+BB1,Group5,On the Fly (KC),?Beerlung (NYC),0,2,2016-11-05T02:09:38+0200
+BB1,Group5,Beediocre (NYC),Warriors Come Out And Play (CHI),0,2,2016-11-05T02:09:38+0200
+BB1,Group5,John Beena (PDX),Golden Hate Warriors (SF),0,2,2016-11-05T02:09:38+0200
+BB1,Group5,?Beerlung (NYC),Bumblebasstronauts (PHX),2,0,2016-11-05T02:09:38+0200
+BB1,Group5,On the Fly (KC),Beediocre (NYC),1,2,2016-11-05T02:09:38+0200
+BB1,Group5,Warriors Come Out And Play (CHI),Golden Hate Warriors (SF),0,2,2016-11-05T02:09:38+0200
+BB1,Group5,Beediocre (NYC),?Beerlung (NYC),0,2,2016-11-05T02:09:38+0200
+BB1,Group5,John Beena (PDX),Bumblebasstronauts (PHX),0,2,2016-11-05T02:09:38+0200
+BB1,Group5,Golden Hate Warriors (SF),On the Fly (KC),2,0,2016-11-05T02:09:38+0200
+BB1,Group5,?Beerlung (NYC),John Beena (PDX),2,0,2016-11-05T02:09:38+0200
+BB1,Group5,Beediocre (NYC),Golden Hate Warriors (SF),1,2,2016-11-05T02:09:38+0200
+BB1,Group5,Bumblebasstronauts (PHX),Warriors Come Out And Play (CHI),0,2,2016-11-05T02:09:38+0200
+BB1,Group5,Golden Hate Warriors (SF),?Beerlung (NYC),0,2,2016-11-05T02:09:38+0200
+BB1,Group5,Warriors Come Out And Play (CHI),John Beena (PDX),2,0,2016-11-05T02:09:38+0200
+BB1,Group5,On the Fly (KC),Bumblebasstronauts (PHX),0,2,2016-11-05T02:09:38+0200
+BB1,Group5,?Beerlung (NYC),Warriors Come Out And Play (CHI),2,1,2016-11-05T02:09:38+0200
+BB1,Group5,John Beena (PDX),On the Fly (KC),2,0,2016-11-05T02:09:38+0200
+BB1,Group5,Beediocre (NYC),Bumblebasstronauts (PHX),2,0,2016-11-05T02:09:38+0200
+BB2,KO,Spyglass,Millenials are Killing Queens,3,0,2020-06-08T15:21:16
+BB2,KO,Salve Pszczoly,#toxic,3,1,2017-10-07T16:39:47-0400
+BB2,KO,Buzzkill,Mmm... Check Please,3,2,2017-10-07T16:39:47-0400
+BB2,KO,Minnesota Mean,Blouses,0,3,2017-10-07T16:39:47-0400
+BB2,KO,Twerk,Spyglass,3,2,2017-10-07T17:16:43-0400
+BB2,KO,FSU,#Set Abs Free,3,0,2017-10-07T16:39:47-0400
+BB2,KO,Hype Train Choo Choo,Salve Pszczoly,3,0,2017-10-07T17:05:24-0400
+BB2,KO,Grolss,Come Bump Us,3,2,2017-10-07T16:39:47-0400
+BB2,KO,Gross Slathered,Buzzkill,0,3,2017-10-07T17:08:39-0400
+BB2,KO,my wife,Gray Duck,3,2,2017-10-07T16:39:47-0400
+BB2,KO,Sam'd It,Blouses,3,0,2017-10-07T17:36:37-0400
+BB2,KO,Madlads,Pigeon Rats,3,0,2017-10-07T16:39:47-0400
+BB2,KO,Twerk,FSU,3,0,2017-10-07T18:07:14-0400
+BB2,KO,Hype Train Choo Choo,Grolss,1,3,2017-10-07T18:00:14-0400
+BB2,KO,Buzzkill,my wife,0,3,2017-10-07T17:57:09-0400
+BB2,KO,Sam'd It,Madlads,2,3,2017-10-07T18:19:25-0400
+BB2,KO,Twerk,Grolss,3,1,2017-10-07T19:24:23-0400
+BB2,KO,my wife,Madlads,3,1,2017-10-07T19:48:08-0400
+BB2,KO,Twerk,my wife,3,0,2017-10-07T22:00:54-0400
+BB2,KO,Pigeon Rats,Millenials are Killing Queens,3,2,2017-10-07T17:42:06-0400
+BB2,KO,Gray Duck,#toxic,3,2,2017-10-07T17:47:53-0400
+BB2,KO,Come Bump Us,Mmm... Check Please,3,0,2017-10-07T17:40:24-0400
+BB2,KO,#Set Abs Free,Minnesota Mean,0,3,2017-10-07T17:37:08-0400
+BB2,KO,Blouses,Pigeon Rats,0,3,2017-10-07T18:36:22-0400
+BB2,KO,Gross Slathered,Gray Duck,1,3,2017-10-07T18:34:54-0400
+BB2,KO,Salve Pszczoly,Come Bump Us,1,3,2017-10-07T18:37:33-0400
+BB2,KO,Spyglass,Minnesota Mean,2,3,2017-10-07T18:11:55-0400
+BB2,KO,Hype Train Choo Choo,Pigeon Rats,1,3,2017-10-07T19:23:38-0400
+BB2,KO,FSU,Gray Duck,3,1,2017-10-07T19:24:23-0400
+BB2,KO,Sam'd It,Come Bump Us,3,0,2017-10-07T19:48:08-0400
+BB2,KO,Buzzkill,Minnesota Mean,0,3,2017-10-07T19:14:01-0400
+BB2,KO,Pigeon Rats,FSU,0,3,2017-10-07T20:06:26-0400
+BB2,KO,Sam'd It,Minnesota Mean,2,3,2017-10-07T20:19:56-0400
+BB2,KO,Madlads,FSU,3,2,2017-10-07T22:00:54-0400
+BB2,KO,Grolss,Minnesota Mean,3,0,2017-10-07T21:26:37-0400
+BB2,KO,Madlads,Grolss,1,3,2017-10-07T22:35:12-0400
+BB2,KO,my wife,Grolss,3,1,2017-10-08T00:17:55-0400
+BB2,KO,Twerk,my wife,4,1,2017-10-08T00:34:29-0400
+BB2,WC,10000 Scrapes,Hot Buzz,2,3,2017-10-07T10:36:59-0500
+BB2,WC,Bumps of Lightning,666Pizza666,3,2,2017-10-07T10:36:59-0500
+BB2,WC,Objective your Honor,Car Crash Baptism,0,3,2017-10-07T10:36:59-0500
+BB2,WC,Juicy Beez,Free Agents,2,3,2017-10-07T10:36:59-0500
+BB2,WC,Sugar Free Gummi Bears,BeeSEAks Box,1,3,2017-10-07T10:36:59-0500
+BB2,WC,Right Gate if Ya Nasty,Hot Buzz,3,0,2017-10-07T12:14:26-0500
+BB2,WC,Hive of the Mantis,Make It Even,1,3,2017-10-07T10:36:59-0500
+BB2,WC,Blouses,Speed Kills Don't Ya Know,3,0,2017-10-07T10:36:59-0500
+BB2,WC,Artificial Hype,Bees With Benefits,3,0,2017-10-07T10:36:59-0500
+BB2,WC,Millenials are Killing Queens,Bumps of Lightning,3,0,2017-10-07T12:14:16-0500
+BB2,WC,Oh Hive Mark,Mile Hive Club,3,0,2017-10-07T10:36:59-0500
+BB2,WC,Blood Honey,Car Crash Baptism,3,0,2017-10-07T12:13:44-0500
+BB2,WC,Big Trouble in Little Castro,Dont Assume My Objective,3,0,2017-10-07T10:36:59-0500
+BB2,WC,Winging It,Free Agents,3,0,2017-10-07T12:48:39-0500
+BB2,WC,Wild Thorntonberries,4 Queens 1 Peen,1,3,2020-06-08T15:21:18
+BB2,WC,Bee Kind Rewind,Formerly Known As,3,1,2017-10-07T10:36:59-0500
+BB2,WC,Constingliere,#toxic,2,3,2017-10-07T10:36:59-0500
+BB2,WC,Rent is Too Damn Hive,BeeSEAks Box,3,0,2017-10-07T12:14:56-0500
+BB2,WC,Dearly Beeloved,Face Up Abs Down,3,0,2017-10-07T10:36:59-0500
+BB2,WC,Bees Didnt Start the Fire,Comfbee Cozbee,3,0,2017-10-07T10:36:59-0500
+BB2,WC,Mmm... Check Please,Rubber Baby Buggy Bumpers,3,0,2017-10-07T10:36:59-0500
+BB2,WC,Right Gate if Ya Nasty,Make It Even,3,0,2017-10-07T13:11:07-0500
+BB2,WC,Blouses,Artificial Hype,3,0,2017-10-07T12:48:50-0500
+BB2,WC,Millenials are Killing Queens,Oh Hive Mark,3,0,2017-10-07T13:06:17-0500
+BB2,WC,Blood Honey,Big Trouble in Little Castro,3,1,2017-10-07T13:31:56-0500
+BB2,WC,Winging It,4 Queens 1 Peen,3,0,2017-10-07T13:26:56-0500
+BB2,WC,Bee Kind Rewind,#toxic,0,3,2017-10-07T13:22:28-0500
+BB2,WC,Rent is Too Damn Hive,Dearly Beeloved,3,0,2017-10-07T13:22:35-0500
+BB2,WC,Bees Didnt Start the Fire,Mmm... Check Please,2,3,2017-10-07T13:38:11-0500
+BB2,WC,Right Gate if Ya Nasty,Blouses,0,3,2017-10-07T13:47:26-0500
+BB2,WC,Millenials are Killing Queens,Blood Honey,3,1,2017-10-07T14:21:49-0500
+BB2,WC,Winging It,#toxic,2,3,2017-10-07T14:04:35-0500
+BB2,WC,Rent is Too Damn Hive,Mmm... Check Please,2,3,2017-10-07T14:08:02-0500
+BB2,WC,Blouses,Millenials are Killing Queens,0,3,2017-10-07T14:38:15-0500
+BB2,WC,#toxic,Mmm... Check Please,2,3,2017-10-07T14:57:15-0500
+BB2,WC,Millenials are Killing Queens,Mmm... Check Please,3,0,2017-10-07T15:14:43-0500
+BB2,WC,Blouses,#toxic,3,0,2017-10-07T15:14:43-0500
+BB2,Group1,[SF] Bumps of Lightning,[MPLS] Face Down Abs Up,0,3,2017-10-06T17:59:28-0500
+BB2,Group1,[CHI] Gross Slathered in Nasty,[MPLS] Sugar Free Gummi Bears,3,0,2017-10-06T17:59:28-0500
+BB2,Group1,[KC] Artificial Hype,[PHX] Oh Hive Mark,1,2,2017-10-06T17:59:28-0500
+BB2,Group1,[MPLS] Sugar Free Gummi Bears,[KC] Artificial Hype,0,3,2017-10-06T17:59:28-0500
+BB2,Group1,[MPLS] Face Down Abs Up,[CHI] Gross Slathered in Nasty,0,3,2017-10-06T17:59:28-0500
+BB2,Group1,[NYC] Full Snail University,[SF] Bumps of Lightning,3,0,2017-10-06T17:59:28-0500
+BB2,Group1,[CHI] Gross Slathered in Nasty,[NYC] Full Snail University,2,1,2017-10-06T17:59:28-0500
+BB2,Group1,[KC] Artificial Hype,[MPLS] Face Down Abs Up,3,0,2017-10-06T17:59:28-0500
+BB2,Group1,[PHX] Oh Hive Mark,[MPLS] Sugar Free Gummi Bears,3,0,2017-10-06T17:59:28-0500
+BB2,Group1,[MPLS] Face Down Abs Up,[PHX] Oh Hive Mark,1,2,2017-10-06T17:59:28-0500
+BB2,Group1,[NYC] Full Snail University,[KC] Artificial Hype,3,0,2017-10-06T17:59:28-0500
+BB2,Group1,[SF] Bumps of Lightning,[CHI] Gross Slathered in Nasty,0,3,2017-10-06T17:59:28-0500
+BB2,Group1,[KC] Artificial Hype,[SF] Bumps of Lightning,3,0,2017-10-06T17:59:28-0500
+BB2,Group1,[PHX] Oh Hive Mark,[NYC] Full Snail University,0,3,2017-10-06T17:59:28-0500
+BB2,Group1,[MPLS] Sugar Free Gummi Bears,[MPLS] Face Down Abs Up,1,2,2017-10-06T17:59:28-0500
+BB2,Group1,[NYC] Full Snail University,[MPLS] Sugar Free Gummi Bears,3,0,2017-10-06T17:59:28-0500
+BB2,Group1,[SF] Bumps of Lightning,[PHX] Oh Hive Mark,1,2,2017-10-06T17:59:28-0500
+BB2,Group1,[CHI] Gross Slathered in Nasty,[KC] Artificial Hype,3,0,2017-10-06T17:59:28-0500
+BB2,Group1,[PHX] Oh Hive Mark,[CHI] Gross Slathered in Nasty,0,3,2017-10-06T17:59:28-0500
+BB2,Group1,[MPLS] Sugar Free Gummi Bears,[SF] Bumps of Lightning,1,2,2017-10-06T17:59:28-0500
+BB2,Group1,[MPLS] Face Down Abs Up,[NYC] Full Snail University,0,3,2017-10-06T17:59:28-0500
+BB2,Group2,[SF] Blouses,[MIX] Free Agents,3,0,2017-10-06T16:08:56-0700
+BB2,Group2,[CHI] Rubber Baby Buggy Bumpers,[MPLS] Salve Pszczoly,0,3,2017-10-06T16:08:56-0700
+BB2,Group2,[CLT] Bees Didn't Start The Fire,[MPLS] Formerly Known As,3,0,2017-10-06T16:08:56-0700
+BB2,Group2,[MPLS] Salve Pszczoly,[CLT] Bees Didn't Start The Fire,3,0,2017-10-06T16:08:56-0700
+BB2,Group2,[MIX] Free Agents,[CHI] Rubber Baby Buggy Bumpers,0,3,2017-10-06T16:08:56-0700
+BB2,Group2,[NYC] Team Werk,[SF] Blouses,3,0,2017-10-06T16:08:56-0700
+BB2,Group2,[CHI] Rubber Baby Buggy Bumpers,[NYC] Team Werk,0,3,2017-10-06T16:08:56-0700
+BB2,Group2,[CLT] Bees Didn't Start The Fire,[MIX] Free Agents,3,0,2017-10-06T16:08:56-0700
+BB2,Group2,[MPLS] Formerly Known As,[MPLS] Salve Pszczoly,0,3,2017-10-06T16:08:56-0700
+BB2,Group2,[MIX] Free Agents,[MPLS] Formerly Known As,0,3,2017-10-06T16:08:56-0700
+BB2,Group2,[NYC] Team Werk,[CLT] Bees Didn't Start The Fire,3,0,2017-10-06T16:08:56-0700
+BB2,Group2,[SF] Blouses,[CHI] Rubber Baby Buggy Bumpers,3,0,2017-10-06T16:08:56-0700
+BB2,Group2,[CLT] Bees Didn't Start The Fire,[SF] Blouses,2,1,2017-10-06T16:08:56-0700
+BB2,Group2,[MPLS] Formerly Known As,[NYC] Team Werk,0,3,2017-10-06T16:08:56-0700
+BB2,Group2,[MPLS] Salve Pszczoly,[MIX] Free Agents,3,0,2017-10-06T16:08:56-0700
+BB2,Group2,[NYC] Team Werk,[MPLS] Salve Pszczoly,3,0,2017-10-06T16:08:57-0700
+BB2,Group2,[SF] Blouses,[MPLS] Formerly Known As,3,0,2017-10-06T16:08:57-0700
+BB2,Group2,[CHI] Rubber Baby Buggy Bumpers,[CLT] Bees Didn't Start The Fire,0,3,2017-10-06T16:08:57-0700
+BB2,Group2,[MPLS] Formerly Known As,[CHI] Rubber Baby Buggy Bumpers,1,2,2020-06-08T15:21:19
+BB2,Group2,[MPLS] Salve Pszczoly,[SF] Blouses,2,1,2017-10-06T16:08:57-0700
+BB2,Group2,[MIX] Free Agents,[NYC] Team Werk,0,3,2017-10-06T16:08:57-0700
+BB2,Group3,[CHI] My Wife,[MPLS] Comfbee Cozbee,3,0,2017-10-06T20:10:34-0300
+BB2,Group3,[NYC] Constingliere,[MPLS] Minnesota Mean,0,3,2017-10-06T20:10:34-0300
+BB2,Group3,[PHX] Don't Assume My Objective,[CLT] Millenials Are Killing Queens,0,3,2017-10-06T20:10:34-0300
+BB2,Group3,[MPLS] Minnesota Mean,[PHX] Don't Assume My Objective,3,0,2017-10-06T20:10:34-0300
+BB2,Group3,[CLT] Millenials Are Killing Queens,[CHI] My Wife,0,3,2017-10-06T20:10:34-0300
+BB2,Group3,[MPLS] Comfbee Cozbee,[NYC] Constingliere,0,3,2017-10-06T20:10:34-0300
+BB2,Group3,[CLT] Millenials Are Killing Queens,[MPLS] Minnesota Mean,1,2,2017-10-06T20:10:34-0300
+BB2,Group3,[PHX] Don't Assume My Objective,[MPLS] Comfbee Cozbee,2,1,2020-06-08T15:21:20
+BB2,Group3,[CHI] My Wife,[NYC] Constingliere,2,1,2017-10-06T20:10:34-0300
+BB2,Group3,[NYC] Constingliere,[PHX] Don't Assume My Objective,2,1,2017-10-06T20:10:34-0300
+BB2,Group3,[MPLS] Comfbee Cozbee,[CLT] Millenials Are Killing Queens,0,3,2017-10-06T20:10:34-0300
+BB2,Group3,[MPLS] Minnesota Mean,[CHI] My Wife,0,3,2017-10-06T20:10:34-0300
+BB2,Group3,[CLT] Millenials Are Killing Queens,[NYC] Constingliere,2,1,2017-10-06T20:10:34-0300
+BB2,Group3,[CHI] My Wife,[PHX] Don't Assume My Objective,3,0,2020-06-08T15:21:20
+BB2,Group3,[MPLS] Minnesota Mean,[MPLS] Comfbee Cozbee,3,0,2017-10-06T20:10:34-0300
+BB2,Group4,[MPLS] 10000 Scrapes,[SF] Hot Buzz,3,0,2017-10-06T18:10:32-0500
+BB2,Group4,[MPLS] Gray Duck,[NYC] Rent is Too Damn Hive,2,1,2017-10-06T18:10:32-0500
+BB2,Group4,[PDX] Grolss,[CBUS] Make it Even,3,0,2017-10-06T18:10:32-0500
+BB2,Group4,[NYC] Rent is Too Damn Hive,[PDX] Grolss,0,3,2017-10-06T18:10:32-0500
+BB2,Group4,[SF] Hot Buzz,[MPLS] Gray Duck,0,3,2017-10-06T18:10:32-0500
+BB2,Group4,[CHI] 4 Queens 1 Peen,[MPLS] 10000 Scrapes,3,0,2017-10-06T18:10:32-0500
+BB2,Group4,[MPLS] Gray Duck,[CHI] 4 Queens 1 Peen,3,0,2017-10-06T18:10:32-0500
+BB2,Group4,[PDX] Grolss,[SF] Hot Buzz,3,0,2017-10-06T18:10:32-0500
+BB2,Group4,[CBUS] Make it Even,[NYC] Rent is Too Damn Hive,0,3,2017-10-06T18:10:32-0500
+BB2,Group4,[SF] Hot Buzz,[CBUS] Make it Even,1,2,2017-10-06T18:10:32-0500
+BB2,Group4,[CHI] 4 Queens 1 Peen,[PDX] Grolss,0,3,2017-10-06T18:10:32-0500
+BB2,Group4,[MPLS] 10000 Scrapes,[MPLS] Gray Duck,0,3,2017-10-06T18:10:32-0500
+BB2,Group4,[PDX] Grolss,[MPLS] 10000 Scrapes,3,0,2017-10-06T18:10:32-0500
+BB2,Group4,[CBUS] Make it Even,[CHI] 4 Queens 1 Peen,2,1,2017-10-06T18:10:32-0500
+BB2,Group4,[NYC] Rent is Too Damn Hive,[SF] Hot Buzz,3,0,2017-10-06T18:10:32-0500
+BB2,Group4,[CHI] 4 Queens 1 Peen,[NYC] Rent is Too Damn Hive,0,3,2017-10-06T18:10:32-0500
+BB2,Group4,[MPLS] 10000 Scrapes,[CBUS] Make it Even,0,3,2017-10-06T18:10:32-0500
+BB2,Group4,[MPLS] Gray Duck,[PDX] Grolss,1,2,2017-10-06T18:10:32-0500
+BB2,Group4,[CBUS] Make it Even,[MPLS] Gray Duck,0,3,2017-10-06T18:10:32-0500
+BB2,Group4,[NYC] Rent is Too Damn Hive,[MPLS] 10000 Scrapes,3,0,2017-10-06T18:10:32-0500
+BB2,Group4,[SF] Hot Buzz,[CHI] 4 Queens 1 Peen,1,2,2017-10-06T18:10:32-0500
+BB2,Group5,[MPLS] Wild Thorntonberries,[ATX] Hive of the Mantis,2,1,2017-10-06T19:10:30-0400
+BB2,Group5,[MPLS] Juicy Beez,[CHI] Buzzkill,0,3,2017-10-06T19:10:30-0400
+BB2,Group5,[MIX] MadLAds,[CLT] Right Gate If Ya Nasty,2,1,2020-06-08T15:21:22
+BB2,Group5,[CHI] Buzzkill,[MIX] MadLAds,0,3,2017-10-06T19:10:30-0400
+BB2,Group5,[CLT] Right Gate If Ya Nasty,[MPLS] Wild Thorntonberries,3,0,2017-10-06T19:10:30-0400
+BB2,Group5,[ATX] Hive of the Mantis,[MPLS] Juicy Beez,3,0,2017-10-06T19:10:30-0400
+BB2,Group5,[CLT] Right Gate If Ya Nasty,[CHI] Buzzkill,1,2,2017-10-06T19:10:30-0400
+BB2,Group5,[MIX] MadLAds,[ATX] Hive of the Mantis,3,0,2017-10-06T19:10:30-0400
+BB2,Group5,[MPLS] Wild Thorntonberries,[MPLS] Juicy Beez,3,0,2017-10-06T19:10:30-0400
+BB2,Group5,[MPLS] Juicy Beez,[MIX] MadLAds,0,3,2017-10-06T19:10:30-0400
+BB2,Group5,[ATX] Hive of the Mantis,[CLT] Right Gate If Ya Nasty,0,3,2017-10-06T19:10:30-0400
+BB2,Group5,[CHI] Buzzkill,[MPLS] Wild Thorntonberries,3,0,2017-10-06T19:10:30-0400
+BB2,Group5,[CLT] Right Gate If Ya Nasty,[MPLS] Juicy Beez,3,0,2017-10-06T19:10:30-0400
+BB2,Group5,[MPLS] Wild Thorntonberries,[MIX] MadLAds,0,3,2017-10-06T19:10:30-0400
+BB2,Group5,[CHI] Buzzkill,[ATX] Hive of the Mantis,3,0,2017-10-06T19:10:30-0400
+BB2,Group6,[KC] Blood Honey,[CLT] Speed Kills Don'tcha Know?,3,0,2017-10-06T18:10:47-0500
+BB2,Group6,[MPLS] Car Crash Baptism,[NYC] Sam'd It,0,3,2020-06-08T15:21:23
+BB2,Group6,[CBUS] Come Bump Us,[CHI] Mmm... Check Please,3,0,2017-10-06T18:10:47-0500
+BB2,Group6,[NYC] Sam'd It,[CBUS] Come Bump Us,2,1,2017-10-06T18:10:47-0500
+BB2,Group6,[CLT] Speed Kills Don'tcha Know?,[MPLS] Car Crash Baptism,2,1,2017-10-06T18:10:47-0500
+BB2,Group6,[SEA] BeeSEAks Box,[KC] Blood Honey,0,3,2017-10-06T18:10:47-0500
+BB2,Group6,[MPLS] Car Crash Baptism,[SEA] BeeSEAks Box,2,1,2017-10-06T18:10:47-0500
+BB2,Group6,[CBUS] Come Bump Us,[CLT] Speed Kills Don'tcha Know?,3,0,2017-10-06T18:10:47-0500
+BB2,Group6,[CHI] Mmm... Check Please,[NYC] Sam'd It,0,3,2017-10-06T18:10:47-0500
+BB2,Group6,[CLT] Speed Kills Don'tcha Know?,[CHI] Mmm... Check Please,1,2,2017-10-06T18:10:47-0500
+BB2,Group6,[SEA] BeeSEAks Box,[CBUS] Come Bump Us,0,3,2017-10-06T18:10:47-0500
+BB2,Group6,[KC] Blood Honey,[MPLS] Car Crash Baptism,3,0,2017-10-06T18:10:47-0500
+BB2,Group6,[CBUS] Come Bump Us,[KC] Blood Honey,2,1,2017-10-06T18:10:47-0500
+BB2,Group6,[CHI] Mmm... Check Please,[SEA] BeeSEAks Box,3,0,2017-10-06T18:10:47-0500
+BB2,Group6,[NYC] Sam'd It,[CLT] Speed Kills Don'tcha Know?,3,0,2017-10-06T18:10:47-0500
+BB2,Group6,[SEA] BeeSEAks Box,[NYC] Sam'd It,0,3,2017-10-06T18:10:47-0500
+BB2,Group6,[KC] Blood Honey,[CHI] Mmm... Check Please,1,2,2017-10-06T18:10:47-0500
+BB2,Group6,[MPLS] Car Crash Baptism,[CBUS] Come Bump Us,0,3,2017-10-06T18:10:47-0500
+BB2,Group6,[CHI] Mmm... Check Please,[MPLS] Car Crash Baptism,3,0,2017-10-06T18:10:47-0500
+BB2,Group6,[NYC] Sam'd It,[KC] Blood Honey,3,0,2017-10-06T18:10:47-0500
+BB2,Group6,[CLT] Speed Kills Don'tcha Know?,[SEA] BeeSEAks Box,1,2,2017-10-06T18:10:47-0500
+BB2,Group7,[MPLS] Bees With Benefits,[NYC] Pigeon Rats,0,3,2017-10-06T16:11:27-0700
+BB2,Group7,[SF] Big Trouble in Little Castro,[STL] Mile Hive Club/STL,2,1,2017-10-06T16:11:27-0700
+BB2,Group7,[CHI] Dearly Beeloved,[KC] Hype Train! CHOO CHOO!,0,3,2017-10-06T16:11:27-0700
+BB2,Group7,[STL] Mile Hive Club/STL,[CHI] Dearly Beeloved,1,2,2017-10-06T16:11:27-0700
+BB2,Group7,[NYC] Pigeon Rats,[SF] Big Trouble in Little Castro,3,0,2017-10-06T16:11:27-0700
+BB2,Group7,[MPLS] 666PIZZA666,[MPLS] Bees With Benefits,2,1,2017-10-06T16:11:27-0700
+BB2,Group7,[SF] Big Trouble in Little Castro,[MPLS] 666PIZZA666,3,0,2017-10-06T16:11:27-0700
+BB2,Group7,[CHI] Dearly Beeloved,[NYC] Pigeon Rats,1,2,2017-10-06T16:11:28-0700
+BB2,Group7,[KC] Hype Train! CHOO CHOO!,[STL] Mile Hive Club/STL,3,0,2017-10-06T16:11:28-0700
+BB2,Group7,[NYC] Pigeon Rats,[KC] Hype Train! CHOO CHOO!,1,2,2017-10-06T16:11:28-0700
+BB2,Group7,[MPLS] 666PIZZA666,[CHI] Dearly Beeloved,0,3,2017-10-06T16:11:28-0700
+BB2,Group7,[MPLS] Bees With Benefits,[SF] Big Trouble in Little Castro,1,2,2017-10-06T16:11:28-0700
+BB2,Group7,[CHI] Dearly Beeloved,[MPLS] Bees With Benefits,2,1,2017-10-06T16:11:28-0700
+BB2,Group7,[KC] Hype Train! CHOO CHOO!,[MPLS] 666PIZZA666,3,0,2017-10-06T16:11:28-0700
+BB2,Group7,[STL] Mile Hive Club/STL,[NYC] Pigeon Rats,0,3,2017-10-06T16:11:28-0700
+BB2,Group7,[MPLS] 666PIZZA666,[STL] Mile Hive Club/STL,0,3,2017-10-06T16:11:28-0700
+BB2,Group7,[MPLS] Bees With Benefits,[KC] Hype Train! CHOO CHOO!,0,3,2017-10-06T16:11:28-0700
+BB2,Group7,[SF] Big Trouble in Little Castro,[CHI] Dearly Beeloved,3,0,2017-10-06T16:11:28-0700
+BB2,Group7,[KC] Hype Train! CHOO CHOO!,[SF] Big Trouble in Little Castro,3,0,2017-10-06T16:11:28-0700
+BB2,Group7,[STL] Mile Hive Club/STL,[MPLS] Bees With Benefits,1,2,2017-10-06T16:11:28-0700
+BB2,Group7,[NYC] Pigeon Rats,[MPLS] 666PIZZA666,3,0,2017-10-06T16:11:28-0700
+BB2,Group8,[PDX] Winging It,[SF] #SetAbsFree,1,2,2017-10-06T19:11:24-0400
+BB2,Group8,[MPLS] #toxic,[CHI] Spyglass,0,3,2017-10-06T19:11:24-0400
+BB2,Group8,[CLT] Bee Kind Rewind,[MPLS] Objective your Honor,3,0,2017-10-06T19:11:24-0400
+BB2,Group8,[CHI] Spyglass,[CLT] Bee Kind Rewind,2,1,2017-10-06T19:11:24-0400
+BB2,Group8,[MPLS] Objective your Honor,[PDX] Winging It,0,3,2017-10-06T19:11:24-0400
+BB2,Group8,[SF] #SetAbsFree,[MPLS] #toxic,3,0,2017-10-06T19:11:24-0400
+BB2,Group8,[MPLS] Objective your Honor,[CHI] Spyglass,0,3,2017-10-06T19:11:24-0400
+BB2,Group8,[CLT] Bee Kind Rewind,[SF] #SetAbsFree,1,2,2017-10-06T19:11:24-0400
+BB2,Group8,[PDX] Winging It,[MPLS] #toxic,3,0,2017-10-06T19:11:24-0400
+BB2,Group8,[MPLS] #toxic,[CLT] Bee Kind Rewind,0,3,2017-10-06T19:11:24-0400
+BB2,Group8,[SF] #SetAbsFree,[MPLS] Objective your Honor,3,0,2017-10-06T19:11:24-0400
+BB2,Group8,[CHI] Spyglass,[PDX] Winging It,2,1,2017-10-06T19:11:24-0400
+BB2,Group8,[MPLS] Objective your Honor,[MPLS] #toxic,1,2,2017-10-06T19:11:24-0400
+BB2,Group8,[PDX] Winging It,[CLT] Bee Kind Rewind,3,0,2017-10-06T19:11:24-0400
+BB2,Group8,[CHI] Spyglass,[SF] #SetAbsFree,1,2,2017-10-06T19:11:24-0400
