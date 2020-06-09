@@ -5,8 +5,72 @@ import math
 
 import trueskill
 from trueskill import *
+from dataclasses import dataclass
 import csv
+import collections
 
+
+@dataclass
+class RatingsUpdate:
+    '''Class for reporting on the change in ratings after a match.'''
+    tournament: str
+    my_team_name: str
+    their_team_name: str
+    my_player_name: str
+    my_old_rating: Rating
+    my_new_rating: Rating
+    wins: int
+    losses: int
+
+
+class AggregatedMatchStats:
+    def __init__(self):
+        self.wins = 0
+        self.losses = 0
+        self.net_rating_change = 0.0
+
+    def aggregate(self, ratings_update: RatingsUpdate) -> None:
+        self.wins += ratings_update.wins
+        self.losses += ratings_update.losses
+        self.net_rating_change += ratings_update.my_new_rating.mu - ratings_update.my_old_rating.mu
+
+    def __repr__(self):
+        return f'wins {self.wins}, losses {self.losses}, net_rating_change {self.net_rating_change:.3f}'
+
+
+
+class RatingsChangeObserver:
+    def __init__(self, teams):
+        self.teams = teams
+
+    def observe(self, ratings_update: RatingsUpdate) -> None:
+        pass
+
+    
+class RatingsChangeByOpponent(RatingsChangeObserver):
+    def __init__(self, teams):
+        super().__init__(teams)
+        self.ratings_change_by_opp = collections.defaultdict(lambda: collections.defaultdict(AggregatedMatchStats))
+
+    def observe(self, ratings_update: RatingsUpdate):
+        my_name = ratings_update.my_player_name
+        for opp_name in self.teams[ratings_update.tournament][ratings_update.their_team_name]:
+            self.ratings_change_by_opp[my_name][opp_name].aggregate(ratings_update)
+
+
+
+class RatingsChangeByTeammate(RatingsChangeObserver):
+    def __init__(self, teams):
+        super().__init__(teams)
+        self.ratings_change_by_teammate = collections.defaultdict(lambda: collections.defaultdict(AggregatedMatchStats))
+
+    def observe(self, ratings_update: RatingsUpdate):
+        my_name = ratings_update.my_player_name
+        for teammate_name in self.teams[ratings_update.tournament][ratings_update.my_team_name]:
+            if teammate_name != my_name:
+                self.ratings_change_by_teammate[my_name][teammate_name].aggregate(ratings_update)
+
+        
 
 class KQTrueSkill:
     datetime_format: str = "%Y-%m-%dT%H:%M:%S%z"
@@ -27,6 +91,9 @@ class KQTrueSkill:
         self.tournamentdates = {}  # source data only ties matches directly to a date.
         self.teams = {}  # [tournament][team name] = {p1, p2, p3...}
         self.output_file_name: str = '../PlayerSkill.csv'
+        self.ratings_change_by_opponent = RatingsChangeByOpponent(self.teams)
+        self.ratings_change_by_teammate = RatingsChangeByTeammate(self.teams)
+        self.observers = [self.ratings_change_by_opponent, self.ratings_change_by_teammate]
         self.process_approved_datasets()
 
     # ingest the known good datasets automatically
@@ -118,6 +185,34 @@ class KQTrueSkill:
 
             for x in range(team2wins):
                 t1ratings, t2ratings = rate([t1ratings, t2ratings], ranks=[1, 0])
+
+
+            # Prepare a list of RatingsUpdate to send to observers
+            all_updates = []
+            for i in range(len(self.teams[tournament][team1name])):
+                all_updates.append(RatingsUpdate(
+                    tournament=tournament,
+                    my_team_name=team1name,
+                    their_team_name=team2name,
+                    my_player_name=self.teams[tournament][team1name][i],
+                    my_old_rating=self.playerratings[self.teams[tournament][team1name][i]],
+                    my_new_rating=t1ratings[i],
+                    wins=team1wins,
+                    losses=team2wins))
+            for i in range(len(self.teams[tournament][team2name])):
+                all_updates.append(RatingsUpdate(
+                    tournament=tournament,
+                    my_team_name=team2name,
+                    their_team_name=team1name,
+                    my_player_name=self.teams[tournament][team2name][i],
+                    my_old_rating=self.playerratings[self.teams[tournament][team2name][i]],
+                    my_new_rating=t2ratings[i],
+                    wins=team2wins,
+                    losses=team1wins))
+
+            for update in all_updates:
+                for observer in self.observers:
+                    observer.observe(update)
 
             # now put the ratings back into the main dict
             for i in range(len(self.teams[tournament][team1name])):
@@ -381,6 +476,23 @@ def main():
 
     print(f"win probability, BB4 Ni Howdy vs BB3 CLEAN = {history.win_probability_teams(ni_howdy, clean)}")
     # print(f'Player Ratings: {history.playerratings}')
+
+
+    def print_player_summary(player_name):
+        print(player_name, 'teammates')
+        teammate_info = history.ratings_change_by_teammate.ratings_change_by_teammate[player_name]
+        for teammate in teammate_info:
+            print(player_name, '+', teammate, teammate_info[teammate])
+
+        print()
+        print(player_name, 'opponents')
+        opp_info = history.ratings_change_by_opponent.ratings_change_by_opp[player_name]
+        for opp in opp_info:
+            if opp_info[opp].wins + opp_info[opp].losses >= 6:
+                print(player_name, '-', opp, opp_info[opp])
+
+    print_player_summary('Rob Neuhaus')
+    print_player_summary('Dan Shupp')
 
     # test whether processing changed values
     if filecmp.cmp("PlayerSkill.old.csv", history.output_file_name):
