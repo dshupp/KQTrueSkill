@@ -30,10 +30,10 @@ This tool uses historical match results at KQ invitationals to calculate estimat
             
     Current Priority: add all touramnet KO & Group stages from all KQ invitationals
     
-    Next: Review results, benchmark predictive power vs tournaments
+    Next: Review results, benchmark predictive power vs tournament resulst with log-liklihood
     
     Future:
-        - Track a player's skill over time
+        - Model improvements
         
 
 ## Project contents 
@@ -46,7 +46,7 @@ KQtrueskill.py - Python object that builds a complete history from canonical pla
 - challengeingest.py - builds a match results files from challong with 'XXX' for errors that need scrubbing  
 - players.py - builds a player file for a tournmaent from a sanitized version of the team sheet 
 
-PlayerSkill.csv - Trueskill by player for the current set of tournaments
+PlayerSkill.csv - Trueskill by player for the current set of tournaments. includes a snapshot of all trueskills after each tournament
 
 
 ## Currently tracked tournaments
