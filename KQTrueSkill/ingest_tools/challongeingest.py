@@ -8,7 +8,6 @@ from KQTrueSkill.KQtrueskill import KQTrueSkill
 
 
 class ChallongeAccount:
-
     DATETIME_FORMAT: str = "%Y-%m-%dT%H:%M:%S.%f%z"
     API_URL: str = "https://api.challonge.com/v1/"
 
@@ -16,7 +15,7 @@ class ChallongeAccount:
         self.subdomain = subdomain
         if subdomain is None:
             self.subdomain_inject = ''
-        else: 
+        else:
             self.subdomain_inject = f"{self.subdomain}-"
         self.api_key = api_key
 
@@ -62,6 +61,7 @@ class ChallongeTournament:
         self.tourney_id = tourney_id
         self.bracket_name = bracket_name  # self.get_bracket_name()
         self.teams = {}
+        self.group_ids = {}
         self.team_ids: {} = {}
         self.teamnames: [] = []
         self.build_participants_list()
@@ -105,6 +105,9 @@ class ChallongeTournament:
             self.teams[team_id] = team_name
             self.team_ids[team_name] = team_id
             self.teamnames.append(team_name)
+            for gid in participant['participant']['group_player_ids']:
+                # in a multistage challonge, the player id in groups is a group_player_id on the participants list
+                self.group_ids[gid] = team_name
             # print(f"{team_id}, {team_name}")
 
     def build_match_results(self):
@@ -200,203 +203,233 @@ class ChallongeTournament:
         print(url)
         resp = requests.get(url)
         # print(json.dumps(resp.json(),indent=1))
-        if resp.status_code != 200:
+        if resp.status_code == 404:
+            # didn't find that team name, look through the participants list group_player_ids
+            return self.group_ids[team_id]
+        elif resp.status_code != 200:
             # This means something went wrong.
             raise Exception('GET /participants/ {}'.format(resp.status_code))
         self.teams[team_id] = resp.json()['participant']['name']
         return resp.json()['participant']['name']
 
 
-BB3: [] = ['BB3', [{'id': 5057256, 'bracket': 'KO'},
-                   {'id': 5057264, 'bracket': 'Pool1'},
-                   {'id': 5057281, 'bracket': 'Pool2'},
-                   {'id': 5057309, 'bracket': 'Pool3'},
-                   {'id': 5057310, 'bracket': 'Pool4'},
-                   {'id': 5057312, 'bracket': 'Pool5'},
-                   {'id': 5057313, 'bracket': 'Pool6'},
-                   {'id': 5057316, 'bracket': 'Pool7'},
-                   {'id': 5057318, 'bracket': 'Pool8'},
-                   {'id': 5057321, 'bracket': 'Pool9'},
-                   {'id': 5057323, 'bracket': 'Pool10'},
-                   {'id': 5057324, 'bracket': 'WC'},
-                   ]]
+# BB3: [] = ['BB3', [{'id': 5057256, 'bracket': 'KO'},
+#                    {'id': 5057264, 'bracket': 'Pool1'},
+#                    {'id': 5057281, 'bracket': 'Pool2'},
+#                    {'id': 5057309, 'bracket': 'Pool3'},
+#                    {'id': 5057310, 'bracket': 'Pool4'},
+#                    {'id': 5057312, 'bracket': 'Pool5'},
+#                    {'id': 5057313, 'bracket': 'Pool6'},
+#                    {'id': 5057316, 'bracket': 'Pool7'},
+#                    {'id': 5057318, 'bracket': 'Pool8'},
+#                    {'id': 5057321, 'bracket': 'Pool9'},
+#                    {'id': 5057323, 'bracket': 'Pool10'},
+#                    {'id': 5057324, 'bracket': 'WC'},
+#                    ]]
+#
+# HH1: [] = ["HH1", [{'id': 5025209, 'bracket': 'Swiss'},
+#                    {'id': 5026099, 'bracket': 'KO'},
+#                    ]]
+#
+# CC1: [] = ["CC1", [{'id': 4230293, 'bracket': 'GroupA'},
+#                    {'id': 4233246, 'bracket': 'GroupB'},
+#                    {'id': 4233248, 'bracket': 'GroupC'},
+#                    {'id': 4223960, 'bracket': 'KO'},
+#                    ]]
+#
+# CC2: [] = ["CC2", [{'id': 5482725, 'bracket': 'GroupA'},
+#                    {'id': 5482751, 'bracket': 'GroupB'},
+#                    {'id': 5482814, 'bracket': 'GroupC'},
+#                    {'id': 5482847, 'bracket': 'KO'},
+#                    ]]
+#
+# CC3: [] = ["CC3", [{'id': 8048812, 'bracket': 'GroupA'},
+#                    {'id': 8048841, 'bracket': 'GroupB'},
+#                    {'id': 8048854, 'bracket': 'GroupC'},
+#                    {'id': 8048858, 'bracket': 'GroupD'},
+#                    {'id': 8048880, 'bracket': 'KO'},
+#                    ]]
+#
+# MGF1: [] = ["MGF1", [{'id': 'MGFDE', 'bracket': 'KO'},
+#                      {'id': 'MGFUD130', 'bracket': 'GroupUpdown1'},
+#                      {'id': 'MGFUDNOON', 'bracket': 'GroupUpdown2'},
+#                      ]]
+#
+# MCS_CBUS: [] = ["MCS-CBUS", [{'id': 'MCSFINALS', 'bracket': 'KO'},
+#                              {'id': 'MCSwc', 'bracket': 'WC'},
+#                              {'id': 'MCSGroup1', 'bracket': 'Group1'},
+#                              {'id': 'MCSGroup2', 'bracket': 'Group2'},
+#                              {'id': 'MCSGroup3', 'bracket': 'Group1'},
+#                              {'id': 'MCSGroup4', 'bracket': 'Group2'},
+#                              ]]
+#
+# MCS_CHI: [] = ["MCS-CHI", [{'id': 'mcschi', 'name': 'MCS-CHI', 'bracket': 'KO'},
+#                            ]]
+#
+# MCS_MPLS: [] = ["MCS-MPLS", [{'id': 'mcsmpls', 'name': 'MCS-MPLS', 'bracket': 'KO'},
+#                              ]]
+#
+# KQ15: [] = ["KQXV", [{'id': 'KQ15', 'name': 'KGXV', 'bracket': 'KO'},
+#                      ]]
+#
+# KQ20: [] = ["KQXX", [{'id': 'kqxx', 'name': 'KQXX', 'bracket': 'KO'},
+#                      {'id': 'kqxxwc', 'name': 'KQXX', 'bracket': 'WC'},
+#                      {'id': 'kqxxgroupa', 'name': 'KQXX', 'bracket': 'Groupa'},
+#                      {'id': 'kqxxgroupb', 'name': 'KQXX', 'bracket': 'Groupb'},
+#                      {'id': 'kqxxgroupc', 'name': 'KQXX', 'bracket': 'Groupc'},
+#                      {'id': 'kqxxgroupd', 'name': 'KQXX', 'bracket': 'Groupd'},
+#                      {'id': 'kqxxgroupe', 'name': 'KQXX', 'bracket': 'Groupe'},
+#                      {'id': 'kqxxgroupf', 'name': 'KQXX', 'bracket': 'Groupf'},
+#                      {'id': 'kqxxgroupg', 'name': 'KQXX', 'bracket': 'Groupg'},
+#                      {'id': 'kqxxgrouph', 'name': 'KQXX', 'bracket': 'Grouph'},
+#                      ]]
+#
+# KQ25: [] = ["KQXXV", [{'id': 'kqxxv', 'name': 'KQXXV', 'bracket': 'KO'},
+#                       {'id': 'kqxxvwc', 'name': 'KQXXV', 'bracket': 'WC'},
+#                       {'id': 'kqxxva', 'name': 'KQXXV', 'bracket': 'GroupA'},
+#                       {'id': 'kqxxvb', 'name': 'KQXXV', 'bracket': 'GroupB'},
+#                       {'id': 'kqxxvc', 'name': 'KQXXV', 'bracket': 'GroupC'},
+#                       {'id': 'kqxxvd', 'name': 'KQXXV', 'bracket': 'GroupD'},
+#                       {'id': 'kqxxve', 'name': 'KQXXV', 'bracket': 'GroupE'},
+#                       {'id': 'kqxxvf', 'name': 'KQXXV', 'bracket': 'GroupF'},
+#                       {'id': 'kqxxvg', 'name': 'KQXXV', 'bracket': 'GroupG'},
+#                       ]]
+#
+# # need groups
+# Cor17s: [] = ["Cor17s", [{'id': 'BKCRN2017', 'name': 'Cor17s', 'bracket': 'KO'},
+#                          ]]
+# # need groups
+# Cor17f: [] = ["Cor17f", [{'id': 'BKCFall2017', 'name': 'Cor17f', 'bracket': 'KO'},
+#                          ]]
+#
+# # uses group stages in challonge
+# Cor18s: [] = ["Cor18s", [{'id': 'springcoronation2018', 'name': 'Cor18s', 'bracket': 'KO'},
+#                          ]]
+#
+# Cor19: [] = ["Cor19", [{'id': 'Coro2019', 'name': 'Cor19', 'bracket': 'KO'},
+#                        {'id': 'Coro2019wc', 'name': 'Cor19', 'bracket': 'WC'},
+#                        {'id': 'Coro2019Group1', 'name': 'Cor19', 'bracket': 'Group1'},
+#                        {'id': 'Coro2019Group2', 'name': 'Cor19', 'bracket': 'Group2'},
+#                        ]]
+#
+# MCS_KC: [] = ["MCS_KC", [{'id': 'KCKQMCS', 'bracket': 'KO'},
+#                          ]]
+#
+# # https://docs.google.com/spreadsheets/d/1MqwEoKrd4gpCt0zgamePn3mtFt4WKx-cJfYq8Gc5ddI/edit#gid=0
+# BBrawl4: [] = ["BBrawl4", [{'id': 'baltimorebrawlfour', 'bracket': 'KO'},
+#                            {'id': 'baltimorebrawlwildcard', 'bracket': 'WC'},
+#                            {'id': 'baltimorebrawlpoola', 'bracket': 'Group1'},
+#                            {'id': 'baltimorebrawlpoolb', 'bracket': 'Group2'},
+#                            ]]
+#
+# # https://docs.google.com/spreadsheets/d/1vIbZ4XPye3dsXB1wVuP-w3Wj4lGjLO8y5w7_ksSyUTE/edit?fbclid=IwAR1UOiEkgERBXM0eZc9sBucn2I5AyuWXTpZgf_vTwi1aoGRIhgqHt7HxHEs#gid=0
+# QGW20: [] = ["QGW20", [{'id': 'QGW2020_DE', 'bracket': 'KO'},
+#                        {'id': 'QGW2020_WC', 'bracket': 'WC'},
+#                        {'id': 'QGW2020_GA', 'bracket': 'Group1'},
+#                        {'id': 'QGW2020_GB', 'bracket': 'Group2'},
+#                        {'id': 'QGW2020_GC', 'bracket': 'Group3'},
+#                        {'id': 'QGW2020_GD', 'bracket': 'Group4'},
+#                        ]]
+#
+# # Queens gone Wild 2019: https://docs.google.com/spreadsheets/d/1wwmeDl_QMP9liZWQTBVH7ew0JCCbW10VMDW0Y8wWdJY/edit?fbclid=IwAR1IwbzQ01cNzFDXiuzOSy1FyWyXNzW7SEA5NJvUbD3joiGyE9Rd_-zeY10#gid=0
+# # https://hybridhypegaming.challonge.com/KQSFLFinals https://hybridhypegaming.challonge.com/8lw9xk6t https://hybridhypegaming.challonge.com/tw2mfmjg https://hybridhypegaming.challonge.com/f9lqxz8p https://hybridhypegaming.challonge.com/xqmd6gv4
+# QGW19: [] = ["QGW19", [{'id': 'KQSFLFinals', 'bracket': 'KO'},
+#                        {'id': '8lw9xk6t', 'bracket': 'Group1'},
+#                        {'id': 'f9lqxz8p', 'bracket': 'WC'},
+#                        {'id': 'tw2mfmjg', 'bracket': 'Group2'},
+#                        {'id': 'xqmd6gv4', 'bracket': 'Group3'},
+#                        ]]
+# # https://docs.google.com/spreadsheets/d/1Jy0Ri9qBXm8M6uwbwS7htWCSnR_0sGeXEQQFJ-UqbeY/edit#gid=1999874923
+# GFT: [] = ["GFT", [{'id': 'kckqGFT', 'bracket': 'KO'},
+#                    ]]
+#
+# # Nooga Hive Turkey - https://docs.google.com/spreadsheets/d/1xvGTsCpQwBVCIwXfn7IB4sfZIlKSsFyoRBH8q4D0ync/edit#gid=1808814704
+# CHA_HT: [] = ["CHA_HT", [{'id': 'Hiveturkeyfinals', 'bracket': 'KO'},
+#                          {'id': 'Hiveturkeyswiss', 'bracket': 'WC'},
+#                          ]]
+#
+# BnB1: [] = ["BnB1", [{'id': 'batb17', 'bracket': 'KO'},
+#                      ]]
+# BnB2: [] = ["BnB2", [{'id': 'bandb2', 'bracket': 'KO'},
+#                      ]]
+# BnB3: [] = ["BnB3", [{'id': 'bandb3', 'bracket': 'KO'},
+#                      ]]
+# MAD420: [] = ["MAD420", [{'id': 'KQBuds420', 'bracket': 'KO'},
+#                          {'id': 'KQBuds1', 'bracket': 'Group1'},
+#                          {'id': 'KQBuds2', 'bracket': 'Group2'},
+#                          ]]
+#
+# # no groups
+# GDC1: [] = ["GDC1", [{'id': 'SFGDC', 'name': 'GDC1', 'bracket': 'KO'},
+#                      ]]
+#
+# GDC2: [] = ["GDC2", [{'id': 'kqgdc2', 'name': 'GDC2', 'bracket': 'KO'},
+#                      ]]
+#
+# Camp17: [] = ["Camp17", [{'id': 'campkq', 'bracket': 'KO'},
+#                          ]]
+#
+# Camp19: [] = ["Camp19", [{'id': 'campkq2019', 'bracket': 'KO'},
+#                          ]]
+#
+# ECC1: [] = ["ECC1", [{'id': 'ECC2019finals', 'bracket': 'KO'},
+#                      {'id': 'ECC2019poolA', 'bracket': 'Group1'},
+#                      {'id': 'ECC2019poolB', 'bracket': 'Group2'},
+#                      ]]
+#
+# BB1: [] = ["BB1", [{'id': 'KQBBFinals', 'bracket': 'KO'},
+#                    {'id': 'KQBBWC', 'bracket': 'WC'},
+#                    {'id': 'KQBB1', 'bracket': 'Group1'},
+#                    {'id': 'KQBB2', 'bracket': 'Group2'},
+#                    {'id': 'KQBB3', 'bracket': 'Group3'},
+#                    {'id': 'KQBB4', 'bracket': 'Group4'},
+#                    {'id': 'KQBB5', 'bracket': 'Group5'},
+#                    ]]
+# BB2: [] = ["BB2", [{'id': 'BB2Knockout', 'bracket': 'KO'},
+#                    {'id': 'bb2wildcard', 'bracket': 'WC'},
+#                    {'id': 'BB2groupa', 'bracket': 'Group1'},
+#                    {'id': 'BB2groupb', 'bracket': 'Group2'},
+#                    {'id': 'BB2groupc', 'bracket': 'Group3'},
+#                    {'id': 'BB2groupd', 'bracket': 'Group4'},
+#                    {'id': 'BB2groupe', 'bracket': 'Group5'},
+#                    {'id': 'BB2groupf', 'bracket': 'Group6'},
+#                    {'id': 'BB2groupg', 'bracket': 'Group7'},
+#                    {'id': 'BB2grouph', 'bracket': 'Group8'},
+#                    ]]
+#
+# WC1: [] = ["WC1", [{'id': 'WinterClusterFinals', 'bracket': 'KO'},
+#                 {'id': 'WinterClusterWildCard', 'bracket': 'WC'},
+#                 {'id': 'WinterClusterGroups', 'bracket': 'Groups'},
+#                 ]]
+# # KQWC2Pools has pools and a fake DE together in the same challonge
+# WC2: [] = ["WC2", [{'id': 'KQWC2Finals', 'bracket': 'KO'},
+#                 {'id': 'KQWC2WildCard', 'bracket': 'WC'},
+#                 {'id': 'KQWC2Pools', 'bracket': 'Groups'},
+#                 ]]
+# WC3: [] = ["WC3", [{'id': 'WinterCluster3', 'bracket': 'KO'},
+#                 {'id': 'WC3Group1', 'bracket': 'Group1'},
+#                 {'id': 'WC3Group2', 'bracket': 'Group2'},
+#                 {'id': 'WC3Group3', 'bracket': 'Group3'},
+#                 ]]
+#
+# SSwarm1: [] = ["SS1", [{'id': 'SummerSwarmDE', 'bracket': 'KO'},
+# # groups challonge contains groups & a DE tourney with diff't results from the KO. using KO results, filter those out
+#                        {'id': 'SummerSwarm', 'bracket': 'Groups'},
+#                     ]]
+#
+# SSwarm2: [] = ["SS2", [{'id': 'SummerSwarm2', 'bracket': 'KO'},
+#                     {'id': 'SummerSwarm2A', 'bracket': 'Group1'},
+#                     {'id': 'SummerSwarm2B', 'bracket': 'Group2'},
+#                     {'id': 'SummerSwarm2C', 'bracket': 'Group3'},
+#                     ]]
+# CBM2018: [] = ["CBM2018", [{'id': 'kh0ywbvz', 'bracket': 'KO'},
+#                     ]]
 
-HH1: [] = ["HH1", [{'id': 5025209, 'bracket': 'Swiss'},
-                   {'id': 5026099, 'bracket': 'KO'},
-                   ]]
-
-CC1: [] = ["CC1", [{'id': 4230293, 'bracket': 'GroupA'},
-                   {'id': 4233246, 'bracket': 'GroupB'},
-                   {'id': 4233248, 'bracket': 'GroupC'},
-                   {'id': 4223960, 'bracket': 'KO'},
-                   ]]
-
-CC2: [] = ["CC2", [{'id': 5482725, 'bracket': 'GroupA'},
-                   {'id': 5482751, 'bracket': 'GroupB'},
-                   {'id': 5482814, 'bracket': 'GroupC'},
-                   {'id': 5482847, 'bracket': 'KO'},
-                   ]]
-
-CC3: [] = ["CC3", [{'id': 8048812, 'bracket': 'GroupA'},
-                   {'id': 8048841, 'bracket': 'GroupB'},
-                   {'id': 8048854, 'bracket': 'GroupC'},
-                   {'id': 8048858, 'bracket': 'GroupD'},
-                   {'id': 8048880, 'bracket': 'KO'},
-                   ]]
-
-MGF1: [] = ["MGF1", [{'id': 'MGFDE', 'bracket': 'KO'},
-                     {'id': 'MGFUD130', 'bracket': 'GroupUpdown1'},
-                     {'id': 'MGFUDNOON', 'bracket': 'GroupUpdown2'},
-                     ]]
-
-MCS_CBUS: [] = ["MCS-CBUS", [{'id': 'MCSFINALS', 'bracket': 'KO'},
-                             {'id': 'MCSwc', 'bracket': 'WC'},
-                             {'id': 'MCSGroup1', 'bracket': 'Group1'},
-                             {'id': 'MCSGroup2', 'bracket': 'Group2'},
-                             {'id': 'MCSGroup3', 'bracket': 'Group1'},
-                             {'id': 'MCSGroup4', 'bracket': 'Group2'},
-                             ]]
-
-MCS_CHI: [] = ["MCS-CHI", [{'id': 'mcschi', 'name': 'MCS-CHI', 'bracket': 'KO'},
-                           ]]
-
-MCS_MPLS: [] = ["MCS-MPLS", [{'id': 'mcsmpls', 'name': 'MCS-MPLS', 'bracket': 'KO'},
-                             ]]
-
-KQ15: [] = ["KQXV", [{'id': 'KQ15', 'name': 'KGXV', 'bracket': 'KO'},
-                     ]]
-
-KQ20: [] = ["KQXX", [{'id': 'kqxx', 'name': 'KQXX', 'bracket': 'KO'},
-                     {'id': 'kqxxwc', 'name': 'KQXX', 'bracket': 'WC'},
-                     {'id': 'kqxxgroupa', 'name': 'KQXX', 'bracket': 'Groupa'},
-                     {'id': 'kqxxgroupb', 'name': 'KQXX', 'bracket': 'Groupb'},
-                     {'id': 'kqxxgroupc', 'name': 'KQXX', 'bracket': 'Groupc'},
-                     {'id': 'kqxxgroupd', 'name': 'KQXX', 'bracket': 'Groupd'},
-                     {'id': 'kqxxgroupe', 'name': 'KQXX', 'bracket': 'Groupe'},
-                     {'id': 'kqxxgroupf', 'name': 'KQXX', 'bracket': 'Groupf'},
-                     {'id': 'kqxxgroupg', 'name': 'KQXX', 'bracket': 'Groupg'},
-                     {'id': 'kqxxgrouph', 'name': 'KQXX', 'bracket': 'Grouph'},
-                     ]]
-
-KQ25: [] = ["KQXXV", [{'id': 'kqxxv', 'name': 'KQXXV', 'bracket': 'KO'},
-                      {'id': 'kqxxvwc', 'name': 'KQXXV', 'bracket': 'WC'},
-                      {'id': 'kqxxva', 'name': 'KQXXV', 'bracket': 'GroupA'},
-                      {'id': 'kqxxvb', 'name': 'KQXXV', 'bracket': 'GroupB'},
-                      {'id': 'kqxxvc', 'name': 'KQXXV', 'bracket': 'GroupC'},
-                      {'id': 'kqxxvd', 'name': 'KQXXV', 'bracket': 'GroupD'},
-                      {'id': 'kqxxve', 'name': 'KQXXV', 'bracket': 'GroupE'},
-                      {'id': 'kqxxvf', 'name': 'KQXXV', 'bracket': 'GroupF'},
-                      {'id': 'kqxxvg', 'name': 'KQXXV', 'bracket': 'GroupG'},
-                      ]]
-
-# need groups
-Cor17s: [] = ["Cor17s", [{'id': 'BKCRN2017', 'name': 'Cor17s', 'bracket': 'KO'},
-                         ]]
-# need groups
-Cor17f: [] = ["Cor17f", [{'id': 'BKCFall2017', 'name': 'Cor17f', 'bracket': 'KO'},
-                         ]]
-
-# uses group stages in challonge
-Cor18s: [] = ["Cor18s", [{'id': 'springcoronation2018', 'name': 'Cor18s', 'bracket': 'KO'},
-                         ]]
-
-Cor19: [] = ["Cor19", [{'id': 'Coro2019', 'name': 'Cor19', 'bracket': 'KO'},
-                       {'id': 'Coro2019wc', 'name': 'Cor19', 'bracket': 'WC'},
-                       {'id': 'Coro2019Group1', 'name': 'Cor19', 'bracket': 'Group1'},
-                       {'id': 'Coro2019Group2', 'name': 'Cor19', 'bracket': 'Group2'},
-                       ]]
-
-
-MCS_KC: [] = ["MCS_KC", [{'id': 'KCKQMCS', 'bracket': 'KO'},
-                         ]]
-
-# https://docs.google.com/spreadsheets/d/1MqwEoKrd4gpCt0zgamePn3mtFt4WKx-cJfYq8Gc5ddI/edit#gid=0
-BBrawl4: [] = ["BBrawl4", [{'id': 'baltimorebrawlfour', 'bracket': 'KO'},
-                           {'id': 'baltimorebrawlwildcard', 'bracket': 'WC'},
-                           {'id': 'baltimorebrawlpoola', 'bracket': 'Group1'},
-                           {'id': 'baltimorebrawlpoolb', 'bracket': 'Group2'},
-                           ]]
-
-# https://docs.google.com/spreadsheets/d/1vIbZ4XPye3dsXB1wVuP-w3Wj4lGjLO8y5w7_ksSyUTE/edit?fbclid=IwAR1UOiEkgERBXM0eZc9sBucn2I5AyuWXTpZgf_vTwi1aoGRIhgqHt7HxHEs#gid=0
-QGW20: [] = ["QGW20", [{'id': 'QGW2020_DE', 'bracket': 'KO'},
-                       {'id': 'QGW2020_WC', 'bracket': 'WC'},
-                       {'id': 'QGW2020_GA', 'bracket': 'Group1'},
-                       {'id': 'QGW2020_GB', 'bracket': 'Group2'},
-                       {'id': 'QGW2020_GC', 'bracket': 'Group3'},
-                       {'id': 'QGW2020_GD', 'bracket': 'Group4'},
-                       ]]
-
-# Queens gone Wild 2019: https://docs.google.com/spreadsheets/d/1wwmeDl_QMP9liZWQTBVH7ew0JCCbW10VMDW0Y8wWdJY/edit?fbclid=IwAR1IwbzQ01cNzFDXiuzOSy1FyWyXNzW7SEA5NJvUbD3joiGyE9Rd_-zeY10#gid=0
-# https://hybridhypegaming.challonge.com/KQSFLFinals https://hybridhypegaming.challonge.com/8lw9xk6t https://hybridhypegaming.challonge.com/tw2mfmjg https://hybridhypegaming.challonge.com/f9lqxz8p https://hybridhypegaming.challonge.com/xqmd6gv4
-QGW19: [] = ["QGW19", [{'id': 'KQSFLFinals', 'bracket': 'KO'},
-                       {'id': '8lw9xk6t', 'bracket': 'Group1'},
-                       {'id': 'f9lqxz8p', 'bracket': 'WC'},
-                       {'id': 'tw2mfmjg', 'bracket': 'Group2'},
-                       {'id': 'xqmd6gv4', 'bracket': 'Group3'},
-                       ]]
-# https://docs.google.com/spreadsheets/d/1Jy0Ri9qBXm8M6uwbwS7htWCSnR_0sGeXEQQFJ-UqbeY/edit#gid=1999874923
-GFT: [] = ["GFT", [{'id': 'kckqGFT', 'bracket': 'KO'},
-                   ]]
-
-# Nooga Hive Turkey - https://docs.google.com/spreadsheets/d/1xvGTsCpQwBVCIwXfn7IB4sfZIlKSsFyoRBH8q4D0ync/edit#gid=1808814704
-CHA_HT: [] = ["CHA_HT", [{'id': 'Hiveturkeyfinals', 'bracket': 'KO'},
-                         {'id': 'Hiveturkeyswiss', 'bracket': 'WC'},
-                         ]]
-
-BnB1: [] = ["BnB1", [{'id': 'batb17', 'bracket': 'KO'},
-                     ]]
-BnB2: [] = ["BnB2", [{'id': 'bandb2', 'bracket': 'KO'},
-                     ]]
-BnB3: [] = ["BnB3", [{'id': 'bandb3', 'bracket': 'KO'},
-                     ]]
-MAD420: [] = ["MAD420", [{'id': 'KQBuds420', 'bracket': 'KO'},
-                     {'id': 'KQBuds1', 'bracket': 'Group1'},
-                     {'id': 'KQBuds2', 'bracket': 'Group2'},
-                     ]]
-
-# no groups
-GDC1: [] = ["GDC1", [{'id': 'SFGDC', 'name': 'GDC1', 'bracket': 'KO'},
-                     ]]
-
-GDC2: [] = ["GDC2", [{'id': 'kqgdc2', 'name': 'GDC2', 'bracket': 'KO'},
-                     ]]
-
-Camp17: [] = ["Camp17", [{'id': 'campkq', 'bracket': 'KO'},
-                     ]]
-
-Camp19: [] = ["Camp19", [{'id': 'campkq2019', 'bracket': 'KO'},
-                     ]]
-
-
-ECC1: [] = ["ECC1", [{'id': 'ECC2019finals', 'bracket': 'KO'},
-                     {'id': 'ECC2019poolA', 'bracket': 'Group1'},
-                     {'id': 'ECC2019poolB', 'bracket': 'Group2'},
-                     ]]
 
 # processed tourneys go above this line
 
 # subtourney_id: int = 5689203  # GDC4 Groups 1
 # subtourney_id: int = 4415714  # GDC3 DE
-
-BB1: [] = ["BB1", [{'id': 'KQBBFinals', 'bracket': 'KO'},
-                     {'id': 'KQBBWC', 'bracket': 'WC'},
-                     {'id': 'KQBB1', 'bracket': 'Group1'},
-                     {'id': 'KQBB2', 'bracket': 'Group2'},
-                     {'id': 'KQBB3', 'bracket': 'Group3'},
-                     {'id': 'KQBB4', 'bracket': 'Group4'},
-                     {'id': 'KQBB5', 'bracket': 'Group5'},
-                     ]]
-BB2: [] = ["BB2", [{'id': 'BB2Knockout', 'bracket': 'KO'},
-                     {'id': 'bb2wildcard', 'bracket': 'WC'},
-                     {'id': 'BB2groupa', 'bracket': 'Group1'},
-                     {'id': 'BB2groupb', 'bracket': 'Group2'},
-                     {'id': 'BB2groupc', 'bracket': 'Group3'},
-                     {'id': 'BB2groupd', 'bracket': 'Group4'},
-                     {'id': 'BB2groupe', 'bracket': 'Group5'},
-                     {'id': 'BB2groupf', 'bracket': 'Group6'},
-                     {'id': 'BB2groupg', 'bracket': 'Group7'},
-                     {'id': 'BB2grouph', 'bracket': 'Group8'},
-                     ]]
 
 # groups?
 Cor15: [] = ["Cor15", [{'id': 'BrooklynCoronation2015', 'name': 'Cor15', 'bracket': 'KO'},
@@ -405,6 +438,14 @@ Cor15: [] = ["Cor15", [{'id': 'BrooklynCoronation2015', 'name': 'Cor15', 'bracke
 # https://ehgaming.challonge.com/users/charlesjpratt/tournaments
 Cor16: [] = ["Cor16", [{'id': 'BrooklynCoronationFall2016', 'name': 'Cor16', 'bracket': 'KO'},
                        ]]
+
+
+WH1: [] = ["WH1", [{'id': 'KQJaxWinterHarvest2018', 'bracket': 'KO'},
+                    ]]
+
+WH2: [] = ["WH2", [{'id': 'kqjaxwh2020', 'bracket': 'KO'},
+                    ]]
+
 
 
 # TEMPLATE[0] = the tourney identifier KQTrueskill will use
@@ -440,23 +481,24 @@ def main():
     # api_key = cp.get('APIKeys', '')
 
     account: ChallongeAccount = ChallongeAccount('OJxf8wmFKHb5afldGJ1HzTn5Omg4s7BcuevuQXCd', None)
-    account_kqsf: ChallongeAccount = ChallongeAccount('OJxf8wmFKHb5afldGJ1HzTn5Omg4s7BcuevuQXCd','kq-sf')
+    account_kqsf: ChallongeAccount = ChallongeAccount('OJxf8wmFKHb5afldGJ1HzTn5Omg4s7BcuevuQXCd', 'kq-sf')
     account_sfl: ChallongeAccount = ChallongeAccount('OJxf8wmFKHb5afldGJ1HzTn5Omg4s7BcuevuQXCd', 'hybridhypegaming')
     account_stl: ChallongeAccount = ChallongeAccount('OJxf8wmFKHb5afldGJ1HzTn5Omg4s7BcuevuQXCd', 'killerqueenstl')
-    account_cha: ChallongeAccount = ChallongeAccount('OJxf8wmFKHb5afldGJ1HzTn5Omg4s7BcuevuQXCd','killer-queen-chattanooga')
+    account_cha: ChallongeAccount = ChallongeAccount('OJxf8wmFKHb5afldGJ1HzTn5Omg4s7BcuevuQXCd',
+                                                     'killer-queen-chattanooga')
 
     # account.print_tournament('BKCRN2017')
 
 
-    get_match_results_from_challonge(account, BB1[0], BB1[1], 'tmp.csv', append=False)
-    get_match_results_from_challonge(account, BB2[0], BB2[1], 'tmp.csv', append=True)
-    # get_match_results_from_challonge(account_stl, BnB1[0], BnB1[1], 'tmp.csv', append=True)
-    # get_match_results_from_challonge(account, BnB2[0], BnB2[1], 'tmp.csv', append=True)
-    # get_match_results_from_challonge(account, BnB3[0], BnB3[1], 'tmp.csv', append=True)
+    get_match_results_from_challonge(account, WH1[0], WH1[1], 'tmp.csv', append=False)
+    get_match_results_from_challonge(account, WH2[0], WH2[1], 'tmp.csv', append=True)
 
+    # template/examples
+    # get_match_results_from_challonge(account, [0], [1], 'tmp.csv', append=False)
+    # get_match_results_from_challonge(account, [0], [1], 'tmp.csv', append=True)
+    # get_match_results_from_challonge(account, [0], [1], 'tmp2.csv', append=False)
     # get_match_results_from_challonge(account_cha, CHA_HT[0], CHA_HT[1], '2019 misc game results.csv', append=True)
 
-    # get_match_results_from_challonge(account, [0], [1], '2019 misc game results.csv', append=True)
 
 
 if __name__ == '__main__':
