@@ -22,7 +22,8 @@ class KQTrueSkill:
         self.playergames = {}
         self.playerwins = {}
         self.playerlosses = {}
-        self.incomplete_players = []  # list of playernames w/0 scenes
+        self.incomplete_players = []  # list of playernames w/o scenes
+        self.incomplete_teams = {} # dict of tourneys & teams with missing player info
         self.tournaments = []
         self.tournamentdates = {}  # source data only ties matches directly to a date.
         self.teams = {}  # [tournament][team name] = {p1, p2, p3...}
@@ -176,6 +177,7 @@ class KQTrueSkill:
         if tournament not in self.tournaments:
             self.tournaments.append(tournament)
             self.teams[tournament] = {}
+            self.incomplete_teams[tournament] = []
 
         if playerteam is None or playerteam.strip() == '':
             raise Exception(f"{tournament}.add_player: empty team")
@@ -185,10 +187,14 @@ class KQTrueSkill:
                 playername = playerteam + f" {len(self.teams[tournament][playerteam]) + 1}"
                 playerscene = None
                 self.incomplete_players.append(f"{tournament}: {playername}")
+                if playerteam not in self.incomplete_teams[tournament]:
+                    self.incomplete_teams[tournament].append(playerteam)
             self.teams[tournament][playerteam].append(playername)
         else:
             if playername is None or playername == '':
                 playername = playerteam + " 1"
+                if playerteam not in self.incomplete_teams[tournament]:
+                    self.incomplete_teams[tournament].append(playerteam)
                 self.incomplete_players.append(f"{tournament}: {playername}")
                 playerscene = None
             self.teams[tournament][playerteam] = [playername]
@@ -342,8 +348,12 @@ class KQTrueSkill:
     def print_data_errors(self):
         # match errors are tracked during data scrubbing. known match errors hard coded into README
         # missing players should have an empty scene, so display players with empty scenes here
-        for p in self.incomplete_players:
-            print(p)
+        for tournament in sorted(self.incomplete_teams.keys()):
+            if len(self.incomplete_teams[tournament]) > 0:
+                output = tournament + ": "
+                for team in self.incomplete_teams[tournament]:
+                    output += f"{team}, "
+                print(output)
 
     def record_trueskill_snapshot(self, tournament):
         self.snapshots[tournament] = copy.deepcopy(self.playerratings)
@@ -369,7 +379,7 @@ def main():
                 history.snapshots['BB4']['Helen Lau'],
                 history.snapshots['BB4']['Dan Barron'],
                 history.snapshots['BB4']['Nick Davis'],
-                history.snapshots['BB4']['Andrew Quang'],
+                history.snapshots['BB4']['Dre Quan'],
                 ]
 
     clean = [history.snapshots['BB3']['Sam Beckman'],

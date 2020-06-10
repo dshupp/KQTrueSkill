@@ -52,9 +52,9 @@ PlayerSkill.csv - Trueskill by player for the current set of tournaments. includ
 ## Currently tracked tournaments
     2016: ['GDC1', 'KQXV', 'BB1']
     2017: ['GDC2', 'Coro17s', 'KQXX', 'Camp17', 'BB2', 'Coro17f']
-    2018: ['CC1', 'GDC3', 'BnB2', 'MCS-MPLS', 'Coro18s', 'MCS-CHI', 'KQXXV', 'MCS_KC', 'MGF1', 'HH1', 'MCS-CBUS', 'BB3', 'CHA_HT']
-    2019: ['CC2', 'QGW19', 'KQC3', 'GDC4', 'BnB3', 'MAD420', 'Coro19', 'GFT', 'KQ30', 'Camp19', 'MGF2', 'ECC1', 'BBrawl4', 'BB4', 'HH2']
-    2020: ['CC3', 'QGW20']
+    2018: ['WC1', 'CC1', 'KQC2', 'GDC3', 'BnB2', 'MCS-MPLS', 'CBM2018', 'Coro18s', 'MCS-CHI', 'SS1', 'KQXXV', 'MCS_KC', 'MGF1', 'HH1', 'MCS-CBUS', 'BB3', 'CHA_HT', 'WH1']
+    2019: ['WC2', 'CC2', 'QGW19', 'KQC3', 'GDC4', 'BnB3', 'MAD420', 'Coro19', 'GFT', 'SS2', 'KQ30', 'HF19', 'Camp19', 'MGF2', 'ECC1', 'BBrawl4', 'DSM1', 'BB4', 'HH2']
+    2020: ['WH2', 'WC3', 'CC3', 'QGW20', 'KQC4']
     
 If you'd like to see a tournament added to the list, send dshupp@gmail.com links to the teamsheet and challonge
 
@@ -80,94 +80,27 @@ it will have you pegged at your current level, and the effects of older tourname
 ## Known Data Issues
 ### Tournaments where we can't find the Team Sheet
     Coronation 2015, 2016
+   
 ### Tournaments where we can't find the Challonge
     Camp 2017 Groups, Camp 2019 Groups
     Coronation 2017f/s groups
+    Mantis Mayhem - challonge error, following up with Challonge.com
 ### Matches with missing data
     None currently
     
 ### Teams with missing players
 
-    QGW19: 3 Dollar PBRs 4
-    QGW19: 3 Dollar PBRs 5
-    GDC3: Better than bots 5
-    GDC2: Welcome to Stingapore 4
-    GDC1: Oprah WindFury (SF) 1
-    GDC1: Oprah WindFury (SF) 2
-    GDC1: Oprah WindFury (SF) 3
-    GDC1: Oprah WindFury (SF) 4
-    GDC1: Oprah WindFury (SF) 5
-    GDC1: Mo Honey Mo Problems (SF) 3
-    GDC1: Mo Honey Mo Problems (SF) 4
-    GDC1: Mo Honey Mo Problems (SF) 5
-    GDC1: Queenie Queen and the Berry Bunch (SF) 2
-    GDC1: Queenie Queen and the Berry Bunch (SF) 3
-    GDC1: Queenie Queen and the Berry Bunch (SF) 4
-    GDC1: Queenie Queen and the Berry Bunch (SF) 5
-    GDC1: Gunpowder and Cigarettes (SF) 1
-    GDC1: Gunpowder and Cigarettes (SF) 2
-    GDC1: Gunpowder and Cigarettes (SF) 3
-    GDC1: Gunpowder and Cigarettes (SF) 4
-    GDC1: Gunpowder and Cigarettes (SF) 5
-    GDC1: Team Pickup (SF) 1
-    GDC1: Team Pickup (SF) 2
-    GDC1: Team Pickup (SF) 3
-    GDC1: Team Pickup (SF) 4
-    GDC1: Team Pickup (SF) 5
-    GDC1: Frankenteam (Mixed) 3
-    GDC1: Frankenteam (Mixed) 4
-    GDC1: Frankenteam (Mixed) 5
-    GDC1: SPORTS (CHI) 4
-    GDC1: OPS (Founders) 4
-    GDC1: OPS (Founders) 5
-    GDC1: The Dollberries (SF) 1
-    GDC1: The Dollberries (SF) 2
-    GDC1: The Dollberries (SF) 3
-    GDC1: The Dollberries (SF) 4
-    GDC1: The Dollberries (SF) 5
-    GDC1: Wild Thornberries (NYC) 3
-    GDC1: Wild Thornberries (NYC) 4
-    GDC1: Wild Thornberries (NYC) 5
-    GDC1: The Bee Team (SF) 3
-    GDC1: The Bee Team (SF) 5
-    GDC1: PDX Hype Machine (PDX) 3
-    GDC1: Buzzkills (SF) 4
-    GDC1: Buzzkills (SF) 5
-    GDC1: Deadbees (SF) 1
-    GDC1: Deadbees (SF) 2
-    GDC1: Deadbees (SF) 3
-    GDC1: Deadbees (SF) 4
-    GDC1: Deadbees (SF) 5
-    GDC1: Golden Empire Phoenix (Mix) 5
-    BB3: Warp World 5
-    BB3: BeeDeeOhNo 5
-    BB3: Show Me Your Boops 4
-    BB3: Show Me Your Boops 5
-    BB1: Pure Storage 1
-    BB1: Pure Storage 2
-    BB1: Pure Storage 3
-    BB1: Pure Storage 4
-    BB1: Pure Storage 5
-    BB2: Free Agents 5
-    KQXX: Kogan's Heroes 5
-    KQXX: Garbage Snail Kids 5
-    KQXV: Fake Palidrones 1
-    KQXV: Fake Palidrones 2
-    KQXV: Fake Palidrones 3
-    KQXV: Fake Palidrones 4
-    KQXV: Fake Palidrones 5
-    KQXV: Harambae Watch 1
-    KQXV: Harambae Watch 2
-    KQXV: Harambae Watch 3
-    KQXV: Harambae Watch 4
-    KQXV: Harambae Watch 5
-    MCS-CHI: Mad Chuck 1
-    MCS-CHI: Mad Chuck 2
-    MCS-CHI: Mad Chuck 3
-    MCS-CHI: Mad Chuck 4
-    MCS-CHI: Mad Chuck 5
-    MGF1: Y U Dumb Tho? 5
-    MAD420: 4:35 blaze it...Sorry, traffic was crazy 5
-    MAD420: 4:35 blaze it...Sorry, traffic was crazy 10
-    BnB3: High Key, Low Seed 1
-    BnB3: Dregs of the Apiary 2
+    BB1: Pure Storage, 
+    BB2: Free Agents, 
+    BB3: Warp World, BeeDeeOhNo, Show Me Your Boops, 
+    BnB3: High Key, Low Seed, Dregs of the Apiary, 
+    GDC1: Oprah WindFury (SF), Mo Honey Mo Problems (SF), Queenie Queen and the Berry Bunch (SF), Gunpowder and Cigarettes (SF), Team Pickup (SF), Frankenteam (Mixed), SPORTS (CHI), OPS (Founders), The Dollberries (SF), Wild Thornberries (NYC), The Bee Team (SF), PDX Hype Machine (PDX), Buzzkills (SF), Deadbees (SF), Golden Empire Phoenix (Mix), 
+    GDC2: Welcome to Stingapore, 
+    GDC3: Better than bots, 
+    KQXV: Fake Palidrones, Harambae Watch, 
+    KQXX: Kogan's Heroes, Garbage Snail Kids, 
+    MAD420: 4:35 blaze it...Sorry, traffic was crazy, 
+    MCS-CHI: Mad Chuck, 
+    MGF1: Y U Dumb Tho?, 
+    QGW19: 3 Dollar PBRs, 
+    WH2: Dwamn Ranch, 

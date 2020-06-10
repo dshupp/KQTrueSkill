@@ -140,7 +140,7 @@ KQC3,TEAM NAME,Sebastian Joseph,DC
 KQC3,TEAM NAME,Ryan Cole,DC
 KQC3,TEAM NAME,Jason Guy,DC
 KQC3,Ol’ Dirty Berries,Deanna Lopez,SFL
-KQC3,Ol’ Dirty Berries,Levi - SFL,SFL
+KQC3,Ol’ Dirty Berries,Levi Levingson,SFL
 KQC3,Ol’ Dirty Berries,Jon Craig,SFL
 KQC3,Ol’ Dirty Berries,Casey Campbell,CHA
 KQC3,Ol’ Dirty Berries,Jon Lyons,CIN
@@ -333,7 +333,7 @@ MGF2,Laser Wolf,Brian Malloy,SFL
 MGF2,Laser Wolf,David Benhamu,SFL
 MGF2,Laser Wolf,Jon Craig,SFL
 MGF2,Laser Wolf,Fez - SFL,SFL
-MGF2,Laser Wolf,Levi - SFL,SFL
+MGF2,Laser Wolf,Levi Levingson,SFL
 MGF2,PIZZA,Nick Valentine,MPLS
 MGF2,PIZZA,Kat Naden,MPLS
 MGF2,PIZZA,Karla Gonzalez,MPLS
@@ -481,7 +481,7 @@ KQ30,The Yung Knuxxx,Chris Cadayona,CHI
 KQ30,The Yung Knuxxx,Michael Rasnic,CHI
 KQ30,LaCroix Super Drank,Stuart Lightfoot,CBUS
 KQ30,LaCroix Super Drank,Julia Azarcon,CBUS
-KQ30,LaCroix Super Drank,Nik - CBUS - KQ30,CBUS
+KQ30,LaCroix Super Drank,Nik - CBUS,CBUS
 KQ30,LaCroix Super Drank,Sam Powers,CBUS
 KQ30,LaCroix Super Drank,Drew Sandquist,NY
 KQ30,Don't Go Chasing Waterfalls,Chase Reeve,CHA
@@ -578,7 +578,7 @@ KQ30,ALL FOUR ONE,Heather Browning,SFL
 KQ30,ALL FOUR ONE,Sebastian Clavero,SFL
 KQ30,ALL FOUR ONE,Dave - SFL,SFL
 KQ30,ALL FOUR ONE,Fez - SFL,SFL
-KQ30,ALL FOUR ONE,Levi - SFL,SFL
+KQ30,ALL FOUR ONE,Levi Levingson,SFL
 KQ30,DON'T PANIC,Alex Panait,NY
 KQ30,DON'T PANIC,Casey Campbell,CHI
 KQ30,DON'T PANIC,Jose Velasco,CLT
@@ -598,7 +598,7 @@ BB4,Boops!...I did it again.,Joey LeCompte,SEA
 BB4,Boops!...I did it again.,Steven Pulliam,PDX
 BB4,Boops!...I did it again.,John Chaney,CLT
 BB4,Boops!...I did it again.,Jeffrey Lyman,BOS
-BB4,Boops!...I did it again.,Santiago Andaluz Ruiz,BOS
+BB4,Boops!...I did it again.,Santiago Ruiz,BOS
 BB4,Arguably,Master Joe,SFL
 BB4,Arguably,JP Singian,SFL
 BB4,Arguably,Michael Floyd,SFL
@@ -822,7 +822,7 @@ BB4,Spicy Milk,Chris Cadayona,CHI
 BB4,PIZZA,Kevan Smoliak,MPLS
 BB4,PIZZA,Nick Valentine,MPLS
 BB4,PIZZA,Alison Jesme,MPLS
-BB4,PIZZA,Shelby Renee,MPLS
+BB4,PIZZA,Shelby Renee Nuncio,MPLS
 BB4,PIZZA,Francis Sullivan,MPLS
 BB4,Top Bottoms,Matt Anderson,CHA
 BB4,Top Bottoms,Nate Johnson,ATL
@@ -969,7 +969,7 @@ BBrawl4,The Fire Nation,Patrick Abramovic,SFL
 BBrawl4,The Fire Nation,Brandon Gould,SFL
 BBrawl4,The Fire Nation,Anthony Hall,SFL
 BBrawl4,The Fire Nation,Jabin Thomas,SFL
-BBrawl4,Maria & the Boys,Erik Clarkson,BMOR
+BBrawl4,Maria & the Boys,Eric Clarkson,BMOR
 BBrawl4,,Christop Corley,CHA
 BBrawl4,,Jack Schlesinger,NY
 BBrawl4,,Adam Forejt,BMOR
@@ -1059,8 +1059,8 @@ QGW19,,Sebastian Clavero,SFL
 QGW19,,Geovanny Tzarax,MPLS
 QGW19,,Christop Corley,CHA
 QGW19,,Heather Browning,SFL
-QGW19,Laser Wolf,Malloy,SFL
-QGW19,,Bus - SFL,SFL
+QGW19,Laser Wolf,Brian Malloy,SFL
+QGW19,,Ryan Busser,SFL
 QGW19,,David Pavao,SFL
 QGW19,,Jon Craig,SFL
 QGW19,,Fez - SFL,SFL
@@ -1074,14 +1074,14 @@ QGW19,,Amanda Camacho,SFL
 QGW19,,Cody - SFL,SFL
 QGW19,,Nik Mikros,NY
 QGW19,,Joe B,SFL
-QGW19,Gargleblasters,Levi - SFL,SFL
+QGW19,Gargleblasters,Levi Levingson,SFL
 QGW19,,Cute Don,SFL
 QGW19,,Dwight,SFL
 QGW19,,Joe P,SFL
 QGW19,,John Hall,SFL
 QGW19,Wannabees,Becca Suzanne,JAX
 QGW19,,Kristen Ferris,JAX
-QGW19,,FF Jay,JAX
+QGW19,,Final Fantasy Jay,JAX
 QGW19,,Ryan Sims,JAX
 QGW19,,Jordan Trajano,JAX
 QGW19,A Stinch In Time,Sarah Greenwood,NY
@@ -1100,7 +1100,7 @@ QGW19,,Vivvian Curran,JAX
 QGW19,,Adam Kocis,JAX
 QGW19,,Brian Aston,JAX
 QGW19,Drinking Required,Andrew Griner,CLT
-QGW19,,Anthony Tony Bee,NY
+QGW19,,Anthony Paredes,NY
 QGW19,,J Sisk,MPLS
 QGW19,,Yennhi Vo,CLT
 QGW19,,Jason Steckey,CLT
@@ -1111,11 +1111,11 @@ QGW19,3 Dollar PBRs,,SFL
 QGW19,3 Dollar PBRs,,SFL
 QGW20,Arguably,Master Joe,SFL
 QGW20,,The Architech (JP),SFL
-QGW20,,Showtime (Michael F),SFL
+QGW20,,Michael Floyd,SFL
 QGW20,,Richard Van,SFL
 QGW20,,Joe B,SFL
-QGW20,Yes Beer No Jerks,Malloy,SFL
-QGW20,,Bus - SFL,SFL
+QGW20,Yes Beer No Jerks,Brian Malloy,SFL
+QGW20,,Ryan Busser,SFL
 QGW20,,David Benhamu,SFL
 QGW20,,Fez - SFL,SFL
 QGW20,,Alex - SFL,SFL
@@ -1344,3 +1344,88 @@ CHA_HT,,Craig Payne,CBUS
 CHA_HT,,Marian Wu,NY
 CHA_HT,,Anthony Paredes,NY
 CHA_HT,,Drew Sandquist,NY
+WH2,Pablo Escargot,Michael Floyd,SFL
+WH2,,Alex - SFL,SFL
+WH2,,Joe P,SFL
+WH2,,Sebastian Clavero,SFL
+WH2,,Levi Levingson,SFL
+WH2,Laser Wolf,Brian Malloy,SFL
+WH2,,Ryan Busser,SFL
+WH2,,David Pavao,SFL
+WH2,,Fez - SFL,SFL
+WH2,,Heather Browning,SFL
+WH2,Dumpster (J) Divers,Brian Aston,JAX
+WH2,,Aaron Bobby,JAX
+WH2,,Nathan Morris,JAX
+WH2,,Josh Howlett,JAX
+WH2,,Matt Stevenson,JAX
+WH2,Pussy Power,Vivvian Curran,JAX
+WH2,,Abby Bourque,JAX
+WH2,,Kristen Ferris,JAX
+WH2,,Maryann Hooper,JAX
+WH2,,Monica West,JAX
+WH2,The Fire Nation,Master Joe,SFL
+WH2,,Patrick Abramovic,SFL
+WH2,,Gabby Livoti,SFL
+WH2,,Anthony Hall,SFL
+WH2,,Jabin Thomas,SFL
+WH2,Not Too Shab-Bee,Chayan Warde,JAX
+WH2,,Nathan Niedel,JAX
+WH2,,Becca Suzanne,JAX
+WH2,,Devin - JAX,JAX
+WH2,,Bill Davis,JAX
+WH2,Third Wheelers,Matt Smith,JAX
+WH2,,Jessica Rashbaum,JAX
+WH2,,Kate Lewis,JAX
+WH2,,Patrick Glover,JAX
+WH2,,Cassie Neiss,JAX
+WH2,Dwamn Ranch,Jacob Lawall,JAX
+WH2,,,
+WH2,,,
+WH2,,,
+WH2,,,
+WH1,Savage Patch Kids,Aaron Bobby,JAX
+WH1,,Bill Davis,JAX
+WH1,,Nathan Niedel,JAX
+WH1,,Eric Carter,JAX
+WH1,,James Ranieri,JAX
+WH1,Your Mom (Goes To College),James Mallory,JAX
+WH1,,Jason Mosely,JAX
+WH1,,Nathan Morris,JAX
+WH1,,Timothy Grubbs,JAX
+WH1,,Jordan Trajano,JAX
+WH1,Where’s Will?!,Heather Browning,SFL
+WH1,,Don Burgess,SFL
+WH1,,Amanda Camacho,SFL
+WH1,,Sebastian,SFL
+WH1,,Jerry,JAX
+WH1,Pussy Power,Heather Henderson,JAX
+WH1,,Abby Moura,JAX
+WH1,,Kristen Ferris,JAX
+WH1,,Vivvian Curran,JAX
+WH1,,Erin Galusha,JAX
+WH1,We Don't Know JAX,Alex Zick,MPLS
+WH1,,Geovanny Tzarax,MPLS
+WH1,,Kelly Zick,MPLS
+WH1,,Nick Monger,CIN
+WH1,,Marian Wu,NY
+WH1,Laser Wolf,Brian Malloy,SFL
+WH1,,Ryan Busser,SFL
+WH1,,David Pavao,SFL
+WH1,,Jon Craig,SFL
+WH1,,Francis Leckey(Fez),SFL
+WH1,Divided by Zero,Warren Fryefield,JAX
+WH1,,Leah Fryefield,JAX
+WH1,,Justen Mann,JAX
+WH1,,Warren Dennis,JAX
+WH1,,Alex Bogh,JAX
+WH1,Duval Til We Dive,Final Fantasy Jay,JAX
+WH1,,Ryan Sims,JAX
+WH1,,Chris Waterman,JAX
+WH1,,Maryann Hooper,JAX
+WH1,,Scott Kurland,JAX
+WH1,Cool Runnings,Joe Co,JAX
+WH1,,Wes,JAX
+WH1,,Brian Aston,JAX
+WH1,,Becca Suzanne,JAX
+WH1,,Spud,JAX

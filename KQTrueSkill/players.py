@@ -42,7 +42,7 @@ def main():
     history: KQTrueSkill = KQTrueSkill()
     print(history.tournaments)
 
-    compare_players_to_history(history, 'datasets/2019 misc players.csv')
+    compare_players_to_history(history, 'ingest_tools/PlayerSkill - Sheet1.csv')
 
 if __name__ == '__main__':
     main()
