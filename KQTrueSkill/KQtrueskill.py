@@ -6,13 +6,17 @@ import math
 import trueskill
 from trueskill import *
 from dataclasses import dataclass
+from typing import Dict
 import csv
 import collections
+import json
+import shutil
+import os
 
 
 @dataclass
 class RatingsUpdate:
-    '''Class for reporting on the change in ratings after a match.'''
+    '''Class for reporting on the change in ratings after a match for a given player.'''
     tournament: str
     my_team_name: str
     their_team_name: str
@@ -24,19 +28,27 @@ class RatingsUpdate:
 
 
 class AggregatedMatchStats:
+    '''AggregatedMatchStats summarizes a series of RatingsUpdate.'''
+
     def __init__(self):
         self.wins = 0
         self.losses = 0
         self.net_rating_change = 0.0
+        self.tournaments = set()
 
     def aggregate(self, ratings_update: RatingsUpdate) -> None:
         self.wins += ratings_update.wins
         self.losses += ratings_update.losses
-        self.net_rating_change += ratings_update.my_new_rating.mu - ratings_update.my_old_rating.mu
+        self.net_rating_change += (ratings_update.my_new_rating.mu -
+                                   ratings_update.my_old_rating.mu)
+        self.tournaments.add(ratings_update.tournament)
 
     def __repr__(self):
-        return f'wins {self.wins}, losses {self.losses}, net_rating_change {self.net_rating_change:.3f}'
-
+        return (
+            f'wins {self.wins}, '
+            f'losses {self.losses}, '
+            f'net_rating_change {self.net_rating_change:.3f}, '
+            f'tournaments {self.tournaments}')
 
 
 class RatingsChangeObserver:
@@ -46,32 +58,42 @@ class RatingsChangeObserver:
     def observe(self, ratings_update: RatingsUpdate) -> None:
         pass
 
+
+def double_keyed_match_stats():
+    return collections.defaultdict(
+        lambda: collections.defaultdict(AggregatedMatchStats))
+
     
 class RatingsChangeByOpponent(RatingsChangeObserver):
     def __init__(self, teams):
         super().__init__(teams)
-        self.ratings_change_by_opp = collections.defaultdict(lambda: collections.defaultdict(AggregatedMatchStats))
+        self.ratings_change_by_opp = double_keyed_match_stats()
 
-    def observe(self, ratings_update: RatingsUpdate):
-        my_name = ratings_update.my_player_name
-        for opp_name in self.teams[ratings_update.tournament][ratings_update.their_team_name]:
-            self.ratings_change_by_opp[my_name][opp_name].aggregate(ratings_update)
-
+    def observe(self, update: RatingsUpdate):
+        my_name = update.my_player_name
+            
+        for opp_name in self.teams[update.tournament][update.their_team_name]:
+            self.ratings_change_by_opp[my_name][opp_name].aggregate(update)
 
 
 class RatingsChangeByTeammate(RatingsChangeObserver):
     def __init__(self, teams):
         super().__init__(teams)
-        self.ratings_change_by_teammate = collections.defaultdict(lambda: collections.defaultdict(AggregatedMatchStats))
+        self.ratings_change_by_teammate = double_keyed_match_stats()
 
-    def observe(self, ratings_update: RatingsUpdate):
-        my_name = ratings_update.my_player_name
-        for teammate_name in self.teams[ratings_update.tournament][ratings_update.my_team_name]:
+    def observe(self, update: RatingsUpdate):
+        my_name = update.my_player_name
+        for teammate_name in self.teams[update.tournament][update.my_team_name]:
             if teammate_name != my_name:
-                self.ratings_change_by_teammate[my_name][teammate_name].aggregate(ratings_update)
+                self.ratings_change_by_teammate[my_name][teammate_name].aggregate(
+                    update)
 
         
+def sort_tournaments_by_date(tournament_list, history):
+    return sorted(tournament_list,
+                  key=lambda t: history.tournamentdates[t])
 
+                
 class KQTrueSkill:
     datetime_format: str = "%Y-%m-%dT%H:%M:%S%z"
 
@@ -360,7 +382,7 @@ class KQTrueSkill:
 
         # make sure our csv rows align
         num_tourneys = len(self.tournaments)
-        tourneylist = sorted(self.tournaments, key=lambda t: self.tournamentdates[t])
+        tourneylist = sort_tournaments_by_date(self.tournaments, self)
 
         headers = ['Player Name', 'scene', 'trueskill', 'tourneys', 'games', 'wins', 'losses', 'win%']
         headers += tourneylist * 2
@@ -447,6 +469,87 @@ class KQTrueSkill:
         return Rating(mu=5.000, sigma=2)
 
 
+def render_player_match_stats(match_stats: Dict[str, AggregatedMatchStats],
+                              table_type: str,
+                              history) -> str:
+    output = f"""
+<table class="sortable-theme-light" data-sortable>
+  <thead>
+   <tr>
+    <th>{table_type}</th>
+    <th>net rating change</th>
+    <th>wins</th>
+    <th>losses</th>
+    <th>win %</th>
+    <th>tournaments</th>
+   </tr>
+  </thead></tbody>
+"""
+    # TODO(rob): Figure out why columns don't sort when clicked.
+    for other_player, agg_stats in match_stats.items():
+        tournaments_list_str = ' '.join(
+            sort_tournaments_by_date(agg_stats.tournaments, history))
+                                     
+        win_percentage = 100 * agg_stats.wins / (
+            agg_stats.wins + agg_stats.losses)
+        output += f"""<tr><td>{other_player}</td>
+                          <td>{agg_stats.net_rating_change:.3f}</td>
+                          <td>{agg_stats.wins}</td>
+                          <td>{agg_stats.losses}</td>
+                          <td>{win_percentage:.3f}</td>
+                          <td>{tournaments_list_str}</td>
+                       </tr>
+"""
+    output += '</tbody></table>'
+    return output
+
+
+def render_trueskill_graph(player_name, history):
+    # https://plotly.com/javascript/error-bars/
+    tournaments = sort_tournaments_by_date(
+        history.playertournaments[player_name], history)
+
+    rating_means, rating_error  = [], []
+    
+    for t in tournaments:
+        rating_at_t = history.snapshots[t][player_name]
+        rating_means.append(rating_at_t.mu)
+        rating_error.append(rating_at_t.sigma * 3)
+
+    json_trace_data = json.dumps([{'x': tournaments,
+                                   'y': rating_means,
+                                   'error_y': {
+                                       'type': 'data',
+                                       'array': rating_error,
+                                       'visible': 'true'}}])
+    # Everyones's initial error bars are stupidly wide and blow out the graph.
+    # It will look better if we truncated the y range to something like
+    # [min(mu) - X, max(mu) + X] for suitable X (5?)
+    return (f'<div id="trueskill_graph"></div> \n'
+            f'<script>Plotly.newPlot("trueskill_graph", {json_trace_data})</script> \n')
+    
+
+def render_player_summary(player_name, history):
+    output = f"""<html><head><title>{player_name}'s KQ player page</title>
+                    <meta name="robots" content="noindex" />
+                    <script src="sortable.min.js"></script>
+                    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+                    <link rel="stylesheet" href="sortable-theme-light.css" />
+              </head>
+              <body>"""
+    output += render_trueskill_graph(player_name, history)
+    output += render_player_match_stats(
+        history.ratings_change_by_teammate.ratings_change_by_teammate[player_name],
+        'teammate',
+        history)
+    output += render_player_match_stats(
+        history.ratings_change_by_opponent.ratings_change_by_opp[player_name],
+        'opponent',
+        history)
+    output += '</body>'
+    return output
+
+
 def main():
     history: KQTrueSkill = KQTrueSkill()
 
@@ -478,21 +581,14 @@ def main():
     # print(f'Player Ratings: {history.playerratings}')
 
 
-    def print_player_summary(player_name):
-        print(player_name, 'teammates')
-        teammate_info = history.ratings_change_by_teammate.ratings_change_by_teammate[player_name]
-        for teammate in teammate_info:
-            print(player_name, '+', teammate, teammate_info[teammate])
-
-        print()
-        print(player_name, 'opponents')
-        opp_info = history.ratings_change_by_opponent.ratings_change_by_opp[player_name]
-        for opp in opp_info:
-            if opp_info[opp].wins + opp_info[opp].losses >= 6:
-                print(player_name, '-', opp, opp_info[opp])
-
-    print_player_summary('Rob Neuhaus')
-    print_player_summary('Dan Shupp')
+    if not os.path.exists('output'):
+        os.mkdir('output')
+    shutil.copyfile('js/sortable.min.js', 'output/sortable.min.js')
+    shutil.copyfile('css/sortable-theme-light.css', 'output/sortable-theme-light.css')
+    for player in sorted(history.playerratings.keys()):
+        # TODO(rob): Use first name, last initial, scene as public player identifier.
+        open(f'output/{player}.html', 'w').write(render_player_summary(player, history))
+    
 
     # test whether processing changed values
     if filecmp.cmp("PlayerSkill.old.csv", history.output_file_name):
