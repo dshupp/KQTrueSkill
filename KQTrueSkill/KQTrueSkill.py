@@ -483,7 +483,7 @@ def render_player_match_stats(match_stats: Dict[str, AggregatedMatchStats],
     <th>win %</th>
     <th>tournaments</th>
    </tr>
-  </thead></tbody>
+  </thead><tbody>
 """
     # TODO(rob): Figure out why columns don't sort when clicked.
     for other_player, agg_stats in match_stats.items():
@@ -532,7 +532,6 @@ def render_trueskill_graph(player_name, history):
 def render_player_summary(player_name, history):
     output = f"""<html><head><title>{player_name}'s KQ player page</title>
                     <meta name="robots" content="noindex" />
-                    <script src="sortable.min.js"></script>
                     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
                     <link rel="stylesheet" href="sortable-theme-light.css" />
               </head>
@@ -546,7 +545,7 @@ def render_player_summary(player_name, history):
         history.ratings_change_by_opponent.ratings_change_by_opp[player_name],
         'opponent',
         history)
-    output += '</body>'
+    output += '<script src="sortable.min.js"></script></body></html>'
     return output
 
 
