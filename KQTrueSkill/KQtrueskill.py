@@ -38,6 +38,7 @@ class KQTrueSkill:
         self.ingest_dataset('datasets/CC Players.csv', 'datasets/CC game results.csv')
         self.ingest_dataset('datasets/Midwest players.csv', 'datasets/Midwest game results.csv')
         self.ingest_dataset('datasets/Coronation players.csv', 'datasets/Coronation game results.csv')
+        self.ingest_dataset('datasets/2021 players.csv', 'datasets/2021 game results.csv')
 
         # run trueskill on the matches
         self.calculate_trueskills()
@@ -62,8 +63,6 @@ class KQTrueSkill:
     # wipe old ratings objects and recalculate trueskill, compare new result with old ratings
     # side effect: update player games & w/l counts
     def calculate_trueskills(self):
-        # save old ratings for later comparison
-        old_playerratings = self.playerratings
 
         # make clean ratings objects
         self.playerratings = {}
@@ -113,12 +112,12 @@ class KQTrueSkill:
                 for _ in range(len(self.teams[tournament][team2name]), 5):
                     t2ratings.append(self.create_bot())
 
-            # update ratings for each game win
-            for x in range(team1wins):
-                t1ratings, t2ratings = rate([t1ratings, t2ratings], ranks=[0, 1])
-
-            for x in range(team2wins):
-                t1ratings, t2ratings = rate([t1ratings, t2ratings], ranks=[1, 0])
+            # update ratings for each game win. since we don't have game order, alternate winners where you can
+            for x in range (max(team1wins,team2wins)):
+                if x < team1wins:
+                    t1ratings, t2ratings = rate([t1ratings, t2ratings], ranks=[0, 1])
+                if x < team2wins:
+                    t1ratings, t2ratings = rate([t1ratings, t2ratings], ranks=[1, 0])
 
             # now put the ratings back into the main dict
             for i in range(len(self.teams[tournament][team1name])):
