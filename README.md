@@ -55,7 +55,8 @@ PlayerSkill.csv - Trueskill by player for the current set of tournaments. includ
     2018: ['WC1', 'CC1', 'KQC2', 'GDC3', 'BnB2', 'MCS-MPLS', 'CBM2018', 'Coro18s', 'MCS-CHI', 'SS1', 'KQXXV', 'MCS_KC', 'MGF1', 'HH1', 'MCS-CBUS', 'BB3', 'CHA_HT', 'WH1']
     2019: ['WC2', 'CC2', 'QGW19', 'KQC3', 'GDC4', 'BnB3', 'MAD420', 'Coro19', 'GFT', 'SS2', 'KQ30', 'HF19', 'Camp19', 'MGF2', 'ECC1', 'BBrawl4', 'DSM1', 'BB4', 'HH2']
     2020: ['WH2', 'WC3', 'CC3', 'QGW20', 'KQC4']
-    
+    2021: ['GDCV']
+
 If you'd like to see a tournament added to the list, send dshupp@gmail.com links to the teamsheet and challonge
 
 ***
