@@ -116,6 +116,8 @@ class KQTrueSkill:
         self.ratings_change_by_opponent = RatingsChangeByOpponent(self.teams)
         self.ratings_change_by_teammate = RatingsChangeByTeammate(self.teams)
         self.observers = [self.ratings_change_by_opponent, self.ratings_change_by_teammate]
+        self.displayname_map = {}
+        
         self.process_approved_datasets()
 
     # ingest the known good datasets automatically
@@ -322,6 +324,13 @@ class KQTrueSkill:
         else:
             self.playertournaments[playername] = [tournament]
 
+        #split_name = playername.split()
+        #displayname = split_name[0] + ' ' + ' '.join(name[0] for name in split_name[1:]) + ' ' + playerscene
+        #if self.displayname_map.get(playername, displayname) != displayname:
+        #    raise ValueError(f'Display name collosion? {playername} -> {displayname} '
+        #                     f'But {self.displayname_map.get(playername, displayname)} already present')
+        # self.displayname_map[playername] = displayname
+
         self.playergames[playername] = 0
         self.playerwins[playername] = 0
         self.playerlosses[playername] = 0
@@ -485,7 +494,6 @@ def render_player_match_stats(match_stats: Dict[str, AggregatedMatchStats],
    </tr>
   </thead><tbody>
 """
-    # TODO(rob): Figure out why columns don't sort when clicked.
     for other_player, agg_stats in match_stats.items():
         tournaments_list_str = ' '.join(
             sort_tournaments_by_date(agg_stats.tournaments, history))
@@ -579,15 +587,12 @@ def main():
     print(f"win probability, BB4 Ni Howdy vs BB3 CLEAN = {history.win_probability_teams(ni_howdy, clean)}")
     # print(f'Player Ratings: {history.playerratings}')
 
-
-    if not os.path.exists('output'):
-        os.mkdir('output')
-    shutil.copyfile('js/sortable.min.js', 'output/sortable.min.js')
-    shutil.copyfile('css/sortable-theme-light.css', 'output/sortable-theme-light.css')
+    
+    shutil.copyfile('js/sortable.min.js', '../docs/sortable.min.js')
+    shutil.copyfile('css/sortable-theme-light.css', '../docs/sortable-theme-light.css')
     for player in sorted(history.playerratings.keys()):
         # TODO(rob): Use first name, last initial, scene as public player identifier.
-        open(f'output/{player}.html', 'w').write(render_player_summary(player, history))
-    
+        open(f'../docs/{player}.html', 'w').write(render_player_summary(player, history))
 
     # test whether processing changed values
     if filecmp.cmp("PlayerSkill.old.csv", history.output_file_name):
