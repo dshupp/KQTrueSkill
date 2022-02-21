@@ -1,0 +1,38 @@
+tournament,bracket,team1name,team2name,team1wins,team2wins,time
+HCC21,Group1,"Yes Beer, No Jerks",sallaD,1,2,2021-07-17T06:56:18-0700
+HCC21,Group1,🐝-ch Please!,The QuaranTeam,3,0,2021-07-17T06:56:18-0700
+HCC21,Group1,The QuaranTeam,"Yes Beer, No Jerks",3,0,2021-07-17T06:56:18-0700
+HCC21,Group1,sallaD,🐝-ch Please!,2,1,2021-07-17T06:56:18-0700
+HCC21,Group1,🐝-ch Please!,"Yes Beer, No Jerks",2,1,2021-07-17T06:56:18-0700
+HCC21,Group1,sallaD,The QuaranTeam,2,1,2021-07-17T06:56:18-0700
+HCC21,Group2,Hot Frog Summer,Center for Ants,3,0,2021-07-17T08:21:15-0700
+HCC21,Group2,Simp Chimps,RUN SFL,3,0,2021-07-17T08:21:15-0700
+HCC21,Group2,RUN SFL,Hot Frog Summer,3,0,2021-07-17T08:21:15-0700
+HCC21,Group2,Center for Ants,Simp Chimps,0,3,2021-07-17T08:21:15-0700
+HCC21,Group2,Simp Chimps,Hot Frog Summer,3,0,2021-07-17T08:21:15-0700
+HCC21,Group2,Center for Ants,RUN SFL,3,0,2021-07-17T08:21:15-0700
+HCC21,Group3,Sponsored by FIGHT MILK Official Drink of the UFC,Chile Con Queso Blanco 2,1,2,2021-07-17T09:21:22-0700
+HCC21,Group3,Clashing Until Midnight,FIRE NATION,0,3,2021-07-17T09:21:22-0700
+HCC21,Group3,FIRE NATION,Sponsored by FIGHT MILK Official Drink of the UFC,3,0,2021-07-17T09:21:22-0700
+HCC21,Group3,Chile Con Queso Blanco 2,Clashing Until Midnight,2,1,2021-07-17T09:21:22-0700
+HCC21,Group3,Clashing Until Midnight,Sponsored by FIGHT MILK Official Drink of the UFC,2,1,2021-07-17T09:21:22-0700
+HCC21,Group3,Chile Con Queso Blanco 2,FIRE NATION,1,2,2021-07-17T09:21:22-0700
+HCC21,KO,Simp Chimps,Yes Beer No Jerks,0,0,2021-07-17T11:04:34-0700
+HCC21,KO,RUN SFL,Bee-ch Please!,2,0,2021-07-17T11:04:34-0700
+HCC21,KO,FIRE NATION,Clashing Until Midnight,0,0,2021-07-17T11:04:34-0700
+HCC21,KO,sallaD,Chile Con Queso Blanco 2,1,2,2021-07-17T11:04:34-0700
+HCC21,KO,Simp Chimps,RUN SFL,1,2,2021-07-17T11:31:54-0700
+HCC21,KO,FIRE NATION,Chile Con Queso Blanco 2,0,2,2021-07-17T11:55:05-0700
+HCC21,KO,RUN SFL,Chile Con Queso Blanco 2,1,2,2021-07-17T13:23:02-0700
+HCC21,KO,sallaD,The QuaranTeam,3,1,2021-07-17T11:55:05-0700
+HCC21,KO,Clashing Until Midnight,Center for Ants,3,0,2021-07-17T11:03:09-0700
+HCC21,KO,Bee-ch Please!,Hot Frog Summer,3,1,2021-07-17T11:31:54-0700
+HCC21,KO,Yes Beer No Jerks,Sponsored by FIGHT MILK Official Drink of the UFC,3,0,2021-07-17T11:02:06-0700
+HCC21,KO,sallaD,Clashing Until Midnight,3,1,2021-07-17T12:39:36-0700
+HCC21,KO,Bee-ch Please!,Yes Beer No Jerks,3,0,2021-07-17T12:15:48-0700
+HCC21,KO,Simp Chimps,sallaD,3,1,2021-07-17T13:16:33-0700
+HCC21,KO,FIRE NATION,Bee-ch Please!,1,3,2021-07-17T13:23:02-0700
+HCC21,KO,Simp Chimps,Bee-ch Please!,3,0,2021-07-17T13:47:03-0700
+HCC21,KO,RUN SFL,Simp Chimps,1,3,2021-07-17T14:11:30-0700
+HCC21,KO,Chile Con Queso Blanco 2,Simp Chimps,1,3,2021-07-17T14:24:29-0700
+HCC21,KO,Simp Chimps,Chile Con Queso Blanco 2,3,1,2021-07-17T14:50:49-0700
