@@ -19,18 +19,14 @@ class ChallongeAccount:
         else:
             self.subdomain_inject = f"{self.subdomain}-"
         self.api_key = api_key
+        challonge.set_credentials('dshupp',api_key)
 
     # GET https://api.challonge.com/v1/tournaments/{tournament}.{json|xml}
     def print_tournament(self, id):
         print(json.dumps(challonge.tournaments.show(id), indent=1))
 
     def get_tourney_list(self) -> {}:
-        url: str = f"{self.API_URL}tournaments.json?api_key={self.api_key}"
-        print(url)
-        resp = requests.get(url)
-        if resp.status_code != 200:
-            # This means something went wrong.
-            raise Exception('GET /index/ {}'.format(resp.status_code))
+
         return resp.json()
 
     def get_tournament(self, parent_tourney_name, tourney_id, bracket_name):
@@ -55,7 +51,7 @@ class ChallongeTournament:
         self.processing_errors = 0
         self.parent_tourney_name = parent_tourney_name
         self.tourney_id = tourney_id
-        self.bracket_name = bracket_name  # self.get_bracket_name()
+        self.bracket_name = self.get_bracket_name()
         self.teams = {}
         self.group_ids = {}
         self.team_ids: {} = {}
@@ -84,6 +80,7 @@ class ChallongeTournament:
             # print(f"{team_id}, {team_name}")
 
     def build_match_results(self):
+        print("building match results for "+self.tourney_id)
         for match in challonge.matches.index(self.tourney_id):
             scores_csv: str = match["scores_csv"]
             if scores_csv is None or scores_csv == '':
@@ -164,18 +161,16 @@ class ChallongeTournament:
     def get_team_name_from_id(self, team_id):
         if team_id in self.teams.keys():
             return self.teams[team_id]
-        url: str = f"{self.account.API_URL}tournaments/{self.account.subdomain_inject}{self.tourney_id}/participants/{team_id}.json?api_key={self.account.api_key}"
-        print(url)
-        resp = requests.get(url)
-        # print(json.dumps(resp.json(),indent=1))
-        if resp.status_code == 404:
-            # didn't find that team name, look through the participants list group_player_ids
-            return self.group_ids[team_id]
-        elif resp.status_code != 200:
-            # This means something went wrong.
-            raise Exception('GET /participants/ {}'.format(resp.status_code))
-        self.teams[team_id] = resp.json()['participant']['name']
-        return resp.json()['participant']['name']
+
+        try:
+            name = challonge.participants.show(self.tourney_id,team_id)['name']
+        except:
+            for participant in challonge.participants.index(self.tourney_id):
+                if len(participant['group_player_ids']) > 0:
+                    if participant['group_player_ids'][0] == team_id:
+                        self.teams[team_id] = challonge.participants.show(self.tourney_id,participant['id'])['name']
+                        return self.teams[team_id]
+        raise Exception("didn't find a matching team")
 
 
 # BB3: [] = ['BB3', [{'id': 5057256, 'bracket': 'KO'},
@@ -316,6 +311,12 @@ HCC21: [] = ["HCC21", [{'id': 'HCC_GA', 'bracket': 'Group1'},
                        {'id': 'HCC_KO', 'bracket': 'KO'},
                        ]]
 #
+# City-State Swat https://docs.google.com/spreadsheets/d/14uoTbnH7DCwF63xc0UReMBlNqorooDeqonXKS-2sEQ8/edit?fbclid=IwAR2mBg4z48OVkV4HR06FB86rkCdZb7cRftarvtKAcIsFB6gzODE4Qtftdv0#gid=0
+# https://challonge.com/csswat/
+CSSwat1: [] = ["CSSwat1", [{'id': 'csswat', 'bracket': 'KO'},
+#                           {'id': 'csswat/groups', 'bracket': 'Groups'},
+                           ]]
+#
 # # https://docs.google.com/spreadsheets/d/1Jy0Ri9qBXm8M6uwbwS7htWCSnR_0sGeXEQQFJ-UqbeY/edit#gid=1999874923
 # GFT: [] = ["GFT", [{'id': 'kckqGFT', 'bracket': 'KO'},
 #                    ]]
@@ -407,8 +408,8 @@ HCC21: [] = ["HCC21", [{'id': 'HCC_GA', 'bracket': 'Group1'},
 #
 # WH2: [] = ["WH2", [{'id': 'kqjaxwh2020', 'bracket': 'KO'},
 #                     ]]
-KQC2: [] = ["KQC2", [{'id': 'kqci2', 'bracket': 'KO'},
-                     ]]
+# KQC2: [] = ["KQC2", [{'id': 'kqci2', 'bracket': 'KO'},
+#                      ]]
 # KQC4: [] = ["KQC4", [{'id': 'kqc4', 'bracket': 'KO'},
 #                      {'id': 'kqc4a', 'bracket': 'Group1'},
 #                      {'id': 'kqc4b', 'bracket': 'Group2'},
@@ -419,6 +420,13 @@ KQC2: [] = ["KQC2", [{'id': 'kqci2', 'bracket': 'KO'},
 # HIVE_FEST: [] = ["HF", [{'id': 'hivefest', 'bracket': 'KO'},
 #                         ]]
 # processed tourneys go above this line
+
+BBR: [] = ["BBR", [{'id': 'BB_Remix', 'bracket': 'KO'},
+                     {'id': 'BB_Remix_GroupA', 'bracket': 'GroupA'},
+                     {'id': 'BB_Remix_GroupB', 'bracket': 'GroupB'},
+                     {'id': 'BB_Remix_GroupC', 'bracket': 'GroupC'},
+                     {'id': 'BB_Remix_GroupD', 'bracket': 'GroupD'},
+                     ]]
 
 # subtourney_id: int = 5689203  # GDC4 Groups 1
 # subtourney_id: int = 4415714  # GDC3 DE
@@ -480,7 +488,7 @@ def main():
     account_cha: ChallongeAccount = ChallongeAccount('OJxf8wmFKHb5afldGJ1HzTn5Omg4s7BcuevuQXCd',
                                                      'killer-queen-chattanooga')
 
-    challonge.set_credentials('dshupp', account.api_key)
+
     # account.print_tournament('BKCRN2017')
 
     # get_match_results_from_challonge(account, KQC2[0], KQC2[1], 'tmp.csv', append=False)
@@ -488,7 +496,11 @@ def main():
     # get_match_results_from_challonge(account, MM19[0], MM19[1], 'tmp.csv', append=True)
     # get_match_results_from_challonge(account, HIVE_FEST[0], HIVE_FEST[1], 'tmp.csv', append=True)
 
-    get_match_results_from_challonge(account, HCC21[0], HCC21[1], 'tmp.csv', append=False)
+    # get_match_results_from_challonge(account, HCC21[0], HCC21[1], 'tmp.csv', append=False)
+    # get_match_results_from_challonge(account, CSSwat1[0], CSSwat1[1], 'tmp.csv', append=True)
+    # get_match_results_from_challonge(account, BBR[0], BBR[1], 'tmp.csv', append=True)
+
+
 
     # template/examples
     # get_match_results_from_challonge(account, [0], [1], 'tmp.csv', append=False)
