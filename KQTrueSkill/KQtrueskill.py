@@ -501,8 +501,8 @@ def main():
             if opp_info[opp].wins + opp_info[opp].losses >= 6:
                 print(player_name, '-', opp, opp_info[opp])
 
-    print_player_summary('Rob Neuhaus')
-    print_player_summary('Dan Shupp')
+    #print_player_summary('Rob Neuhaus')
+    #print_player_summary('Dan Shupp')
 
     # test whether processing changed values
     if filecmp.cmp("PlayerSkill.old.csv", history.output_file_name):

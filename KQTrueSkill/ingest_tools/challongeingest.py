@@ -3,6 +3,7 @@ import datetime
 import configparser
 import requests
 import json
+import challonge
 
 from KQTrueSkill.KQtrueskill import KQTrueSkill
 
@@ -21,13 +22,7 @@ class ChallongeAccount:
 
     # GET https://api.challonge.com/v1/tournaments/{tournament}.{json|xml}
     def print_tournament(self, id):
-        url: str = f"{self.API_URL}tournaments/{id}.json?api_key={self.api_key}"
-        print(url)
-        resp = requests.get(url)
-        if resp.status_code != 200:
-            # This means something went wrong.
-            raise Exception('GET /show/ {}'.format(resp.status_code))
-        print(json.dumps(resp.json()['tournament'], indent=1))
+        print(json.dumps(challonge.tournaments.show(id), indent=1))
 
     def get_tourney_list(self) -> {}:
         url: str = f"{self.API_URL}tournaments.json?api_key={self.api_key}"
@@ -56,6 +51,7 @@ class ChallongeTournament:
         else:
             self.account: ChallongeAccount = ChallongeAccount()
 
+        self.tourney_object = challonge.tournaments.show(tourney_id)
         self.processing_errors = 0
         self.parent_tourney_name = parent_tourney_name
         self.tourney_id = tourney_id
@@ -69,51 +65,26 @@ class ChallongeTournament:
         self.build_match_results()
         self.first_write = True
 
-    # GET https://api.challonge.com/v1/tournaments/{tournament}/matches.{json|xml}
-    def get_matches(self):
-        url: str = f"{self.account.API_URL}tournaments/{self.account.subdomain_inject}{self.tourney_id}/matches.json?api_key={self.account.api_key}"
-        print(url)
-        resp = requests.get(url)
-        if resp.status_code != 200:
-            # This means something went wrong.
-            raise Exception('GET /matches/ {}'.format(resp.status_code))
-        # print(json.dumps(resp.json(),indent=1))
-        return resp.json()
-
     # GET https://api.challonge.com/v1/tournaments/{tournament}.{json|xml}
     def get_tournament_time(self):
-        url: str = f"{self.account.API_URL}tournaments/{self.account.subdomain_inject}{self.tourney_id}.json?api_key={self.account.api_key}"
-        print(url)
-        resp = requests.get(url)
-        if resp.status_code != 200:
-            # This means something went wrong.
-            raise Exception('GET /show/ {}'.format(resp.status_code))
-        p = resp.json()['tournament']['started_at']
+        p = self.tourney_object['started_at']
         return datetime.datetime.strptime(p, ChallongeAccount.DATETIME_FORMAT)
 
     # GET https://api.challonge.com/v1/tournaments/{tournament}/participants.{json|xml}
     def build_participants_list(self):
-        url: str = f"{self.account.API_URL}tournaments/{self.account.subdomain_inject}{self.tourney_id}/participants.json?api_key={self.account.api_key}"
-        print(url)
-        resp = requests.get(url)
-        if resp.status_code != 200:
-            # This means something went wrong.
-            raise Exception('GET /index/ {}'.format(resp.status_code))
-        for participant in resp.json():
-            team_id = participant['participant']['id']
-            team_name = participant['participant']['name']
+        for participant in challonge.participants.index(self.tourney_object["id"]):
+            team_id = participant['id']
+            team_name = participant['name']
             self.teams[team_id] = team_name
             self.team_ids[team_name] = team_id
             self.teamnames.append(team_name)
-            for gid in participant['participant']['group_player_ids']:
+            for gid in participant['group_player_ids']:
                 # in a multistage challonge, the player id in groups is a group_player_id on the participants list
                 self.group_ids[gid] = team_name
             # print(f"{team_id}, {team_name}")
 
     def build_match_results(self):
-        for m in self.get_matches():
-            match = m["match"]
-
+        for match in challonge.matches.index(self.tourney_id):
             scores_csv: str = match["scores_csv"]
             if scores_csv is None or scores_csv == '':
                 team1wins = 'XXX'
@@ -154,20 +125,14 @@ class ChallongeTournament:
                 print(f"ERROR - Empty started_at in match {match}")
                 self.processing_errors += 1
             else:
-                time = datetime.datetime.strptime(match['started_at'], ChallongeAccount.DATETIME_FORMAT)
+                time = match['started_at']
 
             self.match_results.append(
                 [self.parent_tourney_name, self.bracket_name, team1name, team2name, team1wins, team2wins, time])
         print(f"{self.processing_errors} processing errors")
 
     def get_bracket_name(self):
-        url: str = f"{self.account.API_URL}tournaments/{self.account.subdomain_inject}{self.tourney_id}.json?api_key={self.account.api_key}"
-        print(url)
-        resp = requests.get(url)
-        if resp.status_code != 200:
-            # This means something went wrong.
-            raise Exception('GET /index/ {}'.format(resp.status_code))
-        return resp.json()['tournament']['name']
+        return self.tourney_object['name']
 
     def write_matchfile(self, filename: str = None, append=False):
         if filename is None:
@@ -343,6 +308,18 @@ class ChallongeTournament:
 # GFT: [] = ["GFT", [{'id': 'kckqGFT', 'bracket': 'KO'},
 #                    ]]
 #
+# Hive City Classic 2021: https://docs.google.com/spreadsheets/d/12nkN7CFZ0DpeK-M1TzgVZ42SpuTnoJwRNFnq5ZZbHWg/edit#gid=175151071
+# https://challonge.com/HCC_GA https://challonge.com/HCC_GB https://challonge.com/HCC_GC https://challonge.com/HCC_KO
+HCC21: [] = ["HCC21", [{'id': 'HCC_GA', 'bracket': 'Group1'},
+                       {'id': 'HCC_GB', 'bracket': 'Group2'},
+                       {'id': 'HCC_GC', 'bracket': 'Group3'},
+                       {'id': 'HCC_KO', 'bracket': 'KO'},
+                       ]]
+#
+# # https://docs.google.com/spreadsheets/d/1Jy0Ri9qBXm8M6uwbwS7htWCSnR_0sGeXEQQFJ-UqbeY/edit#gid=1999874923
+# GFT: [] = ["GFT", [{'id': 'kckqGFT', 'bracket': 'KO'},
+#                    ]]
+#
 # # Nooga Hive Turkey - https://docs.google.com/spreadsheets/d/1xvGTsCpQwBVCIwXfn7IB4sfZIlKSsFyoRBH8q4D0ync/edit#gid=1808814704
 # CHA_HT: [] = ["CHA_HT", [{'id': 'Hiveturkeyfinals', 'bracket': 'KO'},
 #                          {'id': 'Hiveturkeyswiss', 'bracket': 'WC'},
@@ -430,8 +407,8 @@ class ChallongeTournament:
 #
 # WH2: [] = ["WH2", [{'id': 'kqjaxwh2020', 'bracket': 'KO'},
 #                     ]]
-# KQC2: [] = ["KQC2", [{'id': 'kqci2', 'bracket': 'KO'},
-#                      ]]
+KQC2: [] = ["KQC2", [{'id': 'kqci2', 'bracket': 'KO'},
+                     ]]
 # KQC4: [] = ["KQC4", [{'id': 'kqc4', 'bracket': 'KO'},
 #                      {'id': 'kqc4a', 'bracket': 'Group1'},
 #                      {'id': 'kqc4b', 'bracket': 'Group2'},
@@ -447,12 +424,12 @@ class ChallongeTournament:
 # subtourney_id: int = 4415714  # GDC3 DE
 
 # groups?
-Cor15: [] = ["Cor15", [{'id': 'BrooklynCoronation2015', 'name': 'Cor15', 'bracket': 'KO'},
-                       ]]
-
-# https://ehgaming.challonge.com/users/charlesjpratt/tournaments
-Cor16: [] = ["Cor16", [{'id': 'BrooklynCoronationFall2016', 'name': 'Cor16', 'bracket': 'KO'},
-                       ]]
+# Cor15: [] = ["Cor15", [{'id': 'BrooklynCoronation2015', 'name': 'Cor15', 'bracket': 'KO'},
+#                        ]]
+#
+# # https://ehgaming.challonge.com/users/charlesjpratt/tournaments
+# Cor16: [] = ["Cor16", [{'id': 'BrooklynCoronationFall2016', 'name': 'Cor16', 'bracket': 'KO'},
+#                        ]]
 # No Team Sheet
 # CLT1: [] = ["CLT1", [{'id': 'KQCInvitational', 'bracket': 'KO'},
 #                      ]]
@@ -460,9 +437,9 @@ Cor16: [] = ["Cor16", [{'id': 'BrooklynCoronationFall2016', 'name': 'Cor16', 'br
 
 
 # can't imprt this challonge rn
-MM19: [] = ["MM19", [{'id': 'MantisMayhem2019_Finals', 'bracket': 'KO'},
-                     {'id': 'MantisMayhem2019', 'bracket': 'Groups'},
-                     ]]
+# MM19: [] = ["MM19", [{'id': 'MantisMayhem2019_Finals', 'bracket': 'KO'},
+#                      {'id': 'MantisMayhem2019', 'bracket': 'Groups'},
+#                      ]]
 
 # TEMPLATE[0] = the tourney identifier KQTrueskill will use
 # TEMPLATE[1] = list of dictionaries, one dict for each challonge url
@@ -503,13 +480,15 @@ def main():
     account_cha: ChallongeAccount = ChallongeAccount('OJxf8wmFKHb5afldGJ1HzTn5Omg4s7BcuevuQXCd',
                                                      'killer-queen-chattanooga')
 
+    challonge.set_credentials('dshupp', account.api_key)
     # account.print_tournament('BKCRN2017')
 
     # get_match_results_from_challonge(account, KQC2[0], KQC2[1], 'tmp.csv', append=False)
     # get_match_results_from_challonge(account, KQC4[0], KQC4[1], 'tmp.csv', append=True)
     # get_match_results_from_challonge(account, MM19[0], MM19[1], 'tmp.csv', append=True)
-    get_match_results_from_challonge(account, HIVE_FEST[0], HIVE_FEST[1], 'tmp.csv', append=True)
-    get_match_results_from_challonge(account, DSM1[0], DSM1[1], 'tmp.csv', append=True)
+    # get_match_results_from_challonge(account, HIVE_FEST[0], HIVE_FEST[1], 'tmp.csv', append=True)
+
+    get_match_results_from_challonge(account, HCC21[0], HCC21[1], 'tmp.csv', append=False)
 
     # template/examples
     # get_match_results_from_challonge(account, [0], [1], 'tmp.csv', append=False)
