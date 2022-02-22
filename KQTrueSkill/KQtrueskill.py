@@ -130,8 +130,6 @@ class KQTrueSkill:
     # wipe old ratings objects and recalculate trueskill, compare new result with old ratings
     # side effect: update player games & w/l counts
     def calculate_trueskills(self):
-        # save old ratings for later comparison
-        old_playerratings = self.playerratings
 
         # make clean ratings objects
         self.playerratings = {}
@@ -181,12 +179,12 @@ class KQTrueSkill:
                 for _ in range(len(self.teams[tournament][team2name]), 5):
                     t2ratings.append(self.create_bot())
 
-            # update ratings for each game win
-            for x in range(team1wins):
-                t1ratings, t2ratings = rate([t1ratings, t2ratings], ranks=[0, 1])
-
-            for x in range(team2wins):
-                t1ratings, t2ratings = rate([t1ratings, t2ratings], ranks=[1, 0])
+            # update ratings for each game win. since we don't have game order, alternate winners where you can
+            for x in range (max(team1wins,team2wins)):
+                if x < team1wins:
+                    t1ratings, t2ratings = rate([t1ratings, t2ratings], ranks=[0, 1])
+                if x < team2wins:
+                    t1ratings, t2ratings = rate([t1ratings, t2ratings], ranks=[1, 0])
 
 
             # Prepare a list of RatingsUpdate to send to observers
@@ -315,7 +313,7 @@ class KQTrueSkill:
         #     self.incomplete_players.append(f"{tournament}: {playerteam}, {playername}, {playerscene}")
 
     # side effect: updates tournament dates with dates found here
-    def ingest_matches_from_file(self, filename: str):
+    def ingest_matches_from_file(self, filename: str, use_groups :bool = True):
         with open(filename) as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=',')
             line_count = 0
@@ -347,15 +345,33 @@ class KQTrueSkill:
                         self.tournamentdates[tournament] = time.date()
                         print(f"sat {tournament} date to {time.strftime(KQTrueSkill.datetime_format)}")
 
-                    self.matches.append(
-                        {"tournament": tournament,
-                         "bracket": bracket,
-                         "team1name": team1name,
-                         "team2name": team2name,
-                         "team1wins": team1wins,
-                         "team2wins": team2wins,
-                         "time": time,
-                         })
+                    # output what brackets are included for visual testing
+                    brackets_excluded = []
+                    brackets_included = []
+                    if use_groups:
+                        self.matches.append(
+                            {"tournament": tournament,
+                             "bracket": bracket,
+                             "team1name": team1name,
+                             "team2name": team2name,
+                             "team1wins": team1wins,
+                             "team2wins": team2wins,
+                             "time": time,
+                             })
+                    else:
+                        if bracket in {"KO","Knockout","WC","Wildcard"}:
+                            self.matches.append(
+                                {"tournament": tournament,
+                                 "bracket": bracket,
+                                 "team1name": team1name,
+                                 "team2name": team2name,
+                                 "team1wins": team1wins,
+                                 "team2wins": team2wins,
+                                 "time": time,
+                                 })
+                        else:
+                            # brackets_excluded.append(tournament+"/"+bracket)
+                            print(f"use_groups is {use_groups}: Excluded {tournament}/{bracket}")
                     line_count += 1
         print(f"Processed {line_count - 1} matches, now tracking {len(self.matches)} matches.")
         if errors != '':
@@ -377,6 +393,9 @@ class KQTrueSkill:
             playerskill_writer.writerow(headers)
             for player in sorted(self.playerratings.keys()):
                 try:
+                    win_percentage = 0
+                    if self.playergames[player] > 0:
+                        win_percentage = self.playerwins[player] / self.playergames[player]
                     row = [player,
                            self.playerscenes[player],
                            self.playerratings[player].mu - 3 * self.playerratings[player].sigma,
@@ -384,7 +403,7 @@ class KQTrueSkill:
                            self.playergames[player],
                            self.playerwins[player],
                            self.playerlosses[player],
-                           "%.2f" % (self.playerwins[player] / self.playergames[player]),
+                           "%.2f" % win_percentage,
                            ]
                     for t in tourneylist:
                         if t in self.playertournaments[player]:
@@ -502,8 +521,8 @@ def main():
             if opp_info[opp].wins + opp_info[opp].losses >= 6:
                 print(player_name, '-', opp, opp_info[opp])
 
-    #print_player_summary('Rob Neuhaus')
-    #print_player_summary('Dan Shupp')
+    # print_player_summary('Rob Neuhaus')
+    # print_player_summary('Dan Shupp')
 
     # test whether processing changed values
     if filecmp.cmp("PlayerSkill.old.csv", history.output_file_name):
