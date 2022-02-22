@@ -496,9 +496,9 @@ def main():
     # get_match_results_from_challonge(account, MM19[0], MM19[1], 'tmp.csv', append=True)
     # get_match_results_from_challonge(account, HIVE_FEST[0], HIVE_FEST[1], 'tmp.csv', append=True)
 
-    # get_match_results_from_challonge(account, HCC21[0], HCC21[1], 'tmp.csv', append=False)
-    # get_match_results_from_challonge(account, CSSwat1[0], CSSwat1[1], 'tmp.csv', append=True)
-    # get_match_results_from_challonge(account, BBR[0], BBR[1], 'tmp.csv', append=True)
+    get_match_results_from_challonge(account, HCC21[0], HCC21[1], 'tmp.csv', append=False)
+    get_match_results_from_challonge(account, CSSwat1[0], CSSwat1[1], 'tmp.csv', append=True)
+    get_match_results_from_challonge(account, BBR[0], BBR[1], 'tmp.csv', append=True)
 
 
 
