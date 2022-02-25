@@ -528,13 +528,12 @@ def render_player_match_stats(match_stats: Dict[str, AggregatedMatchStats],
         tournaments_list_str = ' '.join(
             sort_tournaments_by_date(agg_stats.tournaments, history))
                                      
-        win_percentage = 100 * agg_stats.wins / (
-            agg_stats.wins + agg_stats.losses)
+        # win_percentage = 100 * agg_stats.wins / (agg_stats.wins + agg_stats.losses)
+        # removed             <td>{win_percentage:.3f}</td>
         output += f"""<tr><td>{other_player}</td>
                           <td>{agg_stats.net_rating_change:.3f}</td>
                           <td>{agg_stats.wins}</td>
                           <td>{agg_stats.losses}</td>
-                          <td>{win_percentage:.3f}</td>
                           <td>{tournaments_list_str}</td>
                        </tr>
 """
@@ -616,12 +615,12 @@ def main():
 
     print(f"win probability, BB4 Ni Howdy vs BB3 CLEAN = {history.win_probability_teams(ni_howdy, clean)}")
     # print(f'Player Ratings: {history.playerratings}')
-
-    shutil.copyfile('js/sortable.min.js', '../docs/sortable.min.js')
-    shutil.copyfile('css/sortable-theme-light.css', '../docs/sortable-theme-light.css')
-    for player in sorted(history.playerratings.keys()):
-        # TODO(rob): Use first name, last initial, scene as public player identifier.
-        open(f'../docs/{player}.html', 'w').write(render_player_summary(player, history))
+    #
+    # shutil.copyfile('js/sortable.min.js', '../docs/sortable.min.js')
+    # shutil.copyfile('css/sortable-theme-light.css', '../docs/sortable-theme-light.css')
+    # for player in sorted(history.playerratings.keys()):
+    #     # TODO(rob): Use first name, last initial, scene as public player identifier.
+    #     open(f'../docs/{player}.html', 'w').write(render_player_summary(player, history))
 
     # test whether processing changed values
     if filecmp.cmp("PlayerSkill.old.csv", history.output_file_name):
